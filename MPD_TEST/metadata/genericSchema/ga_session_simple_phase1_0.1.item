@@ -3,16 +3,32 @@
   <TalendMetadata:GenericSchemaConnection xmi:id="_kFW8sHX3Eei3jIQe3HhKjQ" name="repository.metadataGenericSchema" dataPackage="_kFW8sXX3Eei3jIQe3HhKjQ"/>
   <TalendMetadata:GenericPackage xmi:id="_kFW8sXX3Eei3jIQe3HhKjQ" name="repository.metadataGenericSchema" dataManager="_kFW8sHX3Eei3jIQe3HhKjQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_kFW8snX3Eei3jIQe3HhKjQ" id="_YZd9UHX3Eei3jIQe3HhKjQ" label="metadata">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8s3X3Eei3jIQe3HhKjQ" name="visitorId" label="visitorId" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tHX3Eei3jIQe3HhKjQ" name="newColumn1" label="newColumn1" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tXX3Eei3jIQe3HhKjQ" name="newColumn2" label="newColumn2" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tnX3Eei3jIQe3HhKjQ" name="newColumn3" label="newColumn3" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8t3X3Eei3jIQe3HhKjQ" name="newColumn4" label="newColumn4" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8uHX3Eei3jIQe3HhKjQ" name="newColumn5" label="newColumn5" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8uXX3Eei3jIQe3HhKjQ" name="newColumn6" label="newColumn6" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8unX3Eei3jIQe3HhKjQ" name="newColumn7" label="newColumn7" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8u3X3Eei3jIQe3HhKjQ" name="newColumn8" label="newColumn8" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8vHX3Eei3jIQe3HhKjQ" name="newColumn9" label="newColumn9" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8s3X3Eei3jIQe3HhKjQ" name="visitorId" label="visitorId" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tHX3Eei3jIQe3HhKjQ" name="visitNumber" label="visitNumber" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tXX3Eei3jIQe3HhKjQ" name="visitId" label="visitId" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tnX3Eei3jIQe3HhKjQ" name="visitStartTime" label="visitStartTime" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8t3X3Eei3jIQe3HhKjQ" name="date" label="date" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8uHX3Eei3jIQe3HhKjQ" name="totalsVisits" label="totalsVisits" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8uXX3Eei3jIQe3HhKjQ" name="totalsHits" label="totalsHits" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8unX3Eei3jIQe3HhKjQ" name="totalsPageviews" label="totalsPageviews" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8u3X3Eei3jIQe3HhKjQ" name="totalsTimeOnSite" label="totalsTimeOnSite" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8vHX3Eei3jIQe3HhKjQ" name="totalsBounces" label="totalsBounces" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wIglgHX3Eei3jIQe3HhKjQ" name="totalsTransactions" label="totalsTransactions" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wKKyYHX3Eei3jIQe3HhKjQ" name="totalsTransactionRevenue" label="totalsTransactionRevenue" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wLavkHX3Eei3jIQe3HhKjQ" name="totalsNewVisits" label="totalsNewVisits" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wNDuUHX3Eei3jIQe3HhKjQ" name="totalsScreenviews" label="totalsScreenviews" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wOc1cHX3Eei3jIQe3HhKjQ" name="totalsUniqueScreenviews" label="totalsUniqueScreenviews" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wPkPwHX3Eei3jIQe3HhKjQ" name="totalsTimeOnScreen" label="totalsTimeOnScreen" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wRBoUHX3Eei3jIQe3HhKjQ" name="totalsTotalTransactionRevenue" label="totalsTotalTransactionRevenue" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wSSzoHX3Eei3jIQe3HhKjQ" name="totalsSessionQualityDim" label="totalsSessionQualityDim" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wTwMMHX3Eei3jIQe3HhKjQ" name="deviceBrowser" label="deviceBrowser" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wVJTUHX3Eei3jIQe3HhKjQ" name="deviceBrowserVersion" label="deviceBrowserVersion" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wWglQHX3Eei3jIQe3HhKjQ" name="deviceBrowserSize" label="deviceBrowserSize" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wX33MHX3Eei3jIQe3HhKjQ" name="deviceOperatingSystem" label="deviceOperatingSystem" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wZAfoHX3Eei3jIQe3HhKjQ" name="deviceOperatingSystemVersion" label="deviceOperatingSystemVersion" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wacDAHX3Eei3jIQe3HhKjQ" name="deviceIsMobile" label="deviceIsMobile" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wb4NcHX3Eei3jIQe3HhKjQ" name="devicesMobileDeviceBranding" label="devicesMobileDeviceBranding" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wdLN8HX3Eei3jIQe3HhKjQ" name="devicesMovileDeviceModel" label="devicesMovileDeviceModel" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
