@@ -116,7 +116,7 @@
     <elementParameter field="PASSWORD" name="CLIENT_SECRET" value="S8rSnLfCIsx9M0eLzBl57t3nqvO9T3AdtjnHuVbMxCw="/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;mpdbq1&quot;"/>
     <elementParameter field="TEXT" name="AUTHORIZATION_CODE" value="&quot;4/AABv00zXqFh8c3UFdZsmf7tws4uDKTDHAWmEIXO-WpHjXLjUeStisw4&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;&#xA;visitorId, visitStartTime, date, fullVisitorId, userId, clientId, totals.visits &#xA;&#xA;FROM &#xA;  (TABLE_DATE_RANGE([445885.ga_sessions_], &#xA;                TIMESTAMP('2018-06-01'), &#xA;                TIMESTAMP('2018-06-02'))) where visitorId is not NULL and limit 1000&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;&#xA;visitorId, visitStartTime, date, fullVisitorId, userId, clientId, totals.visits &#xA;&#xA;FROM &#xA;  (TABLE_DATE_RANGE([445885.ga_sessions_], &#xA;                TIMESTAMP('2018-06-01'), &#xA;                TIMESTAMP('2018-06-02'))) where visitorId is not NULL limit 1000&quot;"/>
     <elementParameter field="CLOSED_LIST" name="RESULT_SIZE" value="LARGE"/>
     <elementParameter field="FILE" name="TOKEN_NAME" value="&quot;/Users/mohdhafeez/Downloads/client_secret_434785495492-ddtume5cghpt2vd9l4ovv5s9n8o4ncv5.apps.googleusercontent.com.json&quot;"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
