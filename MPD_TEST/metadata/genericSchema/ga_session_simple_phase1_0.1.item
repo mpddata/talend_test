@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_kFW8sHX3Eei3jIQe3HhKjQ" name="repository.metadataGenericSchema" dataPackage="_kFW8sXX3Eei3jIQe3HhKjQ"/>
+  <TalendMetadata:GenericPackage xmi:id="_kFW8sXX3Eei3jIQe3HhKjQ" name="repository.metadataGenericSchema" dataManager="_kFW8sHX3Eei3jIQe3HhKjQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_kFW8snX3Eei3jIQe3HhKjQ" id="_YZd9UHX3Eei3jIQe3HhKjQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8s3X3Eei3jIQe3HhKjQ" name="visitorId" label="visitorId" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tHX3Eei3jIQe3HhKjQ" name="visitNumber" label="visitNumber" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tXX3Eei3jIQe3HhKjQ" name="visitId" label="visitId" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8tnX3Eei3jIQe3HhKjQ" name="visitStartTime" label="visitStartTime" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8t3X3Eei3jIQe3HhKjQ" name="date" label="date" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8uHX3Eei3jIQe3HhKjQ" name="totalsVisits" label="totalsVisits" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8uXX3Eei3jIQe3HhKjQ" name="totalsHits" label="totalsHits" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8unX3Eei3jIQe3HhKjQ" name="totalsPageviews" label="totalsPageviews" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8u3X3Eei3jIQe3HhKjQ" name="totalsTimeOnSite" label="totalsTimeOnSite" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_kFW8vHX3Eei3jIQe3HhKjQ" name="totalsBounces" label="totalsBounces" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wIglgHX3Eei3jIQe3HhKjQ" name="totalsTransactions" label="totalsTransactions" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wKKyYHX3Eei3jIQe3HhKjQ" name="totalsTransactionRevenue" label="totalsTransactionRevenue" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wLavkHX3Eei3jIQe3HhKjQ" name="totalsNewVisits" label="totalsNewVisits" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wNDuUHX3Eei3jIQe3HhKjQ" name="totalsScreenviews" label="totalsScreenviews" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wOc1cHX3Eei3jIQe3HhKjQ" name="totalsUniqueScreenviews" label="totalsUniqueScreenviews" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wPkPwHX3Eei3jIQe3HhKjQ" name="totalsTimeOnScreen" label="totalsTimeOnScreen" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wRBoUHX3Eei3jIQe3HhKjQ" name="totalsTotalTransactionRevenue" label="totalsTotalTransactionRevenue" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wSSzoHX3Eei3jIQe3HhKjQ" name="totalsSessionQualityDim" label="totalsSessionQualityDim" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wTwMMHX3Eei3jIQe3HhKjQ" name="deviceBrowser" label="deviceBrowser" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wVJTUHX3Eei3jIQe3HhKjQ" name="deviceBrowserVersion" label="deviceBrowserVersion" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wWglQHX3Eei3jIQe3HhKjQ" name="deviceBrowserSize" label="deviceBrowserSize" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wX33MHX3Eei3jIQe3HhKjQ" name="deviceOperatingSystem" label="deviceOperatingSystem" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wZAfoHX3Eei3jIQe3HhKjQ" name="deviceOperatingSystemVersion" label="deviceOperatingSystemVersion" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wacDAHX3Eei3jIQe3HhKjQ" name="deviceIsMobile" label="deviceIsMobile" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wb4NcHX3Eei3jIQe3HhKjQ" name="deviceMobileDeviceBranding" label="deviceMobileDeviceBranding" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wdLN8HX3Eei3jIQe3HhKjQ" name="deviceMobileDeviceModel" label="deviceMobileDeviceModel" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xuZv0HX4Eei3jIQe3HhKjQ" name="deviceMobileInputSelector" label="deviceMobileInputSelector" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xvzeAHX4Eei3jIQe3HhKjQ" name="deviceMobileDeviceInfo" label="deviceMobileDeviceInfo" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xxk_oHX4Eei3jIQe3HhKjQ" name="deviceMobileDeviceMarketingName" label="deviceMobileDeviceMarketingName" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xzMJMHX4Eei3jIQe3HhKjQ" name="deviceFlashVersion" label="deviceFlashVersion" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x0voYHX4Eei3jIQe3HhKjQ" name="deviceJavaEnabled" label="deviceJavaEnabled" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A6CzkHX5Eei3jIQe3HhKjQ" name="deviceLanguage" label="deviceLanguage" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A8QaEHX5Eei3jIQe3HhKjQ" name="deviceScreenColors" label="deviceScreenColors" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A95_4HX5Eei3jIQe3HhKjQ" name="deviceScreenResolution" label="deviceScreenResolution" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A_kMwHX5Eei3jIQe3HhKjQ" name="deviceDeviceCategory" label="deviceDeviceCategory" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BCI_oHX5Eei3jIQe3HhKjQ" name="geoContinent" label="geoContinent" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_KKedIHX5Eei3jIQe3HhKjQ" name="geoSubContinent" label="geoSubContinent" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_KMBVQHX5Eei3jIQe3HhKjQ" name="geoCountry" label="geoCountry" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_KNf78HX5Eei3jIQe3HhKjQ" name="geoRegion" label="geoRegion" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_KPSEoHX5Eei3jIQe3HhKjQ" name="geoMetro" label="geoMetro" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ObEvoHX5Eei3jIQe3HhKjQ" name="geoCity" label="geoCity" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_OckkcHX5Eei3jIQe3HhKjQ" name="geoCityId" label="geoCityId" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_OeFnYHX5Eei3jIQe3HhKjQ" name="geoNetworkDomain" label="geoNetworkDomain" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Rn-wgHX5Eei3jIQe3HhKjQ" name="geoLatitude" label="geoLatitude" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_STkrMHX5Eei3jIQe3HhKjQ" name="geoLongitude" label="geoLongitude" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_SVCDwHX5Eei3jIQe3HhKjQ" name="geoNetworkLocation" label="geoNetworkLocation" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b3TrQHX5Eei3jIQe3HhKjQ" name="hitsHitNumber" label="hitsHitNumber" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b43KcHX5Eei3jIQe3HhKjQ" name="hitsTime" label="hitsTime" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b7SMUHX5Eei3jIQe3HhKjQ" name="hitsHour" label="hitsHour" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b87LEHX5Eei3jIQe3HhKjQ" name="hitsMinute" label="hitsMinute" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b-U5QHX5Eei3jIQe3HhKjQ" name="hitsIsSecure" label="hitsIsSecure" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b_8p4HX5Eei3jIQe3HhKjQ" name="hitsIsInteraction" label="hitsIsInteraction" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hjS9sHX5Eei3jIQe3HhKjQ" name="hitsIsEntrance" label="hitsIsEntrance" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hmbxQHX5Eei3jIQe3HhKjQ" name="hitsIsExit" label="hitsIsExit" length="-1" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hofmwHX5Eei3jIQe3HhKjQ" name="hitsReferer" label="hitsReferer" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hqgY8HX5Eei3jIQe3HhKjQ" name="hitsPagePagePath" label="hitsPagePagePath" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htHBAHX5Eei3jIQe3HhKjQ" name="hitsPageHostname" label="hitsPageHostname" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hwUtEHX5Eei3jIQe3HhKjQ" name="hitsPagePageTitle" label="hitsPagePageTitle" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pL8xIHX5Eei3jIQe3HhKjQ" name="hitsPageSearchKeyword" label="hitsPageSearchKeyword" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qjfL0HX5Eei3jIQe3HhKjQ" name="hitsPageSearchCategory" label="hitsPageSearchCategory" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qlPfUHX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL1" label="hitsPagePagePathL1" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qn3VgHX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL2" label="hitsPagePagePathL2" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qrcN8HX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL3" label="hitsPagePagePathL3" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_queT0HX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL4" label="hitsPagePagePathL4" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uKU2wHaVEeiDsrW5qa4ixg" name="fullVisitorId" label="fullVisitorId" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uL0rkHaVEeiDsrW5qa4ixg" name="userId" label="userId" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uOOfUHaVEeiDsrW5qa4ixg" name="clientId" label="clientId" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uPfqoHaVEeiDsrW5qa4ixg" name="channelGrouping" label="channelGrouping" length="255" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uRiSAHaVEeiDsrW5qa4ixg" name="socialEngagementType" label="socialEngagementType" length="255" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
