@@ -82,7 +82,7 @@
         <initialValue xsi:type="relational:TdExpression" xmi:id="_76kPxHX9Eei3jIQe3HhKjQ" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_76kPxXX9Eei3jIQe3HhKjQ" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
       </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_76kPxnX9Eei3jIQe3HhKjQ" name="UID" label="UID" length="255" sourceType="VARCHAR" talendType="id_String">
+      <feature xsi:type="relational:TdColumn" xmi:id="_76kPxnX9Eei3jIQe3HhKjQ" name="UID" label="UID" length="255" sourceType="VARCHAR" talendType="id_String" key="true">
         <taggedValue xmi:id="_76kPx3X9Eei3jIQe3HhKjQ" tag="Comment" value=""/>
         <initialValue xsi:type="relational:TdExpression" xmi:id="_76kPyHX9Eei3jIQe3HhKjQ" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_76kPyXX9Eei3jIQe3HhKjQ" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
