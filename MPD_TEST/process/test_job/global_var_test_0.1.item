@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="inputDateStart" prompt="inputDateStart?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="inputDateEnd" prompt="inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="inputDateStart" prompt="inputDateStart?" promptNeeded="false" type="id_String" value="20180101"/>
+    <contextParameter comment="" name="inputDateEnd" prompt="inputDateEnd?" promptNeeded="false" type="id_String" value="20180201"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -182,7 +182,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtDateStart = ((String)globalMap.get(&quot;inputDateStart&quot;));&#xA;String dtDateEnd = ((String)globalMap.get(&quot;inputDateEnd&quot;));&#xA;Date dtCurr = TalendDate.getCurrentDate();&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMdd&quot;);&#xA;Date dtProcessStart = TalendDate.getCurrentDate();&#xA;Date dtProcessEnd = TalendDate.getCurrentDate();&#xA;&#xA;if (dtDateStart != null &amp;&amp; dtDateEnd != null &amp;&amp; dtDateStart.length()==8 &amp;&amp; dtDateEnd.length()==8) {&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateStart);&#xA;&#x9;dtProcessEnd = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateEnd);&#xA;}&#xA;//else{&#xA;//&#x9;if (dtDate.length()==8){&#xA;//&#x9;&#x9;dtProcess=TalendDate.parseDate(&quot;yyyyMMdd&quot;,dtDate);&#xA;//&#x9;&#x9;}&#xA;//}&#xA;globalMap.put(&quot;processStartDate&quot;, df.format(dtProcessStart));&#xA;globalMap.put(&quot;processSEndDate&quot;, df.format(dtProcessEnd));&#xA;System.out.println(df.format(dtProcessStart));&#xA;System.out.println(df.format(dtProcessEnd));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtDateStart = ((String)globalMap.get(&quot;inputDateStart&quot;));&#xA;String dtDateEnd = ((String)globalMap.get(&quot;inputDateEnd&quot;));&#xA;Date dtCurr = TalendDate.getCurrentDate();&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMdd&quot;);&#xA;Date dtProcessStart = TalendDate.getCurrentDate();&#xA;Date dtProcessEnd = TalendDate.getCurrentDate();&#xA;&#xA;if (dtDateStart != null &amp;&amp; dtDateEnd != null &amp;&amp; dtDateStart.length()==8 &amp;&amp; dtDateEnd.length()==8) {&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateStart);&#xA;&#x9;dtProcessEnd = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateEnd);&#xA;}&#xA;//else{&#xA;//&#x9;if (dtDate.length()==8){&#xA;//&#x9;&#x9;dtProcess=TalendDate.parseDate(&quot;yyyyMMdd&quot;,dtDate);&#xA;//&#x9;&#x9;}&#xA;//}&#xA;globalMap.put(&quot;processStartDate&quot;, df.format(dtProcessStart));&#xA;globalMap.put(&quot;processSEndDate&quot;, df.format(dtProcessEnd));&#xA;System.out.println(&quot;Start &quot; + df.format(dtProcessStart));&#xA;System.out.println(&quot;End &quot; + df.format(dtProcessEnd));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
