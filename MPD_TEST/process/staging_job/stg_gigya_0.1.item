@@ -2119,6 +2119,7 @@
     <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
     <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="writeToStagingDb"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="sor_gigya" name="tAmazonMysqlOutput_1">
       <column comment="" key="false" length="65535" name="created" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
