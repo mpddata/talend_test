@@ -32,11 +32,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xuZv0HX4Eei3jIQe3HhKjQ" name="deviceMobileInputSelector" label="deviceMobileInputSelector" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xvzeAHX4Eei3jIQe3HhKjQ" name="deviceMobileDeviceInfo" label="deviceMobileDeviceInfo" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xxk_oHX4Eei3jIQe3HhKjQ" name="deviceMobileDeviceMarketingName" label="deviceMobileDeviceMarketingName" length="255" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xzMJMHX4Eei3jIQe3HhKjQ" name="deviceFlashVersion" label="deviceFlashVersion" length="255" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x0voYHX4Eei3jIQe3HhKjQ" name="deviceJavaEnabled" label="deviceJavaEnabled" length="-1" talendType="id_Boolean"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A6CzkHX5Eei3jIQe3HhKjQ" name="deviceLanguage" label="deviceLanguage" length="255" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A8QaEHX5Eei3jIQe3HhKjQ" name="deviceScreenColors" label="deviceScreenColors" length="255" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A95_4HX5Eei3jIQe3HhKjQ" name="deviceScreenResolution" label="deviceScreenResolution" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A_kMwHX5Eei3jIQe3HhKjQ" name="deviceDeviceCategory" label="deviceDeviceCategory" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BCI_oHX5Eei3jIQe3HhKjQ" name="geoContinent" label="geoContinent" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_KKedIHX5Eei3jIQe3HhKjQ" name="geoSubContinent" label="geoSubContinent" length="255" talendType="id_String"/>
@@ -58,15 +54,15 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hjS9sHX5Eei3jIQe3HhKjQ" name="hitsIsEntrance" label="hitsIsEntrance" length="-1" talendType="id_Boolean"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hmbxQHX5Eei3jIQe3HhKjQ" name="hitsIsExit" label="hitsIsExit" length="-1" talendType="id_Boolean"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hofmwHX5Eei3jIQe3HhKjQ" name="hitsReferer" label="hitsReferer" length="255" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hqgY8HX5Eei3jIQe3HhKjQ" name="hitsPagePagePath" label="hitsPagePagePath" length="4000" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hqgY8HX5Eei3jIQe3HhKjQ" name="hitsPagePagePath" label="hitsPagePagePath" length="65535" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htHBAHX5Eei3jIQe3HhKjQ" name="hitsPageHostname" label="hitsPageHostname" length="255" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hwUtEHX5Eei3jIQe3HhKjQ" name="hitsPagePageTitle" label="hitsPagePageTitle" length="1000" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hwUtEHX5Eei3jIQe3HhKjQ" name="hitsPagePageTitle" label="hitsPagePageTitle" length="65535" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pL8xIHX5Eei3jIQe3HhKjQ" name="hitsPageSearchKeyword" label="hitsPageSearchKeyword" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qjfL0HX5Eei3jIQe3HhKjQ" name="hitsPageSearchCategory" label="hitsPageSearchCategory" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qlPfUHX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL1" label="hitsPagePagePathL1" length="1000" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qn3VgHX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL2" label="hitsPagePagePathL2" length="1000" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_qrcN8HX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL3" label="hitsPagePagePathL3" length="1000" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_queT0HX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL4" label="hitsPagePagePathL4" length="1000" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_queT0HX5Eei3jIQe3HhKjQ" name="hitsPagePagePathL4" label="hitsPagePagePathL4" length="65535" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uKU2wHaVEeiDsrW5qa4ixg" name="fullVisitorId" label="fullVisitorId" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uL0rkHaVEeiDsrW5qa4ixg" name="userId" label="userId" length="255" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uOOfUHaVEeiDsrW5qa4ixg" name="clientId" label="clientId" length="255" talendType="id_String"/>
