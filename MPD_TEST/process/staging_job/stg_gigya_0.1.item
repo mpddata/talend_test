@@ -1721,7 +1721,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="created" expression="TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="created" expression="parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,&quot;2018-02-09T16:24:18.909Z&quot;) " type="id_Date" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="format">
         <mapperTableEntries name="created" expression="Var.created " type="id_Date" nullable="true"/>
