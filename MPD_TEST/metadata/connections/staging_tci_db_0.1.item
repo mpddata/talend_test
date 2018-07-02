@@ -983,9 +983,37 @@
         <sqlDataType xmi:id="_76kSlXX9Eei3jIQe3HhKjQ" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
       </feature>
     </ownedElement>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_Gpa6IH2tEeiNtetg0JvUxg" name="sor_lotame_bh" id="_GpUzgH2tEeiNtetg0JvUxg" label="sor_lotame_bh" tableType="TABLE">
+      <taggedValue xmi:id="_Gpa6IX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6In2tEeiNtetg0JvUxg" name="GAClientId" label="GAClientId" length="200" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Gpa6I32tEeiNtetg0JvUxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6JH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Gpa6JX2tEeiNtetg0JvUxg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Jn2tEeiNtetg0JvUxg" name="dateId" label="dateId" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_Gpa6J32tEeiNtetg0JvUxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6KH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Gpa6KX2tEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Kn2tEeiNtetg0JvUxg" name="LotamePId" label="LotamePId" length="255" sourceType="TINYTEXT" talendType="id_String">
+        <taggedValue xmi:id="_Gpa6K32tEeiNtetg0JvUxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6LH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Gpa6LX2tEeiNtetg0JvUxg" name="TINYTEXT" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Ln2tEeiNtetg0JvUxg" name="GigyaId" label="GigyaId" length="200" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Gpa6L32tEeiNtetg0JvUxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6MH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Gpa6MX2tEeiNtetg0JvUxg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Mn2tEeiNtetg0JvUxg" name="KeywordList" label="KeywordList" length="65535" sourceType="TEXT" talendType="id_String">
+        <taggedValue xmi:id="_Gpa6M32tEeiNtetg0JvUxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6NH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Gpa6NX2tEeiNtetg0JvUxg" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
     <ownedElement xsi:type="relational:TdTable" xmi:id="_GZY6EH2tEeiNtetg0JvUxg" name="sor_gigya_reformat" id="_GY_4gH2tEeiNtetg0JvUxg" label="sor_gigya_reformat" tableType="TABLE">
       <taggedValue xmi:id="_GZY6EX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
-      <feature xsi:type="relational:TdColumn" xmi:id="_GZY6En2tEeiNtetg0JvUxg" name="created" label="created" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;yyyyMMdd HH:mm:ss&quot;">
+      <feature xsi:type="relational:TdColumn" xmi:id="_GZY6En2tEeiNtetg0JvUxg" name="created" label="created" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_GZY6E32tEeiNtetg0JvUxg" tag="Comment" value=""/>
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZY6FH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZY6FX2tEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
@@ -1010,7 +1038,7 @@
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZhKn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZZhK32tEeiNtetg0JvUxg" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
       </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_GZZhLH2tEeiNtetg0JvUxg" name="lastLogin" label="lastLogin" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;yyyyMMdd HH:mm:ss&quot;">
+      <feature xsi:type="relational:TdColumn" xmi:id="_GZZhLH2tEeiNtetg0JvUxg" name="lastLogin" label="lastLogin" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_GZZhLX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZhLn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZZhL32tEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
@@ -1020,7 +1048,7 @@
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZhMn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZZhM32tEeiNtetg0JvUxg" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
       </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_GZZhNH2tEeiNtetg0JvUxg" name="lastUpdated" label="lastUpdated" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;yyyyMMdd HH:mm:ss&quot;">
+      <feature xsi:type="relational:TdColumn" xmi:id="_GZZhNH2tEeiNtetg0JvUxg" name="lastUpdated" label="lastUpdated" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_GZZhNX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZhNn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZZhN32tEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
@@ -1075,10 +1103,10 @@
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZhXn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZZhX32tEeiNtetg0JvUxg" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
       </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_GZZhYH2tEeiNtetg0JvUxg" name="null" label="_null" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;yyyyMMdd HH:mm:ss&quot;">
-        <taggedValue xmi:id="_GZZhYX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZhYn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_GZZhY32tEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
+      <feature xsi:type="relational:TdColumn" xmi:id="_HaNzSn2vEeiNtetg0JvUxg" name="data_bh_login_timestampMY" label="data_bh_login_timestampMY" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_HaNzS32vEeiNtetg0JvUxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_HaNzTH2vEeiNtetg0JvUxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_HaNzTX2vEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
       </feature>
       <feature xsi:type="relational:TdColumn" xmi:id="_GZZhZH2tEeiNtetg0JvUxg" name="data_bh_site" label="data_bh_site" length="65535" sourceType="TEXT" talendType="id_String">
         <taggedValue xmi:id="_GZZhZX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
@@ -1949,34 +1977,6 @@
         <taggedValue xmi:id="_GZZkGX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
         <initialValue xsi:type="relational:TdExpression" xmi:id="_GZZkGn2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_GZZkG32tEeiNtetg0JvUxg" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
-      </feature>
-    </ownedElement>
-    <ownedElement xsi:type="relational:TdTable" xmi:id="_Gpa6IH2tEeiNtetg0JvUxg" name="sor_lotame_bh" id="_GpUzgH2tEeiNtetg0JvUxg" label="sor_lotame_bh" tableType="TABLE">
-      <taggedValue xmi:id="_Gpa6IX2tEeiNtetg0JvUxg" tag="Comment" value=""/>
-      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6In2tEeiNtetg0JvUxg" name="GAClientId" label="GAClientId" length="200" sourceType="VARCHAR" talendType="id_String">
-        <taggedValue xmi:id="_Gpa6I32tEeiNtetg0JvUxg" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6JH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_Gpa6JX2tEeiNtetg0JvUxg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Jn2tEeiNtetg0JvUxg" name="dateId" label="dateId" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
-        <taggedValue xmi:id="_Gpa6J32tEeiNtetg0JvUxg" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6KH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_Gpa6KX2tEeiNtetg0JvUxg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Kn2tEeiNtetg0JvUxg" name="LotamePId" label="LotamePId" length="255" sourceType="TINYTEXT" talendType="id_String">
-        <taggedValue xmi:id="_Gpa6K32tEeiNtetg0JvUxg" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6LH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_Gpa6LX2tEeiNtetg0JvUxg" name="TINYTEXT" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Ln2tEeiNtetg0JvUxg" name="GigyaId" label="GigyaId" length="200" sourceType="VARCHAR" talendType="id_String">
-        <taggedValue xmi:id="_Gpa6L32tEeiNtetg0JvUxg" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6MH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_Gpa6MX2tEeiNtetg0JvUxg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_Gpa6Mn2tEeiNtetg0JvUxg" name="KeywordList" label="KeywordList" length="65535" sourceType="TEXT" talendType="id_String">
-        <taggedValue xmi:id="_Gpa6M32tEeiNtetg0JvUxg" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_Gpa6NH2tEeiNtetg0JvUxg" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_Gpa6NX2tEeiNtetg0JvUxg" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
       </feature>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
