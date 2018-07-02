@@ -1295,7 +1295,7 @@
         <mapperTableEntries name="socialProviders" expression="row1.socialProviders " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_bh_login_timestampMY" expression="row1.data_bh_login_timestampMY " type="id_Date" nullable="true"/>
         <mapperTableEntries name="data_education_level" expression="row1.data_education_level " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_ethnicity" expression="(row1.data_ethnicity.matches(&quot;MY|Malaya&quot;))?&quot;Malay&quot;:&#xD;&#xA;(row1.data_ethnicity.equals(&quot;CN&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(row1.data_ethnicity.equals(&quot;IN&quot;))?&quot;Indian&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="data_ethnicity" expression="(row1.data_ethnicity == null)?null:&#xD;&#xA;(row1.data_ethnicity.matches(&quot;MY|Malaya&quot;))?&quot;Malay&quot;:&#xD;&#xD;&#xA;(row1.data_ethnicity.equals(&quot;CN&quot;))?&quot;Chinese&quot;:&#xD;&#xD;&#xA;(row1.data_ethnicity.equals(&quot;IN&quot;))?&quot;Indian&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_income_bracket" expression="row1.data_income_bracket " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_marital_status" expression="(row1.data_marital_status == null)?null:(StringHandling.DOWNCASE(row1.data_marital_status).contains(&quot;select&quot;))?null:row1.data_marital_status " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_mobile_number" expression="row1.data_mobile_number " type="id_String" nullable="true"/>
