@@ -1140,7 +1140,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="format">
-      <column comment="" key="false" length="65535" name="created" nullable="true" pattern="&quot;yyyyMMdd HH:mm:ss&quot;" precision="0" sourceType="TEXT" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="65535" name="created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TEXT" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="65535" name="iRank" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
@@ -1724,7 +1724,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="format">
-        <mapperTableEntries name="created" expression="TalendDate.isDate(row1.created, &quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;) == true)?TalendDate.formatDate(&quot;yyyyMMdd HH:mm:ss&quot;,TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created)) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="created" expression="TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="iRank" expression="row1.iRank " type="id_String" nullable="true"/>
         <mapperTableEntries name="isActive" expression="row1.isActive " type="id_String" nullable="true"/>
         <mapperTableEntries name="isRegistered" expression="row1.isRegistered " type="id_String" nullable="true"/>
@@ -2520,7 +2520,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="65535" name="created" nullable="true" pattern="&quot;yyyyMMdd HH:mm:ss&quot;" precision="0" sourceType="TEXT" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="65535" name="created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TEXT" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="65535" name="iRank" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
