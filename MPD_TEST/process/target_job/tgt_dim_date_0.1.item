@@ -7,7 +7,7 @@
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_Database" prompt="connection_awsmysql_target_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_AdditionalParams" prompt="connection_awsmysql_target_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_Port" prompt="connection_awsmysql_target_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
-    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" type="id_Date" value="1900-01-01"/>
+    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_Server" prompt="connection_awsmysql_target_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
@@ -16,7 +16,7 @@
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_Database" prompt="connection_awsmysql_target_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_AdditionalParams" prompt="connection_awsmysql_target_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_awsmysql_target_tci_db_Port" prompt="connection_awsmysql_target_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
-    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -157,13 +157,13 @@
     <elementParameter field="TEXT" name="NB_ROWS" value="1000" show="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
-      <elementValue elementRef="ARRAY" value="TalendDate.addDate(context.startDate ,Numeric.sequence(“s1”, 1, 1) - 1 ,&quot;dd&quot; )"/>
+      <elementValue elementRef="ARRAY" value="TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,context.startDate) ,Numeric.sequence(“s1”, 1, 1) - 1 ,&quot;dd&quot; )"/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRowGenerator_1">
       <column comment="" defaultValue="" key="false" length="-1" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;addDate&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;date&quot;,&quot;PARAMETER_VALUE&quot;:&quot;context.startDate &quot;},{&quot;PARAMETER_NAME&quot;:&quot;nb&quot;,&quot;PARAMETER_VALUE&quot;:&quot;Numeric.sequence(\u201cs1\u201d, 1, 1) - 1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;dateType&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;dd\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDate&quot;}"/>
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;addDate&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;date&quot;,&quot;PARAMETER_VALUE&quot;:&quot;TalendDate.parseDate(\&quot;yyyyMMdd\&quot;,context.startDate) &quot;},{&quot;PARAMETER_NAME&quot;:&quot;nb&quot;,&quot;PARAMETER_VALUE&quot;:&quot;Numeric.sequence(\u201cs1\u201d, 1, 1) - 1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;dateType&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;dd\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDate&quot;}"/>
       </column>
     </metadata>
   </node>
