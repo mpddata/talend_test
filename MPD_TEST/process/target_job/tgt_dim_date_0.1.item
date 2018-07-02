@@ -204,7 +204,7 @@
         <mapperTableEntries name="quarterName" expression="&quot;Q&quot; + ((Integer.parseInt(TalendDate.formatDate(&quot;M&quot;,row1.date))+3-1)/3)" type="id_String" nullable="true"/>
         <mapperTableEntries name="day" expression="TalendDate.formatDate(&quot;dd&quot;,row1.date) " type="id_String" nullable="true"/>
         <mapperTableEntries name="lastDayOfMonth" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.getLastDayOfMonth(row1.date)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="dayOfWeek" expression="TalendDate.formatDate(&quot;u&quot;,row1.date) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dayOfWeek" expression="Integer.parseInt(TalendDate.formatDate(&quot;u&quot;,row1.date))" type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="date" type="id_Date" nullable="true"/>
