@@ -237,7 +237,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="raceDesc" expression="(row1.raceDesc.matches(&quot;MY|Malaya&quot;))?&quot;Malay&quot;:&#xD;&#xA;(row1.raceDesc.equals(&quot;CN&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(row1.raceDesc.equals(&quot;IN&quot;))?&quot;Indian&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="raceDesc" expression="(row1.raceDesc.matches(&quot;MY|Malaya&quot;))?&quot;Malay&quot;:&#xD;&#xA;(row1.raceDesc.equals(&quot;CN&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(row1.raceDesc.equals(&quot;IN&quot;))?&quot;Indian&quot;:row1.raceDesc " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="row1.raceDesc != null &amp;&amp; !StringHandling.DOWNCASE(row1.raceDesc).contains(&quot;select&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="raceDesc" type="id_String" nullable="true"/>
