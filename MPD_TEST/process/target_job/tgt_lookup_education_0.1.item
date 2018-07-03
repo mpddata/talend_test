@@ -271,12 +271,12 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlSCD_1">
       <column comment="" key="false" length="50" name="educationDesc" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
-      <column comment="" key="true" length="-1" name="educationSid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="educationSid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="50" name="educationDesc" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
-      <column comment="" key="true" length="-1" name="educationSid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="educationSid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
