@@ -242,7 +242,7 @@
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="maritalDesc" expression="row1.maritalDesc " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="row1.maritalDesc != null &amp;&amp;  !StringHandling.DOWNCASE(row1.maritalDesc).contains(&quot;select&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="row1.maritalDesc != null &amp;&amp;  !StringHandling.DOWNCASE(row1.maritalDesc).contains(&quot;select&quot;) &amp;&amp; !row1.maritalDesc.equals(&quot;--&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="maritalDesc" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
