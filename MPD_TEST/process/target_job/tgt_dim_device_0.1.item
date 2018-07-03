@@ -280,7 +280,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="deviceUID" expression="row1.deviceMobileDeviceBranding  row1.deviceMobileDeviceModel  row1.deviceDeviceCategory " type="id_String"/>
+        <mapperTableEntries name="deviceUID" expression="row1.deviceMobileDeviceBranding + row1.deviceMobileDeviceModel + row1.deviceDeviceCategory " type="id_String"/>
         <mapperTableEntries name="deviceMobileDeviceBranding" expression="row1.deviceMobileDeviceBranding " type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceMobileDeviceModel" expression="row1.deviceMobileDeviceModel " type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceMobileDeviceInfo" expression="row1.deviceMobileDeviceInfo " type="id_String" nullable="true"/>
