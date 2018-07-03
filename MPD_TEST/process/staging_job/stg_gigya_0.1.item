@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Login" prompt="connection_awsmysql_staging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Server" prompt="connection_awsmysql_staging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Port" prompt="connection_awsmysql_staging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Password" prompt="connection_awsmysql_staging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Database" prompt="connection_awsmysql_staging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_AdditionalParams" prompt="connection_awsmysql_staging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Login" prompt="connection_mysql_staging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Server" prompt="connection_mysql_staging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Port" prompt="connection_mysql_staging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Password" prompt="connection_mysql_staging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Database" prompt="connection_mysql_staging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_AdditionalParams" prompt="connection_mysql_staging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="YYYYMMDD" name="inputDateStart" prompt="inputDateStart?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="inputDateEnd" prompt="inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Login" prompt="connection_awsmysql_staging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Server" prompt="connection_awsmysql_staging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Port" prompt="connection_awsmysql_staging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Password" prompt="connection_awsmysql_staging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_Database" prompt="connection_awsmysql_staging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
-    <contextParameter comment="" name="connection_awsmysql_staging_tci_db_AdditionalParams" prompt="connection_awsmysql_staging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Login" prompt="connection_mysql_staging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Server" prompt="connection_mysql_staging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Port" prompt="connection_mysql_staging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Password" prompt="connection_mysql_staging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_Database" prompt="connection_mysql_staging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysql_staging_tci_db_AdditionalParams" prompt="connection_mysql_staging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="YYYYMMDD" name="inputDateStart" prompt="inputDateStart?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="inputDateEnd" prompt="inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -127,19 +131,19 @@
     <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
     <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
   </parameters>
-  <node componentName="tAmazonMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
+  <node componentName="tAmazonMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tAmazonMysqlConnection_1"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_awsmysql_staging_tci_db_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_awsmysql_staging_tci_db_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_awsmysql_staging_tci_db_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysql_staging_tci_db_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysql_staging_tci_db_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysql_staging_tci_db_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_awsmysql_staging_tci_db_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL9bVzxX1MRAAKYM+yP6E3FW5PdrTuSUVpOnuV4YTtc7QPV0Tb6ia6tc=" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysql_staging_tci_db_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3IunCrKp3ik+rK93dE5uKcdv8VwWsNZSRPdcobqWo4GeQ=" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ - sor_gigya_reformat" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_gigya_reformat&quot;"/>
@@ -149,7 +153,7 @@
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `sor_gigya_reformat`.`created`, &#xA;  `sor_gigya_reformat`.`iRank`, &#xA;  `sor_gigya_reformat`.`isActive`, &#xA;  `sor_gigya_reformat`.`isRegistered`, &#xA;  `sor_gigya_reformat`.`isVerified`, &#xA;  `sor_gigya_reformat`.`lastLogin`, &#xA;  `sor_gigya_reformat`.`lastLoginTimestamp`, &#xA;  `sor_gigya_reformat`.`lastUpdated`, &#xA;  `sor_gigya_reformat`.`lastUpdatedTimestamp`, &#xA;  `sor_gigya_reformat`.`loginProvider`, &#xA;  `sor_gigya_reformat`.`oldestDataUpdated`, &#xA;  `sor_gigya_reformat`.`oldestDataUpdatedTimestamp`, &#xA;  `sor_gigya_reformat`.`socialProviders`, &#xA;  `sor_gigya_reformat`.`UID`, &#xA;  `sor_gigya_reformat`.`filename`, &#xA;  `sor_gigya_reformat`.`data_android_purchase_orderId`, &#xA;  `sor_gigya_reformat`.`data_android_purchase_token`, &#xA;  `sor_gigya_reformat`.`data_android_subscription_id`, &#xA;  `sor_gigya_reformat`.`data_bh_login_timestampMY`, &#xA;  `sor_gigya_reformat`.`data_bh_site`, &#xA;  `sor_gigya_reformat`.`data_checkbox`, &#xA;  `sor_gigya_reformat`.`data_childrenCount`, &#xA;  `sor_gigya_reformat`.`data_concurrentDevicesIds`, &#xA;  `sor_gigya_reformat`.`data_created`, &#xA;  `sor_gigya_reformat`.`data_createdTimestamp`, &#xA;  `sor_gigya_reformat`.`data_dob`, &#xA;  `sor_gigya_reformat`.`data_education`, &#xA;  `sor_gigya_reformat`.`data_education_level`, &#xA;  `sor_gigya_reformat`.`data_elapsed_days_aiskacang`, &#xA;  `sor_gigya_reformat`.`data_elapsed_days_bhplus`, &#xA;  `sor_gigya_reformat`.`data_elapsed_days_cjwow`, &#xA;  `sor_gigya_reformat`.`data_elapsed_days_tt`, &#xA;  `sor_gigya_reformat`.`data_emarsyscreation`, &#xA;  `sor_gigya_reformat`.`data_ethnicity`, &#xA;  `sor_gigya_reformat`.`data_facebook_broadcast`, &#xA;  `sor_gigya_reformat`.`data_facebook_id`, &#xA;  `sor_gigya_reformat`.`data_favBooks`, &#xA;  `sor_gigya_reformat`.`data_favFood`, &#xA;  `sor_gigya_reformat`.`data_favHobbies`, &#xA;  `sor_gigya_reformat`.`data_favMovies`, &#xA;  `sor_gigya_reformat`.`data_favMusic`, &#xA;  `sor_gigya_reformat`.`data_favSports`, &#xA;  `sor_gigya_reformat`.`data_favourite_books`, &#xA;  `sor_gigya_reformat`.`data_favourite_food`, &#xA;  `sor_gigya_reformat`.`data_favourite_hobbies`, &#xA;  `sor_gigya_reformat`.`data_favourite_movies`, &#xA;  `sor_gigya_reformat`.`data_favourite_music`, &#xA;  `sor_gigya_reformat`.`data_favourite_sports`, &#xA;  `sor_gigya_reformat`.`data_gigyaImportJob`, &#xA;  `sor_gigya_reformat`.`data_gigyaImportPW`, &#xA;  `sor_gigya_reformat`.`data_iRank`, &#xA;  `sor_gigya_reformat`.`data_iap_ios`, &#xA;  `sor_gigya_reformat`.`data_icNumber`, &#xA;  `sor_gigya_reformat`.`data_identity_card_number`, &#xA;  `sor_gigya_reformat`.`data_income`, &#xA;  `sor_gigya_reformat`.`data_income_bracket`, &#xA;  `sor_gigya_reformat`.`data_internetAccess`, &#xA;  `sor_gigya_reformat`.`data_internet_connection`, &#xA;  `sor_gigya_reformat`.`data_ios_subscription_id`, &#xA;  `sor_gigya_reformat`.`data_ios_transactionId`, &#xA;  `sor_gigya_reformat`.`data_isActive`, &#xA;  `sor_gigya_reformat`.`data_isLockedOut`, &#xA;  `sor_gigya_reformat`.`data_isRegistered`, &#xA;  `sor_gigya_reformat`.`data_isSubscriberNewsLetter`, &#xA;  `sor_gigya_reformat`.`data_is_entitlement_set`, &#xA;  `sor_gigya_reformat`.`data_is_entitlement_set_prod`, &#xA;  `sor_gigya_reformat`.`data_is_firstime_login`, &#xA;  `sor_gigya_reformat`.`data_language`, &#xA;  `sor_gigya_reformat`.`data_lastLogin`, &#xA;  `sor_gigya_reformat`.`data_last_login_aiskacang`, &#xA;  `sor_gigya_reformat`.`data_last_login_bhplus`, &#xA;  `sor_gigya_reformat`.`data_last_login_cjwow`, &#xA;  `sor_gigya_reformat`.`data_last_login_flyfm`, &#xA;  `sor_gigya_reformat`.`data_last_login_hm`, &#xA;  `sor_gigya_reformat`.`data_last_login_hotfm`, &#xA;  `sor_gigya_reformat`.`data_last_login_nst`, &#xA;  `sor_gigya_reformat`.`data_last_login_onefm`, &#xA;  `sor_gigya_reformat`.`data_last_login_tonton`, &#xA;  `sor_gigya_reformat`.`data_last_login_koolfm`, &#xA;  `sor_gigya_reformat`.`data_lastLoginTimestamp`, &#xA;  `sor_gigya_reformat`.`data_lastUpdated`, &#xA;  `sor_gigya_reformat`.`data_lastUpdatedTimestamp`, &#xA;  `sor_gigya_reformat`.`data_marital_status`, &#xA;  `sor_gigya_reformat`.`data_maxis_activation_chargeid`, &#xA;  `sor_gigya_reformat`.`data_maxis_activation_product`, &#xA;  `sor_gigya_reformat`.`data_maxis_activationresponse_charge_bill_id`, &#xA;  `sor_gigya_reformat`.`data_maxis_activationresponse_charge_id`, &#xA;  `sor_gigya_reformat`.`data_maxis_activationresponse_charge_price`, &#xA;  `sor_gigya_reformat`.`data_maxis_activationresponse_status_code`, &#xA;  `sor_gigya_reformat`.`data_maxis_activationresponse_transaction_id`, &#xA;  `sor_gigya_reformat`.`data_maxis_customer_type`, &#xA;  `sor_gigya_reformat`.`data_maxis_msisdn`, &#xA;  `sor_gigya_reformat`.`data_maxis_redirector_charge_bill_id`, &#xA;  `sor_gigya_reformat`.`data_maxis_redirector_charge_price`, &#xA;  `sor_gigya_reformat`.`data_maxis_redirector_description`, &#xA;  `sor_gigya_reformat`.`data_maxis_redirector_trial_bill_id`, &#xA;  `sor_gigya_reformat`.`data_maxis_service_indicator`, &#xA;  `sor_gigya_reformat`.`data_mg_login_timestampMY`, &#xA;  `sor_gigya_reformat`.`data_mg_site`, &#xA;  `sor_gigya_reformat`.`data_mobile_number`, &#xA;  `sor_gigya_reformat`.`data_mobile_phone`, &#xA;  `sor_gigya_reformat`.`data_mpb_retargeting_ad`, &#xA;  `sor_gigya_reformat`.`data_newsletter`, &#xA;  `sor_gigya_reformat`.`data_number_of_children`, &#xA;  `sor_gigya_reformat`.`data_occupation`, &#xA;  `sor_gigya_reformat`.`data_oldestDataUpdated`, &#xA;  `sor_gigya_reformat`.`data_oldestDataUpdatedTimestamp`, &#xA;  `sor_gigya_reformat`.`data_ooyala_subscription_id`, &#xA;  `sor_gigya_reformat`.`data_optin_aiskacang`, &#xA;  `sor_gigya_reformat`.`data_optin_bhplus`, &#xA;  `sor_gigya_reformat`.`data_optin_cjwow`, &#xA;  `sor_gigya_reformat`.`data_optin_flyfm`, &#xA;  `sor_gigya_reformat`.`data_optin_hm`, &#xA;  `sor_gigya_reformat`.`data_optin_hotfm`, &#xA;  `sor_gigya_reformat`.`data_optin_nst`, &#xA;  `sor_gigya_reformat`.`data_optin_onefm`, &#xA;  `sor_gigya_reformat`.`data_optin_tonton`, &#xA;  `sor_gigya_reformat`.`data_optin_koolfm`, &#xA;  `sor_gigya_reformat`.`data_paymentAmount`, &#xA;  `sor_gigya_reformat`.`data_paymentCurrency`, &#xA;  `sor_gigya_reformat`.`data_paymentError`, &#xA;  `sor_gigya_reformat`.`data_paymentSubscriptionID`, &#xA;  `sor_gigya_reformat`.`data_payment_method`, &#xA;  `sor_gigya_reformat`.`data_phone`, &#xA;  `sor_gigya_reformat`.`data_preferred_contact_method`, &#xA;  `sor_gigya_reformat`.`data_preferred_language`, &#xA;  `sor_gigya_reformat`.`data_profile_age`, &#xA;  `sor_gigya_reformat`.`data_profile_birthDay`, &#xA;  `sor_gigya_reformat`.`data_profile_birthMonth`, &#xA;  `sor_gigya_reformat`.`data_profile_birthYear`, &#xA;  `sor_gigya_reformat`.`data_profile_email`, &#xA;  `sor_gigya_reformat`.`data_profile_firstName`, &#xA;  `sor_gigya_reformat`.`data_profile_gender`, &#xA;  `sor_gigya_reformat`.`data_profile_lastName`, &#xA;  `sor_gigya_reformat`.`data_profile_username`, &#xA;  `sor_gigya_reformat`.`data_race`, &#xA;  `sor_gigya_reformat`.`data_receive_notifications`, &#xA;  `sor_gigya_reformat`.`data_referrer_user_id`, &#xA;  `sor_gigya_reformat`.`data_regSource`, &#xA;  `sor_gigya_reformat`.`data_registered`, &#xA;  `sor_gigya_reformat`.`data_registeredTimestamp`, &#xA;  `sor_gigya_reformat`.`data_site_id`, &#xA;  `sor_gigya_reformat`.`data_socialProviders`, &#xA;  `sor_gigya_reformat`.`data_subscribe`, &#xA;  `sor_gigya_reformat`.`data_terms`, &#xA;  `sor_gigya_reformat`.`data_tfaStatus`, &#xA;  `sor_gigya_reformat`.`data_tt_login_timestampMY`, &#xA;  `sor_gigya_reformat`.`data_tt_site`, &#xA;  `sor_gigya_reformat`.`data_twitter_broadcast`, &#xA;  `sor_gigya_reformat`.`data_username`, &#xA;  `sor_gigya_reformat`.`data_uuid`, &#xA;  `sor_gigya_reformat`.`data_verified`, &#xA;  `sor_gigya_reformat`.`data_verifiedTimestamp`, &#xA;  `sor_gigya_reformat`.`data_vindiciacreation`, &#xA;  `sor_gigya_reformat`.`data_virtual`, &#xA;  `sor_gigya_reformat`.`data_wow_login_timestampMY`, &#xA;  `sor_gigya_reformat`.`data_wow_site`, &#xA;  `sor_gigya_reformat`.`emails`, &#xA;  `sor_gigya_reformat`.`loginids`, &#xA;  `sor_gigya_reformat`.`profile_age`, &#xA;  `sor_gigya_reformat`.`profile_bio`, &#xA;  `sor_gigya_reformat`.`profile_birthDay`, &#xA;  `sor_gigya_reformat`.`profile_birthMonth`, &#xA;  `sor_gigya_reformat`.`profile_birthYear`, &#xA;  `sor_gigya_reformat`.`profile_certifications`, &#xA;  `sor_gigya_reformat`.`profile_city`, &#xA;  `sor_gigya_reformat`.`profile_country`, &#xA;  `sor_gigya_reformat`.`profile_educationLevel`, &#xA;  `sor_gigya_reformat`.`profile_email`, &#xA;  `sor_gigya_reformat`.`profile_firstName`, &#xA;  `sor_gigya_reformat`.`profile_followersCount`, &#xA;  `sor_gigya_reformat`.`profile_followingCount`, &#xA;  `sor_gigya_reformat`.`profile_gender`, &#xA;  `sor_gigya_reformat`.`profile_hometown`, &#xA;  `sor_gigya_reformat`.`profile_honors`, &#xA;  `sor_gigya_reformat`.`profile_industry`, &#xA;  `sor_gigya_reformat`.`profile_interestedIn`, &#xA;  `sor_gigya_reformat`.`profile_languages`, &#xA;  `sor_gigya_reformat`.`profile_lastName`, &#xA;  `sor_gigya_reformat`.`profile_locale`, &#xA;  `sor_gigya_reformat`.`profile_name`, &#xA;  `sor_gigya_reformat`.`profile_nickname`, &#xA;  `sor_gigya_reformat`.`profile_religion`, &#xA;  `sor_gigya_reformat`.`profile_skills_level`, &#xA;  `sor_gigya_reformat`.`profile_skills_skill`, &#xA;  `sor_gigya_reformat`.`profile_skills_years`, &#xA;  `sor_gigya_reformat`.`profile_specialities`, &#xA;  `sor_gigya_reformat`.`profile_state`, &#xA;  `sor_gigya_reformat`.`profile_thumbnailURL`, &#xA;  `sor_gigya_reformat`.`profile_timezone`, &#xA;  `sor_gigya_reformat`.`profile_username`, &#xA;  `sor_gigya_reformat`.`profile_verified`, &#xA;  `sor_gigya_reformat`.`profile_zip`&#xA;FROM `sor_gigya_reformat`&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_awsmysql_staging_tci_db_AdditionalParams" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysql_staging_tci_db_AdditionalParams" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
@@ -1127,7 +1131,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1280,7 +1284,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="gigya_stg">
         <mapperTableEntries name="UID" expression="row1.UID " type="id_String"/>
@@ -1295,12 +1299,12 @@
         <mapperTableEntries name="socialProviders" expression="row1.socialProviders " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_bh_login_timestampMY" expression="row1.data_bh_login_timestampMY " type="id_Date" nullable="true"/>
         <mapperTableEntries name="data_education_level" expression="row1.data_education_level " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_ethnicity" expression="row1.data_ethnicity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="data_ethnicity" expression="(row1.data_ethnicity == null)?null:&#xD;&#xA;(row1.data_ethnicity.matches(&quot;MY|Malaya&quot;))?&quot;Malay&quot;:&#xD;&#xD;&#xA;(row1.data_ethnicity.equals(&quot;CN&quot;))?&quot;Chinese&quot;:&#xD;&#xD;&#xA;(row1.data_ethnicity.equals(&quot;IN&quot;))?&quot;Indian&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_income_bracket" expression="row1.data_income_bracket " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_marital_status" expression="row1.data_marital_status " type="id_String" nullable="true"/>
+        <mapperTableEntries name="data_marital_status" expression="(row1.data_marital_status == null)?null:(StringHandling.DOWNCASE(row1.data_marital_status).contains(&quot;select&quot;))?null:row1.data_marital_status " type="id_String" nullable="true"/>
         <mapperTableEntries name="data_mobile_number" expression="row1.data_mobile_number " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_occupation" expression="row1.data_occupation " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_preferred_contact_method" expression="row1.data_preferred_contact_method " type="id_String" nullable="true"/>
+        <mapperTableEntries name="data_occupation" expression="(row1.data_occupation == null)?null:(StringHandling.DOWNCASE(row1.data_occupation).contains(&quot;select&quot;))?null:row1.data_occupation " type="id_String" nullable="true"/>
+        <mapperTableEntries name="data_preferred_contact_method" expression="(row1.data_preferred_contact_method == null)?null:(StringHandling.DOWNCASE(row1.data_preferred_contact_method).contains(&quot;select&quot;)||row1.data_preferred_contact_method.equals(&quot;-&quot;))?null:row1.data_preferred_contact_method " type="id_String" nullable="true"/>
         <mapperTableEntries name="profile_birthDay" expression="row1.profile_birthDay " type="id_String" nullable="true"/>
         <mapperTableEntries name="profile_birthMonth" expression="row1.profile_birthMonth " type="id_String" nullable="true"/>
         <mapperTableEntries name="profile_birthYear" expression="row1.profile_birthYear " type="id_String" nullable="true"/>
@@ -1527,7 +1531,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAmazonMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
+  <node componentName="tAmazonMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlOutput_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -2084,13 +2088,13 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_awsmysql_staging_tci_db_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysql_staging_tci_db_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_awsmysql_staging_tci_db_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_awsmysql_staging_tci_db_Database"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_awsmysql_staging_tci_db_AdditionalParams"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_awsmysql_staging_tci_db_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL9bVzxX1MRAAKYM+yP6E3FW5PdrTuSUVpOnuV4YTtc7QPV0Tb6ia6tc="/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysql_staging_tci_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysql_staging_tci_db_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysql_staging_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysql_staging_tci_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3IunCrKp3ik+rK93dE5uKcdv8VwWsNZSRPdcobqWo4GeQ="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -2104,13 +2108,13 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_awsmysql_staging_tci_db_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysql_staging_tci_db_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_awsmysql_staging_tci_db_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_awsmysql_staging_tci_db_Database"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_awsmysql_staging_tci_db_AdditionalParams"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_awsmysql_staging_tci_db_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL9bVzxX1MRAAKYM+yP6E3FW5PdrTuSUVpOnuV4YTtc7QPV0Tb6ia6tc="/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysql_staging_tci_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysql_staging_tci_db_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysql_staging_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysql_staging_tci_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3IunCrKp3ik+rK93dE5uKcdv8VwWsNZSRPdcobqWo4GeQ="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -2118,6 +2122,30 @@
     <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="stg_db_conn"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;inputDateStart&quot;"/>
+      <elementValue elementRef="VALUE" value="context.inputDateStart"/>
+      <elementValue elementRef="KEY" value="&quot;inputDateEnd&quot;"/>
+      <elementValue elementRef="VALUE" value="context.inputDateEnd"/>
+      <elementValue elementRef="KEY" value="&quot;processStartDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;processEndDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="defineGlobalVar"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtDateStart = ((String)globalMap.get(&quot;inputDateStart&quot;));&#xA;String dtDateEnd = ((String)globalMap.get(&quot;inputDateEnd&quot;));&#xA;Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xA;Date dtProcessStart = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;Date dtProcessEnd = TalendDate.getCurrentDate();&#xA;&#xA;if (dtDateStart != null &amp;&amp; dtDateEnd != null &amp;&amp; dtDateStart.length()==8 &amp;&amp; dtDateEnd.length()==8) {&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateStart);&#xA;&#x9;dtProcessEnd = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateEnd),1,&quot;dd&quot;);&#xA;}&#xA;&#xA;globalMap.put(&quot;processStartDate&quot;, df.format(dtProcessStart));&#xA;globalMap.put(&quot;processEndDate&quot;, df.format(dtProcessEnd));&#xA;System.out.println(&quot;Start &quot; + ((String)globalMap.get(&quot;processStartDate&quot;)));&#xA;System.out.println(&quot;End &quot; + ((String)globalMap.get(&quot;processEndDate&quot;)));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="setDate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tAmazonMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2249,8 +2277,14 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAmazonMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlConnection_1" target="tAmazonMysqlConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAmazonMysqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlConnection_2" target="tAmazonMysqlInput_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAmazonMysqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlConnection_2" target="tSetGlobalVar_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tAmazonMysqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlInput_1" show="false"/>
@@ -2264,6 +2298,16 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlConnection_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
