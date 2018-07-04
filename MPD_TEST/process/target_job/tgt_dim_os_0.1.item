@@ -248,7 +248,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="osUID" expression="row1.osName  + row1.osVer.contains(&quot;not set&quot;)?&quot;&quot;:row1.osVer " type="id_String" nullable="true"/>
+        <mapperTableEntries name="osUID" expression="row1.osName + (row1.osVer.contains(&quot;not set&quot;)?&quot;&quot;:row1.osVer) " type="id_String" nullable="true"/>
         <mapperTableEntries name="osName" expression="row1.osName " type="id_String" nullable="true"/>
         <mapperTableEntries name="osVer" expression="row1.osVer" type="id_String" nullable="true"/>
       </outputTables>
