@@ -598,7 +598,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
@@ -622,7 +622,7 @@
         <mapperTableEntries name="country" expression="row1.profile_country " type="id_String" nullable="true"/>
         <mapperTableEntries name="zip" expression="row1.profile_zip " type="id_String" nullable="true"/>
         <mapperTableEntries name="hometown" expression="row1.profile_hometown " type="id_String" nullable="true"/>
-        <mapperTableEntries name="occupation" expression="row5.occupationSid  row1.data_occupation " type="id_String" nullable="true"/>
+        <mapperTableEntries name="occupation" expression="row1.data_occupation " type="id_String" nullable="true"/>
         <mapperTableEntries name="certifications" expression="row1.profile_certifications " type="id_String" nullable="true"/>
         <mapperTableEntries name="phone" expression="row1.data_mobile_number" type="id_String" nullable="true"/>
         <mapperTableEntries name="email" expression="row1.profile_email " type="id_String" nullable="true"/>
