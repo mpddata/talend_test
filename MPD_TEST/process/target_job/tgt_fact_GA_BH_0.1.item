@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="connection_mysql_staging_tci_db_AdditionalParams" prompt="connection_mysql_staging_tci_db_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysql_staging_tci_db_Database" prompt="connection_mysql_staging_tci_db_Database?" promptNeeded="false" type="id_String" value="stg-tci"/>
@@ -531,6 +531,102 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_E27jkID0Eeiie8Xa956gWQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="10" name="visitorId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="visitNumber" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitNumber" expression="row1.visitNumber " type="id_Integer" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitStartTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="totalsVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsHits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsPageviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTimeOnSite" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsBounces" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTransactions" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTransactionRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsNewVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsUniqueScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTimeOnScreen" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTotalTransactionRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsSessionQualityDim" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="deviceBrowser" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceBrowserVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceBrowserSize" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceOperatingSystem" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceOperatingSystemVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceIsMobile" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceBranding" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceModel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileInputSelector" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceInfo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceMarketingName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceLanguage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceDeviceCategory" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoSubContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoRegion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoMetro" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCityId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoNetworkDomain" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLatitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLongitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoNetworkLocation" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsHitNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsHour" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsMinute" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsIsSecure" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsInteraction" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsEntrance" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsExit" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsReferer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePath" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageHostname" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePageTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageSearchKeyword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageSearchCategory" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fullVisitorId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="userId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="clientId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="channelGrouping" type="id_String" nullable="true"/>
+        <mapperTableEntries name="socialEngagementType" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
@@ -904,9 +1000,13 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tMysqlConnection_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tLogRow_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_3" target="tMysqlInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
