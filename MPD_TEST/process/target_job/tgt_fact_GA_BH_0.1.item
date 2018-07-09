@@ -736,7 +736,7 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="out2" columnNameFilter="dat" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="GAClientId" expression="row1.clientId " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="dateId" expression="row1.date " type="id_Date" nullable="true" operator="="/>
+        <mapperTableEntries name="dateId" expression="row1.date " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="LotamePId" type="id_String" nullable="true"/>
         <mapperTableEntries name="GigyaId" type="id_String" nullable="true"/>
         <mapperTableEntries name="KeywordList" type="id_String" nullable="true"/>
@@ -855,7 +855,7 @@
       <column comment="" key="false" length="200" name="GAClientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="19" name="dateId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="19" name="dateId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="LotamePId" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
@@ -872,11 +872,11 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
         <mapperTableEntries name="GAClientId" expression="row2.GAClientId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="dateId" expression="row2.dateId " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="dateId" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,row2.dateId) " type="id_String" nullable="true"/>
         <mapperTableEntries name="LotamePId" expression="row2.LotamePId " type="id_String" nullable="true"/>
         <mapperTableEntries name="GigyaId" expression="row2.GigyaId " type="id_String" nullable="true"/>
         <mapperTableEntries name="KeywordList" expression="row2.KeywordList " type="id_String" nullable="true"/>
