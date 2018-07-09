@@ -1331,17 +1331,17 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_7" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ - dim_device" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device&quot;"/>
@@ -1350,11 +1350,11 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_device`.`deviceUID`, &#xA;  `dim_device`.`deviceMobileDeviceBranding`, &#xA;  `dim_device`.`deviceMobileDeviceModel`, &#xA;  `dim_device`.`deviceMobileDeviceInfo`, &#xA;  `dim_device`.`deviceMobileDeviceMarketingName`, &#xA;  `dim_device`.`deviceDeviceCategory`, &#xA;  `dim_device`.`deviceSid`&#xA;FROM `dim_device`&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
