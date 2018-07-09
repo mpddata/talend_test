@@ -618,6 +618,9 @@
       <column comment="" key="true" length="10" name="browserSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="true" length="10" name="osSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -654,6 +657,7 @@
         <mapperTableEntries name="geoNetworkLocation" expression="row1.geoNetworkLocation " type="id_String" nullable="true"/>
         <mapperTableEntries name="custSid" expression="out2.custSid " type="id_Integer"/>
         <mapperTableEntries name="browserSid" expression="row4.browserSid " type="id_Integer"/>
+        <mapperTableEntries name="osSid" expression="row5.osSid " type="id_Integer"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
@@ -736,11 +740,11 @@
         <mapperTableEntries name="browserVer" expression="row1.deviceBrowserVersion " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="browserSid" expression="" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="osUID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="osName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="osVer" type="id_String" nullable="true"/>
-        <mapperTableEntries name="osSid" type="id_Integer"/>
+        <mapperTableEntries name="osName" expression="row1.deviceOperatingSystem " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="osVer" expression="row1.deviceOperatingSystemVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="osSid" expression="" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -819,6 +823,8 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="browserSid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="osSid"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -916,6 +922,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="true" length="10" name="browserSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="osSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -1573,6 +1582,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="browserSid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="osSid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
