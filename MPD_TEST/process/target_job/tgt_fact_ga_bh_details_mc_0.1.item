@@ -681,7 +681,7 @@
         <mapperTableEntries name="visitorId" expression="row3.visitorId " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitNumber" expression="row3.visitNumber " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitId" expression="row3.visitId " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="sessionId" expression="row3.visitId  + row3.clientId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="sessionId" expression="(new Integer(row3.visitId)).toString()  + row3.clientId " type="id_String" nullable="true"/>
         <mapperTableEntries name="visitStartTime" expression="row3.visitStartTime " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="row3.date " type="id_String" nullable="true"/>
         <mapperTableEntries name="fullVisitorId" expression="row3.fullVisitorId " type="id_String" nullable="true"/>
