@@ -743,9 +743,9 @@
         <mapperTableEntries name="custSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="browserUID" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="browserName" expression="row1.deviceBrowser " type="id_String" nullable="true"/>
-        <mapperTableEntries name="browserVer" expression="row1.deviceBrowserVersion " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="browserUID" expression="row1.deviceBrowser + (row1.deviceBrowserVersion.contains(&quot;not set&quot;)?&quot;&quot;:row1.deviceBrowserVersion) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="browserName" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="browserVer" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="browserSid" expression="" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
