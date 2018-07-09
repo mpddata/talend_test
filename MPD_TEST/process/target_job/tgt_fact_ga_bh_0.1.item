@@ -749,7 +749,7 @@
         <mapperTableEntries name="browserSid" expression="" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="osUID" expression="row1.osName + (row1.osVer.contains(&quot;not set&quot;)?&quot;&quot;:row1.osVer)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="osUID" expression="row1.deviceOperatingSystem + (row1.deviceOperatingSystemVersion.contains(&quot;not set&quot;)?&quot;&quot;:row1.deviceOperatingSystemVersion) " type="id_String" nullable="true"/>
         <mapperTableEntries name="osName" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="osVer" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="osSid" expression="" type="id_Integer"/>
