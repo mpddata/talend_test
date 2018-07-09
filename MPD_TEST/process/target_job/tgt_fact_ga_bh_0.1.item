@@ -537,7 +537,7 @@
       <column comment="" key="false" length="10" name="visitStartTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="255" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -629,14 +629,14 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitNumber" expression="row1.visitNumber " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitId" expression="row1.visitId" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitStartTime" expression="row1.visitStartTime " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="date" expression="out2.dateId " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="date" expression="out2.dateId " type="id_String" nullable="true"/>
         <mapperTableEntries name="fullVisitorId" expression="row1.fullVisitorId " type="id_String" nullable="true"/>
         <mapperTableEntries name="userId" expression="row1.userId " type="id_String" nullable="true"/>
         <mapperTableEntries name="clientId" expression="row1.clientId " type="id_String" nullable="true"/>
@@ -1708,7 +1708,7 @@
       <column comment="" key="false" length="10" name="visitStartTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="255" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -1812,7 +1812,7 @@
       <column comment="" key="false" length="10" name="visitStartTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="255" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
