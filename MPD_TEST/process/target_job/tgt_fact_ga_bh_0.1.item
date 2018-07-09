@@ -665,7 +665,7 @@
         <mapperTableEntries name="browserSid" expression="row4.browserSid " type="id_Integer"/>
         <mapperTableEntries name="osSid" expression="row5.osSid " type="id_Integer"/>
         <mapperTableEntries name="deviceSid" expression="row6.deviceSid " type="id_Integer"/>
-        <mapperTableEntries name="geoCityId" expression="row7.geoCityId " type="id_String"/>
+        <mapperTableEntries name="geoCityId" expression="row1.geoCityId " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
@@ -763,8 +763,8 @@
         <mapperTableEntries name="deviceDeviceCategory" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="geoCityId" expression="geoCityId" type="id_String"/>
+      <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="geoCityId" expression="" type="id_String"/>
         <mapperTableEntries name="geoContinent" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="geoSubContinent" type="id_String" nullable="true"/>
         <mapperTableEntries name="geoCountry" type="id_String" nullable="true"/>
@@ -1404,6 +1404,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_8" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -2179,6 +2180,7 @@
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="8" metaname="tMysqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_8" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_2" target="tMysqlConnection_4">
