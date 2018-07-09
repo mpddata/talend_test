@@ -203,7 +203,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="dateId" expression="row1.dateId === null?&quot;&quot;: TalendDate.formatDate(&quot;yyyyMMdd&quot;,row1.dateId) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dateId" expression="row1.dateId == null?&quot;&quot;: TalendDate.formatDate(&quot;yyyyMMdd&quot;,row1.dateId) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="GAClientId" type="id_String" nullable="true"/>
