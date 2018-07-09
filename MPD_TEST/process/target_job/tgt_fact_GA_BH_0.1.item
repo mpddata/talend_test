@@ -326,7 +326,7 @@
       <column comment="" key="false" length="10" name="visitStartTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="19" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="19" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="totalsVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -672,7 +672,7 @@
         <mapperTableEntries name="visitNumber" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitId" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitStartTime" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="date" type="id_String" nullable="true"/>
         <mapperTableEntries name="totalsVisits" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="totalsHits" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="totalsPageviews" type="id_Integer" nullable="true"/>
@@ -749,15 +749,15 @@
         <mapperTableEntries name="browserSid" expression="" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="osUID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="osName" expression="row1.deviceOperatingSystem " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="osVer" expression="row1.deviceOperatingSystemVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="osUID" expression="row1.osName + (row1.osVer.contains(&quot;not set&quot;)?&quot;&quot;:row1.osVer)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="osName" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="osVer" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="osSid" expression="" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="deviceUID" expression="" type="id_String"/>
-        <mapperTableEntries name="deviceMobileDeviceBranding" expression="row1.deviceMobileDeviceBranding" type="id_String" nullable="true"/>
-        <mapperTableEntries name="deviceMobileDeviceModel" expression="row1.deviceMobileDeviceModel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceUID" expression="row1.deviceMobileDeviceBranding + row1.deviceMobileDeviceModel + row1.deviceDeviceCategory " type="id_String"/>
+        <mapperTableEntries name="deviceMobileDeviceBranding" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceModel" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceMobileDeviceInfo" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceMobileDeviceMarketingName" type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceDeviceCategory" expression="" type="id_String" nullable="true"/>
