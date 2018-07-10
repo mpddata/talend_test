@@ -137,7 +137,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;SELECT&#xD;&#xA;dateSid,&#xD;&#xA;custSid,&#xD;&#xA;COUNT(sessionId) AS dailyTotalSessions,&#xD;&#xA;SUM(totalHits) AS dailyTotalHits,&#xD;&#xA;SUM(totalPageviews) AS dailyTotalPageview,&#xD;&#xA;SUM(totalTimeOnSite) AS dailyTotalTimeOnSite,&#xD;&#xA;SUM(totalBounces) AS dailyTotalBounces,&#xD;&#xA;SUM(totalTrans) AS dailyTotalTrans,&#xD;&#xA;SUM(totalTransRevenue) AS dailyTotalTransRevenue,&#xD;&#xA;SUM(totalNewVisits) AS dailyTotalNewVisits,&#xD;&#xA;SUM(totalScreenviews) AS dailyTotalScreenviews,&#xD;&#xA;SUM(totalUnique) AS dailyTotalUnique,&#xD;&#xA;SUM(totalTimeOnScreen) AS dailyTotalTimeOnScreen,&#xD;&#xA;SUM(totalTotalTransRevenue) AS dailyTotalTransRevenue,&#xD;&#xA;SUM(totalSessionQualityDim) AS dailyTotalSessionQualityDim,&#xD;&#xA;(SUM(totalHits)/COUNT(sessionId)) AS dailyAveHitsPerSession,&#xD;&#xA;(SUM(totalPageviews)/COUNT(sessionId)) AS dailyAvePageviewsPerSession,&#xD;&#xA;(SUM(totalTimeOnSite)/COUNT(sessionId)) AS dailyAveTimeOnSitePerSession,&#xD;&#xA;(SUM(totalTimeOnScreen)/COUNT(sessionId)) AS dailyAveTimeOnScreenPerSession&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;GROUP BY dateSid, custSid&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;SELECT&#xD;&#xA;dateSid,&#xD;&#xA;custSid,&#xD;&#xA;COUNT(sessionId) AS dailyTotalSessions,&#xD;&#xA;SUM(totalHits) AS dailyTotalHits,&#xD;&#xA;SUM(totalPageviews) AS dailyTotalPageview,&#xD;&#xA;SUM(totalTimeOnSite) AS dailyTotalTimeOnSite,&#xD;&#xA;SUM(totalBounces) AS dailyTotalBounces,&#xD;&#xA;SUM(totalTrans) AS dailyTotalTrans,&#xD;&#xA;SUM(totalTransRevenue) AS dailyTotalTransRevenue,&#xD;&#xA;SUM(totalNewVisits) AS dailyTotalNewVisits,&#xD;&#xA;SUM(totalScreenviews) AS dailyTotalScreenviews,&#xD;&#xA;SUM(totalUnique) AS dailyTotalUnique,&#xD;&#xA;SUM(totalTimeOnScreen) AS dailyTotalTimeOnScreen,&#xD;&#xA;SUM(totalTotalTransRevenue) AS dailyTotalTotalTransRevenue,&#xD;&#xA;SUM(totalSessionQualityDim) AS dailyTotalSessionQualityDim,&#xD;&#xA;(SUM(totalHits)/COUNT(sessionId)) AS dailyAveHitsPerSession,&#xD;&#xA;(SUM(totalPageviews)/COUNT(sessionId)) AS dailyAvePageviewsPerSession,&#xD;&#xA;(SUM(totalTimeOnSite)/COUNT(sessionId)) AS dailyAveTimeOnSitePerSession,&#xD;&#xA;(SUM(totalTimeOnScreen)/COUNT(sessionId)) AS dailyAveTimeOnScreenPerSession&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;GROUP BY dateSid, custSid&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -156,6 +156,26 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalHits"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalPageviews"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalBounces"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalTrans"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalTransRevenue"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalNewVisits"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalScreenviews"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalUnique"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalTimeOnScreen"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalTotalTransRevenue"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_2">
@@ -163,6 +183,16 @@
       <column comment="" key="false" length="10" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalSessions" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalHits" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalPageviews" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalTimeOnSite" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalBounces" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalTrans" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalTransRevenue" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalNewVisits" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalScreenviews" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalUnique" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalTimeOnScreen" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dailyTotalTotalTransRevenue" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
@@ -201,6 +231,16 @@
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalSessions" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalHits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalPageviews" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTimeOnSite" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalBounces" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTrans" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTransRevenue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalNewVisits" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalScreenviews" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalUnique" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTimeOnScreen" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTotalTransRevenue" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -310,6 +350,38 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_2" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalScreenviews"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalNewVisits"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalTimeOnScreen"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalTransRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalUnique"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalPageviews"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalTrans"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalBounces"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalTotalTransRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
