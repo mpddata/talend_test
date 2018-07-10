@@ -176,6 +176,16 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalTotalTransRevenue"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyTotalSessionQualityDim"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyAveHitsPerSession"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyAvePageviewsPerSession"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyAveTimeOnSitePerSession"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dailyAveTimeOnScreenPerSession"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_2">
@@ -183,16 +193,21 @@
       <column comment="" key="false" length="10" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalSessions" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalHits" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalPageviews" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalTimeOnSite" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalBounces" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalTrans" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalTransRevenue" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalNewVisits" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalScreenviews" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalUnique" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalTimeOnScreen" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dailyTotalTotalTransRevenue" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalPageviews" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalTimeOnSite" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalBounces" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalTrans" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalTransRevenue" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalNewVisits" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalScreenviews" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalUnique" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalTimeOnScreen" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalTotalTransRevenue" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyTotalSessionQualityDim" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
@@ -231,16 +246,21 @@
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalSessions" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalHits" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalPageviews" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTimeOnSite" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalBounces" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTrans" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTransRevenue" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalNewVisits" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalScreenviews" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalUnique" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTimeOnScreen" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTotalTransRevenue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dailyTotalPageviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTimeOnSite" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalBounces" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTrans" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTransRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalNewVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalUnique" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTimeOnScreen" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTotalTransRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalSessionQualityDim" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveHitsPerSession" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAvePageviewsPerSession" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveTimeOnSitePerSession" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveTimeOnScreenPerSession" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -379,6 +399,21 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="dailyTotalTotalTransRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyAveHitsPerSession"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyAvePageviewsPerSession"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyTotalSessionQualityDim"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyAveTimeOnSitePerSession"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dailyAveTimeOnScreenPerSession"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
