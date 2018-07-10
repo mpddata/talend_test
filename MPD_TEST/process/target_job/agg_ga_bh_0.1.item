@@ -160,7 +160,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_2">
       <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalSessions" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalHits" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -176,7 +176,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_1">
       <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalSessions" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="dailyTotalHits" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
@@ -214,7 +214,7 @@
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSid" type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalSessions" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalHits" type="id_Integer" nullable="true"/>
       </inputTables>
