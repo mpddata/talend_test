@@ -784,44 +784,44 @@
         <mapperTableEntries name="NetworkLocation" expression="row1.geoNetworkLocation " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="outHitsDetails">
-        <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="visitNumber" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="visitId" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="sessionId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="visitStartTime" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
-        <mapperTableEntries name="fullVisitorId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="userId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="clientId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSid" type="id_Integer"/>
-        <mapperTableEntries name="browserSid" type="id_Integer"/>
-        <mapperTableEntries name="osSid" type="id_Integer"/>
-        <mapperTableEntries name="deviceSid" type="id_Integer"/>
-        <mapperTableEntries name="geoSid" type="id_String" nullable="true"/>
-        <mapperTableEntries name="deviceInputSelector" type="id_String" nullable="true"/>
-        <mapperTableEntries name="browserSize" type="id_String" nullable="true"/>
-        <mapperTableEntries name="isMobile" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="deviceLanguage" type="id_String" nullable="true"/>
-        <mapperTableEntries name="networkDomain" type="id_String" nullable="true"/>
-        <mapperTableEntries name="networkLocation" type="id_String" nullable="true"/>
-        <mapperTableEntries name="hitNumber" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="hitTime" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="hitHour" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="hitMinute" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="hitIssecure" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="hitIsinteraction" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="histIsentrance" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="hitsIsexit" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="hitReferer" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pagePath" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pageHostname" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pageTitle" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pageSearchKeyword" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pageSearchCat" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pagePathL1" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pagePathL2" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pagePathL3" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pagePathL4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitNumber" expression="row1.visitNumber " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitId" expression="row1.visitId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="sessionId" expression="(new Integer(row1.visitId)).toString()+ row1.clientId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="visitStartTime" expression="row1.visitStartTime " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dateSid" expression="row1.date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fullVisitorId" expression="row1.fullVisitorId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="userId" expression="row1.userId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="clientId" expression="row1.clientId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSid" expression="out2.custSid " type="id_Integer"/>
+        <mapperTableEntries name="browserSid" expression="row4.browserSid " type="id_Integer"/>
+        <mapperTableEntries name="osSid" expression="row5.osSid " type="id_Integer"/>
+        <mapperTableEntries name="deviceSid" expression="row6.deviceSid " type="id_Integer"/>
+        <mapperTableEntries name="geoSid" expression="row1.geoCityId.contains(&quot;not set&quot;)?&quot;&quot;:row1.geoCityId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceInputSelector" expression="row1.deviceMobileInputSelector " type="id_String" nullable="true"/>
+        <mapperTableEntries name="browserSize" expression="row1.deviceBrowserSize " type="id_String" nullable="true"/>
+        <mapperTableEntries name="isMobile" expression="row1.deviceIsMobile " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="deviceLanguage" expression="row1.deviceLanguage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="networkDomain" expression="row1.geoNetworkDomain " type="id_String" nullable="true"/>
+        <mapperTableEntries name="networkLocation" expression="row1.geoNetworkLocation " type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitNumber" expression="row1.hitsHitNumber " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitTime" expression="row1.hitsTime " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitHour" expression="row1.hitsHour " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitMinute" expression="row1.hitsMinute " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitIssecure" expression="row1.hitsIsSecure " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitIsinteraction" expression="row1.hitsIsInteraction " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="histIsentrance" expression="row1.hitsIsEntrance " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsexit" expression="row1.hitsIsExit " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitReferer" expression="row1.hitsReferer " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pagePath" expression="row1.hitsPagePagePath " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pageHostname" expression="row1.hitsPageHostname " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pageTitle" expression="row1.hitsPagePageTitle " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pageSearchKeyword" expression="row1.hitsPageSearchKeyword " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pageSearchCat" expression="row1.hitsPageSearchCategory " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pagePathL1" expression="row1.hitsPagePagePathL1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pagePathL2" expression="row1.hitsPagePagePathL2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pagePathL3" expression="row1.hitsPagePagePathL3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="pagePathL4" expression="row1.hitsPagePagePathL4" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
