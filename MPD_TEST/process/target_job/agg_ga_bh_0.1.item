@@ -804,7 +804,7 @@
       <column comment="" key="false" length="10" name="visitId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="sessionId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="10" name="sessionId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="visitStartTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -968,7 +968,7 @@
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitNumber" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitId" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="sessionId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sessionId" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitStartTime" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
         <mapperTableEntries name="fullVisitorId" type="id_String" nullable="true"/>
