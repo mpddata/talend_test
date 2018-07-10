@@ -207,8 +207,8 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSid" type="id_Integer"/>
+        <mapperTableEntries name="dateSid" expression="row3.dateSid " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSid" expression="row3.custSid " type="id_Integer"/>
         <mapperTableEntries name="dailyTotalSessions" expression="row3.dailyTotalSessions " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalHits" expression="row3.dailyTotalHits " type="id_Integer" nullable="true"/>
       </outputTables>
