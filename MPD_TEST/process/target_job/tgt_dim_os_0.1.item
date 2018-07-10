@@ -319,7 +319,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="COLUMN_LIST" name="SURROGATE_KEY" value="osSid" show="false"/>
     <elementParameter field="CLOSED_LIST" name="SK_CREATION" value="AUTO_INCREMENT" show="false"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="SK_INPUT_FIELD" value="osUID" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="SK_INPUT_FIELD" value="" show="false"/>
     <elementParameter field="TEXT" name="SK_ROUTINE" value="Numeric.sequence(&quot;seq&quot;, 1, 1)" show="false"/>
     <elementParameter field="TABLE" name="SOURCE_KEYS" show="false">
       <elementValue elementRef="NAME" value="osUID"/>
@@ -338,7 +338,7 @@
     <elementParameter field="TABLE" name="L2_FIELDS" show="false"/>
     <elementParameter field="COLUMN_LIST" name="L2_STARTDATE_FIELD" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="L2_STARTDATE_VALUE" value="JOB_START_TIME" show="false"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="L2_STARTDATE_INPUT_FIELD" value="osUID" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="L2_STARTDATE_INPUT_FIELD" value="" show="false"/>
     <elementParameter field="COLUMN_LIST" name="L2_ENDDATE_FIELD" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="L2_ENDDATE_VALUE" value="NULL_VALUE" show="false"/>
     <elementParameter field="TEXT" name="L2_ENDDATE_FIXED_VALUE" value="&quot;2500&quot;" show="false"/>
