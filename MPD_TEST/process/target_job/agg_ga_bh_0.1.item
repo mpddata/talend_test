@@ -412,8 +412,8 @@
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="dateSid" expression="row1.dateSid " type="id_String" nullable="true"/>
         <mapperTableEntries name="custSid" expression="row1.custSid " type="id_Integer"/>
-        <mapperTableEntries name="dailyTotalSessions" expression="((String)globalMap.get(&quot;dailyTotalSessions&quot;)) " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalHits" expression="((String)globalMap.get(&quot;dailyTotalHits&quot;)) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalSessions" expression="globalMap.get(&quot;dailyTotalSessions&quot;) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalHits" expression="globalMap.get(&quot;dailyTotalHits&quot;) " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
