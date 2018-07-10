@@ -931,28 +931,28 @@
       <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="agg_out">
-        <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalSessions" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalHits" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalPageviews" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTimeOnSite" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalBounces" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTrans" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTransRevenue" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalNewVisits" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalScreenviews" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalUnique" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTimeOnScreen" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalTotalTransRevenue" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyTotalSessionQualityDim" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAveHitsPerSession" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAvePageviewsPerSession" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAveTimeOnSitePerSession" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAveTimeOnScreenPerSession" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dateSid" expression="row3.dateSid " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSid" expression="row3.custSid " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalSessions" expression="row3.sessionId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalHits" expression="row3.totalHits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalPageviews" expression="row3.totalPageviews " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTimeOnSite" expression="row3.totalTimeOnSite " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalBounces" expression="row3.totalBounces " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTrans" expression="row3.totalTrans " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTransRevenue" expression="row3.totalTransRevenue " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalNewVisits" expression="row3.totalNewVisits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalScreenviews" expression="row3.totalScreenviews " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalUnique" expression="row3.totalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTimeOnScreen" expression="row3.totalTimeOnScreen " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalTotalTransRevenue" expression="row3.totalTotalTransRevenue " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyTotalSessionQualityDim" expression="row3.totalSessionQualityDim " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveHitsPerSession" expression="row3.totalHits/row3.sessionId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAvePageviewsPerSession" expression="row3.totalPageviews/row3.sessionId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveTimeOnSitePerSession" expression="row3.totalTimeOnSite/row3.sessionId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveTimeOnScreenPerSession" expression="row3.totalTimeOnScreen/row3.sessionId  " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
