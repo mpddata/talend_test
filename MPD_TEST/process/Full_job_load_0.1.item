@@ -438,7 +438,26 @@
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
-    <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_inputDateStart_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_inputDateEnd_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="resource_file_tokenfile"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.resource_file_bg_api_tokenfile"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
