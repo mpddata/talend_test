@@ -740,7 +740,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -765,6 +765,18 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
