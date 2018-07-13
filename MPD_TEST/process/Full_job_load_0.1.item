@@ -20,9 +20,11 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
     <contextParameter comment="BigQuery API Token File" name="resource_file_bg_api_tokenfile" prompt="resource_file_bg_api_tokenfile?" promptNeeded="true" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_GA_inputDateStart_YYYYMMDD" prompt="parameter_GA_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_GA_inputDateEnd_YYYYMMDD" prompt="parameter_GA_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateStart_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateEnd_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="Y or N" name="parameter_firstTime_master" prompt="parameter_firstTime_master?" promptNeeded="true" type="id_String" value="N"/>
+    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateStart_YYYYMMDD" prompt="parameter_Gigya_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateEnd_YYYYMMDD" prompt="parameter_Gigya_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
@@ -44,9 +46,11 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
     <contextParameter comment="BigQuery API Token File" name="resource_file_bg_api_tokenfile" prompt="resource_file_bg_api_tokenfile?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_GA_inputDateStart_YYYYMMDD" prompt="parameter_GA_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_GA_inputDateEnd_YYYYMMDD" prompt="parameter_GA_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateStart_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateEnd_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="Y or N" name="parameter_firstTime_master" prompt="parameter_firstTime_master?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateStart_YYYYMMDD" prompt="parameter_Gigya_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateEnd_YYYYMMDD" prompt="parameter_Gigya_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -198,6 +202,10 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateStart_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateEnd_YYYYMMDD"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -220,9 +228,9 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_inputDateStart_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_inputDateEnd_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
@@ -707,9 +715,9 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_inputDateStart_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_inputDateEnd_YYYYMMDD"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="resource_file_tokenfile"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.resource_file_bg_api_tokenfile"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
@@ -732,7 +740,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -757,6 +765,18 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
