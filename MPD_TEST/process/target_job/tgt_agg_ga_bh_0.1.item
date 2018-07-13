@@ -579,13 +579,13 @@
       <column comment="" key="false" length="10" name="dailyTotalSessionQualityDim" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="" type="id_Float" originalLength="10" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
         <mapperTableEntries name="dateSid" expression="row3.dateSid " type="id_String" nullable="true"/>
@@ -604,10 +604,10 @@
         <mapperTableEntries name="dailyTotalTimeOnScreen" expression="row3.totalTimeOnScreen " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalTotalTransRevenue" expression="row3.totalTotalTransRevenue " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dailyTotalSessionQualityDim" expression="row3.totalSessionQualityDim " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAveHitsPerSession" expression="row3.totalHits == null?0:row3.totalHits/row3.sessionId " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAvePageviewsPerSession" expression="row3.totalPageviews == null?0:row3.totalPageviews/row3.sessionId " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAveTimeOnSitePerSession" expression="row3.totalTimeOnSite == null?0:row3.totalTimeOnSite/row3.sessionId " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="dailyAveTimeOnScreenPerSession" expression="row3.totalTimeOnScreen == null?0:row3.totalTimeOnScreen/row3.sessionId " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dailyAveHitsPerSession" expression="row3.totalHits == null?0:((float)(row3.totalHits))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="dailyAvePageviewsPerSession" expression="row3.totalPageviews == null?0:((float)(row3.totalPageviews))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="dailyAveTimeOnSitePerSession" expression="row3.totalTimeOnSite == null?0:((float)(row3.totalTimeOnSite))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="dailyAveTimeOnScreenPerSession" expression="row3.totalTimeOnScreen == null?0:((float)(row3.totalTimeOnScreen))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
@@ -661,7 +661,7 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_bh&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
@@ -836,10 +836,10 @@
       <column comment="" key="false" length="10" name="dailyTotalSessionQualityDim" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -888,10 +888,10 @@
       <column comment="" key="false" length="10" name="dailyTotalSessionQualityDim" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" originalLength="10" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
