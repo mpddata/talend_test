@@ -818,7 +818,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;BEGIN&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_3month,&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_2month,&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_1month,&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;&#xD;&#xA;END&#xD;&#xA;&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;BEGIN&#xD;&#xA;&#xD;&#xA;SELECT dateSid, custSid&#xD;&#xA;FROM fact_ga_bh;&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_3month,&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_2month,&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_1month,&#xD;&#xA;FROM fact_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;&#xD;&#xA;END&#xD;&#xA;&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -835,6 +835,10 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_1month"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateSid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="get total"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -842,9 +846,11 @@
       <column comment="" key="false" length="10" name="totalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="totalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="totalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="256">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -864,6 +870,10 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_1month"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateSid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -872,6 +882,8 @@
       <column comment="" key="false" length="10" name="totalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="totalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="totalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
@@ -942,6 +954,14 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="custSid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dateSid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
