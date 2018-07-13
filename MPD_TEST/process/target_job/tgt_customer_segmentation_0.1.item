@@ -753,7 +753,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;); &#xA;&#xA;Date dtProcessStart_3month = TalendDate.addDate(TalendDate.getCurrentDate(),-3,&quot;MM&quot;);&#xA;Date dtProcessStart_2month = TalendDate.addDate(TalendDate.getCurrentDate(),-2,&quot;MM&quot;);&#xA;Date dtProcessStart_1month = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;MM&quot;);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;); &#xA;&#xA;Date dtProcessStartDate_3month = TalendDate.addDate(TalendDate.getCurrentDate(),-3,&quot;MM&quot;);&#xA;Date dtProcessStartDate_2month = TalendDate.addDate(TalendDate.getCurrentDate(),-2,&quot;MM&quot;);&#xA;Date dtProcessStartDate_1month = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;MM&quot;);&#xA;&#xA;globalMap.put(&quot;ProcessStartDate_3month&quot;, dtProcessStart_3month);&#xA;globalMap.put(&quot;ProcessStartDate_2month&quot;, dtProcessStart_2month);&#xA;globalMap.put(&quot;ProcessStartDate_1month&quot;, dtProcessStart_1month);&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="setDate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
