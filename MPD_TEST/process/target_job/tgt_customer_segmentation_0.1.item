@@ -829,13 +829,19 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_3months"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_2month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_1month"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="get total"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
-      <column comment="" key="false" length="10" name="totalHits_3months" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="totalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="256">
@@ -849,7 +855,9 @@
     <elementParameter field="TEXT" name="LABEL" value="assign data range"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_1">
-      <column comment="" key="false" length="10" name="totalHits_3months" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="totalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="256">
@@ -1080,7 +1088,13 @@
       <elementValue elementRef="TRACE_COLUMN" value="enddate"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="totalHits_3months"/>
+      <elementValue elementRef="TRACE_COLUMN" value="totalHits_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="totalHits_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="totalHits_2month"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
