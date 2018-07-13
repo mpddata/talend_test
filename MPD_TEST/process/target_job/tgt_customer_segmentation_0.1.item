@@ -634,9 +634,9 @@
         <mapperTableEntries name="dailyAvePageviewsPerSession" expression="row3.totalPageviews == null?0:((float)(row3.totalPageviews))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
         <mapperTableEntries name="dailyAveTimeOnSitePerSession" expression="row3.totalTimeOnSite == null?0:((float)(row3.totalTimeOnSite))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
         <mapperTableEntries name="dailyAveTimeOnScreenPerSession" expression="row3.totalTimeOnScreen == null?0:((float)(row3.totalTimeOnScreen))/((float)(row3.sessionId)) " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="date_3months" expression="TalendDate.addDate(TalendDate.getCurrentDate(),-3,&quot;MM&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="date_2months" expression="TalendDate.addDate(TalendDate.getCurrentDate(),-2,&quot;MM&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="date_1months" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_3months" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,row3.dateSid),-3,&quot;MM&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_2months" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,row3.dateSid),-2,&quot;MM&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_1months" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,row3.dateSid),-1,&quot;MM&quot;)) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
