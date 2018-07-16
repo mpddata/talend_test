@@ -602,12 +602,12 @@
       <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="aggTotalHits_3month" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalHits_2month" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="aggTotalHits_1month" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -651,12 +651,12 @@
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
-        <mapperTableEntries name="aggTotalHits_3month" type="id_Integer"/>
+        <mapperTableEntries name="aggTotalHits_3month" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_2month" type="id_Integer"/>
-        <mapperTableEntries name="aggTotalHits_1month" type="id_Integer"/>
-        <mapperTableEntries name="aggTotalVisits_3month" type="id_Integer"/>
-        <mapperTableEntries name="aggTotalVisits_2month" type="id_Integer"/>
-        <mapperTableEntries name="aggTotalVisits_1month" type="id_Integer"/>
+        <mapperTableEntries name="aggTotalHits_1month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_2month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_1month" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
