@@ -906,6 +906,11 @@
         <initialValue xsi:type="relational:TdExpression" xmi:id="_YhilUYWPEeiDAb00dCaQXg" language="COLUMN_DEF"/>
         <sqlDataType xmi:id="_YhilUoWPEeiDAb00dCaQXg" name="INT" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
       </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_tD9uAoikEeiyIoqbIvJm9Q" name="dailyTotalVisits" label="dailyTotalVisits" length="10" sourceType="INT" talendType="id_Integer">
+        <taggedValue xmi:id="_tD9uA4ikEeiyIoqbIvJm9Q" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_tD9uBIikEeiyIoqbIvJm9Q" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_tD9uBYikEeiyIoqbIvJm9Q" name="INT" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+      </feature>
       <feature xsi:type="relational:TdColumn" xmi:id="_YhilU4WPEeiDAb00dCaQXg" name="dailyTotalHits" label="dailyTotalHits" length="10" sourceType="INT" talendType="id_Integer">
         <taggedValue xmi:id="_YhilVIWPEeiDAb00dCaQXg" tag="Comment" value=""/>
         <initialValue xsi:type="relational:TdExpression" xmi:id="_YhilVYWPEeiDAb00dCaQXg" language="COLUMN_DEF"/>
