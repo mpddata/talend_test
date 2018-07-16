@@ -371,7 +371,7 @@
         <mapperTableEntries name="dailyAvePageviewsPerSession" expression="row1.dailyAvePageviewsPerSession " type="id_Float" nullable="true"/>
         <mapperTableEntries name="dailyAveTimeOnSitePerSession" expression="row1.dailyAveTimeOnSitePerSession " type="id_Float" nullable="true"/>
         <mapperTableEntries name="dailyAveTimeOnScreenPerSession" expression="row1.dailyAveTimeOnScreenPerSession " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="transformDate" expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,row1.dateSid) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="transformDate" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,row1.dateSid) " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
