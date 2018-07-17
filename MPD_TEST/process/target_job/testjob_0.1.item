@@ -660,11 +660,21 @@
       <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="userSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateSid" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg">
         <mapperTableEntries name="custSid" expression="row3.custSid " type="id_Integer"/>
@@ -674,7 +684,17 @@
         <mapperTableEntries name="aggTotalVisits_3month" expression="row3.aggTotalVisits_3month " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_2month" expression="row3.aggTotalVisits_2month " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_1month" expression="row3.aggTotalVisits_1month " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="userSegment" expression="row3.aggTotalVisits_1month >= 15 &amp;&amp; row3.aggTotalHits_1month >=15 ?&quot;High Active/Loyal User&quot;:&quot;0&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_3month" expression="row3.aggTotalSessions_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_2month" expression="row3.aggTotalSessions_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_1month" expression="row3.aggTotalSessions_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_3month" expression="row3.aggTotalPageviews_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_2month" expression="row3.aggTotalPageviews_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_1month" expression="row3.aggTotalPageviews_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_3month" expression="row3.aggTotalUnique_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_2month" expression="row3.aggTotalUnique_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_1month" expression="row3.aggTotalUnique_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="userSegment" expression="row3.aggTotalVisits_1month >= 15 &amp;&amp; row3.aggTotalHits_1month >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row3.aggTotalVisits_1month >=1 &amp;&amp; row3.aggTotalVisits_1month &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row3.aggTotalVisits_1month ==1?&quot;New User&quot;: &#xD;&#xA;row3.aggTotalVisits_1month &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dateSid" expression="TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;) " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
@@ -724,7 +744,27 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_1month"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="userSegment"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateSid"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -740,7 +780,17 @@
       <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="userSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateSid" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -807,6 +857,36 @@
   <connection connectorName="FLOW" label="cust_seg" lineStyle="0" metaname="cust_seg" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="userSegment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dateSid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
