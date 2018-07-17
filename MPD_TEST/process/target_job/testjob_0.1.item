@@ -570,7 +570,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;SELECT custSid,&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalHits) as aggTotalHits_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid)&#xD;&#xA;&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;GROUP BY custSid&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;SELECT custSid,&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalHits) as aggTotalHits_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalHits) as aggTotalHits_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid)&#xD;&#xA;&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;GROUP BY custSid&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -583,7 +583,9 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_2month"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="get total"/>
@@ -592,7 +594,8 @@
       <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="aggTotalHits" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="aggTotalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="aggTotalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -636,7 +639,8 @@
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
-        <mapperTableEntries name="aggTotalHits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_2month" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -723,7 +727,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="aggTotalHits_3month"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="aggTotalHits"/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalHits_3month"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
