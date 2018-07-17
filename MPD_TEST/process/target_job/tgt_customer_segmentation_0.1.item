@@ -347,7 +347,7 @@
       <column comment="" key="false" length="-1" name="transformDate" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="dateSid" expression="row1.dateSid " type="id_String" nullable="true"/>
@@ -554,47 +554,8 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="256">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_3"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_bh&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select custSid, &#xD;&#xA; transformDate&#xD;&#xA;from agg_ga_bh&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="transformDate"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMysqlInput_2">
-      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="transformDate" nullable="true" pattern="&quot;dd-MM-yyyy hh:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
@@ -604,12 +565,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;agg_ga_bh&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;BEGIN&#xD;&#xA;&#xD;&#xA;SELECT custSid,&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid&#xD;&#xA;&#xD;&#xA;SELECT custSid,&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid&#xD;&#xA;&#xD;&#xA;SELECT custSid,&#xD;&#xA;SUM(fact_ga_bh.totalHits) as totalHits_1month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid&#xD;&#xA;&#xD;&#xA;END&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;SELECT custSid,&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalHits) as aggTotalHits_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalHits) as aggTotalHits_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalHits) as aggTotalHits_1month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalVisits) as aggTotalVisits_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalVisits) as aggTotalVisits_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalVisits) as aggTotalVisits_1month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalSessions) as aggTotalSessions_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalSessions) as aggTotalSessions_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalSessions) as aggTotalSessions_1month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalPageviews) as aggTotalPageviews_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalPageviews) as aggTotalPageviews_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalPageviews) as aggTotalPageviews_1month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalUnique) as aggTotalUnique_3month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_3month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalUnique) as aggTotalUnique_2month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)g lobalMap.get(&quot;processDate_2month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid),&#xD;&#xA;&#xD;&#xA;(SELECT SUM(agg_ga_bh.dailyTotalUnique) as aggTotalUnique_1month,&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;WHERE transformDate BETWEEN '&quot;+ ((String)globalMap.get(&quot;processDate_1month&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;currentDate&quot;))+&quot;'&#xD;&#xA;GROUP BY custSid)&#xD;&#xA;&#xD;&#xA;FROM agg_ga_bh&#xD;&#xA;GROUP BY custSid&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -620,25 +581,142 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_3month"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_2month"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_1month"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_2month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_1month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_2month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_1month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_2month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_1month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_2month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_1month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_3month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_2month"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_1month"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="get total"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMysqlInput_3">
-      <column comment="" key="false" length="10" name="totalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="totalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="totalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    <metadata connector="FLOW" label="agg_ga_bh" name="tMysqlInput_2">
+      <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="aggTotalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="128">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_E1cXYIirEeitzu-Uzz79Ww-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="agg_ga_bh" name="cust_seg">
+      <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="aggTotalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="userSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateSid" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="cust_seg">
+        <mapperTableEntries name="custSid" expression="row3.custSid " type="id_Integer"/>
+        <mapperTableEntries name="aggTotalHits_3month" expression="row3.aggTotalHits_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_2month" expression="row3.aggTotalHits_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_1month" expression="row3.aggTotalHits_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_3month" expression="row3.aggTotalVisits_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_2month" expression="row3.aggTotalVisits_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_1month" expression="row3.aggTotalVisits_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_3month" expression="row3.aggTotalSessions_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_2month" expression="row3.aggTotalSessions_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_1month" expression="row3.aggTotalSessions_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_3month" expression="row3.aggTotalPageviews_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_2month" expression="row3.aggTotalPageviews_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_1month" expression="row3.aggTotalPageviews_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_3month" expression="row3.aggTotalUnique_3month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_2month" expression="row3.aggTotalUnique_2month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_1month" expression="row3.aggTotalUnique_1month " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="userSegment" expression="row3.aggTotalVisits_1month >= 15 &amp;&amp; row3.aggTotalHits_1month >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row3.aggTotalVisits_1month >=1 &amp;&amp; row3.aggTotalVisits_1month &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row3.aggTotalVisits_1month ==1?&quot;New User&quot;: &#xD;&#xA;row3.aggTotalVisits_1month &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dateSid" expression="TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;) " type="id_Date" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="custSid" type="id_Integer"/>
+        <mapperTableEntries name="aggTotalHits_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_2month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_1month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_2month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_1month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_2month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_1month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_2month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_1month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_3month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_2month" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_1month" type="id_Integer" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -652,23 +730,68 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_3month"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_2month"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="totalHits_1month"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="custSid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalVisits_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalPageviews_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_3month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_2month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_1month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="userSegment"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateSid"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="10" name="totalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="totalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="totalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    <metadata connector="FLOW" label="agg_ga_bh" name="tLogRow_1">
+      <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="aggTotalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalHits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalVisits_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalSessions_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalPageviews_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="aggTotalUnique_1month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="userSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateSid" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_1">
@@ -683,12 +806,92 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tMysqlInput_3">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tMysqlInput_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMysqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_3" target="tLogRow_1">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMysqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_2" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalVisits_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalHits_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalVisits_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalVisits_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="cust_seg" lineStyle="0" metaname="cust_seg" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="userSegment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalSessions_1month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalPageviews_3month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTotalUnique_2month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dateSid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
@@ -697,11 +900,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
