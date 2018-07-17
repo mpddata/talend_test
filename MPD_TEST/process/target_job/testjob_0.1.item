@@ -585,8 +585,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_3month"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalHits_2month"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="get total"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -595,7 +593,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="aggTotalHits_3month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="aggTotalHits_2month" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -640,7 +637,6 @@
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
         <mapperTableEntries name="aggTotalHits_3month" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_2month" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
