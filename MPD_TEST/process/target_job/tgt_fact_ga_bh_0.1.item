@@ -152,7 +152,7 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -738,7 +738,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
@@ -932,12 +932,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ - stg_lotame_bh" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_lotame_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_lotame_bh_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `stg_lotame_bh`.`GAClientId`, &#xA;  `stg_lotame_bh`.`dateId`, &#xA;  `stg_lotame_bh`.`LotamePId`, &#xA;  `stg_lotame_bh`.`GigyaId`, &#xA;  `stg_lotame_bh`.`KeywordList`&#xA;FROM `stg_lotame_bh`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `stg_lotame_bh`.`GAClientId`, &#xA;  `stg_lotame_bh`.`dateId`, &#xA;  `stg_lotame_bh`.`LotamePId`, &#xA;  `stg_lotame_bh`.`GigyaId`, &#xA;  `stg_lotame_bh`.`KeywordList`&#xA;FROM `stg_lotame_bh_test`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1096,12 +1096,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_customer" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_customer&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_customer_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_customer`.`gigyaID`, &#xA;  `dim_customer`.`dateCreated`, &#xA;  `dim_customer`.`firstName`, &#xA;  `dim_customer`.`lastName`, &#xA;  `dim_customer`.`name`, &#xA;  `dim_customer`.`nickName`, &#xA;  `dim_customer`.`userName`, &#xA;  `dim_customer`.`DOB`, &#xA;  `dim_customer`.`birthDay`, &#xA;  `dim_customer`.`birthMonth`, &#xA;  `dim_customer`.`birthYear`, &#xA;  `dim_customer`.`religion`, &#xA;  `dim_customer`.`gender`, &#xA;  `dim_customer`.`raceSid`, &#xA;  `dim_customer`.`educationSid`, &#xA;  `dim_customer`.`maritalSid`, &#xA;  `dim_customer`.`city`, &#xA;  `dim_customer`.`state`, &#xA;  `dim_customer`.`country`, &#xA;  `dim_customer`.`zip`, &#xA;  `dim_customer`.`hometown`, &#xA;  `dim_customer`.`occupation`, &#xA;  `dim_customer`.`certifications`, &#xA;  `dim_customer`.`phone`, &#xA;  `dim_customer`.`email`, &#xA;  `dim_customer`.`contactMethodSid`, &#xA;  `dim_customer`.`timezone`, &#xA;  `dim_customer`.`locale`, &#xA;  `dim_customer`.`languages`, &#xA;  `dim_customer`.`industry`, &#xA;  `dim_customer`.`interestedIn`, &#xA;  `dim_customer`.`skillLevel`, &#xA;  `dim_customer`.`skills`, &#xA;  `dim_customer`.`skillsYears`, &#xA;  `dim_customer`.`specialities`, &#xA;  `dim_customer`.`incomeBracket`, &#xA;  `dim_customer`.`siteBhLastLogin`, &#xA;  `dim_customer`.`iRank`, &#xA;  `dim_customer`.`isActive`, &#xA;  `dim_customer`.`isRegistered`, &#xA;  `dim_customer`.`isVerified`, &#xA;  `dim_customer`.`profileVerified`, &#xA;  `dim_customer`.`lastLogin`, &#xA;  `dim_customer`.`lastUpdated`, &#xA;  `dim_customer`.`loginProvider`, &#xA;  `dim_customer`.`socialProviders`, &#xA;  `dim_customer`.`custSid`&#xA;FROM `dim_customer`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_customer`.`gigyaID`, &#xA;  `dim_customer`.`dateCreated`, &#xA;  `dim_customer`.`firstName`, &#xA;  `dim_customer`.`lastName`, &#xA;  `dim_customer`.`name`, &#xA;  `dim_customer`.`nickName`, &#xA;  `dim_customer`.`userName`, &#xA;  `dim_customer`.`DOB`, &#xA;  `dim_customer`.`birthDay`, &#xA;  `dim_customer`.`birthMonth`, &#xA;  `dim_customer`.`birthYear`, &#xA;  `dim_customer`.`religion`, &#xA;  `dim_customer`.`gender`, &#xA;  `dim_customer`.`raceSid`, &#xA;  `dim_customer`.`educationSid`, &#xA;  `dim_customer`.`maritalSid`, &#xA;  `dim_customer`.`city`, &#xA;  `dim_customer`.`state`, &#xA;  `dim_customer`.`country`, &#xA;  `dim_customer`.`zip`, &#xA;  `dim_customer`.`hometown`, &#xA;  `dim_customer`.`occupation`, &#xA;  `dim_customer`.`certifications`, &#xA;  `dim_customer`.`phone`, &#xA;  `dim_customer`.`email`, &#xA;  `dim_customer`.`contactMethodSid`, &#xA;  `dim_customer`.`timezone`, &#xA;  `dim_customer`.`locale`, &#xA;  `dim_customer`.`languages`, &#xA;  `dim_customer`.`industry`, &#xA;  `dim_customer`.`interestedIn`, &#xA;  `dim_customer`.`skillLevel`, &#xA;  `dim_customer`.`skills`, &#xA;  `dim_customer`.`skillsYears`, &#xA;  `dim_customer`.`specialities`, &#xA;  `dim_customer`.`incomeBracket`, &#xA;  `dim_customer`.`siteBhLastLogin`, &#xA;  `dim_customer`.`iRank`, &#xA;  `dim_customer`.`isActive`, &#xA;  `dim_customer`.`isRegistered`, &#xA;  `dim_customer`.`isVerified`, &#xA;  `dim_customer`.`profileVerified`, &#xA;  `dim_customer`.`lastLogin`, &#xA;  `dim_customer`.`lastUpdated`, &#xA;  `dim_customer`.`loginProvider`, &#xA;  `dim_customer`.`socialProviders`, &#xA;  `dim_customer`.`custSid`&#xA;FROM `dim_customer_test`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1369,12 +1369,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_browser" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_browser&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_browser_test"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_browser`.`browserUID`, &#xA;  `dim_browser`.`browserName`, &#xA;  `dim_browser`.`browserVer`, &#xA;  `dim_browser`.`browserSid`&#xA;FROM `dim_browser`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_browser`.`browserUID`, &#xA;  `dim_browser`.`browserName`, &#xA;  `dim_browser`.`browserVer`, &#xA;  `dim_browser`.`browserSid`&#xA;FROM `dim_browser_test`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1427,12 +1427,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_os" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_os&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_os_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_os`.`osUID`, &#xA;  `dim_os`.`osName`, &#xA;  `dim_os`.`osVer`, &#xA;  `dim_os`.`osSid`&#xA;FROM `dim_os`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_os`.`osUID`, &#xA;  `dim_os`.`osName`, &#xA;  `dim_os`.`osVer`, &#xA;  `dim_os`.`osSid`&#xA;FROM `dim_os_test`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1485,12 +1485,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_device" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_device`.`deviceUID`, &#xA;  `dim_device`.`deviceMobileDeviceBranding`, &#xA;  `dim_device`.`deviceMobileDeviceModel`, &#xA;  `dim_device`.`deviceMobileDeviceInfo`, &#xA;  `dim_device`.`deviceMobileDeviceMarketingName`, &#xA;  `dim_device`.`deviceDeviceCategory`, &#xA;  `dim_device`.`deviceSid`&#xA;FROM `dim_device`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_device`.`deviceUID`, &#xA;  `dim_device`.`deviceMobileDeviceBranding`, &#xA;  `dim_device`.`deviceMobileDeviceModel`, &#xA;  `dim_device`.`deviceMobileDeviceInfo`, &#xA;  `dim_device`.`deviceMobileDeviceMarketingName`, &#xA;  `dim_device`.`deviceDeviceCategory`, &#xA;  `dim_device`.`deviceSid`&#xA;FROM `dim_device_test`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1554,7 +1554,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh_details&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh_details_test&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
@@ -2469,7 +2469,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh_test&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
@@ -2954,12 +2954,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;MIN(`stg_ga_sessions_bh`.`date`),&#xD;&#xA;MAX(`stg_ga_sessions_bh`.`date`)&#xD;&#xA;FROM `stg_ga_sessions_bh`&quot; &#xD;&#xA;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;MIN(`stg_ga_sessions_bh`.`date`),&#xD;&#xA;MAX(`stg_ga_sessions_bh`.`date`)&#xD;&#xA;FROM `stg_ga_sessions_bh_test`&quot; &#xD;&#xA;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
