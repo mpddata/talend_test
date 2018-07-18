@@ -203,7 +203,7 @@
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_gigya&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `stg_gigya`.`UID`, &#xA;  `stg_gigya`.`created`, &#xA;  `stg_gigya`.`iRank`, &#xA;  `stg_gigya`.`isActive`, &#xA;  `stg_gigya`.`isRegistered`, &#xA;  `stg_gigya`.`isVerified`, &#xA;  `stg_gigya`.`lastLogin`, &#xA;  `stg_gigya`.`lastUpdated`, &#xA;  `stg_gigya`.`loginProvider`, &#xA;  `stg_gigya`.`socialProviders`, &#xA;  `stg_gigya`.`data_bh_login_timestampMY`, &#xA;  `stg_gigya`.`data_education_level`, &#xA;  `stg_gigya`.`data_ethnicity`, &#xA;  `stg_gigya`.`data_income_bracket`, &#xA;  `stg_gigya`.`data_marital_status`, &#xA;  `stg_gigya`.`data_mobile_number`, &#xA;  `stg_gigya`.`data_occupation`, &#xA;  `stg_gigya`.`data_preferred_contact_method`, &#xA;  `stg_gigya`.`profile_birthDay`, &#xA;  `stg_gigya`.`profile_birthMonth`, &#xA;  `stg_gigya`.`profile_birthYear`, &#xA;  `stg_gigya`.`profile_certifications`, &#xA;  `stg_gigya`.`profile_city`, &#xA;  `stg_gigya`.`profile_country`, &#xA;  `stg_gigya`.`profile_educationLevel`, &#xA;  `stg_gigya`.`profile_email`, &#xA;  `stg_gigya`.`profile_firstName`, &#xA;  `stg_gigya`.`profile_gender`, &#xA;  `stg_gigya`.`profile_hometown`, &#xA;  `stg_gigya`.`profile_industry`, &#xA;  `stg_gigya`.`profile_interestedIn`, &#xA;  `stg_gigya`.`profile_languages`, &#xA;  `stg_gigya`.`profile_lastName`, &#xA;  `stg_gigya`.`profile_locale`, &#xA;  `stg_gigya`.`profile_name`, &#xA;  `stg_gigya`.`profile_nickname`, &#xA;  `stg_gigya`.`profile_religion`, &#xA;  `stg_gigya`.`profile_skills_level`, &#xA;  `stg_gigya`.`profile_skills_skill`, &#xA;  `stg_gigya`.`profile_skills_years`, &#xA;  `stg_gigya`.`profile_specialities`, &#xA;  `stg_gigya`.`profile_state`, &#xA;  `stg_gigya`.`profile_timezone`, &#xA;  `stg_gigya`.`profile_username`, &#xA;  `stg_gigya`.`profile_verified`, &#xA;  `stg_gigya`.`profile_zip`&#xA;FROM `stg_gigya`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -598,7 +598,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
