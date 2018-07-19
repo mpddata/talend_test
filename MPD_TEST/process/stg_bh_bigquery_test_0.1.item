@@ -158,20 +158,30 @@
   </node>
   <node componentName="tGSGet" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSGet_1" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
-    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tGSConnection_1"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false" show="false"/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_KEYS_LIST" value="false"/>
+    <elementParameter field="CHECK" name="USE_KEYS_LIST" value="false" show="false"/>
     <elementParameter field="TABLE" name="KEYS" show="false"/>
-    <elementParameter field="CHECK" name="GETLIST" value="false"/>
-    <elementParameter field="TABLE" name="BUCKETS" show="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/mohdhafeez/Downloads/Talend-Studio-20180116_1512-V6.5.1/workspace/out/&quot;"/>
+    <elementParameter field="CHECK" name="GETLIST" value="true"/>
+    <elementParameter field="TABLE" name="BUCKETS">
+      <elementValue elementRef="BUCKET_NAME" value="&quot;talend_mpd&quot;"/>
+      <elementValue elementRef="OBJECT_PREFIX" value="&quot;.csv&quot;"/>
+      <elementValue elementRef="OBJECT_DELIMITER" value="&quot;,&quot;"/>
+    </elementParameter>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/mohdhafeez/Downloads&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tGSConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOGMS7U6Y4YMRJZNLXX2FF6&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="UkumQgnNRvBGv3hWji+MW1oYIZ5K8sKMj+B1TZ+ZEijd9y7xUTgVIg7CgdbirKAc"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAmazonMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlConnection_1" target="tSetGlobalVar_1">
@@ -179,6 +189,12 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tGSConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tGSConnection_1" offsetLabelX="0" offsetLabelY="0" source="tGSConnection_1" target="tGSGet_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlConnection_1" show="false"/>
@@ -197,6 +213,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSGet_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
