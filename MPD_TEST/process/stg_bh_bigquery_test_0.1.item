@@ -2,6 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="96" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -110,4 +112,92 @@
     <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
     <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
   </parameters>
+  <node componentName="tAmazonMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlConnection_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="stg_db_conn"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;inputDateStart&quot;"/>
+      <elementValue elementRef="VALUE" value="context.inputDateStart"/>
+      <elementValue elementRef="KEY" value="&quot;inputDateEnd&quot;"/>
+      <elementValue elementRef="VALUE" value="context.inputDateEnd"/>
+      <elementValue elementRef="KEY" value="&quot;processStartDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;processEndDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="defineGlobalVar"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtDateStart = ((String)globalMap.get(&quot;inputDateStart&quot;));&#xA;String dtDateEnd = ((String)globalMap.get(&quot;inputDateEnd&quot;));&#xA;Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xA;Date dtProcessStart = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;Date dtProcessEnd = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;&#xA;if (dtDateStart != null &amp;&amp; dtDateEnd != null &amp;&amp; dtDateStart.length()==8 &amp;&amp; dtDateEnd.length()==8) {&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateStart);&#xA;&#x9;dtProcessEnd = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateEnd);&#xA;}&#xA;&#xA;globalMap.put(&quot;processStartDate&quot;, df.format(dtProcessStart));&#xA;globalMap.put(&quot;processEndDate&quot;, df.format(dtProcessEnd));&#xA;System.out.println(&quot;Start &quot; + ((String)globalMap.get(&quot;processStartDate&quot;)));&#xA;System.out.println(&quot;End &quot; + ((String)globalMap.get(&quot;processEndDate&quot;)));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="setDate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tGSGet" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSGet_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_KEYS_LIST" value="false"/>
+    <elementParameter field="TABLE" name="KEYS" show="false"/>
+    <elementParameter field="CHECK" name="GETLIST" value="false"/>
+    <elementParameter field="TABLE" name="BUCKETS" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/mohdhafeez/Downloads/Talend-Studio-20180116_1512-V6.5.1/workspace/out/&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAmazonMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlConnection_1" target="tSetGlobalVar_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSGet_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
 </talendfile:ProcessType>
