@@ -156,14 +156,14 @@
     <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;mpdbq1&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_KEYS_LIST" value="false" show="false"/>
     <elementParameter field="TABLE" name="KEYS" show="false"/>
     <elementParameter field="CHECK" name="GETLIST" value="true"/>
     <elementParameter field="TABLE" name="BUCKETS">
       <elementValue elementRef="BUCKET_NAME" value="&quot;talend_mpd&quot;"/>
-      <elementValue elementRef="OBJECT_PREFIX" value="&quot;.csv&quot;"/>
+      <elementValue elementRef="OBJECT_PREFIX" value="&quot;&quot;"/>
       <elementValue elementRef="OBJECT_DELIMITER" value="&quot;,&quot;"/>
     </elementParameter>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/mohdhafeez/Downloads&quot;"/>
