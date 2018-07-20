@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Password" prompt="connection_mysqlstaging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Port" prompt="connection_mysqlstaging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -655,11 +662,7 @@
     <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false" show="false"/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="LIST_IN_BUCKET_LIST" value="true"/>
-    <elementParameter field="TABLE" name="BUCKETS">
-      <elementValue elementRef="BUCKET_NAME" value="&quot;ga_bh_sessions.csv000000000000&quot;"/>
-      <elementValue elementRef="OBJECT_PREFIX" value="&quot;&quot;"/>
-      <elementValue elementRef="OBJECT_DELIMITER" value="&quot;&quot;"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="BUCKETS"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -707,7 +710,7 @@
   <node componentName="tGSConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
     <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOG4G7BRQHEYYVLD6MFCOEN&quot;"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="rzasXliW8altZhVKXq488E3UU+Dm22FGoTU5JJVkPhc5kAuFigLoBMsK2NVINj4v"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="rzasXliW8altZhVKXq488E3UU+Dm22FGoTU5JJVkPhc5kAuFigLoBEP+I5PqIkGK"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tGSList_1" offsetLabelX="0" offsetLabelY="0" source="tGSList_1" target="tIterateToFlow_1">
