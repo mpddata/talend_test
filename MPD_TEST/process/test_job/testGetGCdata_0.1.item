@@ -651,19 +651,20 @@
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tGSList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSList_1" show="false"/>
+  <node componentName="tGSConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOG4G7BRQHEYYVLD6MFCOEN&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="rzasXliW8altZhVKXq488E3UU+Dm22FGoTU5JJVkPhc5kAuFigLoBEP+I5PqIkGK"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tGSBucketList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSBucketList_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tGSConnection_1"/>
     <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="LIST_IN_BUCKET_LIST" value="true"/>
-    <elementParameter field="TABLE" name="BUCKETS"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="true"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;talend_mpd&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tIterateToFlow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
@@ -707,13 +708,10 @@
       <column comment="" key="false" length="-1" name="key" nullable="true" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tGSConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
-    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOG4G7BRQHEYYVLD6MFCOEN&quot;"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="rzasXliW8altZhVKXq488E3UU+Dm22FGoTU5JJVkPhc5kAuFigLoBEP+I5PqIkGK"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tGSList_1" offsetLabelX="0" offsetLabelY="0" source="tGSList_1" target="tIterateToFlow_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tGSConnection_1" offsetLabelX="0" offsetLabelY="0" source="tGSConnection_1" target="tGSBucketList_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tGSBucketList_2" offsetLabelX="0" offsetLabelY="0" source="tGSBucketList_2" target="tIterateToFlow_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
@@ -729,9 +727,6 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tGSConnection_1" offsetLabelX="0" offsetLabelY="0" source="tGSConnection_1" target="tGSList_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlConnection_1" show="false"/>
@@ -749,12 +744,12 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSList_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSBucketList_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
