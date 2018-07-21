@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
@@ -600,7 +600,225 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAmazonMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_svu3gIzPEeipLPvAfnovFg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="output1">
+      <column comment="" key="false" length="-1" name="visitorId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visitNumber" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visitId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visitStartTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsHits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsPageviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsTimeOnSite" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsBounces" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsTransactions" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsTransactionRevenue" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsNewVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsScreenviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsUniqueScreenviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsTimeOnScreen" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsTotalTransactionRevenue" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="totalsSessionQualityDim" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceBrowser" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceBrowserVersion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceBrowserSize" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceOperatingSystem" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceOperatingSystemVersion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="deviceIsMobile" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceMobileDeviceBranding" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceMobileDeviceModel" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceMobileInputSelector" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceMobileDeviceInfo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceMobileDeviceMarketingName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceLanguage" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="deviceDeviceCategory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoSubContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCountry" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoRegion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoMetro" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCity" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCityId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoNetworkDomain" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLatitude" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLongitude" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoNetworkLocation" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsHitNumber" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsTime" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsHour" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsMinute" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsIsSecure" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsIsInteraction" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsIsEntrance" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hitsIsExit" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsReferer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="hitsPagePagePath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageHostname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="hitsPagePageTitle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageSearchKeyword" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageSearchCategory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="hitsPagePagePathL1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="hitsPagePagePathL2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="hitsPagePagePathL3" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="hitsPagePagePathL4" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="userId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="clientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="channelGrouping" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="socialEngagementType" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="output1">
+        <mapperTableEntries name="visitorId" expression="row1.visitorId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitNumber" expression="row1.visitNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitId" expression="row1.visitId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitStartTime" expression="row1.visitStartTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="date" expression="row1.date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="totalsVisits" expression="row1.totalsVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsHits" expression="row1.totalsHits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsPageviews" expression="row1.totalsPageviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTimeOnSite" expression="row1.totalsTimeOnSite" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsBounces" expression="row1.totalsBounces" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTransactions" expression="row1.totalsTransactions" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTransactionRevenue" expression="row1.totalsTransactionRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsNewVisits" expression="row1.totalsNewVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsScreenviews" expression="row1.totalsScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsUniqueScreenviews" expression="row1.totalsUniqueScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTimeOnScreen" expression="row1.totalsTimeOnScreen" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTotalTransactionRevenue" expression="row1.totalsTotalTransactionRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsSessionQualityDim" expression="row1.totalsSessionQualityDim" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="deviceBrowser" expression="row1.deviceBrowser" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceBrowserVersion" expression="row1.deviceBrowserVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceBrowserSize" expression="row1.deviceBrowserSize" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceOperatingSystem" expression="row1.deviceOperatingSystem" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceOperatingSystemVersion" expression="row1.deviceOperatingSystemVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceIsMobile" expression="row1.deviceIsMobile" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceBranding" expression="row1.deviceMobileDeviceBranding" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceModel" expression="row1.deviceMobileDeviceModel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileInputSelector" expression="row1.deviceMobileInputSelector" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceInfo" expression="row1.deviceMobileDeviceInfo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceMarketingName" expression="row1.deviceMobileDeviceMarketingName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceLanguage" expression="row1.deviceLanguage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceDeviceCategory" expression="row1.deviceDeviceCategory" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoContinent" expression="row1.geoContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoSubContinent" expression="row1.geoSubContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCountry" expression="row1.geoCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoRegion" expression="row1.geoRegion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoMetro" expression="row1.geoMetro" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCity" expression="row1.geoCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCityId" expression="row1.geoCityId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoNetworkDomain" expression="row1.geoNetworkDomain" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLatitude" expression="row1.geoLatitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLongitude" expression="row1.geoLongitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoNetworkLocation" expression="row1.geoNetworkLocation" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsHitNumber" expression="row1.hitsHitNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsTime" expression="row1.hitsTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsHour" expression="row1.hitsHour" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsMinute" expression="row1.hitsMinute" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsIsSecure" expression="row1.hitsIsSecure" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsInteraction" expression="row1.hitsIsInteraction" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsEntrance" expression="row1.hitsIsEntrance" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsExit" expression="row1.hitsIsExit" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsReferer" expression="row1.hitsReferer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePath" expression="row1.hitsPagePagePath" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageHostname" expression="row1.hitsPageHostname" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePageTitle" expression="row1.hitsPagePageTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageSearchKeyword" expression="row1.hitsPageSearchKeyword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageSearchCategory" expression="row1.hitsPageSearchCategory" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL1" expression="row1.hitsPagePagePathL1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL2" expression="row1.hitsPagePagePathL2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL3" expression="row1.hitsPagePagePathL3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL4" expression="row1.hitsPagePagePathL4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fullVisitorId" expression="row1.fullVisitorId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="userId" expression="row1.userId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="clientId" expression="row1.clientId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="channelGrouping" expression="row1.channelGrouping" type="id_String" nullable="true"/>
+        <mapperTableEntries name="socialEngagementType" expression="row1.socialEngagementType" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="visitStartTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="totalsVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsHits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsPageviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTimeOnSite" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsBounces" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTransactions" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTransactionRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsNewVisits" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsUniqueScreenviews" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTimeOnScreen" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsTotalTransactionRevenue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="totalsSessionQualityDim" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="deviceBrowser" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceBrowserVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceBrowserSize" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceOperatingSystem" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceOperatingSystemVersion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceIsMobile" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceBranding" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceModel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileInputSelector" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceInfo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceMobileDeviceMarketingName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceLanguage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="deviceDeviceCategory" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoSubContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoRegion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoMetro" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCityId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoNetworkDomain" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLatitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLongitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoNetworkLocation" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsHitNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsHour" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsMinute" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hitsIsSecure" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsInteraction" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsEntrance" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsIsExit" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="hitsReferer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePath" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageHostname" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePageTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageSearchKeyword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPageSearchCategory" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hitsPagePagePathL4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fullVisitorId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="userId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="clientId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="channelGrouping" type="id_String" nullable="true"/>
+        <mapperTableEntries name="socialEngagementType" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAmazonMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlOutput_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -1013,21 +1231,21 @@
       <column comment="" key="false" length="-1" name="hitsIsInteraction" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="hitsIsEntrance" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="hitsIsExit" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsReferer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsReferer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2000" name="hitsPagePagePath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsPageHostname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageHostname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2000" name="hitsPagePageTitle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsPageSearchKeyword" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsPageSearchCategory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageSearchKeyword" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageSearchCategory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="hitsPagePagePathL1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="hitsPagePagePathL2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="hitsPagePagePathL3" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2000" name="hitsPagePagePathL4" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="userId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="clientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="channelGrouping" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="socialEngagementType" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="userId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="clientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="channelGrouping" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="socialEngagementType" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="-1" name="visitorId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
@@ -1080,21 +1298,21 @@
       <column comment="" key="false" length="-1" name="hitsIsInteraction" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="hitsIsEntrance" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="hitsIsExit" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsReferer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsReferer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2000" name="hitsPagePagePath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsPageHostname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageHostname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2000" name="hitsPagePageTitle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsPageSearchKeyword" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="hitsPageSearchCategory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageSearchKeyword" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="hitsPageSearchCategory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="hitsPagePagePathL1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="hitsPagePagePathL2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="hitsPagePagePathL3" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2000" name="hitsPagePagePathL4" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="userId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="clientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="channelGrouping" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="socialEngagementType" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="fullVisitorId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="userId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="clientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="channelGrouping" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="700" name="socialEngagementType" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -1105,9 +1323,13 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputDelimited_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tAmazonMysqlOutput_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="output1" lineStyle="0" metaname="output1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tAmazonMysqlOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="output1" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlConnection_1" show="false"/>
