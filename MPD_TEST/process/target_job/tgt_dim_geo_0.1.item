@@ -479,6 +479,24 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
+  <note opaque="true" posX="32" posY="128" sizeHeight="97" sizeWidth="97" text="Establish &#xD;&#xA;staging &#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="256" posY="32" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="128" posY="352" sizeHeight="97" sizeWidth="161" text="Retrieve &#xD;&#xA;geo&#xD;&#xA;data from &#xD;&#xA;&quot;stg_ga_sessions_bh&quot;&#xD;&#xA;table&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="384" posY="352" sizeHeight="97" sizeWidth="97" text="Transform&#xD;&#xA;and&#xD;&#xA;route data">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="544" posY="352" sizeHeight="97" sizeWidth="97" text="Aggregate&#xD;&#xA;columns&#xD;&#xA;using function&#xD;&#xA;&quot;max&quot;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="800" posY="352" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;dim_geo&quot; &#xD;&#xA;table">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
