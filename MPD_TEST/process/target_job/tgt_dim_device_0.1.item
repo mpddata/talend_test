@@ -500,6 +500,15 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
+  <note opaque="true" posX="256" posY="32" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="32" posY="128" sizeHeight="97" sizeWidth="97" text="Establish &#xD;&#xA;staging &#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="128" posY="288" sizeHeight="97" sizeWidth="161" text="Retrieve &#xD;&#xA;device&#xD;&#xA;data from &#xD;&#xA;&quot;stg_ga_sessions_bh&quot;&#xD;&#xA;table&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
