@@ -3170,7 +3170,10 @@
   <note opaque="true" posX="384" posY="128" sizeHeight="97" sizeWidth="129" text="Daclare the &#xD;&#xA;Min and Max date &#xD;&#xA;as 2 global variables&#xD;&#xA;&quot;startdate&quot;&#xD;&#xA;and &quot;enddate&quot;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="576" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;stg_ga_sessions_bh&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
+  <note opaque="true" posX="576" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;fact_ga_bh&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="832" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;fact_ga_bh_details&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
