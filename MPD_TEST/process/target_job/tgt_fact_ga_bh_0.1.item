@@ -3179,6 +3179,27 @@
   <note opaque="true" posX="1184" posY="576" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;fact_ga_bh_details&quot; &#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
+  <note opaque="true" posX="544" posY="320" sizeHeight="97" sizeWidth="161" text="Retrieve data &#xD;&#xA;from &#xD;&#xA;&quot;stg_ga_sessions_bh&quot; &#xD;&#xA;table&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="384" posY="512" sizeHeight="97" sizeWidth="161" text="Retrieve data &#xD;&#xA;from &#xD;&#xA;&quot;stg_lotame_bh&quot; &#xD;&#xA;table&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="384" posY="640" sizeHeight="97" sizeWidth="161" text="Retrieve data &#xD;&#xA;from &#xD;&#xA;&quot;dim_customer&quot; &#xD;&#xA;table as lookup&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="736" posY="768" sizeHeight="97" sizeWidth="161" text="Retrieve data &#xD;&#xA;from &#xD;&#xA;&quot;dim__browser&quot; &#xD;&#xA;table as lookup&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="928" posY="768" sizeHeight="97" sizeWidth="129" text="Retrieve data &#xD;&#xA;from &#xD;&#xA;&quot;dim__os&quot; &#xD;&#xA;table as lookup&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="1056" posY="672" sizeHeight="97" sizeWidth="129" text="Retrieve data &#xD;&#xA;from &#xD;&#xA;&quot;dim__device&quot; &#xD;&#xA;table as lookup&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="928" posY="256" sizeHeight="65" sizeWidth="129" text="Get only unique row">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
