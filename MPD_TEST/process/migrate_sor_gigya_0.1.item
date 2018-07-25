@@ -138,8 +138,6 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;dw_admin&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="Rz7+dnIsrHIkSVZXNN/9Ug=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_42sVII_3EeiUGIQGZTbpHQ - sor_gigya" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_gigya&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -584,7 +582,7 @@
       <column comment="" key="false" length="65535" name="socialProviders" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="255" name="UID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="255" name="UID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="250" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -1179,7 +1177,7 @@
       <column comment="" key="false" length="65535" name="socialProviders" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="255" name="UID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="255" name="UID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="250" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -1738,7 +1736,7 @@
         <mapperTableEntries name="oldestDataUpdated" expression="row1.oldestDataUpdated" type="id_String" nullable="true"/>
         <mapperTableEntries name="oldestDataUpdatedTimestamp" expression="row1.oldestDataUpdatedTimestamp" type="id_String" nullable="true"/>
         <mapperTableEntries name="socialProviders" expression="row1.socialProviders" type="id_String" nullable="true"/>
-        <mapperTableEntries name="UID" expression="row1.UID" type="id_String"/>
+        <mapperTableEntries name="UID" expression="row1.UID" type="id_String" nullable="true"/>
         <mapperTableEntries name="filename" expression="row1.filename" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_android_purchase_orderId" expression="row1.data_android_purchase_orderId" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_android_purchase_token" expression="row1.data_android_purchase_token" type="id_String" nullable="true"/>
@@ -1933,7 +1931,7 @@
         <mapperTableEntries name="oldestDataUpdated" type="id_String" nullable="true"/>
         <mapperTableEntries name="oldestDataUpdatedTimestamp" type="id_String" nullable="true"/>
         <mapperTableEntries name="socialProviders" type="id_String" nullable="true"/>
-        <mapperTableEntries name="UID" type="id_String"/>
+        <mapperTableEntries name="UID" type="id_String" nullable="true"/>
         <mapperTableEntries name="filename" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_android_purchase_orderId" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_android_purchase_token" type="id_String" nullable="true"/>
@@ -3162,7 +3160,7 @@
       <column comment="" key="false" length="65535" name="socialProviders" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="255" name="UID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="255" name="UID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="250" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -3744,7 +3742,7 @@
       <column comment="" key="false" length="65535" name="socialProviders" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="255" name="UID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="255" name="UID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="250" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
