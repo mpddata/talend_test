@@ -9,7 +9,7 @@
     <contextParameter comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Password" prompt="connection_mysqlsource_db_Password?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
     <contextParameter comment="" name="connection_mysqlsource_db_Port" prompt="connection_mysqlsource_db_Port?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="3306"/>
-    <contextParameter comment="" name="connection_mysqlsource_db_Server" prompt="connection_mysqlsource_db_Server?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysqlsource_db_Server" prompt="connection_mysqlsource_db_Server?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
@@ -26,7 +26,7 @@
     <contextParameter comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Password" prompt="connection_mysqlsource_db_Password?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
     <contextParameter comment="" name="connection_mysqlsource_db_Port" prompt="connection_mysqlsource_db_Port?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="3306"/>
-    <contextParameter comment="" name="connection_mysqlsource_db_Server" prompt="connection_mysqlsource_db_Server?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysqlsource_db_Server" prompt="connection_mysqlsource_db_Server?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
@@ -1298,7 +1298,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="created" expression="(row1.created == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_String"/>
         <mapperTableEntries name="lastLogin" expression="(row1.lastLogin == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastLogin)" type="id_String"/>
