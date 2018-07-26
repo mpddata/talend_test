@@ -1296,7 +1296,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="created" expression="(row1.created == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_Date"/>
         <mapperTableEntries name="lastLogin" expression="(row1.lastLogin == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastLogin)" type="id_Date"/>
