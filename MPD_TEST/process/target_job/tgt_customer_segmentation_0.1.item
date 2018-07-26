@@ -824,7 +824,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tUnite" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="160">
+  <node componentName="tUnite" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUnite_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tUnite_1">
@@ -1690,6 +1690,10 @@
       <elementValue elementRef="FUNCTION" value="sum"/>
       <elementValue elementRef="INPUT_COLUMN" value="aggTotalUnique_90"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -1749,6 +1753,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="288">
@@ -1771,6 +1778,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="8" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -1825,6 +1835,7 @@
         <mapperTableEntries name="custSid" expression="row9.custSid " type="id_Integer"/>
         <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="row9.dateSid " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLoginDate" expression="row9.lastLoginDate " type="id_String" nullable="true"/>
         <mapperTableEntries name="custSegment" expression="row9.aggTotalVisits_30 >= 15 &amp;&amp; row9.aggTotalHits_30 >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row9.aggTotalVisits_30 >=1 &amp;&amp; row9.aggTotalVisits_30 &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 ==1?&quot;New User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_30" expression="row9.aggTotalSessions_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_30" expression="row9.aggTotalVisits_30 " type="id_Integer" nullable="true"/>
@@ -1861,6 +1872,7 @@
         <mapperTableEntries name="aggTotalHits_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="lastLoginDate" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1908,6 +1920,11 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="dateSid"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLoginDate"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -2008,6 +2025,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="8" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -2063,6 +2083,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="8" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -2336,6 +2359,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="cust_seg_full" lineStyle="0" metaname="cust_seg_full" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tMysqlOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_full" show="false"/>
   </connection>
