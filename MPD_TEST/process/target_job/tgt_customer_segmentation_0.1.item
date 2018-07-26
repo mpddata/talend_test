@@ -629,6 +629,10 @@
       <elementValue elementRef="FUNCTION" value="sum"/>
       <elementValue elementRef="INPUT_COLUMN" value="dailyTotalTimeOnSite"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dateSid"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dateSid"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -767,6 +771,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -790,6 +797,7 @@
         <mapperTableEntries name="aggTotalHits_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="lastLoginDate" expression="row4.dateSid " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
@@ -870,6 +878,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -1046,6 +1057,10 @@
       <elementValue elementRef="FUNCTION" value="sum"/>
       <elementValue elementRef="INPUT_COLUMN" value="dailyTotalTimeOnSite"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dateSid"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dateSid"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -1184,6 +1199,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -1207,6 +1225,7 @@
         <mapperTableEntries name="aggTotalHits_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="lastLoginDate" expression="row5.dateSid " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
@@ -1405,6 +1424,10 @@
       <elementValue elementRef="FUNCTION" value="sum"/>
       <elementValue elementRef="INPUT_COLUMN" value="dailyTotalTimeOnSite"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dateSid"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dateSid"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -1543,6 +1566,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -1566,6 +1592,7 @@
         <mapperTableEntries name="aggTotalHits_90" expression="row7.dailyTotalHits == null ? 0:row7.dailyTotalHits " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="row7.dailyTotalPageviews == null ? 0:row7.dailyTotalPageviews " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="row7.dailyTotalUnique == null ? 0:row7.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="lastLoginDate" expression="row7.dateSid " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
@@ -1744,6 +1771,7 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="8" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1789,7 +1817,6 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="cust_segment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -1798,6 +1825,7 @@
         <mapperTableEntries name="custSid" expression="row9.custSid " type="id_Integer"/>
         <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="row9.dateSid " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSegment" expression="row9.aggTotalVisits_30 >= 15 &amp;&amp; row9.aggTotalHits_30 >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row9.aggTotalVisits_30 >=1 &amp;&amp; row9.aggTotalVisits_30 &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 ==1?&quot;New User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_30" expression="row9.aggTotalSessions_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_30" expression="row9.aggTotalVisits_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_30" expression="row9.aggTotalHits_30 " type="id_Integer" nullable="true"/>
@@ -1813,7 +1841,6 @@
         <mapperTableEntries name="aggTotalHits_90" expression="row9.aggTotalHits_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="row9.aggTotalPageviews_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="row9.aggTotalUnique_90 " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="cust_segment" expression="row9.aggTotalVisits_30 >= 15 &amp;&amp; row9.aggTotalHits_30 >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row9.aggTotalVisits_30 >=1 &amp;&amp; row9.aggTotalVisits_30 &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 ==1?&quot;New User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
@@ -1881,6 +1908,11 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="dateSid"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custSegment"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1960,11 +1992,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="cust_segment"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -1981,6 +2008,7 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="8" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -2026,7 +2054,6 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="cust_segment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -2036,6 +2063,7 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="8" name="dateSid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="8" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -2081,7 +2109,6 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="cust_segment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -2258,6 +2285,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="cust_seg_30" lineStyle="10" mergeOrder="1" metaname="cust_seg_30" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tUnite_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_30" show="false"/>
   </connection>
@@ -2274,6 +2306,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="cust_seg_60" lineStyle="10" mergeOrder="2" metaname="cust_seg_60" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tUnite_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_60" show="false"/>
   </connection>
@@ -2286,6 +2323,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="cust_seg_90" lineStyle="10" mergeOrder="3" metaname="cust_seg_90" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tUnite_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_90" show="false"/>
   </connection>
