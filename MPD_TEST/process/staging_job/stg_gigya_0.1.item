@@ -158,8 +158,6 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_IqpBEISqEei1CL3KFVK_vQ - sor_gigya" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_gigya&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -1298,12 +1296,12 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="created" expression="(row1.created == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_String"/>
-        <mapperTableEntries name="lastLogin" expression="(row1.lastLogin == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastLogin)" type="id_String"/>
-        <mapperTableEntries name="lastUpdated" expression="(row1.lastUpdated == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastUpdated) " type="id_String"/>
-        <mapperTableEntries name="data_bh_login_timestampMY" expression="(row1.data_bh_login_timestampMY == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss'Z'&quot;,row1.data_bh_login_timestampMY) " type="id_String"/>
+        <mapperTableEntries name="created" expression="(row1.created == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_Date"/>
+        <mapperTableEntries name="lastLogin" expression="(row1.lastLogin == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastLogin)" type="id_Date"/>
+        <mapperTableEntries name="lastUpdated" expression="(row1.lastUpdated == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastUpdated) " type="id_Date"/>
+        <mapperTableEntries name="data_bh_login_timestampMY" expression="(row1.data_bh_login_timestampMY == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss'Z'&quot;,row1.data_bh_login_timestampMY) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="gigya_stg">
         <mapperTableEntries name="UID" expression="row1.UID " type="id_String"/>
