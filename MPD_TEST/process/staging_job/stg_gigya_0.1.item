@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="Y or N" name="firstTime" prompt="firstTime?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="inputDateStart" prompt="inputDateStart?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="inputDateEnd" prompt="inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="Y or N" name="parameter_firstTime" prompt="parameter_firstTime?" promptNeeded="true" type="id_String" value="N"/>
+    <contextParameter comment="YYYYMMDD" name="parameter_inputDateStart" prompt="parameter_inputDateStart?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_inputDateEnd" prompt="parameter_inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
@@ -18,9 +18,9 @@
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="Y or N" name="firstTime" prompt="firstTime?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="inputDateStart" prompt="inputDateStart?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="inputDateEnd" prompt="inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="Y or N" name="parameter_firstTime" prompt="parameter_firstTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_inputDateStart" prompt="parameter_inputDateStart?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_inputDateEnd" prompt="parameter_inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
@@ -2148,9 +2148,9 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;inputDateStart&quot;"/>
-      <elementValue elementRef="VALUE" value="context.inputDateStart"/>
+      <elementValue elementRef="VALUE" value="context.parameter_inputDateStart"/>
       <elementValue elementRef="KEY" value="&quot;inputDateEnd&quot;"/>
-      <elementValue elementRef="VALUE" value="context.inputDateEnd"/>
+      <elementValue elementRef="VALUE" value="context.parameter_inputDateEnd"/>
       <elementValue elementRef="KEY" value="&quot;processStartDate&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;&quot;"/>
       <elementValue elementRef="KEY" value="&quot;processEndDate&quot;"/>
@@ -2162,7 +2162,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtDateStart = ((String)globalMap.get(&quot;inputDateStart&quot;));&#xA;String dtDateEnd = ((String)globalMap.get(&quot;inputDateEnd&quot;));&#xA;Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xA;Date dtProcessStart = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;Date dtProcessEnd = TalendDate.getCurrentDate();&#xA;&#xA;if (!context.firstTime.equals(&quot;N&quot;)){&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;19000101&quot;);&#xA;}&#xA;else if (dtDateStart != null &amp;&amp; dtDateEnd != null &amp;&amp; dtDateStart.length()==8 &amp;&amp; dtDateEnd.length()==8) {&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateStart);&#xA;&#x9;dtProcessEnd = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateEnd),1,&quot;dd&quot;);&#xA;}&#xA;&#xA;globalMap.put(&quot;processStartDate&quot;, df.format(dtProcessStart));&#xA;globalMap.put(&quot;processEndDate&quot;, df.format(dtProcessEnd));&#xA;System.out.println(&quot;Start &quot; + ((String)globalMap.get(&quot;processStartDate&quot;)));&#xA;System.out.println(&quot;End &quot; + ((String)globalMap.get(&quot;processEndDate&quot;)));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtDateStart = ((String)globalMap.get(&quot;inputDateStart&quot;));&#xA;String dtDateEnd = ((String)globalMap.get(&quot;inputDateEnd&quot;));&#xA;Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xA;Date dtProcessStart = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;Date dtProcessEnd = TalendDate.getCurrentDate();&#xA;&#xA;if (!context.parameter_firstTime.equals(&quot;N&quot;)){&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;19000101&quot;);&#xA;}&#xA;else if (dtDateStart != null &amp;&amp; dtDateEnd != null &amp;&amp; dtDateStart.length()==8 &amp;&amp; dtDateEnd.length()==8) {&#xA;&#x9;dtProcessStart = TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateStart);&#xA;&#x9;dtProcessEnd = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtDateEnd),1,&quot;dd&quot;);&#xA;}&#xA;&#xA;globalMap.put(&quot;processStartDate&quot;, df.format(dtProcessStart));&#xA;globalMap.put(&quot;processEndDate&quot;, df.format(dtProcessEnd));&#xA;System.out.println(&quot;Start &quot; + ((String)globalMap.get(&quot;processStartDate&quot;)));&#xA;System.out.println(&quot;End &quot; + ((String)globalMap.get(&quot;processEndDate&quot;)));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="setDate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>

@@ -176,7 +176,7 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="firstTime"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_firstTime"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_firstTime_master"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_AdditionalParams"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_AdditionalParams"/>
@@ -202,9 +202,9 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateStart_YYYYMMDD"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateEnd_YYYYMMDD"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
@@ -227,9 +227,9 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
@@ -490,9 +490,9 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="resource_file_tokenfile"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.resource_file_bg_api_tokenfile"/>

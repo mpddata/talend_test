@@ -179,7 +179,7 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="firstTime"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_firstTime"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_firstTime_master"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_AdditionalParams"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_AdditionalParams"/>
@@ -205,9 +205,9 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateStart_YYYYMMDD"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateEnd_YYYYMMDD"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
@@ -231,9 +231,9 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
@@ -625,6 +625,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_24" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_os"/>
@@ -727,7 +728,7 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
@@ -839,6 +840,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_24" offsetLabelX="0" offsetLabelY="0" source="tRunJob_24" target="tRunJob_25">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk12" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_25" offsetLabelX="0" offsetLabelY="0" source="tRunJob_25" target="tRunJob_5">
