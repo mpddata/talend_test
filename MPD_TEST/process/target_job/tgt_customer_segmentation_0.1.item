@@ -775,21 +775,21 @@
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
         <mapperTableEntries name="custUID" expression="row4.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_30" expression="row4.dailyTotalSessions " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_30" expression="row4.dailyTotalVisits " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_30" expression="row4.dailyTotalHits " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_30" expression="row4.dailyTotalPageviews " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_30" expression="row4.dailyTotalUnique " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_60" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_60" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_60" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_60" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_60" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_90" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_30" expression="row4.dailyTotalSessions == null ? 0:row4.dailyTotalSessions " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_30" expression="row4.dailyTotalVisits  == null ? 0:row4.dailyTotalVisits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_30" expression="row4.dailyTotalHits  == null ? 0:row4.dailyTotalHits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_30" expression="row4.dailyTotalPageviews == null ? 0:row4.dailyTotalPageviews " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_30" expression="row4.dailyTotalUnique == null ? 0:row4.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_90" expression="0" type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
@@ -1192,21 +1192,21 @@
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
         <mapperTableEntries name="custUID" expression="row4.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_60" expression="row5.dailyTotalSessions " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_60" expression="row5.dailyTotalVisits " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_60" expression="row5.dailyTotalHits " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_60" expression="row5.dailyTotalPageviews " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_60" expression="row5.dailyTotalUnique " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_90" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_90" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_60" expression="row5.dailyTotalSessions == null ? 0:row5.dailyTotalSessions " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_60" expression="row5.dailyTotalVisits == null ? 0:row5.dailyTotalVisits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_60" expression="row5.dailyTotalHits == null ? 0:row5.dailyTotalHits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_60" expression="row5.dailyTotalPageviews == null ? 0:row5.dailyTotalPageviews " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_60" expression="row5.dailyTotalUnique == null? 0:row5.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_90" expression="0" type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
@@ -1551,21 +1551,21 @@
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
         <mapperTableEntries name="custUID" expression="row4.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_30" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_60" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_60" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_60" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_60" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_60" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalSessions_90" expression="row7.dailyTotalSessions " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalVisits_90" expression="row7.dailyTotalVisits " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalHits_90" expression="row7.dailyTotalHits " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalPageviews_90" expression="row7.dailyTotalPageviews " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="aggTotalUnique_90" expression="row7.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalSessions_90" expression="row7.dailyTotalSessions == null ? 0:row7.dailyTotalSessions " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalVisits_90" expression="row7.dailyTotalVisits == null ? 0:row7.dailyTotalVisits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalHits_90" expression="row7.dailyTotalHits == null ? 0:row7.dailyTotalHits " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalPageviews_90" expression="row7.dailyTotalPageviews == null ? 0:row7.dailyTotalPageviews " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTotalUnique_90" expression="row7.dailyTotalUnique == null ? 0:row7.dailyTotalUnique " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
