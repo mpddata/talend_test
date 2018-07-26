@@ -35,7 +35,7 @@
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx2048M&quot;]}" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -1298,7 +1298,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="created" expression="(row1.created == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.created) " type="id_Date"/>
         <mapperTableEntries name="lastLogin" expression="(row1.lastLogin == null)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;,row1.lastLogin)" type="id_Date"/>
@@ -1552,23 +1552,23 @@
   </node>
   <node componentName="tAmazonMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonMysqlOutput_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tAmazonMysqlConnection_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tAmazonMysqlConnection_2"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_gigya&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams" show="false"/>
     <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
     <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)"/>
     <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="1000"/>
@@ -1576,7 +1576,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
