@@ -1054,7 +1054,7 @@
         <mapperTableEntries name="country" type="id_String" nullable="true"/>
         <mapperTableEntries name="zip" type="id_String" nullable="true"/>
         <mapperTableEntries name="hometown" type="id_String" nullable="true"/>
-        <mapperTableEntries name="occupation" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="occupation" type="id_String" nullable="true"/>
         <mapperTableEntries name="certifications" type="id_String" nullable="true"/>
         <mapperTableEntries name="phone" type="id_String" nullable="true"/>
         <mapperTableEntries name="email" type="id_String" nullable="true"/>
@@ -1275,7 +1275,7 @@
       <column comment="" key="false" length="65535" name="hometown" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="occupation" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="255" name="occupation" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="65535" name="certifications" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
@@ -1350,7 +1350,7 @@
       <column comment="" key="false" length="65535" name="socialProviders" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+      <column comment="" defaultValue="0" key="true" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
