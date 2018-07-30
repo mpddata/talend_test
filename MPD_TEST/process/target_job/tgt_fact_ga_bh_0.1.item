@@ -740,13 +740,13 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitNumber" expression="row1.visitNumber " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitId" expression="row1.visitId" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="sessionId" expression="(new Integer(row1.visitId)).toString()+ row1.clientId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="sessionId" expression="row1.clientId == null? (new Integer(row1.visitId)).toString()+ row1.fullVisitorId:(new Integer(row1.visitId)).toString()+ row1.clientId " type="id_String" nullable="true"/>
         <mapperTableEntries name="visitStartTime" expression="row1.visitStartTime " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="row1.date" type="id_String" nullable="true"/>
         <mapperTableEntries name="fullVisitorId" expression="row1.fullVisitorId " type="id_String" nullable="true"/>
