@@ -533,7 +533,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_30">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -961,7 +961,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_60">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -1328,7 +1328,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_90">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -1539,6 +1539,7 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custCount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1594,6 +1595,7 @@
         <mapperTableEntries name="dateSid" expression="row9.dateSid " type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLoginDate" expression="row9.lastLoginDate " type="id_String" nullable="true"/>
         <mapperTableEntries name="custSegment" expression="row9.aggTotalVisits_30 >= 15 &amp;&amp; row9.aggTotalHits_30 >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row9.aggTotalSessions_30 >1 &amp;&amp; row9.aggTotalSessions_30 &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 ==1 || row9.aggTotalSessions_30 ==1?&quot;New User&quot;: &#xD;&#xA;(row9.aggTotalVisits_30 + row9.aggTotalVisits_60 + row9.aggTotalVisits_90) &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custCount" expression="1" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_30" expression="row9.aggTotalSessions_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_30" expression="row9.aggTotalVisits_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_30" expression="row9.aggTotalHits_30 " type="id_Integer" nullable="true"/>
@@ -1687,6 +1689,11 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="custSegment"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custCount"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1786,6 +1793,7 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custCount" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1844,6 +1852,7 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custCount" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -2192,7 +2201,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_infinite">
         <mapperTableEntries name="custSid" expression="row10.custSid " type="id_Integer"/>
@@ -2415,6 +2424,9 @@
   <connection connectorName="FLOW" label="cust_seg_full" lineStyle="0" metaname="cust_seg_full" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tMysqlOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="custCount"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
