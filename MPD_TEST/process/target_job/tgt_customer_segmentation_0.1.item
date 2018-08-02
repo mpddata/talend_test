@@ -1488,6 +1488,18 @@
       <elementValue elementRef="FUNCTION" value="max"/>
       <elementValue elementRef="INPUT_COLUMN" value="lastLoginDate"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="aggTimeOnSite_30"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="aggTimeOnSite_30"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="aggTimeOnSite_90"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="aggTimeOnSite_90"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -1517,6 +1529,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1532,6 +1547,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1547,6 +1563,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1592,6 +1609,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1607,6 +1627,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1622,9 +1643,10 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_full">
         <mapperTableEntries name="custSid" expression="row9.custSid " type="id_Integer"/>
@@ -1638,16 +1660,19 @@
         <mapperTableEntries name="aggTotalHits_30" expression="row9.aggTotalHits_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_30" expression="row9.aggTotalPageviews_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_30" expression="row9.aggTotalUnique_30 " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_30" expression="row9.aggTimeOnSite_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_60" expression="row9.aggTotalSessions_60 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_60" expression="row9.aggTotalVisits_60 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_60" expression="row9.aggTotalHits_60 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_60" expression="row9.aggTotalPageviews_60 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_60" expression="row9.aggTotalUnique_60 " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_60" expression="row9.aggTimeOnSite_60 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_90" expression="row9.aggTotalSessions_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_90" expression="row9.aggTotalVisits_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_90" expression="row9.aggTotalHits_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="row9.aggTotalPageviews_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="row9.aggTotalUnique_90 " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_90" expression="row9.aggTimeOnSite_90 " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
@@ -1658,16 +1683,19 @@
         <mapperTableEntries name="aggTotalHits_30" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_30" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_30" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_30" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_60" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_60" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_60" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_60" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_60" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_60" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="lastLoginDate" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
@@ -1760,6 +1788,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTimeOnSite_30"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_60"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -1785,6 +1818,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalSessions_90"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -1806,6 +1844,11 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="aggTotalUnique_90"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggTimeOnSite_90"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1846,6 +1889,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1861,6 +1907,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1876,6 +1923,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -1905,6 +1953,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1920,6 +1971,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1935,6 +1987,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -2502,6 +2555,15 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="custCount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_90"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_30"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
