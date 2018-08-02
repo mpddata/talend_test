@@ -237,10 +237,10 @@
       <column comment="" key="true" length="50" name="educationDesc" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="educationDesc" expression="row1.educationDesc " type="id_String" nullable="true"/>
+        <mapperTableEntries name="educationDesc" expression="(StringHandling.DOWNCASE(row1.educationDesc).matches(&quot;master&quot;))?&quot;Masters&quot;:row1.educationDesc " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="row1.educationDesc != null &amp;&amp;  !StringHandling.DOWNCASE(row1.educationDesc).contains(&quot;select&quot;) &amp;&amp; !StringHandling.DOWNCASE(row1.educationDesc).contains(&quot;please&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="educationDesc" type="id_String" nullable="true"/>
