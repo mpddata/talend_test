@@ -601,7 +601,7 @@
       <column comment="" key="true" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
@@ -701,7 +701,7 @@
         <mapperTableEntries name="profile_zip" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method == null?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil&quot;))?&quot;Mobile&quot;:&#xD;&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method == null?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil|ponsel&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel|e-mail|e-posta|enamel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
