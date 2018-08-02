@@ -237,7 +237,7 @@
       <column comment="" key="true" length="255" name="contactMethodDesc" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="contactMethodDesc" expression="(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;mobil&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;e-mel&quot;))?&quot;Email&quot;:row1.contactMethodDesc " type="id_String" nullable="true"/>
