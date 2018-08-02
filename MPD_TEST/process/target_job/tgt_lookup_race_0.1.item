@@ -236,7 +236,7 @@
       <column comment="" key="true" length="20" name="raceDesc" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="30" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="raceDesc" expression="(StringHandling.DOWNCASE(row1.raceDesc).matches(&quot;my|malaya|melayu|m&quot;))?&quot;Malay&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.raceDesc).matches(&quot;cn|c|cina&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.raceDesc).matches(&quot;in|i&quot;))?&quot;Indian&quot;:(StringHandling.DOWNCASE(row1.raceDesc).contains(&quot;other&quot;))?&quot;Others&quot;:row1.raceDesc " type="id_String" nullable="true"/>
