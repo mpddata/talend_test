@@ -201,7 +201,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT distinct &#xA;  CASE WHEN data_ethnicity in ('my','malaya','melayu','m') THEN 'Malay'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity in ('cina','cn','c') THEN 'Chinese'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity in ('in','i') THEN 'Indian'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity in ('other') THEN 'Others'&#xD;&#xA;&#x9;&#x9;&#x9;ELSE data_ethnicity END&#xA;FROM `stg-tci`.stg_gigya&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT distinct &#xA;  CASE WHEN data_ethnicity in ('my','malaya','melayu','m') THEN 'Malay'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity in ('cina','cn','c') THEN 'Chinese'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity like '%cina%' THEN 'Chinese'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity in ('in','i') THEN 'Indian'&#xD;&#xA;&#x9;&#x9;&#x9;WHEN data_ethnicity in ('other') THEN 'Others'&#xD;&#xA;&#x9;&#x9;&#x9;ELSE data_ethnicity END&#xA;FROM `stg-tci`.stg_gigya&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
