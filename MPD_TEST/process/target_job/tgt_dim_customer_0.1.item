@@ -699,7 +699,7 @@
         <mapperTableEntries name="profile_zip" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method==null?null:(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method == null?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil|ponsel&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel|e-mail|e-posta|enamel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
