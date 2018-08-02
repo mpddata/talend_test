@@ -390,6 +390,10 @@
       <elementValue elementRef="FUNCTION" value="max"/>
       <elementValue elementRef="INPUT_COLUMN" value="dateSid"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -498,6 +502,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -513,6 +520,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -528,12 +536,13 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_30">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -544,16 +553,19 @@
         <mapperTableEntries name="aggTotalHits_30" expression="row4.dailyTotalHits  == null ? 0:row4.dailyTotalHits " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_30" expression="row4.dailyTotalPageviews == null ? 0:row4.dailyTotalPageviews " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_30" expression="row4.dailyTotalUnique == null ? 0:row4.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_30" expression="row4.dailyTotalTimeOnSite  == null ? 0:row4.dailyTotalTimeOnSite" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="lastLoginDate" expression="row4.dateSid " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -607,6 +619,9 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -622,6 +637,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -637,6 +653,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -818,6 +835,10 @@
       <elementValue elementRef="FUNCTION" value="max"/>
       <elementValue elementRef="INPUT_COLUMN" value="dateSid"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -926,6 +947,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -941,6 +963,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -956,12 +979,13 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_60">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -972,16 +996,19 @@
         <mapperTableEntries name="aggTotalHits_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_60" expression="row5.dailyTotalSessions == null ? 0:row5.dailyTotalSessions " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_60" expression="row5.dailyTotalVisits == null ? 0:row5.dailyTotalVisits " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_60" expression="row5.dailyTotalHits == null ? 0:row5.dailyTotalHits " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_60" expression="row5.dailyTotalPageviews == null ? 0:row5.dailyTotalPageviews " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_60" expression="row5.dailyTotalUnique == null? 0:row5.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_60" expression="row5.dailyTotalTimeOnSite == null ? 0:row5.dailyTotalTimeOnSite " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_90" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="lastLoginDate" expression="row5.dateSid " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -1185,6 +1212,10 @@
       <elementValue elementRef="FUNCTION" value="max"/>
       <elementValue elementRef="INPUT_COLUMN" value="dateSid"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dailyTotalTimeOnSite"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -1293,6 +1324,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_30" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1308,6 +1340,7 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_60" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_60" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="aggTotalSessions_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1323,12 +1356,13 @@
       <column comment="" key="false" length="10" name="aggTotalUnique_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="lastLoginDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_90">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -1339,16 +1373,19 @@
         <mapperTableEntries name="aggTotalHits_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_30" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_60" expression="0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_60" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_90" expression="row7.dailyTotalSessions == null ? 0:row7.dailyTotalSessions " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_90" expression="row7.dailyTotalVisits == null ? 0:row7.dailyTotalVisits " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalHits_90" expression="row7.dailyTotalHits == null ? 0:row7.dailyTotalHits " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalPageviews_90" expression="row7.dailyTotalPageviews == null ? 0:row7.dailyTotalPageviews " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="row7.dailyTotalUnique == null ? 0:row7.dailyTotalUnique " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="aggTimeOnSite_90" expression="row7.dailyTotalTimeOnSite == null ? 0:  row7.dailyTotalTimeOnSite " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="lastLoginDate" expression="row7.dateSid " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -1587,7 +1624,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_full">
         <mapperTableEntries name="custSid" expression="row9.custSid " type="id_Integer"/>
@@ -1902,8 +1939,121 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtInputDate = ((String)globalMap.get(&quot;inputDate&quot;));&#xA;Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMdd&quot;);&#xA;Date dtProcessStart30 = TalendDate.addDate(TalendDate.getCurrentDate(),-30,&quot;dd&quot;);&#xA;Date dtProcessEnd30 = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;Date dtProcessStart60 = TalendDate.addDate(TalendDate.getCurrentDate(),-60,&quot;dd&quot;);&#xA;Date dtProcessEnd60 = TalendDate.addDate(TalendDate.getCurrentDate(),-31,&quot;dd&quot;);&#xA;Date dtProcessStart90 = TalendDate.addDate(TalendDate.getCurrentDate(),-90,&quot;dd&quot;);&#xA;Date dtProcessEnd90 = TalendDate.addDate(TalendDate.getCurrentDate(),-61,&quot;dd&quot;);&#xA;&#xA;if (dtInputDate != null &amp;&amp; dtInputDate.length()==8) {&#xA;&#x9;dtProcessStart30 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-29,&quot;dd&quot;);&#xA;&#x9;dtProcessEnd30 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),0,&quot;dd&quot;);&#xA;&#x9;dtProcessStart60 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-59,&quot;dd&quot;);&#xA;&#x9;dtProcessEnd60 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-30,&quot;dd&quot;);&#xA;&#x9;dtProcessStart90 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-89,&quot;dd&quot;);&#xA;&#x9;dtProcessEnd90 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-60,&quot;dd&quot;);&#xA;} else {&#xA;globalMap.put(&quot;inputDate&quot;, df.format(dtCurr));&#xA;}&#xA;&#xA;globalMap.put(&quot;processStartDate30&quot;, df.format(dtProcessStart30));&#xA;globalMap.put(&quot;processEndDate30&quot;, df.format(dtProcessEnd30));&#xA;globalMap.put(&quot;processStartDate60&quot;, df.format(dtProcessStart60));&#xA;globalMap.put(&quot;processEndDate60&quot;, df.format(dtProcessEnd60));&#xA;globalMap.put(&quot;processStartDate90&quot;, df.format(dtProcessStart90));&#xA;globalMap.put(&quot;processEndDate90&quot;, df.format(dtProcessEnd90));&#xA;System.out.println(&quot;inputDate: &quot; + ((String)globalMap.get(&quot;inputDate&quot;)));&#xA;System.out.println(&quot;Start 30: &quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)));&#xA;System.out.println(&quot;End 30: &quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)));&#xA;System.out.println(&quot;Start 60: &quot; + ((String)globalMap.get(&quot;processStartDate60&quot;)));&#xA;System.out.println(&quot;End 60:  &quot; + ((String)globalMap.get(&quot;processEndDate60&quot;)));&#xA;System.out.println(&quot;Start 90: &quot; + ((String)globalMap.get(&quot;processStartDate90&quot;)));&#xA;System.out.println(&quot;End 90: &quot; + ((String)globalMap.get(&quot;processEndDate90&quot;)));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="setDate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1">
+      <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="custUID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalSessions" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalHits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalPageviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalTimeOnSite" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalBounces" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalTrans" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalTransRevenue" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalNewVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalScreenviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalUnique" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalTimeOnScreen" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalTotalTransRevenue" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyTotalSessionQualityDim" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="transformDate" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlRow_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_4" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqltarget_tci_db_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqltarget_tci_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_customer_segmentation where dateSid = '&quot;+ ((String)globalMap.get(&quot;inputDate&quot;)) +&quot;'&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="del from agg_customer_segmentation"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMysqlRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
@@ -2047,6 +2197,7 @@
   </node>
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_5" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="custSid"/>
       <elementValue elementRef="INPUT_COLUMN" value="custSid"/>
@@ -2133,6 +2284,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2249,118 +2401,6 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String dtInputDate = ((String)globalMap.get(&quot;inputDate&quot;));&#xA;Date dtCurr = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMdd&quot;);&#xA;Date dtProcessStart30 = TalendDate.addDate(TalendDate.getCurrentDate(),-30,&quot;dd&quot;);&#xA;Date dtProcessEnd30 = TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;);&#xA;Date dtProcessStart60 = TalendDate.addDate(TalendDate.getCurrentDate(),-60,&quot;dd&quot;);&#xA;Date dtProcessEnd60 = TalendDate.addDate(TalendDate.getCurrentDate(),-31,&quot;dd&quot;);&#xA;Date dtProcessStart90 = TalendDate.addDate(TalendDate.getCurrentDate(),-90,&quot;dd&quot;);&#xA;Date dtProcessEnd90 = TalendDate.addDate(TalendDate.getCurrentDate(),-61,&quot;dd&quot;);&#xA;&#xA;if (dtInputDate != null &amp;&amp; dtInputDate.length()==8) {&#xA;&#x9;dtProcessStart30 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-29,&quot;dd&quot;);&#xA;&#x9;dtProcessEnd30 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),0,&quot;dd&quot;);&#xA;&#x9;dtProcessStart60 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-59,&quot;dd&quot;);&#xA;&#x9;dtProcessEnd60 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-30,&quot;dd&quot;);&#xA;&#x9;dtProcessStart90 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-89,&quot;dd&quot;);&#xA;&#x9;dtProcessEnd90 = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, dtInputDate),-60,&quot;dd&quot;);&#xA;} else {&#xA;globalMap.put(&quot;inputDate&quot;, df.format(dtCurr));&#xA;}&#xA;&#xA;globalMap.put(&quot;processStartDate30&quot;, df.format(dtProcessStart30));&#xA;globalMap.put(&quot;processEndDate30&quot;, df.format(dtProcessEnd30));&#xA;globalMap.put(&quot;processStartDate60&quot;, df.format(dtProcessStart60));&#xA;globalMap.put(&quot;processEndDate60&quot;, df.format(dtProcessEnd60));&#xA;globalMap.put(&quot;processStartDate90&quot;, df.format(dtProcessStart90));&#xA;globalMap.put(&quot;processEndDate90&quot;, df.format(dtProcessEnd90));&#xA;System.out.println(&quot;inputDate: &quot; + ((String)globalMap.get(&quot;inputDate&quot;)));&#xA;System.out.println(&quot;Start 30: &quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)));&#xA;System.out.println(&quot;End 30: &quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)));&#xA;System.out.println(&quot;Start 60: &quot; + ((String)globalMap.get(&quot;processStartDate60&quot;)));&#xA;System.out.println(&quot;End 60:  &quot; + ((String)globalMap.get(&quot;processEndDate60&quot;)));&#xA;System.out.println(&quot;Start 90: &quot; + ((String)globalMap.get(&quot;processStartDate90&quot;)));&#xA;System.out.println(&quot;End 90: &quot; + ((String)globalMap.get(&quot;processEndDate90&quot;)));"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="setDate"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1">
-      <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="255" name="custUID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalSessions" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalHits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalPageviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalTimeOnSite" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalBounces" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalTrans" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalTransRevenue" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalNewVisits" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalScreenviews" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalUnique" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalTimeOnScreen" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalTotalTransRevenue" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyTotalSessionQualityDim" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyAveHitsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyAvePageviewsPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnSitePerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="dailyAveTimeOnScreenPerSession" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="-1" name="transformDate" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <additionalProperties key="Comment" value=""/>
-    </metadata>
-  </node>
-  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlRow_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_4" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqltarget_tci_db_Server"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqltarget_tci_db_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
-    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_customer_segmentation where dateSid = '&quot;+ ((String)globalMap.get(&quot;inputDate&quot;)) +&quot;'&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="del from agg_customer_segmentation"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMysqlRow_1"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
@@ -2375,6 +2415,21 @@
   <connection connectorName="FLOW" label="cust_seg_30" lineStyle="10" mergeOrder="1" metaname="cust_seg_30" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tUnite_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_90"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnScreen_30"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnScreen_60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_30"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -2398,6 +2453,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_90"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_30"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_60" show="false"/>
@@ -2413,6 +2477,15 @@
   <connection connectorName="FLOW" label="cust_seg_90" lineStyle="10" mergeOrder="3" metaname="cust_seg_90" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tUnite_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="lastLoginDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_90"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_60"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aggTimeOnSite_30"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -2435,23 +2508,26 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_full" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tMysqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_5" target="tAggregateRow_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tMap_6">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="cust_seg_infinite" lineStyle="10" mergeOrder="4" metaname="cust_seg_infinite" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tUnite_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_infinite" show="false"/>
-  </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tMysqlRow_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlRow_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlRow_1" target="tMysqlInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tMysqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_5" target="tAggregateRow_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tMap_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="cust_seg_infinite" lineStyle="10" mergeOrder="4" metaname="cust_seg_infinite" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tUnite_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_infinite" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
@@ -2470,6 +2546,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlRow_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
