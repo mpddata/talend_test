@@ -600,7 +600,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
@@ -702,11 +702,11 @@
         <mapperTableEntries name="contactMethodDesc" expression="(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" minimized="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="educationDesc" expression="row1.data_education_level " type="id_String" nullable="true" operator="="/>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="educationDesc" expression="(StringHandling.DOWNCASE(row1.data_education_level).matches(&quot;master&quot;))?&quot;Masters&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="educationSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" minimized="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="maritalDesc" expression="row1.data_marital_status " type="id_String" nullable="true"/>
         <mapperTableEntries name="maritalSid" type="id_Integer"/>
       </inputTables>
