@@ -1645,6 +1645,7 @@
       </column>
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="preferredTopic_30" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="activeHour_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -1675,6 +1676,7 @@
         <mapperTableEntries name="aggTotalUnique_90" expression="row9.aggTotalUnique_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTimeOnSite_90" expression="row9.aggTimeOnSite_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="preferredTopic_30" expression="out1.topic " type="id_String" nullable="true"/>
+        <mapperTableEntries name="activeHour_30" expression="out3.visitHour " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
@@ -1705,7 +1707,11 @@
         <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="topic" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="out3" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE"/>
+      <inputTables sizeState="INTERMEDIATE" name="out3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
+      </inputTables>
     </nodeData>
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="544">
@@ -1866,6 +1872,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="activeHour_30"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -1938,6 +1949,7 @@
       </column>
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="preferredTopic_30" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="activeHour_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -2003,6 +2015,7 @@
       </column>
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="preferredTopic_30" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="activeHour_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -2126,22 +2139,30 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="out3" name="out3"/>
+    <metadata connector="FLOW" label="out3" name="out3">
+      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custUID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visitHour" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out3"/>
+      <outputTables sizeState="INTERMEDIATE" name="out3">
+        <mapperTableEntries name="custSid" expression="row17.custSid " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="custUID" expression="row17.custUID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="visitHour" expression="row17.visitHour " type="id_Integer" nullable="true"/>
+      </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row17" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="custUID" type="id_String" nullable="true"/>
         <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="hourCount" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row18" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="custUID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="custUID" expression="row17.custUID " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="hourCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="hourCount" expression="row17.hourCount " type="id_Integer" nullable="true" operator="="/>
       </inputTables>
     </nodeData>
   </node>
@@ -2166,12 +2187,10 @@
       <elementValue elementRef="INPUT_COLUMN" value="custSid"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="custUID"/>
       <elementValue elementRef="INPUT_COLUMN" value="custUID"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="visitHour"/>
-      <elementValue elementRef="INPUT_COLUMN" value="visitHour"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="hourCount"/>
-      <elementValue elementRef="FUNCTION" value="count"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
       <elementValue elementRef="INPUT_COLUMN" value="hourCount"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
     </elementParameter>
@@ -2890,6 +2909,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="preferredTopic_30"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="activeHour_30"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
