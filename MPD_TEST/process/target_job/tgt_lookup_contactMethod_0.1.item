@@ -237,12 +237,12 @@
       <column comment="" key="true" length="255" name="contactMethodDesc" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="contactMethodDesc" expression="(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;mobil|ponsel&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;e-mel|e-mail|e-posta|enamel&quot;))?&quot;Email&quot;:&#xA;(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;bergerak|m&amp;oacute;vil&quot;))?null:row1.contactMethodDesc " type="id_String" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1" activateExpressionFilter="true">
+        <mapperTableEntries name="contactMethodDesc" expression="(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;mobil|ponsel&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.contactMethodDesc).matches(&quot;e-mel|e-mail|e-posta|enamel&quot;))?&quot;Email&quot;:row1.contactMethodDesc " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="row1.contactMethodDesc != null &amp;&amp; !row1.contactMethodDesc.contains(&quot;??&quot;) &amp;&amp; !row1.contactMethodDesc.contains(&quot;null&quot;) &amp;&amp; !row1.contactMethodDesc.contains(&quot;xml&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="row1.contactMethodDesc != null &amp;&amp; !row1.contactMethodDesc.contains(&quot;??&quot;) &amp;&amp; !row1.contactMethodDesc.contains(&quot;null&quot;) &amp;&amp; !row1.contactMethodDesc.contains(&quot;xml&quot;) &amp;&amp;&#xA;!StringHandling.DOWNCASE(row1.contactMethodDesc).matches(bergerak|m&amp;oacute;vil|goooo)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="contactMethodDesc" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
