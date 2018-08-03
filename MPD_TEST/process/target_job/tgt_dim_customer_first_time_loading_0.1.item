@@ -601,7 +601,7 @@
       <column comment="" key="true" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
@@ -705,7 +705,7 @@
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="educationDesc" expression="row1.data_education_level==null?null:(StringHandling.DOWNCASE(row1.data_education_level).matches(&quot;master&quot;))?&quot;Masters&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="educationDesc" expression="row1.data_education_level==null?null:(StringHandling.DOWNCASE(row1.data_education_level).contains(&quot;master&quot;))?&quot;Masters&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_education_level).contains(&quot;bachelor&quot;))?&quot;Degree&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="educationSid" expression="" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
