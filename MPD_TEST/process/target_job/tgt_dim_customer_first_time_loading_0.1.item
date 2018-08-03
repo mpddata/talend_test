@@ -29,7 +29,7 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx2048M&quot;]}" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms4096M&quot;,&quot;-Xmx32768M&quot;]}" show="false"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -700,20 +700,20 @@
         <mapperTableEntries name="profile_verified" type="id_String" nullable="true"/>
         <mapperTableEntries name="profile_zip" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row2" minimized="true" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
+      <inputTables sizeState="INTERMEDIATE" name="row2" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method == null?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil|ponsel&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel|e-mail|e-posta|enamel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" minimized="true" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="educationDesc" expression="row1.data_education_level " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="educationSid" type="id_Integer"/>
+      <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="educationDesc" expression="row1.data_education_level==null?null:(StringHandling.DOWNCASE(row1.data_education_level).matches(&quot;master&quot;))?&quot;Masters&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="educationSid" expression="" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" minimized="true" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row4" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="maritalDesc" expression="row1.data_marital_status " type="id_String" nullable="true"/>
         <mapperTableEntries name="maritalSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="raceDesc" expression="(row1.data_ethnicity == null)?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;my|malaya|melayu|m&quot;))?&quot;Malay&quot;:&#xD;&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;cn|c&quot;))?&quot;Chinese&quot;:&#xD;&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;in|i&quot;))?&quot;Indian&quot;:(StringHandling.DOWNCASE(row1.data_ethnicity).contains(&quot;other&quot;))?&quot;Others&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="raceDesc" expression="(row1.data_ethnicity == null)?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;my|malaya|melayu|m&quot;))?&quot;Malay&quot;:&#xD;&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;cn|c|cina&quot;))?&quot;Chinese&quot;:&#xD;(StringHandling.DOWNCASE(row1.data_ethnicity).contains(&quot;cina&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;in|i&quot;))?&quot;Indian&quot;:(StringHandling.DOWNCASE(row1.data_ethnicity).contains(&quot;other&quot;))?&quot;Others&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
         <mapperTableEntries name="raceSid" type="id_Integer"/>
       </inputTables>
     </nodeData>
