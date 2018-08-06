@@ -643,9 +643,9 @@
         <mapperTableEntries name="userId" expression="row1.userId " type="id_String" nullable="true"/>
         <mapperTableEntries name="clientId" expression="row1.clientId " type="id_String" nullable="true"/>
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
-        <mapperTableEntries name="browserSid" expression="&quot;&quot;" type="id_Integer"/>
-        <mapperTableEntries name="osSid" expression="&quot;&quot;" type="id_Integer"/>
-        <mapperTableEntries name="deviceSid" expression="&quot;&quot;" type="id_Integer"/>
+        <mapperTableEntries name="browserSid" expression="0" type="id_Integer"/>
+        <mapperTableEntries name="osSid" expression="0" type="id_Integer"/>
+        <mapperTableEntries name="deviceSid" expression="0" type="id_Integer"/>
         <mapperTableEntries name="geoSid" expression="row1.geoCityId.contains(&quot;not set&quot;)?&quot;&quot;:row1.geoCityId " type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceInputSelector" expression="row1.deviceMobileInputSelector " type="id_String" nullable="true"/>
         <mapperTableEntries name="browserSize" expression="row1.deviceBrowserSize " type="id_String" nullable="true"/>
