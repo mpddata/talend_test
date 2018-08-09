@@ -705,7 +705,7 @@
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="educationDesc" expression="row1.data_education_level==null?null:(StringHandling.DOWNCASE(row1.data_education_level).matches(&quot;master&quot;))?&quot;Masters&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="educationDesc" expression="row1.data_education_level==null?null:(StringHandling.DOWNCASE(row1.data_education_level).contains(&quot;master&quot;))?&quot;Masters&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_education_level).contains(&quot;bachelor&quot;))?&quot;Degree&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="educationSid" expression="" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
@@ -1206,7 +1206,7 @@
       <column comment="" key="false" length="255" name="userName" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="8" name="DOB" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="8" name="DOB" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="2" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
@@ -1339,7 +1339,7 @@
       <column comment="" key="false" length="255" name="userName" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="8" name="DOB" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="8" name="DOB" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="2" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="2" usefulColumn="true"/>
