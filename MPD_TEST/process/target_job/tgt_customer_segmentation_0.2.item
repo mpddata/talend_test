@@ -1563,8 +1563,8 @@
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="preferredTopic_30" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="activeHour_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="latest_deviceSid_30" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="1000" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latest_deviceSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -1596,8 +1596,8 @@
         <mapperTableEntries name="aggTimeOnSite_90" expression="row9.aggTimeOnSite_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="preferredTopic_30" type="id_String" nullable="true"/>
         <mapperTableEntries name="activeHour_30" expression="out3.visitHour " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="latest_deviceSid_30" expression="row10.deviceSid " type="id_Integer"/>
-        <mapperTableEntries name="latest_geoSid_30" expression="row10.geoSid " type="id_Integer"/>
+        <mapperTableEntries name="latest_deviceSid_30" expression="row10.deviceSid " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="latest_geoSid_30" expression="row10.geoSid " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
@@ -2045,8 +2045,8 @@
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="preferredTopic_30" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="activeHour_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="latest_deviceSid_30" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="1000" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latest_deviceSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="endout" name="REJECT">
       <column comment="" key="false" length="10" name="custSid" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -2113,8 +2113,8 @@
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="preferredTopic_30" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="activeHour_30" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="latest_deviceSid_30" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="1000" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latest_deviceSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
