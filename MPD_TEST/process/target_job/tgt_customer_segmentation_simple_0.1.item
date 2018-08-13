@@ -1429,11 +1429,11 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_60">
-        <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
-        <mapperTableEntries name="custUID" expression="row4.custUID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSid" expression="row5.custSid " type="id_Integer"/>
+        <mapperTableEntries name="custUID" expression="row5.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_30" expression="0" type="id_Integer" nullable="true"/>
@@ -1786,11 +1786,11 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_90">
-        <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
-        <mapperTableEntries name="custUID" expression="row4.custUID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSid" expression="row7.custSid " type="id_Integer"/>
+        <mapperTableEntries name="custUID" expression="row7.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_30" expression="0" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_30" expression="0" type="id_Integer" nullable="true"/>
