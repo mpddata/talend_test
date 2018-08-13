@@ -1682,7 +1682,7 @@
         <mapperTableEntries name="aggTotalPageviews_90" expression="row9.aggTotalPageviews_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalUnique_90" expression="row9.aggTotalUnique_90 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTimeOnSite_90" expression="row9.aggTimeOnSite_90 " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="preferredTopic_30" expression="&quot;NA&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="preferredTopic_30" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="activeHour_30" expression="out3.visitHour " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="latest_deviceSid_30" expression="row20.deviceSid " type="id_Integer"/>
         <mapperTableEntries name="latest_geoSid_30" expression="row20.geoSid " type="id_Integer"/>
@@ -1713,11 +1713,11 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="out3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custUID" expression="row9.custUID == null?&quot;&quot;:row9.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row20" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custUID" expression="row9.custUID == null?&quot;&quot;:row9.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="geoSid" type="id_Integer" nullable="true"/>
       </inputTables>
