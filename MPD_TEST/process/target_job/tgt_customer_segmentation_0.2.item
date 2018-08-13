@@ -2604,6 +2604,11 @@
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tAggregateRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="true" show="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS" show="false">
+      <elementValue elementRef="KEY_COLUMN" value="custSid"/>
+      <elementValue elementRef="KEY_COLUMN" value="custUID"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_1">
@@ -2636,6 +2641,12 @@
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tUnite_1" offsetLabelX="0" offsetLabelY="0" source="tUnite_1" target="tAggregateRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="true" show="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS" show="false">
+      <elementValue elementRef="KEY_COLUMN" value="custSid"/>
+      <elementValue elementRef="KEY_COLUMN" value="custUID"/>
+      <elementValue elementRef="KEY_COLUMN" value="dateSid"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tMysqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_3" target="tAggregateRow_2">
@@ -2769,6 +2780,12 @@
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tAggregateRow_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" value="true" show="false"/>
+    <elementParameter field="TABLE" name="HASH_KEYS" show="false">
+      <elementValue elementRef="KEY_COLUMN" value="custSid"/>
+      <elementValue elementRef="KEY_COLUMN" value="custUID"/>
+      <elementValue elementRef="KEY_COLUMN" value="visitHour"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tMysqlInput_1">
