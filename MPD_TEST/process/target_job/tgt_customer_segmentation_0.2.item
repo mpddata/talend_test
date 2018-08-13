@@ -2417,7 +2417,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="352">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -2561,7 +2561,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="352">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_5" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
@@ -2648,7 +2648,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="352">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -2785,7 +2785,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT AA.custSid, AA.custUID, AA.topic, count(AA.topic) FROM&#xD;&#xA;(SELECT custSid,  &#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;REPLACE(pagePathL1,'/','') AS topic&#xD;&#xA;FROM fact_ga_bh_details WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;'&#xD;&#xA;&#xD;&#xA;UNION&#xD;&#xA;&#xD;&#xA;SELECT custSid,&#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID, &#xD;&#xA;REPLACE(pagePathL2,'/','') AS topic&#xD;&#xA;FROM fact_ga_bh_details WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;') AA&#xD;&#xA;GROUP BY AA.custSid, AA.custUID, AA.topic&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT custSid,  &#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;REPLACE(pagePathL1,'/','') AS topic&#xD;&#xA;FROM fact_ga_bh_details WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;'&#xD;&#xA;&#xD;&#xA;UNION&#xD;&#xA;&#xD;&#xA;SELECT custSid,&#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID, &#xD;&#xA;REPLACE(pagePathL2,'/','') AS topic&#xD;&#xA;FROM fact_ga_bh_details WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2802,8 +2802,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="topic"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="topicCount"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="agg_topic_count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -2811,10 +2809,37 @@
       <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="custUID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="topic" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="topicCount" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="256">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_9" show="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="custSid"/>
+      <elementValue elementRef="INPUT_COLUMN" value="custSid"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="custUID"/>
+      <elementValue elementRef="INPUT_COLUMN" value="custUID"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="topic"/>
+      <elementValue elementRef="INPUT_COLUMN" value="topic"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="topicCount"/>
+      <elementValue elementRef="FUNCTION" value="count"/>
+      <elementValue elementRef="INPUT_COLUMN" value="topic"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_9">
+      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="custUID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="topic" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="topicCount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_1" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -2850,7 +2875,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT AA.custSid, AA.custUID, AA.visitHour, count(AA.visitHour) FROM&#xD;&#xA;(SELECT custSid,&#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;hour(from_unixtime(visitStartTime)) AS visitHour&#xD;&#xA;FROM fact_ga_bh WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;') AA&#xD;&#xA;GROUP BY AA.custSid, AA.custUID, AA.visitHour&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT custSid,&#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;hour(from_unixtime(visitStartTime)) AS visitHour&#xD;&#xA;FROM fact_ga_bh WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2867,8 +2892,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="visitHour"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="hourCount"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="agg_hour_count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -2876,10 +2899,37 @@
       <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="custUID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="visitHour" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="hourCount" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="352">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_10" show="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="custSid"/>
+      <elementValue elementRef="INPUT_COLUMN" value="custSid"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="custUID"/>
+      <elementValue elementRef="INPUT_COLUMN" value="custUID"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="visitHour"/>
+      <elementValue elementRef="INPUT_COLUMN" value="visitHour"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="hourCount"/>
+      <elementValue elementRef="FUNCTION" value="count"/>
+      <elementValue elementRef="INPUT_COLUMN" value="visitHour"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_10">
+      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custUID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visitHour" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hourCount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHashOutput_2" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="" show="false"/>
@@ -3086,19 +3136,27 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cust_seg_infinite" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMysqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_2" target="tHashOutput_1">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMysqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_2" target="tAggregateRow_9">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_2" target="tMysqlInput_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tHashOutput_2">
+  <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tAggregateRow_9" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_9" target="tHashOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row21" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tAggregateRow_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tMysqlInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row22" lineStyle="0" metaname="tAggregateRow_10" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_10" target="tHashOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row22" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
