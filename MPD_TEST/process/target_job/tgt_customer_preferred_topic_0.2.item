@@ -445,7 +445,7 @@
       <column comment="" key="false" length="1000" name="topic" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
