@@ -445,7 +445,7 @@
       <column comment="" key="false" length="1000" name="topic" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="dateSid" expression="((String)globalMap.get(&quot;inputDate&quot;))" type="id_String" nullable="true"/>
@@ -458,7 +458,6 @@
         <mapperTableEntries name="topicCount" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row14" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="custUID" expression="row13.custUID " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="topic" type="id_String" nullable="true"/>
         <mapperTableEntries name="topicCount" expression="row13.topicCount " type="id_Integer" nullable="true" operator="="/>
@@ -483,7 +482,6 @@
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_6">
-      <column comment="" key="false" length="-1" name="custSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="custUID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="1000" name="topic" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="topicCount" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
