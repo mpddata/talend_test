@@ -809,14 +809,14 @@
       <column comment="" key="false" length="10" name="aggTimeOnSite_90" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_full">
         <mapperTableEntries name="custSid" expression="row9.custSid " type="id_Integer"/>
         <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" expression="row9.dateSid " type="id_String"/>
         <mapperTableEntries name="lastLoginDate" expression="row9.lastLoginDate " type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSegment" expression="row9.aggTotalVisits_30 >= 15 &amp;&amp; row9.aggTotalHits_30 >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;row9.aggTotalSessions_30 >1 &amp;&amp; row9.aggTotalSessions_30 &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 ==1 || row9.aggTotalSessions_30 ==1?&quot;New User&quot;: &#xD;&#xA;(row9.aggTotalVisits_30 + row9.aggTotalVisits_60 + row9.aggTotalVisits_90) &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSegment" expression="row9.aggTotalVisits_30 >= 15 &amp;&amp; row9.aggTotalHits_30 >=15 ?&quot;High Active/Loyal User&quot;:&#xD;&#xA;(row9.aggTotalVisits_30 + row9.aggTotalVisits_60 + row9.aggTotalVisits_90) >1 &amp;&amp; (row9.aggTotalVisits_30 + row9.aggTotalVisits_60 + row9.aggTotalVisits_90) &lt;15 ?&quot;Returning User/Medium User&quot;: &#xD;&#xA;row9.aggTotalVisits_30 ==1 || row9.aggTotalSessions_30 ==1?&quot;New User&quot;: &#xD;&#xA;(row9.aggTotalVisits_30 + row9.aggTotalVisits_60 + row9.aggTotalVisits_90) &lt;1?&quot;Low User&quot;:&quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="custCount" expression="1" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalSessions_30" expression="row9.aggTotalSessions_30 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="aggTotalVisits_30" expression="row9.aggTotalVisits_30 " type="id_Integer" nullable="true"/>
