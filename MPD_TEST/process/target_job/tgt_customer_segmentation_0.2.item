@@ -1490,7 +1490,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
     <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_5-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
@@ -1567,7 +1567,7 @@
       <column comment="" key="false" length="-1" name="latest_geoSid_30" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="endout">
         <mapperTableEntries name="custSid" expression="row9.custSid " type="id_Integer"/>
@@ -1599,7 +1599,7 @@
         <mapperTableEntries name="latest_deviceSid_30" expression="row10.deviceSid " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="latest_geoSid_30" expression="row10.geoSid " type="id_Integer" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row9" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="custSid" type="id_Integer"/>
         <mapperTableEntries name="custUID" type="id_String" nullable="true"/>
         <mapperTableEntries name="dateSid" type="id_String" nullable="true"/>
@@ -1623,12 +1623,12 @@
         <mapperTableEntries name="aggTimeOnSite_90" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="lastLoginDate" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="out3" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="out3" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row10" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row10" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="custUID" expression="row9.custUID " type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="geoSid" type="id_Integer" nullable="true"/>
@@ -1653,7 +1653,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="/home/centos/job_temp"/>
     <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_7-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
@@ -1667,7 +1667,7 @@
       <column comment="" key="false" length="-1" name="visitHour" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out3">
         <mapperTableEntries name="custSid" expression="row17.custSid " type="id_Integer" nullable="true"/>
@@ -1680,7 +1680,7 @@
         <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="hourCount" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row18" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
+      <inputTables sizeState="INTERMEDIATE" name="row18" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true" persistent="true">
         <mapperTableEntries name="custSid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="custUID" expression="row17.custUID " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="visitHour" type="id_Integer" nullable="true"/>
