@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_fPiogI-6EeiM5ZSyuP5-tQ" defaultContext="Default" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_fPiogY-6EeiM5ZSyuP5-tQ" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_fPiogo-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_fPiog4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
+    <contextParameter xmi:id="_fPiohI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
+    <contextParameter xmi:id="_fPiohY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Password" prompt="connection_mysqlsource_db_Password?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter xmi:id="_fPioho-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Port" prompt="connection_mysqlsource_db_Port?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_fPioh4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Server" prompt="connection_mysqlsource_db_Server?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_fPioiI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_fPioiY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter xmi:id="_fPioio-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter xmi:id="_fPioi4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Password" prompt="connection_mysqlstaging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter xmi:id="_fPiojI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Port" prompt="connection_mysqlstaging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_fPiojY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_fPiojo-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_AdditionalParams" prompt="connection_mysqltarget_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_fPioj4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Database" prompt="connection_mysqltarget_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
+    <contextParameter xmi:id="_fPiokI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Login" prompt="connection_mysqltarget_tci_db_Login?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="tci_user"/>
+    <contextParameter xmi:id="_fPiokY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter xmi:id="_fPioko-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_fPiok4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_fPiolI-6EeiM5ZSyuP5-tQ" comment="BigQuery API Token File" name="resource_file_bg_api_tokenfile" prompt="resource_file_bg_api_tokenfile?" promptNeeded="true" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPiolY-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateStart_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPiolo-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateEnd_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPiol4-6EeiM5ZSyuP5-tQ" comment="Y or N" name="parameter_firstTime_master" prompt="parameter_firstTime_master?" promptNeeded="true" type="id_String" value="N"/>
+    <contextParameter xmi:id="_fPiomI-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_Gigya_inputDateStart_YYYYMMDD" prompt="parameter_Gigya_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPiomY-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_Gigya_inputDateEnd_YYYYMMDD" prompt="parameter_Gigya_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <context xmi:id="_fPiomo-6EeiM5ZSyuP5-tQ" confirmationNeeded="false" name="Production">
+    <contextParameter xmi:id="_fPiom4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_fPionI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
+    <contextParameter xmi:id="_fPionY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
+    <contextParameter xmi:id="_fPiono-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Password" prompt="connection_mysqlsource_db_Password?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter xmi:id="_fPion4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Port" prompt="connection_mysqlsource_db_Port?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_fPiooI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlsource_db_Server" prompt="connection_mysqlsource_db_Server?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_fPiooY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_fPiooo-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter xmi:id="_fPioo4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter xmi:id="_fPiopI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Password" prompt="connection_mysqlstaging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter xmi:id="_fPiopY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Port" prompt="connection_mysqlstaging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_fPiopo-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_fPiop4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_AdditionalParams" prompt="connection_mysqltarget_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_fPioqI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Database" prompt="connection_mysqltarget_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
+    <contextParameter xmi:id="_fPioqY-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Login" prompt="connection_mysqltarget_tci_db_Login?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="tci_user"/>
+    <contextParameter xmi:id="_fPioqo-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter xmi:id="_fPioq4-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_fPiorI-6EeiM5ZSyuP5-tQ" comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_fPiorY-6EeiM5ZSyuP5-tQ" comment="BigQuery API Token File" name="resource_file_bg_api_tokenfile" prompt="resource_file_bg_api_tokenfile?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPioro-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateStart_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPior4-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateEnd_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPiosI-6EeiM5ZSyuP5-tQ" comment="Y or N" name="parameter_firstTime_master" prompt="parameter_firstTime_master?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter xmi:id="_fPiosY-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_Gigya_inputDateStart_YYYYMMDD" prompt="parameter_Gigya_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fPioso-6EeiM5ZSyuP5-tQ" comment="YYYYMMDD" name="parameter_Gigya_inputDateEnd_YYYYMMDD" prompt="parameter_Gigya_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <parameters xmi:id="_fPios4-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPiotI-6EeiM5ZSyuP5-tQ" field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter xmi:id="_fPiotY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter xmi:id="_fPioto-6EeiM5ZSyuP5-tQ" field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter xmi:id="_fPiot4-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter xmi:id="_fPiouI-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter xmi:id="_fPiouY-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter xmi:id="_fPiouo-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter xmi:id="_fPiou4-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter xmi:id="_fPiovI-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter xmi:id="_fPiovY-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter xmi:id="_fPiovo-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter xmi:id="_fPiov4-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter xmi:id="_fPiowI-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter xmi:id="_fPiowY-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter xmi:id="_fPiowo-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter xmi:id="_fPiow4-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter xmi:id="_fPioxI-6EeiM5ZSyuP5-tQ" field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter xmi:id="_fPioxY-6EeiM5ZSyuP5-tQ" field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter xmi:id="_fPioxo-6EeiM5ZSyuP5-tQ" field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter xmi:id="_fPiox4-6EeiM5ZSyuP5-tQ" field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter xmi:id="_fPioyI-6EeiM5ZSyuP5-tQ" field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter xmi:id="_fPioyY-6EeiM5ZSyuP5-tQ" field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter xmi:id="_fPioyo-6EeiM5ZSyuP5-tQ" field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter xmi:id="_fPioy4-6EeiM5ZSyuP5-tQ" field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter xmi:id="_fPiozI-6EeiM5ZSyuP5-tQ" field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPiozY-6EeiM5ZSyuP5-tQ" field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPiozo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter xmi:id="_fPioz4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter xmi:id="_fPio0I-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter xmi:id="_fPio0Y-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter xmi:id="_fPio0o-6EeiM5ZSyuP5-tQ" field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio04-6EeiM5ZSyuP5-tQ" field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter xmi:id="_fPio1I-6EeiM5ZSyuP5-tQ" field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio1Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio1o-6EeiM5ZSyuP5-tQ" field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio14-6EeiM5ZSyuP5-tQ" field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio2I-6EeiM5ZSyuP5-tQ" field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio2Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio2o-6EeiM5ZSyuP5-tQ" field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio24-6EeiM5ZSyuP5-tQ" field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio3I-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPio3Y-6EeiM5ZSyuP5-tQ" field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio3o-6EeiM5ZSyuP5-tQ" field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio34-6EeiM5ZSyuP5-tQ" field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio4I-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter xmi:id="_fPio4Y-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter xmi:id="_fPio4o-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio44-6EeiM5ZSyuP5-tQ" field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio5I-6EeiM5ZSyuP5-tQ" field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio5Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio5o-6EeiM5ZSyuP5-tQ" field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter xmi:id="_fPio54-6EeiM5ZSyuP5-tQ" field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter xmi:id="_fPio6I-6EeiM5ZSyuP5-tQ" field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter xmi:id="_fPio6Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio6o-6EeiM5ZSyuP5-tQ" field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio64-6EeiM5ZSyuP5-tQ" field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio6.5.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio7I-6EeiM5ZSyuP5-tQ" field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio7Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio7o-6EeiM5ZSyuP5-tQ" field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio74-6EeiM5ZSyuP5-tQ" field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter xmi:id="_fPio8I-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter xmi:id="_fPio8Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter xmi:id="_fPio8o-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter xmi:id="_fPio84-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter xmi:id="_fPio9I-6EeiM5ZSyuP5-tQ" field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio9Y-6EeiM5ZSyuP5-tQ" field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter xmi:id="_fPio9o-6EeiM5ZSyuP5-tQ" field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio94-6EeiM5ZSyuP5-tQ" field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio-I-6EeiM5ZSyuP5-tQ" field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio-Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio-o-6EeiM5ZSyuP5-tQ" field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio-4-6EeiM5ZSyuP5-tQ" field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio_I-6EeiM5ZSyuP5-tQ" field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio_Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio_o-6EeiM5ZSyuP5-tQ" field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPio_4-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipAI-6EeiM5ZSyuP5-tQ" field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipAY-6EeiM5ZSyuP5-tQ" field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipAo-6EeiM5ZSyuP5-tQ" field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipA4-6EeiM5ZSyuP5-tQ" field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipBI-6EeiM5ZSyuP5-tQ" field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter xmi:id="_fPipBY-6EeiM5ZSyuP5-tQ" field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter xmi:id="_fPipBo-6EeiM5ZSyuP5-tQ" field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter xmi:id="_fPipB4-6EeiM5ZSyuP5-tQ" field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipCI-6EeiM5ZSyuP5-tQ" field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter xmi:id="_fPipCY-6EeiM5ZSyuP5-tQ" field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipCo-6EeiM5ZSyuP5-tQ" field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter xmi:id="_fPipC4-6EeiM5ZSyuP5-tQ" field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter xmi:id="_fPipDI-6EeiM5ZSyuP5-tQ" field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter xmi:id="_fPipDY-6EeiM5ZSyuP5-tQ" field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter xmi:id="_fPipDo-6EeiM5ZSyuP5-tQ" field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipD4-6EeiM5ZSyuP5-tQ" field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter xmi:id="_fPipEI-6EeiM5ZSyuP5-tQ" field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter xmi:id="_fPipEY-6EeiM5ZSyuP5-tQ" field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <elementParameter xmi:id="_fPipEo-6EeiM5ZSyuP5-tQ" field="CHECK" name="SPARK_LOCAL_MODE" value="true"/>
+    <elementParameter xmi:id="_fPipE4-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SPARK_LOCAL_VERSION" value="SPARK_2_0_0"/>
+    <elementParameter xmi:id="_fPipFI-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SPARK_VERSION" value="EMR_5_5_0" show="false"/>
+    <elementParameter xmi:id="_fPipFY-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SUPPORTED_SPARK_VERSION" value="SPARK_2_1_0" show="false"/>
+    <elementParameter xmi:id="_fPipFo-6EeiM5ZSyuP5-tQ" field="HADOOP_DISTRIBUTION" name="SPARKBATCH" value="" show="false"/>
+    <elementParameter xmi:id="_fPipF4-6EeiM5ZSyuP5-tQ" field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value="" show="false"/>
+    <elementParameter xmi:id="_fPipGI-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE" value="** The version of Spark must be 1.3.0 or later." show="false"/>
+    <elementParameter xmi:id="_fPipGY-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SPARK_API_VERSION" value="SPARK_200" show="false"/>
+    <elementParameter xmi:id="_fPipGo-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_HDP_VERSION" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipG4-6EeiM5ZSyuP5-tQ" field="TEXT" name="HDP_VERSION" value="&quot;x.x.x.x-x&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipHI-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SPARK_MODE" value="CLUSTER" show="false"/>
+    <elementParameter xmi:id="_fPipHY-6EeiM5ZSyuP5-tQ" field="TEXT" name="RESOURCE_MANAGER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipHo-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_SCHEDULER_ADDRESS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipH4-6EeiM5ZSyuP5-tQ" field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipII-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipIY-6EeiM5ZSyuP5-tQ" field="TEXT" name="JOBHISTORY_ADDRESS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipIo-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_STAGING_DIRECTORY" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipI4-6EeiM5ZSyuP5-tQ" field="TEXT" name="STAGING_DIRECTORY" value="&quot;/user&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipJI-6EeiM5ZSyuP5-tQ" field="TEXT" name="HDINSIGHT_ENDPOINT" value="&quot;https://xxxx.azurehdinsight.net&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipJY-6EeiM5ZSyuP5-tQ" field="TEXT" name="HDINSIGHT_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipJo-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="HDINSIGHT_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipJ4-6EeiM5ZSyuP5-tQ" field="TEXT" name="LIVY_HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipKI-6EeiM5ZSyuP5-tQ" field="TEXT" name="LIVY_PORT" value="&quot;443&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipKY-6EeiM5ZSyuP5-tQ" field="TEXT" name="LIVY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipKo-6EeiM5ZSyuP5-tQ" field="TEXT" name="HDINSIGHT_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipK4-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="HDINSIGHT_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipLI-6EeiM5ZSyuP5-tQ" field="TEXT" name="WASB_HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipLY-6EeiM5ZSyuP5-tQ" field="TEXT" name="WASB_CONTAINER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipLo-6EeiM5ZSyuP5-tQ" field="TEXT" name="WASB_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipL4-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="WASB_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipMI-6EeiM5ZSyuP5-tQ" field="TEXT" name="REMOTE_FOLDER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipMY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_HOST" value="&quot;spark://localhost:7077&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipMo-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_HOME" value="&quot;/usr/lib/spark&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipM4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DEFINE_HADOOP_HOME_DIR" value="false"/>
+    <elementParameter xmi:id="_fPipNI-6EeiM5ZSyuP5-tQ" field="TEXT" name="HADOOP_HOME_DIR" value="&quot;C:/Talend/winutils&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipNY-6EeiM5ZSyuP5-tQ" field="CHECK" name="DEFINE_SPARK_DRIVER_HOST" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipNo-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_DRIVER_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipN4-6EeiM5ZSyuP5-tQ" field="TEXT" name="GOOGLE_PROJECT_ID" value="&quot;my-google-project&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipOI-6EeiM5ZSyuP5-tQ" field="TEXT" name="GOOGLE_CLUSTER_ID" value="&quot;my-cluster-id&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipOY-6EeiM5ZSyuP5-tQ" field="TEXT" name="GOOGLE_REGION" value="&quot;global&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipOo-6EeiM5ZSyuP5-tQ" field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;gs://my-bucket/talend/jars&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipO4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipPI-6EeiM5ZSyuP5-tQ" field="TEXT" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipPY-6EeiM5ZSyuP5-tQ" field="CHECK" name="ALTUS_SET_CREDENTIALS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipPo-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_ACCESS_KEY" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipP4-6EeiM5ZSyuP5-tQ" field="FILE" name="ALTUS_SECRET_KEY" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipQI-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_CLI_PATH" value="&quot;/opt/altuscli/altusclienv/bin/altus&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipQY-6EeiM5ZSyuP5-tQ" field="CHECK" name="ALTUS_REUSE_CLUSTER" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipQo-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_CLUSTER_NAME" value="&quot;talend-altus-cluster&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipQ4-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_ENVIRONMENT_NAME" value="&quot;talend-altus-cluster&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipRI-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="ALTUS_CLOUD_PROVIDER" value="&quot;AWS&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipRY-6EeiM5ZSyuP5-tQ" field="CHECK" name="ALTUS_DELETE_AFTER_EXECUTION" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipRo-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_S3_ACCESS_KEY" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipR4-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="ALTUS_S3_SECRET_KEY" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipSI-6EeiM5ZSyuP5-tQ" field="OPENED_LIST" name="ALTUS_S3_REGION" value="&quot;us-east-1&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipSY-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_BUCKET_NAME" value="&quot;my-bucket&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipSo-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_JARS_BUCKET" value="&quot;talend/jars/&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipS4-6EeiM5ZSyuP5-tQ" field="CHECK" name="ALTUS_USE_CUSTOM_JSON" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipTI-6EeiM5ZSyuP5-tQ" field="MEMO" name="ALTUS_CUSTOM_JSON" value="{}" show="false"/>
+    <elementParameter xmi:id="_fPipTY-6EeiM5ZSyuP5-tQ" field="OPENED_LIST" name="ALTUS_INSTANCE_TYPE" value="&quot;c4.2xlarge&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipTo-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_WORKER_NODE" value="&quot;10&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipT4-6EeiM5ZSyuP5-tQ" field="FILE" name="ALTUS_SSH_PRIVATE_KEY" value="" show="false"/>
+    <elementParameter xmi:id="_fPipUI-6EeiM5ZSyuP5-tQ" field="TEXT" name="ALTUS_CLOUDERA_MANAGER_USERNAME" value="&quot;altus&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipUY-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="ALTUS_CLOUDERA_MANAGER_PASSWORD" value="" show="false"/>
+    <elementParameter xmi:id="_fPipUo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_KRB" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipU4-6EeiM5ZSyuP5-tQ" field="TEXT" name="RESOURCEMANAGER_PRINCIPAL" value="&quot;yarn/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipVI-6EeiM5ZSyuP5-tQ" field="TEXT" name="JOBHISTORY_PRINCIPAL" value="&quot;mapred/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipVY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_KEYTAB" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipVo-6EeiM5ZSyuP5-tQ" field="TEXT" name="PRINCIPAL" value="&quot;hdfs&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipV4-6EeiM5ZSyuP5-tQ" field="FILE" name="KEYTAB_PATH" value="&quot;/tmp/hdfs.headless.keytab&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipWI-6EeiM5ZSyuP5-tQ" field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipWY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_MAPRTICKET" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipWo-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="MAPRTICKET_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipW4-6EeiM5ZSyuP5-tQ" field="TEXT" name="MAPRTICKET_CLUSTER" value="&quot;demo.mapr.com&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipXI-6EeiM5ZSyuP5-tQ" field="TEXT" name="MAPRTICKET_DURATION" value="86400L" show="false"/>
+    <elementParameter xmi:id="_fPipXY-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_MAPR_HOME_DIR" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipXo-6EeiM5ZSyuP5-tQ" field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipX4-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipYI-6EeiM5ZSyuP5-tQ" field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipYY-6EeiM5ZSyuP5-tQ" field="CHECK" name="ADVANCED_SETTINGS_CHECK" value="false"/>
+    <elementParameter xmi:id="_fPipYo-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_DRIVER_MEM" value="&quot;512m&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipY4-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_DRIVER_CORES" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipZI-6EeiM5ZSyuP5-tQ" field="CHECK" name="SPARK_YARN_AM_SETTINGS_CHECK" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipZY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_YARN_AM_MEM" value="&quot;512m&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipZo-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_YARN_AM_CORES" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipZ4-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_EXECUTOR_MEM" value="&quot;512m&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipaI-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_SPARK_EXECUTOR_MEM_OVERHEAD" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipaY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_EXECUTOR_MEM_OVERHEAD" value="&quot;384&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipao-6EeiM5ZSyuP5-tQ" field="CHECK" name="SPARK_EXECUTOR_CORES_CHECK" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipa4-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_EXECUTOR_CORES" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipbI-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SPARK_YARN_ALLOC_TYPE" value="AUTO" show="false"/>
+    <elementParameter xmi:id="_fPipbY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_EXECUTOR_INSTANCES" value="&quot;2&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipbo-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_YARN_DYN_INIT" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipb4-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_YARN_DYN_MIN" value="&quot;0&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipcI-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_YARN_DYN_MAX" value="&quot;MAX&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipcY-6EeiM5ZSyuP5-tQ" field="CHECK" name="WEB_UI_PORT_CHECK" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipco-6EeiM5ZSyuP5-tQ" field="TEXT" name="WEB_UI_PORT" value="&quot;4040&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipc4-6EeiM5ZSyuP5-tQ" field="CLOSED_LIST" name="SPARK_BROADCAST_FACTORY" value="AUTO" show="false"/>
+    <elementParameter xmi:id="_fPipdI-6EeiM5ZSyuP5-tQ" field="CHECK" name="CUSTOMIZE_SPARK_SERIALIZER" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipdY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_SERIALIZER" value="&quot;org.apache.spark.serializer.KryoSerializer&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipdo-6EeiM5ZSyuP5-tQ" field="CHECK" name="ENABLE_SPARK_EVENT_LOGGING" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipd4-6EeiM5ZSyuP5-tQ" field="CHECK" name="COMPRESS_SPARK_EVENT_LOGS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipeI-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_EVENT_LOG_DIR" value="&quot;hdfs://namenode:8020/user/spark/applicationHistory&quot;&#xA;&#x9;&#x9;&#x9;" show="false"/>
+    <elementParameter xmi:id="_fPipeY-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARKHISTORY_ADDRESS" value="&quot;sparkHistoryServer:18080&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipeo-6EeiM5ZSyuP5-tQ" field="TEXT" name="SPARK_SCRATCH_DIR" value="&quot;/tmp&quot;"/>
+    <elementParameter xmi:id="_fPipe4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_CHECKPOINT" value="false"/>
+    <elementParameter xmi:id="_fPipfI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CHECKPOINT_DIR" value="&quot;file:///tmp/mycheckpoint&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipfY-6EeiM5ZSyuP5-tQ" field="TABLE" name="SPARK_ADVANCED_PROPERTIES"/>
+    <elementParameter xmi:id="_fPipfo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_CLOUDERA_NAVIGATOR" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipf4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CLOUDERA_NAVIGATOR_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipgI-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="CLOUDERA_NAVIGATOR_PASSWORD" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
+    <elementParameter xmi:id="_fPipgY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CLOUDERA_NAVIGATOR_URL" value="&quot;http://localhost:7187/api/v8/&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipgo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CLOUDERA_NAVIGATOR_METADATA_URL" value="&quot;http://localhost:7187/api/v8/metadata/plugin&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipg4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CLOUDERA_NAVIGATOR_CLIENT_URL" value="&quot;http://localhost&quot;" show="false"/>
+    <elementParameter xmi:id="_fPiphI-6EeiM5ZSyuP5-tQ" field="CHECK" name="CLOUDERA_NAVIGATOR_AUTOCOMMIT" value="false" show="false"/>
+    <elementParameter xmi:id="_fPiphY-6EeiM5ZSyuP5-tQ" field="CHECK" name="CLOUDERA_NAVIGATOR_DISABLE_SSL_VALIDATION" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipho-6EeiM5ZSyuP5-tQ" field="CHECK" name="CLOUDERA_NAVIGATOR_DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter xmi:id="_fPiph4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_ATLAS" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipiI-6EeiM5ZSyuP5-tQ" field="TEXT" name="ATLAS_URL" value="&quot;http://localhost:21000&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipiY-6EeiM5ZSyuP5-tQ" field="TEXT" name="ATLAS_USERNAME" value="&quot;admin&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipio-6EeiM5ZSyuP5-tQ" field="PASSWORD" name="ATLAS_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_fPipi4-6EeiM5ZSyuP5-tQ" field="CHECK" name="SET_ATLAS_APPLICATION_PROPERTIES" value="false" show="false"/>
+    <elementParameter xmi:id="_fPipjI-6EeiM5ZSyuP5-tQ" field="TEXT" name="ATLAS_APPLICATION_PROPERTIES" value="&quot;/user/atlas/atlas-application.properties&quot;" show="false"/>
+    <elementParameter xmi:id="_fPipjY-6EeiM5ZSyuP5-tQ" field="CHECK" name="ATLAS_DIE_ON_ERROR" value="false" show="false"/>
+    <routinesParameter xmi:id="_HU6pIopuEeiM5ZSyuP5-tQ" id="_n5kuoHXKEeicVoGHXlv0ow" name="DQTechnical"/>
+    <routinesParameter xmi:id="_HU6pI4puEeiM5ZSyuP5-tQ" id="_n5NiQHXKEeicVoGHXlv0ow" name="DataMasking"/>
+    <routinesParameter xmi:id="_HU6pJIpuEeiM5ZSyuP5-tQ" id="_n0n9MHXKEeicVoGHXlv0ow" name="DataOperation"/>
+    <routinesParameter xmi:id="_HU6pJYpuEeiM5ZSyuP5-tQ" id="_n5WFIHXKEeicVoGHXlv0ow" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_HU6pJopuEeiM5ZSyuP5-tQ" id="_n5RzsHXKEeicVoGHXlv0ow" name="DataQuality"/>
+    <routinesParameter xmi:id="_HU6pJ4puEeiM5ZSyuP5-tQ" id="_n5gdMHXKEeicVoGHXlv0ow" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_HU6pKIpuEeiM5ZSyuP5-tQ" id="_n4WmoHXKEeicVoGHXlv0ow" name="Mathematical"/>
+    <routinesParameter xmi:id="_HU6pKYpuEeiM5ZSyuP5-tQ" id="_n4g-sHXKEeicVoGHXlv0ow" name="Numeric"/>
+    <routinesParameter xmi:id="_HU6pKopuEeiM5ZSyuP5-tQ" id="_n4meQHXKEeicVoGHXlv0ow" name="Relational"/>
+    <routinesParameter xmi:id="_HU6pK4puEeiM5ZSyuP5-tQ" id="_n5JQ0HXKEeicVoGHXlv0ow" name="SQLike"/>
+    <routinesParameter xmi:id="_HU6pLIpuEeiM5ZSyuP5-tQ" id="_n4sk4HXKEeicVoGHXlv0ow" name="StringHandling"/>
+    <routinesParameter xmi:id="_HU6pLYpuEeiM5ZSyuP5-tQ" id="_n4yEcHXKEeicVoGHXlv0ow" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_HU6pLopuEeiM5ZSyuP5-tQ" id="_n44yIHXKEeicVoGHXlv0ow" name="TalendDate"/>
+    <routinesParameter xmi:id="_HU6pL4puEeiM5ZSyuP5-tQ" id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
+    <routinesParameter xmi:id="_HU6pMIpuEeiM5ZSyuP5-tQ" id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_fPipjo-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
+    <elementParameter xmi:id="_fPipj4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
+    <elementParameter xmi:id="_fPipkI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPipkY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPipko-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="stg_gigya"/>
+    <elementParameter xmi:id="_fPipk4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPiplI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_1xdjIHq6Eei8sLOnUszr4w"/>
+    <elementParameter xmi:id="_fPiplY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPiplo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPipl4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPipmI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPipmY-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPipmo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="firstTime"/>
+      <elementValue xmi:id="_fPipm4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_firstTime_master"/>
+      <elementValue xmi:id="_fPipnI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPipnY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPipno-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_Database"/>
+      <elementValue xmi:id="_fPipn4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_Database"/>
+      <elementValue xmi:id="_fPipoI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_Login"/>
+      <elementValue xmi:id="_fPipoY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_Login"/>
+      <elementValue xmi:id="_fPipoo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_Password"/>
+      <elementValue xmi:id="_fPipo4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_Password"/>
+      <elementValue xmi:id="_fPippI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_Port"/>
+      <elementValue xmi:id="_fPippY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_Port"/>
+      <elementValue xmi:id="_fPippo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlsource_db_Server"/>
+      <elementValue xmi:id="_fPipp4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlsource_db_Server"/>
+      <elementValue xmi:id="_fPipqI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPipqY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPipqo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPipq4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPiprI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPiprY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjPkI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjPkY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjPko-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjPk4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjPlI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjPlY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjPlo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue xmi:id="_fPjPl4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateStart_YYYYMMDD"/>
+      <elementValue xmi:id="_fPjPmI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue xmi:id="_fPjPmY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_Gigya_inputDateEnd_YYYYMMDD"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjPmo-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjPm4-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjPnI-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjPnY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjPno-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjPn4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjPoI-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_2"/>
+  </node>
+  <node xmi:id="_fPjPoY-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
+    <elementParameter xmi:id="_fPjPoo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
+    <elementParameter xmi:id="_fPjPo4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjPpI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjPpY-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="stg_lotame_bh"/>
+    <elementParameter xmi:id="_fPjPpo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjPp4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_HE0fQH4GEeidscQ24LKW-A"/>
+    <elementParameter xmi:id="_fPjPqI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjPqY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjPqo-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjPq4-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjPrI-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjPrY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue xmi:id="_fPjPro-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
+      <elementValue xmi:id="_fPjPr4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue xmi:id="_fPjPsI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
+      <elementValue xmi:id="_fPjPsY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjPso-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjPs4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjPtI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjPtY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjPto-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjPt4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjPuI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjPuY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjPuo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjPu4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjPvI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjPvY-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjPvo-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjPv4-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjPwI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjPwY-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjPwo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjPw4-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_3"/>
+  </node>
+  <node xmi:id="_fPjPxI-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+    <elementParameter xmi:id="_fPjPxY-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter xmi:id="_fPjPxo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjPx4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjPyI-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_lookup_contactMethod"/>
+    <elementParameter xmi:id="_fPjPyY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjPyo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_VS1SMH27EeidscQ24LKW-A"/>
+    <elementParameter xmi:id="_fPjPy4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjPzI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjPzY-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjPzo-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjPz4-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjP0I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjP0Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjP0o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjP04-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjP1I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjP1Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjP1o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjP14-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjP2I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjP2Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjP2o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjP24-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjP3I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjP3Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjP3o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjP34-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjP4I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjP4Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjP4o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjP44-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjP5I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjP5Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjP5o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjP54-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjP6I-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjP6Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjP6o-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjP64-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjP7I-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjP7Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjP7o-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_4"/>
+  </node>
+  <node xmi:id="_fPjP74-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
+    <elementParameter xmi:id="_fPjP8I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter xmi:id="_fPjP8Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjP8o-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjP84-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_lookup_education"/>
+    <elementParameter xmi:id="_fPjP9I-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjP9Y-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_BmAfAH57EeifjNRE8MD7hw"/>
+    <elementParameter xmi:id="_fPjP9o-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjP94-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjP-I-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjP-Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjP-o-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjP-4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjP_I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjP_Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjP_o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjP_4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQAI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQAY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQAo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQA4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQBI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQBY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQBo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQB4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQCI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQCY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQCo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQC4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQDI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQDY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQDo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQD4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQEI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQEY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQEo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjQE4-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjQFI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjQFY-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjQFo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjQF4-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjQGI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjQGY-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_6"/>
+  </node>
+  <node xmi:id="_fPjQGo-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
+    <elementParameter xmi:id="_fPjQG4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_9" show="false"/>
+    <elementParameter xmi:id="_fPjQHI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjQHY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjQHo-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_lookup_marital"/>
+    <elementParameter xmi:id="_fPjQH4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjQII-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_RVxKQH28EeidscQ24LKW-A"/>
+    <elementParameter xmi:id="_fPjQIY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjQIo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjQI4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjQJI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjQJY-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjQJo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQJ4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQKI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQKY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQKo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQK4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQLI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQLY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQLo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQL4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQMI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQMY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQMo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQM4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQNI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQNY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQNo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQN4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQOI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQOY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQOo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQO4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQPI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQPY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjQPo-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjQP4-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjQQI-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjQQY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjQQo-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjQQ4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjQRI-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_9"/>
+  </node>
+  <node xmi:id="_fPjQRY-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+    <elementParameter xmi:id="_fPjQRo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_13" show="false"/>
+    <elementParameter xmi:id="_fPjQR4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjQSI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjQSY-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_lookup_race"/>
+    <elementParameter xmi:id="_fPjQSo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjQS4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_8YO-YH3REeim_el8OH0DyA"/>
+    <elementParameter xmi:id="_fPjQTI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjQTY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjQTo-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjQT4-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjQUI-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjQUY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQUo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQU4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQVI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQVY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQVo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQV4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQWI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQWY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQWo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQW4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQXI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQXY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQXo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQX4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQYI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQYY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQYo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQY4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQZI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQZY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQZo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQZ4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQaI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjQaY-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjQao-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjQa4-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjQbI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjQbY-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjQbo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjQb4-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_13"/>
+  </node>
+  <node xmi:id="_fPjQcI-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="192">
+    <elementParameter xmi:id="_fPjQcY-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_14" show="false"/>
+    <elementParameter xmi:id="_fPjQco-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjQc4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjQdI-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_customer"/>
+    <elementParameter xmi:id="_fPjQdY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjQdo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_H4AuAH3KEeidscQ24LKW-A"/>
+    <elementParameter xmi:id="_fPjQd4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjQeI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjQeY-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjQeo-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjQe4-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjQfI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQfY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQfo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQf4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQgI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQgY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQgo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQg4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQhI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQhY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQho-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQh4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQiI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQiY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQio-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQi4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQjI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQjY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQjo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQj4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQkI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQkY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQko-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQk4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjQlI-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjQlY-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjQlo-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjQl4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjQmI-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjQmY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjQmo-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_14"/>
+  </node>
+  <node xmi:id="_fPjQm4-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="320">
+    <elementParameter xmi:id="_fPjQnI-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_15" show="false"/>
+    <elementParameter xmi:id="_fPjQnY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjQno-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjQn4-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_browser"/>
+    <elementParameter xmi:id="_fPjQoI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjQoY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_4D8tIH8uEeitDKGrROkq2A"/>
+    <elementParameter xmi:id="_fPjQoo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjQo4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjQpI-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjQpY-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjQpo-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjQp4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQqI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQqY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQqo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQq4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQrI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQrY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQro-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQr4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQsI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQsY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQso-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQs4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQtI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQtY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQto-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQt4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQuI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQuY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQuo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQu4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQvI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQvY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQvo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjQv4-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjQwI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjQwY-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjQwo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjQw4-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjQxI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjQxY-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_15"/>
+  </node>
+  <node xmi:id="_fPjQxo-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+    <elementParameter xmi:id="_fPjQx4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_17" show="false"/>
+    <elementParameter xmi:id="_fPjQyI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjQyY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjQyo-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_device"/>
+    <elementParameter xmi:id="_fPjQy4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjQzI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_lyurgH5dEeidscQ24LKW-A"/>
+    <elementParameter xmi:id="_fPjQzY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjQzo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjQz4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjQ0I-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjQ0Y-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjQ0o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQ04-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQ1I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQ1Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQ1o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQ14-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQ2I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQ2Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQ2o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQ24-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQ3I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQ3Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQ3o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQ34-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQ4I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQ4Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjQ4o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQ44-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjQ5I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQ5Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjQ5o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQ54-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjQ6I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjQ6Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjQ6o-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjQ64-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjQ7I-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjQ7Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjQ7o-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjQ74-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjQ8I-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_17"/>
+  </node>
+  <node xmi:id="_fPjQ8Y-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
+    <elementParameter xmi:id="_fPjQ8o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_20" show="false"/>
+    <elementParameter xmi:id="_fPjQ84-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjQ9I-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjQ9Y-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_geo"/>
+    <elementParameter xmi:id="_fPjQ9o-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjQ94-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_L6qq4H5pEeidscQ24LKW-A"/>
+    <elementParameter xmi:id="_fPjQ-I-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjQ-Y-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjQ-o-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjQ-4-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjQ_I-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjQ_Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQ_o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjQ_4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRAI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRAY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRAo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRA4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRBI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRBY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRBo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRB4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRCI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRCY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRCo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRC4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRDI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRDY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRDo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRD4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjREI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjREY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjREo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRE4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRFI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjRFY-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjRFo-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjRF4-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjRGI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjRGY-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjRGo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjRG4-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_20"/>
+  </node>
+  <node xmi:id="_fPjRHI-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
+    <elementParameter xmi:id="_fPjRHY-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_24" show="false"/>
+    <elementParameter xmi:id="_fPjRHo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjRH4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjRII-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_os"/>
+    <elementParameter xmi:id="_fPjRIY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjRIo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_WsRlgH8oEeitDKGrROkq2A"/>
+    <elementParameter xmi:id="_fPjRI4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjRJI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjRJY-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjRJo-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjRJ4-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjRKI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRKY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRKo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRK4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRLI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRLY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRLo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRL4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRMI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRMY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRMo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRM4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRNI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRNY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRNo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRN4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjROI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjROY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjROo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRO4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRPI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRPY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRPo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRP4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjRQI-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjRQY-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjRQo-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjRQ4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjRRI-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjRRY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjRRo-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_24"/>
+  </node>
+  <node xmi:id="_fPjRR4-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="320">
+    <elementParameter xmi:id="_fPjRSI-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_25" show="false"/>
+    <elementParameter xmi:id="_fPjRSY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjRSo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjRS4-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_fact_ga_bh"/>
+    <elementParameter xmi:id="_fPjRTI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjRTY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_E27jkID0Eeiie8Xa956gWQ"/>
+    <elementParameter xmi:id="_fPjRTo-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjRT4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjRUI-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjRUY-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjRUo-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjRU4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRVI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRVY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRVo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRV4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRWI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRWY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRWo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRW4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRXI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRXY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRXo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRX4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRYI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRYY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRYo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRY4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRZI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRZY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRZo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRZ4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRaI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRaY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRao-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjRa4-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjRbI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjRbY-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjRbo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjRb4-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjRcI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjRcY-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_25"/>
+  </node>
+  <node xmi:id="_fPjRco-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
+    <elementParameter xmi:id="_fPjRc4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter xmi:id="_fPjRdI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjRdY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjRdo-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="stg_ga_session_bh"/>
+    <elementParameter xmi:id="_fPjRd4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjReI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_1JfuwHq7Eei8sLOnUszr4w"/>
+    <elementParameter xmi:id="_fPjReY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjReo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjRe4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjRfI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjRfY-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjRfo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="inputDateStart"/>
+      <elementValue xmi:id="_fPjRf4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateStart_YYYYMMDD"/>
+      <elementValue xmi:id="_fPjRgI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="inputDateEnd"/>
+      <elementValue xmi:id="_fPjRgY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.parameter_GA_Lotame_inputDateEnd_YYYYMMDD"/>
+      <elementValue xmi:id="_fPjRgo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="resource_file_tokenfile"/>
+      <elementValue xmi:id="_fPjRg4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.resource_file_bg_api_tokenfile"/>
+      <elementValue xmi:id="_fPjRhI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRhY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRho-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRh4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRiI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRiY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRio-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRi4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRjI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRjY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRjo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRj4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjRkI-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjRkY-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjRko-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjRk4-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjRlI-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjRlY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjRlo-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_1"/>
+  </node>
+  <node xmi:id="_fPjRl4-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
+    <elementParameter xmi:id="_fPjRmI-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
+    <elementParameter xmi:id="_fPjRmY-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjRmo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjRm4-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="tgt_agg_ga_bh"/>
+    <elementParameter xmi:id="_fPjRnI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjRnY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_QlGDUIPzEeiSwax_S4wVhQ"/>
+    <elementParameter xmi:id="_fPjRno-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjRn4-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjRoI-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjRoY-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjRoo-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjRo4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRpI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRpY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRpo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRp4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRqI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRqY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRqo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRq4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRrI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRrY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRro-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRr4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRsI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRsY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRso-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjRs4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRtI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjRtY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRto-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjRt4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRuI-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjRuY-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjRuo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjRu4-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjRvI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjRvY-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjRvo-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjRv4-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjRwI-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjRwY-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_5"/>
+  </node>
+  <node xmi:id="_fPjRwo-6EeiM5ZSyuP5-tQ" componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
+    <elementParameter xmi:id="_fPjRw4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_7" show="false"/>
+    <elementParameter xmi:id="_fPjRxI-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter xmi:id="_fPjRxY-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter xmi:id="_fPjRxo-6EeiM5ZSyuP5-tQ" field="PROCESS_TYPE" name="PROCESS" value="source_gigya_reformat"/>
+    <elementParameter xmi:id="_fPjRx4-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter xmi:id="_fPjRyI-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_0OS4EH2rEeiNtetg0JvUxg"/>
+    <elementParameter xmi:id="_fPjRyY-6EeiM5ZSyuP5-tQ" field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter xmi:id="_fPjRyo-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter xmi:id="_fPjRy4-6EeiM5ZSyuP5-tQ" field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter xmi:id="_fPjRzI-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter xmi:id="_fPjRzY-6EeiM5ZSyuP5-tQ" field="TABLE" name="CONTEXTPARAMS">
+      <elementValue xmi:id="_fPjRzo-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjRz4-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue xmi:id="_fPjR0I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjR0Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue xmi:id="_fPjR0o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjR04-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue xmi:id="_fPjR1I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjR1Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue xmi:id="_fPjR1o-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjR14-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue xmi:id="_fPjR2I-6EeiM5ZSyuP5-tQ" elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue xmi:id="_fPjR2Y-6EeiM5ZSyuP5-tQ" elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+    </elementParameter>
+    <elementParameter xmi:id="_fPjR2o-6EeiM5ZSyuP5-tQ" field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter xmi:id="_fPjR24-6EeiM5ZSyuP5-tQ" field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjR3I-6EeiM5ZSyuP5-tQ" field="LABEL" name="NOTE_INDEPENDANT" value="Following options are not available for Spark Jobs:"/>
+    <elementParameter xmi:id="_fPjR3Y-6EeiM5ZSyuP5-tQ" field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
+    <elementParameter xmi:id="_fPjR3o-6EeiM5ZSyuP5-tQ" field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter xmi:id="_fPjR34-6EeiM5ZSyuP5-tQ" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_fPjR4I-6EeiM5ZSyuP5-tQ" connector="FLOW" name="tRunJob_7"/>
+  </node>
+  <connection xmi:id="_fPjR4Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tRunJob_1">
+    <elementParameter xmi:id="_fPjR4o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR44-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_3" offsetLabelX="0" offsetLabelY="0" source="tRunJob_3" target="tRunJob_4">
+    <elementParameter xmi:id="_fPjR5I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR5Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tRunJob_6">
+    <elementParameter xmi:id="_fPjR5o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR54-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_6" offsetLabelX="0" offsetLabelY="0" source="tRunJob_6" target="tRunJob_9">
+    <elementParameter xmi:id="_fPjR6I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR6Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_9" offsetLabelX="0" offsetLabelY="0" source="tRunJob_9" target="tRunJob_13">
+    <elementParameter xmi:id="_fPjR6o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR64-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_13" offsetLabelX="0" offsetLabelY="0" source="tRunJob_13" target="tRunJob_14">
+    <elementParameter xmi:id="_fPjR7I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR7Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_14" offsetLabelX="0" offsetLabelY="0" source="tRunJob_14" target="tRunJob_15">
+    <elementParameter xmi:id="_fPjR7o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR74-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_15" offsetLabelX="0" offsetLabelY="0" source="tRunJob_15" target="tRunJob_17">
+    <elementParameter xmi:id="_fPjR8I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk9" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR8Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_17" offsetLabelX="0" offsetLabelY="0" source="tRunJob_17" target="tRunJob_20">
+    <elementParameter xmi:id="_fPjR8o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk10" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR84-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_20" offsetLabelX="0" offsetLabelY="0" source="tRunJob_20" target="tRunJob_24">
+    <elementParameter xmi:id="_fPjR9I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR9Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_24" offsetLabelX="0" offsetLabelY="0" source="tRunJob_24" target="tRunJob_25">
+    <elementParameter xmi:id="_fPjR9o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk12" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR94-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_25" offsetLabelX="0" offsetLabelY="0" source="tRunJob_25" target="tRunJob_5">
+    <elementParameter xmi:id="_fPjR-I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk14" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR-Y-6EeiM5ZSyuP5-tQ" connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRunJob_3">
+    <elementParameter xmi:id="_fPjR-o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection xmi:id="_fPjR-4-6EeiM5ZSyuP5-tQ" connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_7" offsetLabelX="0" offsetLabelY="0" source="tRunJob_7" target="tRunJob_2">
+    <elementParameter xmi:id="_fPjR_I-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <subjob xmi:id="_fPjR_Y-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjR_o-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
+    <elementParameter xmi:id="_fPjR_4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSAI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSAY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSAo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
+    <elementParameter xmi:id="_fPjSA4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSBI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSBY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSBo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter xmi:id="_fPjSB4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSCI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSCY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSCo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter xmi:id="_fPjSC4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSDI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSDY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSDo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_9" show="false"/>
+    <elementParameter xmi:id="_fPjSD4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSEI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSEY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSEo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_13" show="false"/>
+    <elementParameter xmi:id="_fPjSE4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSFI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSFY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSFo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_14" show="false"/>
+    <elementParameter xmi:id="_fPjSF4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSGI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSGY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSGo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_15" show="false"/>
+    <elementParameter xmi:id="_fPjSG4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSHI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSHY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSHo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_17" show="false"/>
+    <elementParameter xmi:id="_fPjSH4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSII-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSIY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSIo-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_20" show="false"/>
+    <elementParameter xmi:id="_fPjSI4-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSJI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSJY-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSJo-6EeiM5ZSyuP5-tQ" field="CHECK" name="COLLAPSED" value="true" show="false"/>
+    <elementParameter xmi:id="_fPjSJ4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_24" show="false"/>
+    <elementParameter xmi:id="_fPjSKI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSKY-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSKo-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSK4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_25" show="false"/>
+    <elementParameter xmi:id="_fPjSLI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSLY-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSLo-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSL4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter xmi:id="_fPjSMI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSMY-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSMo-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSM4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
+    <elementParameter xmi:id="_fPjSNI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSNY-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_fPjSNo-6EeiM5ZSyuP5-tQ">
+    <elementParameter xmi:id="_fPjSN4-6EeiM5ZSyuP5-tQ" field="TEXT" name="UNIQUE_NAME" value="tRunJob_7" show="false"/>
+    <elementParameter xmi:id="_fPjSOI-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_fPjSOY-6EeiM5ZSyuP5-tQ" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>
