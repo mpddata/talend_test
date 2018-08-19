@@ -506,7 +506,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
     <elementParameter field="IMAGE" name="PREVIEW" value="_E27jkID0Eeiie8Xa956gWQ-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
@@ -740,7 +740,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
@@ -821,7 +821,7 @@
         <mapperTableEntries name="pagePathL4" expression="row1.hitsPagePagePathL4" type="id_String" nullable="true"/>
         <mapperTableEntries name="KeywordList" expression="" type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row1" minimized="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitNumber" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="visitId" type="id_Integer" nullable="true"/>
@@ -888,7 +888,7 @@
         <mapperTableEntries name="channelGrouping" type="id_String" nullable="true"/>
         <mapperTableEntries name="socialEngagementType" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="out2" columnNameFilter="dat" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="out2" minimized="true" activateCondensedTool="true" columnNameFilter="dat" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="GAClientId" expression="row1.clientId " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="dateId" expression="row1.date " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="LotamePId" type="id_String" nullable="true"/>
@@ -896,19 +896,19 @@
         <mapperTableEntries name="KeywordList" type="id_String" nullable="true"/>
         <mapperTableEntries name="custSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row4" minimized="true" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="browserUID" expression="row1.deviceBrowser + (row1.deviceBrowserVersion.contains(&quot;not set&quot;)?&quot;&quot;:row1.deviceBrowserVersion) " type="id_String" nullable="true"/>
         <mapperTableEntries name="browserName" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="browserVer" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="browserSid" expression="" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row5" minimized="true" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="osUID" expression="row1.deviceOperatingSystem + (row1.deviceOperatingSystemVersion.contains(&quot;not set&quot;)?&quot;&quot;:row1.deviceOperatingSystemVersion) " type="id_String" nullable="true"/>
         <mapperTableEntries name="osName" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="osVer" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="osSid" expression="" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="deviceUID" expression="row1.deviceMobileDeviceBranding + row1.deviceMobileDeviceModel + row1.deviceDeviceCategory " type="id_String"/>
         <mapperTableEntries name="deviceMobileDeviceBranding" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="deviceMobileDeviceModel" expression="" type="id_String" nullable="true"/>
@@ -984,7 +984,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
     <elementParameter field="IMAGE" name="PREVIEW" value="_E27jkID0Eeiie8Xa956gWQ-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
@@ -1013,7 +1013,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
         <mapperTableEntries name="GAClientId" expression="row2.GAClientId " type="id_String" nullable="true"/>
@@ -1030,7 +1030,7 @@
         <mapperTableEntries name="GigyaId" type="id_String" nullable="true"/>
         <mapperTableEntries name="KeywordList" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="gigyaID" expression="row2.GigyaId " type="id_String" operator="="/>
         <mapperTableEntries name="custSid" type="id_Integer"/>
       </inputTables>
