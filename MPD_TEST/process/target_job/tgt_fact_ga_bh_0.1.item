@@ -819,7 +819,7 @@
         <mapperTableEntries name="pagePathL2" expression="row1.hitsPagePagePathL2 " type="id_String" nullable="true"/>
         <mapperTableEntries name="pagePathL3" expression="row1.hitsPagePagePathL3" type="id_String" nullable="true"/>
         <mapperTableEntries name="pagePathL4" expression="row1.hitsPagePagePathL4" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KeywordList" expression="out2.KeywordList " type="id_String" nullable="true"/>
+        <mapperTableEntries name="KeywordList" expression="" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="visitorId" type="id_Integer" nullable="true"/>
