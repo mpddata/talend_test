@@ -1037,6 +1037,27 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlRow_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlRow_1" target="tMysqlInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
   </connection>
+  <note opaque="true" posX="64" posY="128" sizeHeight="97" sizeWidth="97" text="Establish &#xD;&#xA;staging &#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="192" posY="128" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="416" posY="288" sizeHeight="161" sizeWidth="129" text="Load data &#xD;&#xA;from &#xD;&#xA;&quot;fact_ga_bh&quot; &#xD;&#xA;table&#xD;&#xA;on the&#xD;&#xA;specific date">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="576" posY="288" sizeHeight="129" sizeWidth="97" text="Aggregate&#xD;&#xA;column&#xD;&#xA;based on&#xD;&#xA;custSid,&#xD;&#xA;custUID&#xD;&#xA;and dateSid">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="704" posY="288" sizeHeight="97" sizeWidth="97" text="Transform&#xD;&#xA;and&#xD;&#xA;route date">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="896" posY="288" sizeHeight="65" sizeWidth="129" text="Load data to&#xD;&#xA;&quot;agg_ga_bh&quot;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="704" posY="32" sizeHeight="97" sizeWidth="129" text="delete a specific&#xD;&#xA;date's record&#xD;&#xA;from&#xD;&#xA;agg_ga_bh">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
