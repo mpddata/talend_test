@@ -187,7 +187,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tgt_db_conn"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="288">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
@@ -453,7 +453,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -716,7 +716,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="384">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -764,7 +764,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="480">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -812,7 +812,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="544">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_4" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -858,7 +858,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="480">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_6" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -906,7 +906,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="288">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -1492,19 +1492,19 @@
   <note opaque="true" posX="256" posY="32" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="96" posY="224" sizeHeight="97" sizeWidth="97" text="Retrieve &#xD;&#xA;gigya&#xD;&#xA;data from &#xD;&#xA;&quot;stg_gigya&quot; &#xD;&#xA;table">
+  <note opaque="true" posX="124" posY="224" sizeHeight="129" sizeWidth="97" text="Retrieve &#xD;&#xA;gigya&#xD;&#xA;data from &#xD;&#xA;&quot;stg_gigya&quot; &#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="32" posY="320" sizeHeight="129" sizeWidth="161" text="Retrieve contact&#xD;&#xA;method data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_contactMethod&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="0" posY="352" sizeHeight="129" sizeWidth="193" text="Retrieve contact&#xD;&#xA;method data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_contactMethod&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="64" posY="448" sizeHeight="129" sizeWidth="161" text="Retrieve education data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_education&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="32" posY="480" sizeHeight="129" sizeWidth="193" text="Retrieve education data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_education&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="480" posY="544" sizeHeight="129" sizeWidth="161" text="Retrieve race data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_race&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="480" posY="576" sizeHeight="129" sizeWidth="161" text="Retrieve race data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_race&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="288" posY="608" sizeHeight="129" sizeWidth="161" text="Retrieve marital data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_marital&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="256" posY="640" sizeHeight="129" sizeWidth="193" text="Retrieve marital data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_marital&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
