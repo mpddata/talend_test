@@ -281,7 +281,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="test01" activateCondensedTool="true">
         <mapperTableEntries name="LotameID" expression="row1.LotameID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CreateDate" expression="TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;yyyyMMdd&quot;) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="CreateDate" expression="TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="Audience1" expression="row1.Audience1" type="id_String" nullable="true"/>
         <mapperTableEntries name="Audience2" expression="row1.Audience2" type="id_String" nullable="true"/>
         <mapperTableEntries name="Audience3" expression=" row1.Audience3 " type="id_String" nullable="true"/>
