@@ -126,7 +126,8 @@
     <elementParameter field="PASSWORD" name="PASSPHRASE" value="0RMsyjmybrE="/>
     <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;" show="false"/>
     <elementParameter field="TABLE" name="COMMANDS">
-      <elementValue elementRef="COMMAND" value="&quot;mysql -h 127.0.0.1 -u tci_admin -p&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;mysql -h 127.0.0.1 -u tci_admin -p;&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;TcIaDmIn2018&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="60" show="false"/>
