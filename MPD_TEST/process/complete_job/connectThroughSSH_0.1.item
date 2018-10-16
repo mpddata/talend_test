@@ -126,13 +126,12 @@
     <elementParameter field="PASSWORD" name="PASSPHRASE" value="0RMsyjmybrE="/>
     <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;" show="false"/>
     <elementParameter field="TABLE" name="COMMANDS">
-      <elementValue elementRef="COMMAND" value="&quot;-L 3306:127.0.0.1:3306 -N&quot;"/>
       <elementValue elementRef="COMMAND" value="&quot;mysql -h 127.0.0.1 -u tci_admin -p&quot;"/>
       <elementValue elementRef="COMMAND" value="&quot;TcIaDmIn2018&quot;"/>
       <elementValue elementRef="COMMAND" value="&quot;select count(*) from stg_tci.sor_lotame_id;&quot;"/>
     </elementParameter>
-    <elementParameter field="CHECK" name="USE_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="60" show="false"/>
+    <elementParameter field="CHECK" name="USE_TIMEOUT" value="true"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSSH_1">
       <column comment="" key="false" length="-1" name="kiraCount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
