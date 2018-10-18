@@ -245,7 +245,7 @@
       <column comment="" key="false" length="255" name="browserVer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="browserUID" expression="row1.deviceBrowser + (row1.deviceBrowserVersion.contains(&quot;not set&quot;)?&quot;&quot;:row1.deviceBrowserVersion) " type="id_String" nullable="true"/>
@@ -388,7 +388,7 @@
   <note opaque="true" posX="320" posY="288" sizeHeight="97" sizeWidth="97" text="Transform&#xD;&#xA;and&#xD;&#xA;route data">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="128" posY="288" sizeHeight="97" sizeWidth="161" text="Retrieve &#xD;&#xA;browser&#xD;&#xA;data from &#xD;&#xA;&quot;stg_ga_sessions_bh&quot; &#xD;&#xA;table">
+  <note opaque="true" posX="128" posY="288" sizeHeight="97" sizeWidth="161" text="Retrieve &#xD;&#xA;browser&#xD;&#xA;data from &#xD;&#xA;&quot;stg_ga_sessions_nst&quot; &#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <note opaque="true" posX="480" posY="288" sizeHeight="97" sizeWidth="97" text="Sort out &#xD;&#xA;duplicate &#xD;&#xA;entries">
