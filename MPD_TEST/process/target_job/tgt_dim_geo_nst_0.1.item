@@ -29,6 +29,8 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms2014M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
@@ -494,7 +496,7 @@
   <note opaque="true" posX="544" posY="352" sizeHeight="97" sizeWidth="97" text="Aggregate&#xD;&#xA;columns&#xD;&#xA;using function&#xD;&#xA;&quot;max&quot;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="800" posY="352" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;dim_geo&quot; &#xD;&#xA;table">
+  <note opaque="true" posX="800" posY="352" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;dim_geo_nst&quot; &#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
