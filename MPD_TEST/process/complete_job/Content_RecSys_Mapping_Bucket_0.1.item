@@ -290,7 +290,7 @@
         <mapperTableEntries name="articleId_7" expression="Integer.parseInt(row4.articleId_7) " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="articleId_8" expression="Integer.parseInt(row4.articleId_8) " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="articleId_9" expression="Integer.parseInt(row4.articleId_9) " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="articleId_10" expression="Integer.parseInt(row4.articleId_10.substring(1)) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="articleId_10" expression="Integer.parseInt(row4.articleId_10.trim().substring(0,5)) " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="clientId" type="id_String" nullable="true"/>
