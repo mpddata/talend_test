@@ -178,14 +178,14 @@
       <elementValue elementRef="OBJECT_PREFIX" value="&quot;&quot;"/>
       <elementValue elementRef="OBJECT_DELIMITER" value="&quot;,&quot;"/>
     </elementParameter>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/home/centos/output_july/&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/mohdhafeez/Downloads&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tGSConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
-    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOGMS7U6Y4YMRJZNLXX2FF6&quot;"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="UkumQgnNRvBGv3hWji+MW1oYIZ5K8sKMj+B1TZ+ZEih1Zkz0gAtsiu0gV/xqZe1+"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;560757959591-8ga0gtle47tjg6hj7teui494b213sssc.apps.googleusercontent.com&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="yHyybFOsJ198chMmZHihWrC6jqbq+T2cqC7wHSaELwc="/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAmazonMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlConnection_1" target="tGSConnection_1">
