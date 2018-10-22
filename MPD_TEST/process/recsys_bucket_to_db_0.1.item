@@ -155,7 +155,7 @@
     <elementParameter field="CHECK" name="GETLIST" value="true"/>
     <elementParameter field="TABLE" name="BUCKETS">
       <elementValue elementRef="BUCKET_NAME" value="&quot;mpd-recsys/nst/recommend&quot;"/>
-      <elementValue elementRef="OBJECT_PREFIX" value="&quot;&quot;"/>
+      <elementValue elementRef="OBJECT_PREFIX" value="&quot;*.json&quot;"/>
       <elementValue elementRef="OBJECT_DELIMITER" value="&quot;,&quot;"/>
     </elementParameter>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/mohdhafeez/Downloads&quot;"/>
