@@ -29,7 +29,7 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx2048M&quot;]}" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xmx4096M&quot;,&quot;-Xms2014M&quot;]}" show="false"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -247,7 +247,7 @@
       <column comment="" key="false" length="255" name="osVer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="osUID" expression="row1.osName + (row1.osVer.contains(&quot;not set&quot;)?&quot;&quot;:row1.osVer) " type="id_String" nullable="true"/>
