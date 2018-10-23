@@ -207,7 +207,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_2">
-      <column comment="" key="false" length="-1" name="articleID" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="articleID" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="field_article_images_url" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -390,7 +390,7 @@
         <mapperTableEntries name="field_article_images_caption" expression="row1.field_article_images_caption " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="articleID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="articleID" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="title" type="id_String" nullable="true"/>
         <mapperTableEntries name="url" type="id_String" nullable="true"/>
         <mapperTableEntries name="field_article_images_url" type="id_String" nullable="true"/>
