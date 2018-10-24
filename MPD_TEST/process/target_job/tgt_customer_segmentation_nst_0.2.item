@@ -148,12 +148,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - agg_ga_bh" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `agg_ga_bh`.`dateSid`, &#xA;  `agg_ga_bh`.`custSid`, &#xA;  `agg_ga_bh`.`custUID`, &#xA;  `agg_ga_bh`.`dailyTotalSessions`, &#xA;  `agg_ga_bh`.`dailyTotalVisits`, &#xA;  `agg_ga_bh`.`dailyTotalHits`, &#xA;  `agg_ga_bh`.`dailyTotalPageviews`, &#xA;  `agg_ga_bh`.`dailyTotalTimeOnSite`, &#xA;  `agg_ga_bh`.`dailyTotalBounces`, &#xA;  `agg_ga_bh`.`dailyTotalTrans`, &#xA;  `agg_ga_bh`.`dailyTotalTransRevenue`, &#xA;  `agg_ga_bh`.`dailyTotalNewVisits`, &#xA;  `agg_ga_bh`.`dailyTotalScreenviews`, &#xA;  `agg_ga_bh`.`dailyTotalUnique`, &#xA;  `agg_ga_bh`.`dailyTotalTimeOnScreen`, &#xA;  `agg_ga_bh`.`dailyTotalTotalTransRevenue`, &#xA;  `agg_ga_bh`.`dailyTotalSessionQualityDim`, &#xA;  `agg_ga_bh`.`dailyAveHitsPerSession`, &#xA;  `agg_ga_bh`.`dailyAvePageviewsPerSession`, &#xA;  `agg_ga_bh`.`dailyAveTimeOnSitePerSession`, &#xA;  `agg_ga_bh`.`dailyAveTimeOnScreenPerSession`&#xA;FROM `agg_ga_bh`&#xD;&#xA;WHERE  `agg_ga_bh`.`dateSid` between '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `agg_ga_nst`.`dateSid`, &#xA;  `agg_ga_nst`.`custSid`, &#xA;  `agg_ga_nst`.`custUID`, &#xA;  `agg_ga_nst`.`dailyTotalSessions`, &#xA;  `agg_ga_nst`.`dailyTotalVisits`, &#xA;  `agg_ga_nst`.`dailyTotalHits`, &#xA;  `agg_ga_nst`.`dailyTotalPageviews`, &#xA;  `agg_ga_nst`.`dailyTotalTimeOnSite`, &#xA;  `agg_ga_nst`.`dailyTotalBounces`, &#xA;  `agg_ga_nst`.`dailyTotalTrans`, &#xA;  `agg_ga_nst`.`dailyTotalTransRevenue`, &#xA;  `agg_ga_nst`.`dailyTotalNewVisits`, &#xA;  `agg_ga_nst`.`dailyTotalScreenviews`, &#xA;  `agg_ga_nst`.`dailyTotalUnique`, &#xA;  `agg_ga_nst`.`dailyTotalTimeOnScreen`, &#xA;  `agg_ga_nst`.`dailyTotalTotalTransRevenue`, &#xA;  `agg_ga_nst`.`dailyTotalSessionQualityDim`, &#xA;  `agg_ga_nst`.`dailyAveHitsPerSession`, &#xA;  `agg_ga_nst`.`dailyAvePageviewsPerSession`, &#xA;  `agg_ga_nst`.`dailyAveTimeOnSitePerSession`, &#xA;  `agg_ga_nst`.`dailyAveTimeOnScreenPerSession`&#xA;FROM `agg_ga_nst`&#xA;WHERE  `agg_ga_nst`.`dateSid` between '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -391,7 +391,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rqLZ0NdvEeiD07wKzyrpvQ-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -836,7 +836,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rqLZ0NdvEeiD07wKzyrpvQ-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -1213,7 +1213,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rqLZ0NdvEeiD07wKzyrpvQ-tMap_4-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -1493,7 +1493,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_5-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rqLZ0NdvEeiD07wKzyrpvQ-tMap_5-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -1654,7 +1654,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_qKDHoKFoEeiWxr-LubPSdQ-tMap_7-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rqLZ0NdvEeiD07wKzyrpvQ-tMap_7-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -2290,7 +2290,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_customer_segmentation where dateSid = '&quot;+ ((String)globalMap.get(&quot;inputDate&quot;)) +&quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_customer_segmentation_nst where dateSid = '&quot;+ ((String)globalMap.get(&quot;inputDate&quot;)) +&quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2324,12 +2324,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;hour(from_unixtime(visitStartTime)) AS visitHour&#xD;&#xA;FROM fact_ga_bh WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;CASE WHEN custSid = 0 &#xD;&#xA;&#x9;THEN CASE WHEN clientId IS NULL OR clientId ='' &#xD;&#xA;&#x9;&#x9;&#x9;THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;hour(from_unixtime(visitStartTime)) AS visitHour&#xD;&#xA;FROM fact_ga_nst WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
