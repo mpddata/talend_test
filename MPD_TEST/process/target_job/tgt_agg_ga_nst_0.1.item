@@ -140,12 +140,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `fact_ga_bh`.`visitorId`, &#xA;  `fact_ga_bh`.`visitNumber`, &#xA;  `fact_ga_bh`.`visitId`, &#xA;  `fact_ga_bh`.`sessionId`, &#xA;  `fact_ga_bh`.`visitStartTime`, &#xA;  `fact_ga_bh`.`dateSid`, &#xA;  `fact_ga_bh`.`fullVisitorId`, &#xA;  `fact_ga_bh`.`userId`, &#xA;  `fact_ga_bh`.`clientId`, &#xD;&#xA;  `fact_ga_bh`.`custSid`,&#xA;  case when `fact_ga_bh`.`custSid` = 0 then case when `fact_ga_bh`.`clientId` is null or `fact_ga_bh`.`clientId` ='' then  `fact_ga_bh`.`fullVisitorId` else `fact_ga_bh`.`clientId` end else `fact_ga_bh`.`custSid` end, &#xA;  `fact_ga_bh`.`channelGrouping`, &#xA;  `fact_ga_bh`.`socialEngagementType`, &#xA;  `fact_ga_bh`.`totalVisits`, &#xA;  `fact_ga_bh`.`totalHits`, &#xA;  `fact_ga_bh`.`totalPageviews`, &#xA;  `fact_ga_bh`.`totalTimeOnSite`, &#xA;  `fact_ga_bh`.`totalBounces`, &#xA;  `fact_ga_bh`.`totalTrans`, &#xA;  `fact_ga_bh`.`totalTransRevenue`, &#xA;  `fact_ga_bh`.`totalNewVisits`, &#xA;  `fact_ga_bh`.`totalScreenviews`, &#xA;  `fact_ga_bh`.`totalUnique`, &#xA;  `fact_ga_bh`.`totalTimeOnScreen`, &#xA;  `fact_ga_bh`.`totalTotalTransRevenue`, &#xA;  `fact_ga_bh`.`totalSessionQualityDim`, &#xA;  `fact_ga_bh`.`browserSid`, &#xA;  `fact_ga_bh`.`browserSize`, &#xA;  `fact_ga_bh`.`osSid`, &#xA;  `fact_ga_bh`.`isMobile`, &#xA;  `fact_ga_bh`.`deviceSid`, &#xA;  `fact_ga_bh`.`deviceInputSelector`, &#xA;  `fact_ga_bh`.`deviceLanguage`, &#xA;  `fact_ga_bh`.`geoSid`, &#xA;  `fact_ga_bh`.`NetworkDomain`, &#xA;  `fact_ga_bh`.`NetworkLocation`&#xA;FROM `fact_ga_bh`&#xD;&#xA;WHERE dateSid between '&quot; + ((String)globalMap.get(&quot;startdate&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;enddate&quot;)) + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `fact_ga_nst`.`visitorId`, &#xA;  `fact_ga_nst`.`visitNumber`, &#xA;  `fact_ga_nst`.`visitId`, &#xA;  `fact_ga_nst`.`sessionId`, &#xA;  `fact_ga_nst`.`visitStartTime`, &#xA;  `fact_ga_nst`.`dateSid`, &#xA;  `fact_ga_nst`.`fullVisitorId`, &#xA;  `fact_ga_nst`.`userId`, &#xA;  `fact_ga_nst`.`clientId`, &#xA;  `fact_ga_nst`.`custSid`,&#xA;  case when `fact_ga_nst`.`custSid` = 0 then case when `fact_ga_nst`.`clientId` is null or `fact_ga_nst`.`clientId` ='' then  `fact_ga_nst`.`fullVisitorId` else `fact_ga_nst`.`clientId` end else `fact_ga_nst`.`custSid` end, &#xA;  `fact_ga_nst`.`channelGrouping`, &#xA;  `fact_ga_nst`.`socialEngagementType`, &#xA;  `fact_ga_nst`.`totalVisits`, &#xA;  `fact_ga_nst`.`totalHits`, &#xA;  `fact_ga_nst`.`totalPageviews`, &#xA;  `fact_ga_nst`.`totalTimeOnSite`, &#xA;  `fact_ga_nst`.`totalBounces`, &#xA;  `fact_ga_nst`.`totalTrans`, &#xA;  `fact_ga_nst`.`totalTransRevenue`, &#xA;  `fact_ga_nst`.`totalNewVisits`, &#xA;  `fact_ga_nst`.`totalScreenviews`, &#xA;  `fact_ga_nst`.`totalUnique`, &#xA;  `fact_ga_nst`.`totalTimeOnScreen`, &#xA;  `fact_ga_nst`.`totalTotalTransRevenue`, &#xA;  `fact_ga_nst`.`totalSessionQualityDim`, &#xA;  `fact_ga_nst`.`browserSid`, &#xA;  `fact_ga_nst`.`browserSize`, &#xA;  `fact_ga_nst`.`osSid`, &#xA;  `fact_ga_nst`.`isMobile`, &#xA;  `fact_ga_nst`.`deviceSid`, &#xA;  `fact_ga_nst`.`deviceInputSelector`, &#xA;  `fact_ga_nst`.`deviceLanguage`, &#xA;  `fact_ga_nst`.`geoSid`, &#xA;  `fact_ga_nst`.`NetworkDomain`, &#xA;  `fact_ga_nst`.`NetworkLocation`&#xA;FROM `fact_ga_nst`&#xA;WHERE dateSid between '&quot; + ((String)globalMap.get(&quot;startdate&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;enddate&quot;)) + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -530,7 +530,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_QlGDUIPzEeiSwax_S4wVhQ-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_I40wMNduEeiD07wKzyrpvQ-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -672,7 +672,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_nst&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -804,7 +804,7 @@
     <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
     <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="insert data into agg_ga_bh"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert data into agg_ga_nst"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlOutput_2">
       <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -953,12 +953,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;MIN(`stg_ga_sessions_bh`.`date`),&#xD;&#xA;MAX(`stg_ga_sessions_bh`.`date`)&#xD;&#xA;FROM `stg_ga_sessions_bh`&quot; &#xD;&#xA;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `stg_ga_sessions_nst`.`startdate`, &#xA;  `stg_ga_sessions_nst`.`enddate`&#xA;FROM `stg_ga_sessions_nst`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1011,7 +1011,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_ga_bh where dateSid between '&quot;+((String)globalMap.get(&quot;startdate&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;enddate&quot;))+&quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_ga_nst where dateSid between '&quot;+((String)globalMap.get(&quot;startdate&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;enddate&quot;))+&quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1111,7 +1111,7 @@
   <note opaque="true" posX="192" posY="128" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="352" posY="128" sizeHeight="129" sizeWidth="161" text="Find&#xD;&#xA;the Min,&#xD;&#xA;and Max date &#xD;&#xA;from &#xD;&#xA;&quot;stg_ga_sessions_bh&quot; &#xD;&#xA;table">
+  <note opaque="true" posX="352" posY="128" sizeHeight="129" sizeWidth="161" text="Find&#xD;&#xA;the Min,&#xD;&#xA;and Max date &#xD;&#xA;from &#xD;&#xA;&quot;stg_ga_sessions_nst&quot; &#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <note opaque="true" posX="544" posY="128" sizeHeight="129" sizeWidth="161" text="Daclare the &#xD;&#xA;Min and Max date &#xD;&#xA;as 2 global variables&#xD;&#xA;&quot;startdate&quot;&#xD;&#xA;and &quot;enddate&quot;">
@@ -1120,7 +1120,7 @@
   <note opaque="true" posX="864" posY="32" sizeHeight="129" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;agg_ga_bh&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="704" posY="320" sizeHeight="161" sizeWidth="129" text="Load data &#xD;&#xA;from &#xD;&#xA;&quot;fact_ga_bh&quot; &#xD;&#xA;table&#xD;&#xA;that are&#xD;&#xA;between&#xD;&#xA;start date&#xD;&#xA;and end date&#xD;&#xA;">
+  <note opaque="true" posX="704" posY="320" sizeHeight="161" sizeWidth="129" text="Load data &#xD;&#xA;from &#xD;&#xA;&quot;fact_ga_nst&quot; &#xD;&#xA;table&#xD;&#xA;that are&#xD;&#xA;between&#xD;&#xA;start date&#xD;&#xA;and end date&#xD;&#xA;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <note opaque="true" posX="864" posY="320" sizeHeight="129" sizeWidth="97" text="Aggregate&#xD;&#xA;column&#xD;&#xA;based on&#xD;&#xA;custSid,&#xD;&#xA;custUID&#xD;&#xA;and dateSid">
@@ -1129,7 +1129,8 @@
   <note opaque="true" posX="992" posY="320" sizeHeight="97" sizeWidth="97" text="Transform&#xD;&#xA;and&#xD;&#xA;route date">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="1184" posY="320" sizeHeight="65" sizeWidth="129" text="Load data to&#xD;&#xA;&quot;agg_ga_bh&quot;">
+  <note opaque="true" posX="1184" posY="320" sizeHeight="65" sizeWidth="129" text="Load data to&#xD;&#xA;&quot;agg_ga_nst&quot;">
+    <elementParameter field="TEXT" name="NOTE_FONT" value="Times New Roman"/>
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
