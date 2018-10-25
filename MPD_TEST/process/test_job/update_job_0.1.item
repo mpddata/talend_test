@@ -146,7 +146,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE agg_customer_segmentation&#xD;&#xA;SET custSegment=&#xD;&#xA;CASE WHEN aggTotalVisits_30 > 15 and aggTotalHits_30 > 15 THEN 'High Active/Loyal User'&#xD;&#xA;WHEN aggTotalSessions_30 + aggTotalSessions_60 + aggTotalSessions_90 > 1 THEN 'Returning User/Medium User'&#xD;&#xA;WHEN aggTotalVisits_30 = 1 or aggTotalSessions_30 = 1 THEN 'New User'&#xD;&#xA;WHEN aggTotalSessions_30 + aggTotalSessions_60 + aggTotalSessions_90 = 0 THEN 'Low User'&#xD;&#xA;ELSE '' END&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE agg_customer_segmentation&#xD;&#xA;SET custSegment=&#xD;&#xA;CASE WHEN aggTotalSessions_30 >= 15 THEN 'Loyal (High)'&#xD;&#xA;WHEN aggTotalSessions_30 >= 2 THEN 'Returning (Medium)'&#xD;&#xA;WHEN aggTotalSessions_30 = 1 THEN 'New User (Low)'&#xD;&#xA;ELSE 'Lost' END&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
