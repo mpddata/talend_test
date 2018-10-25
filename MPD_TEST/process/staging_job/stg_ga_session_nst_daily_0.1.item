@@ -149,7 +149,7 @@
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="LABEL" value="ga_session_nst"/>
+    <elementParameter field="TEXT" name="LABEL" value="ga_session_nst_daily"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tBigQueryInput_1">
       <column comment="" key="false" length="-1" name="visitorId" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
@@ -789,7 +789,7 @@
   <note opaque="true" posX="352" posY="416" sizeHeight="97" sizeWidth="129" text="retrieve ga &#xD;&#xA;sessions &#xD;&#xA;records from &#xD;&#xA;BigQuery">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="544" posY="416" sizeHeight="97" sizeWidth="161" text="write BigQuery&#xD;&#xA;records to&#xD;&#xA;staging db&#xD;&#xA;stg_ga_sessions_nst">
+  <note opaque="true" posX="544" posY="416" sizeHeight="97" sizeWidth="161" text="write BigQuery&#xD;&#xA;records to&#xD;&#xA;staging db&#xD;&#xA;stg_ga_sessions_nst_daily">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
