@@ -2,6 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -110,4 +112,78 @@
     <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
     <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
   </parameters>
+  <node componentName="tBigQueryInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBigQueryInput_1" show="false"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;434785495492-q0d8nogibd7qj7agenqfq6fh6h1j13vd.apps.googleusercontent.com&quot;"/>
+    <elementParameter field="PASSWORD" name="CLIENT_SECRET" value="nD9ipHrNcOCxNS7mrKfdW4vHVirt7fD9EDyAz9HHIs8="/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;mpdbq1&quot;"/>
+    <elementParameter field="TEXT" name="AUTHORIZATION_CODE" value="&quot;4/AAAE2Q1pKW2LbWnca8e-Z8YCzTnJ0EGb_zJkNgCAKRV1lbNEE2z0hds&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;With GigyaIdTab as (&#xA;  SELECT fullvisitorid, cd.value as GigyaId, date&#xA;  FROM `mpdbq1.149081219.ga_sessions_*`, UNNEST(customDimensions) AS cd&#xA;  WHERE _table_suffix = FORMAT_DATE(&quot;%Y%m%d&quot;, DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY))&#xA;  and cd.index=2&#xA;),&#xA;LotamePIdTab as (&#xA;  SELECT cd.value as LotamePId, fullvisitorId&#xA;  FROM `mpdbq1.149081219.ga_sessions_*`, UNNEST(hits) AS hits, UNNEST(hits.customDimensions) AS cd&#xA;  WHERE cd.index=34&#xA;  and _table_suffix = FORMAT_DATE(&quot;%Y%m%d&quot;, DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY))&#xA;  and cd.value is not null&#xA;),&#xA;GAClientIdTab as (&#xA;  SELECT fullvisitorid, cd.value as GAClientId&#xA;  FROM `mpdbq1.149081219.ga_sessions_*`, UNNEST(customDimensions) AS cd&#xA;  WHERE _table_suffix = FORMAT_DATE(&quot;%Y%m%d&quot;, DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY))&#xA;  and cd.index=17&#xA;)&#xA;select GigyaIdTab.GigyaId,GAClientIdTab.GAClientId,LotamePIdTab.LotamePId,GigyaIdTab.date&#xA;from GigyaIdTab,GAClientIdTab,LotamePIdTab&#xA;where GAClientIdTab.fullvisitorId = GigyaIdTab.fullvisitorId&#xA;and GAClientIdTab.fullvisitorId = LotamePIdTab.fullvisitorId&#xA;and GigyaIdTab.GigyaId is not null&#xA;and GAClientIdTab.GAClientId is not null&#xA;and LotamePIdTab.LotamePId is not null&#xA;order by GAClientIdTab.GAClientId&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="RESULT_SIZE" value="SMALL"/>
+    <elementParameter field="FILE" name="TOKEN_NAME" value="&quot;C:/Talend/TalendStudio/v651/workspace/token.properties&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tBigQueryInput_1">
+      <column comment="" key="false" length="-1" name="GigyaId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GAClientId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LotamePId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="userId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="clientId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="channelGrouping" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="socialEngagementType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="GigyaId"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GAClientId"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LotamePId"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="GigyaId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GAClientId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LotamePId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="fullVisitorId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="userId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="clientId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="channelGrouping" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+      <column comment="" key="false" length="255" name="socialEngagementType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="false"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tBigQueryInput_1" offsetLabelX="0" offsetLabelY="0" source="tBigQueryInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBigQueryInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
 </talendfile:ProcessType>
