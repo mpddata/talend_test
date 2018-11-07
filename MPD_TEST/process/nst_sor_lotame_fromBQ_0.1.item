@@ -118,7 +118,7 @@
     <elementParameter field="PASSWORD" name="CLIENT_SECRET" value="nD9ipHrNcOCxNS7mrKfdW4vHVirt7fD9EDyAz9HHIs8="/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;mpdbq1&quot;"/>
     <elementParameter field="TEXT" name="AUTHORIZATION_CODE" value="&quot;4/jgCnEAvIUTDxBXDHXBaxMZXjGrPJF3Fwiutwda4SEDsMDub3ad90hHI&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT fullvisitorid, cd.value as GigyaId, date&#xA;  FROM `mpdbq1.149081219.ga_sessions_*`, UNNEST(customDimensions) AS cd&#xA;  WHERE cd.index=2&#xA;  limit 10&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT fullvisitorid, cd.value as GigyaId, date&#xA;  FROM `mpdbq1.149081219.ga_sessions_*`, UNNEST(customDimensions) AS cd&#xA;  WHERE cd.index=2&#xA;   and cd.value is not null&#xA;  limit 10&#xA;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="RESULT_SIZE" value="SMALL"/>
     <elementParameter field="FILE" name="TOKEN_NAME" value="&quot;/Users/hafeez/Downloads/token.properties&quot;"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
