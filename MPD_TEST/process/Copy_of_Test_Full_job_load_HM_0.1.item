@@ -20,11 +20,11 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
     <contextParameter comment="BigQuery API Token File" name="resource_file_bg_api_tokenfile" prompt="resource_file_bg_api_tokenfile?" promptNeeded="true" type="id_String" value="C:/Users/CK/Downloads/token.properties"/>
-    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateStart_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateEnd_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateStart_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value="20181110"/>
+    <contextParameter comment="YYYYMMDD" name="parameter_GA_Lotame_inputDateEnd_YYYYMMDD" prompt="parameter_GA_Lotame_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value="20181110"/>
     <contextParameter comment="Y or N" name="parameter_firstTime_master" prompt="parameter_firstTime_master?" promptNeeded="true" type="id_String" value="N"/>
-    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateStart_YYYYMMDD" prompt="parameter_Gigya_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateEnd_YYYYMMDD" prompt="parameter_Gigya_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateStart_YYYYMMDD" prompt="parameter_Gigya_inputDateStart_YYYYMMDD?" promptNeeded="false" type="id_String" value="20181110"/>
+    <contextParameter comment="YYYYMMDD" name="parameter_Gigya_inputDateEnd_YYYYMMDD" prompt="parameter_Gigya_inputDateEnd_YYYYMMDD?" promptNeeded="false" type="id_String" value="20181110"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
