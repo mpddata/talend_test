@@ -131,7 +131,7 @@
     <elementParameter field="PASSWORD" name="CLIENT_SECRET" value="nD9ipHrNcOCxNS7mrKfdW4vHVirt7fD9EDyAz9HHIs8="/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;mpdbq1&quot;"/>
     <elementParameter field="TEXT" name="AUTHORIZATION_CODE" value="&quot;4/jgCnEAvIUTDxBXDHXBaxMZXjGrPJF3Fwiutwda4SEDsMDub3ad90hHI&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT GAClientId,GigyaId,LotamePId,date &#xA;FROM [mpdbq1:149081219.sor_lotame_nst_daily]&#xA;WHERE LotamePId IS NOT NULL and GigyaId IS NOT NULL and GAClientId IS NOT NULL&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT GAClientId,GigyaId,LotamePId,date &#xA;FROM [mpdbq1:1396468.sor_lotame_hm_daily]&#xA;WHERE LotamePId IS NOT NULL and GigyaId IS NOT NULL and GAClientId IS NOT NULL&quot;"/>
     <elementParameter field="CLOSED_LIST" name="RESULT_SIZE" value="LARGE"/>
     <elementParameter field="FILE" name="TOKEN_NAME" value="&quot;/home/hafeez/sor_lotame_daily/token/token.properties&quot;"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
@@ -157,7 +157,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_y5MNMOL_EeigxM_-SHxhSw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_u_AVwOfEEeiuQP4NrWwt4A-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -196,11 +196,11 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3307&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;stg_tci&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;tci_admin&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="xDY/Cy1A8HrVjemW6VrblA=="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_lotame_nst_daily&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_lotame_hm_daily&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
