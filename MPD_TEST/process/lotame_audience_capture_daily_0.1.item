@@ -112,7 +112,7 @@
     <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
     <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
   </parameters>
-  <node componentName="tGSGet" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="128">
+  <node componentName="tGSGet" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSGet_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -158,7 +158,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tIterateToFlow_1" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="filename"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;CURRENT_FILE&quot;)"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;CURRENT_FILE&quot;))&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tIterateToFlow_1">
@@ -205,7 +205,7 @@
       <column defaultValue="" key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
+  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSortRow_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="CRITERIA">
@@ -222,7 +222,7 @@
       <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSampleRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="128">
+  <node componentName="tSampleRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSampleRow_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="INFO_RANGE" value="Range let you choose a list of line numbers and/or a list of ranges.&#xA;&#xA;- &quot;1,5&quot; : line 1 and 5&#xA;- &quot;10..20&quot; : lines 10 to 20&#xA;- &quot;23..45,48,50..54&quot; : lines 23 to 45, line 48 and lines 50 to 54&#xA;- &quot;1..10&quot; : 10 first lines&#xA;&#xA;&#x9;  "/>
@@ -232,7 +232,7 @@
       <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -259,7 +259,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="192">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
