@@ -29,7 +29,7 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx2048M&quot;]}" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx5000M&quot;]}" show="false"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -187,7 +187,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tgt_db_conn"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="288">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
@@ -453,11 +453,11 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value="&quot;/home/centos/job_temp&quot;"/>
     <elementParameter field="IMAGE" name="PREVIEW" value="_H4AuAH3KEeidscQ24LKW-A-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
@@ -598,7 +598,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
@@ -696,25 +696,25 @@
         <mapperTableEntries name="profile_verified" type="id_String" nullable="true"/>
         <mapperTableEntries name="profile_zip" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row2" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="contactMethodDesc" expression="row1.data_preferred_contact_method == null?null:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;mobil|ponsel&quot;))?&quot;Mobile&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_preferred_contact_method).matches(&quot;e-mel|e-mail|e-posta|enamel&quot;))?&quot;Email&quot;:row1.data_preferred_contact_method " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="contactMethodSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="educationDesc" expression="row1.data_education_level==null?null:(StringHandling.DOWNCASE(row1.data_education_level).contains(&quot;master&quot;))?&quot;Masters&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_education_level).contains(&quot;bachelor&quot;))?&quot;Degree&quot;:row1.data_education_level " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="educationSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row4" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="maritalDesc" expression="row1.data_marital_status " type="id_String" nullable="true"/>
         <mapperTableEntries name="maritalSid" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="raceDesc" expression="(row1.data_ethnicity == null)?null:" type="id_String" nullable="true"/>
+      <inputTables sizeState="INTERMEDIATE" name="row6" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" persistent="true">
+        <mapperTableEntries name="raceDesc" expression="(row1.data_ethnicity == null)?null:(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;my|malaya|melayu|m&quot;))?&quot;Malay&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;cina|cn|cina|c&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;in|i&quot;))?&quot;Indian&quot;:(StringHandling.DOWNCASE(row1.data_ethnicity).contains(&quot;other&quot;))?&quot;Others&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
         <mapperTableEntries name="raceSid" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="384">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -762,7 +762,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="480">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -810,7 +810,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="544">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_4" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -856,7 +856,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="480">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_6" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
@@ -904,7 +904,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlSCD" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="288">
+  <node componentName="tMysqlSCD" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlSCD_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -928,6 +928,7 @@
     <elementParameter field="CHECK" name="USE_SAVE_MEM_MODE" value="false"/>
     <elementParameter field="CHECK" name="SOURCE_KEY_INC_NULL" value="false"/>
     <elementParameter field="CHECK" name="USE_L0" value="false" show="false"/>
+    <elementParameter field="TABLE" name="L0_FIELDS" show="false"/>
     <elementParameter field="CHECK" name="USE_L1" value="true" show="false"/>
     <elementParameter field="TABLE" name="L1_FIELDS" show="false">
       <elementValue elementRef="NAME" value="birthDay"/>
@@ -977,6 +978,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="ONLY_UPDATE_ACTIVE" value="false" show="false"/>
     <elementParameter field="CHECK" name="USE_L2" value="false" show="false"/>
+    <elementParameter field="TABLE" name="L2_FIELDS" show="false"/>
     <elementParameter field="COLUMN_LIST" name="L2_STARTDATE_FIELD" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="L2_STARTDATE_VALUE" value="JOB_START_TIME" show="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="L2_STARTDATE_INPUT_FIELD" value="gigyaID" show="false"/>
@@ -1054,6 +1056,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="hometown" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="occupation" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="certifications" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
@@ -1186,6 +1191,9 @@
       <column comment="" key="false" length="255" name="hometown" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="255" name="occupation" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="255" name="certifications" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -1256,14 +1264,77 @@
       <column comment="" key="false" length="255" name="socialProviders" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="Column generated by scd editor." defaultValue="" key="true" length="-1" name="custSid" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_gigya&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select count(*) from stg_gigya&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="count"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMysqlInput_5">
+      <column comment="" key="false" length="-1" name="count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="true" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="count"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="check stg count"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tMysqlConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_2" target="tMysqlInput_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_2" target="tMysqlInput_5">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_1">
@@ -1295,28 +1366,42 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tMysqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_5" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tMysqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_5" target="tMysqlInput_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(row5.count == null?0:row5.count) > 0"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
   <note opaque="true" posX="32" posY="128" sizeHeight="97" sizeWidth="97" text="Establish &#xD;&#xA;staging &#xD;&#xA;database&#xD;&#xA;connection">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <note opaque="true" posX="256" posY="32" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="96" posY="224" sizeHeight="97" sizeWidth="97" text="Retrieve &#xD;&#xA;gigya&#xD;&#xA;data from &#xD;&#xA;&quot;stg_gigya&quot; &#xD;&#xA;table">
+  <note opaque="true" posX="96" posY="320" sizeHeight="129" sizeWidth="97" text="Retrieve &#xD;&#xA;gigya&#xD;&#xA;data from &#xD;&#xA;&quot;stg_gigya&quot; &#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="32" posY="320" sizeHeight="129" sizeWidth="161" text="Retrieve contact&#xD;&#xA;method data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_contactMethod&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="0" posY="448" sizeHeight="129" sizeWidth="193" text="Retrieve contact&#xD;&#xA;method data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_contactMethod&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="64" posY="448" sizeHeight="129" sizeWidth="161" text="Retrieve education data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_education&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="32" posY="576" sizeHeight="129" sizeWidth="193" text="Retrieve education data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_education&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="480" posY="544" sizeHeight="129" sizeWidth="161" text="Retrieve race data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_race&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="480" posY="672" sizeHeight="129" sizeWidth="161" text="Retrieve race data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_race&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="288" posY="608" sizeHeight="129" sizeWidth="161" text="Retrieve marital data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_marital&quot;&#xD;&#xA;table ">
+  <note opaque="true" posX="256" posY="736" sizeHeight="129" sizeWidth="193" text="Retrieve marital data as&#xD;&#xA;a lookup information&#xD;&#xA;from&#xD;&#xA;&quot;lookup_marital&quot;&#xD;&#xA;table ">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="704" posY="352" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;dim_customer&quot; &#xD;&#xA;table&#xD;&#xA;using SCD type 1">
+  <note opaque="true" posX="704" posY="480" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;dim_customer&quot; &#xD;&#xA;table&#xD;&#xA;using SCD type 1">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="480" posY="128" sizeHeight="97" sizeWidth="97" text="Check &#xD;&#xA;source row&#xD;&#xA;count">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="288" posY="256" sizeHeight="97" sizeWidth="129" text="Continue only if&#xD;&#xA;staging row &#xD;&#xA;count is not 0">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
@@ -1331,6 +1416,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
