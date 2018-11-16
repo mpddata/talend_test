@@ -149,7 +149,7 @@
     <elementParameter field="TABLE" name="BUCKETS">
       <elementValue elementRef="BUCKET_NAME" value="&quot;mp-ooyala-file&quot;"/>
       <elementValue elementRef="OBJECT_PREFIX" value="&quot;lotame/lotame_id/&quot;"/>
-      <elementValue elementRef="OBJECT_DELIMITER" value=""/>
+      <elementValue elementRef="OBJECT_DELIMITER" value="&quot;_&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
