@@ -141,12 +141,12 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOGXT6JQF2FH4Y2RPIPXA67&quot;"/>
     <elementParameter field="PASSWORD" name="SECRET_KEY" value="mXXDl7HZcC8rbnwwYt3S2gc8PkHG05ziEws5NNosAp4lUVdrNLeKPVRW74T2Grdn"/>
-    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="LIST_IN_BUCKET_LIST" value="true"/>
-    <elementParameter field="TABLE" name="BUCKETS">
+    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;mp-ooyala-file/lotame/lotame_id/&quot;"/>
+    <elementParameter field="TEXT" name="DELIMITER" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="true"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;MP-BIGDATA&quot;"/>
+    <elementParameter field="CHECK" name="LIST_IN_BUCKET_LIST" value="false"/>
+    <elementParameter field="TABLE" name="BUCKETS" show="false">
       <elementValue elementRef="BUCKET_NAME" value="&quot;mp-ooyala-file&quot;"/>
       <elementValue elementRef="OBJECT_PREFIX" value="&quot;lotame/lotame_id/&quot;"/>
       <elementValue elementRef="OBJECT_DELIMITER" value=""/>
