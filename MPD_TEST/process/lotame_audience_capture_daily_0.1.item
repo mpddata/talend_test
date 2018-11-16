@@ -141,12 +141,12 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;GOOGXT6JQF2FH4Y2RPIPXA67&quot;"/>
     <elementParameter field="PASSWORD" name="SECRET_KEY" value="mXXDl7HZcC8rbnwwYt3S2gc8PkHG05ziEws5NNosAp4lUVdrNLeKPVRW74T2Grdn"/>
-    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;mp-ooyala-file/lotame/lotame_id/&quot;"/>
-    <elementParameter field="TEXT" name="DELIMITER" value=""/>
-    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="true"/>
-    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;MP-BIGDATA&quot;"/>
-    <elementParameter field="CHECK" name="LIST_IN_BUCKET_LIST" value="false"/>
-    <elementParameter field="TABLE" name="BUCKETS" show="false">
+    <elementParameter field="TEXT" name="OBJECTS_PREFIX" value="&quot;mp-ooyala-file/lotame/lotame_id/&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DELIMITER" value="" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_PROJECT" value="false" show="false"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;MP-BIGDATA&quot;" show="false"/>
+    <elementParameter field="CHECK" name="LIST_IN_BUCKET_LIST" value="true"/>
+    <elementParameter field="TABLE" name="BUCKETS">
       <elementValue elementRef="BUCKET_NAME" value="&quot;mp-ooyala-file&quot;"/>
       <elementValue elementRef="OBJECT_PREFIX" value="&quot;lotame/lotame_id/&quot;"/>
       <elementValue elementRef="OBJECT_DELIMITER" value=""/>
@@ -158,11 +158,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tIterateToFlow_1" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="filename"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;CURRENT_FILE&quot;)"/>
+      <elementValue elementRef="VALUE" value="globalMap.get(&quot;CURRENT_FILE&quot;)"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tIterateToFlow_1">
-      <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="128">
@@ -186,7 +186,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_2">
-      <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tContextLoad" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
