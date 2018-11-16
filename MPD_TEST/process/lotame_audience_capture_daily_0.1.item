@@ -158,7 +158,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tIterateToFlow_1" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="filename"/>
-      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;tGSList_1_CURRENT_FILE&quot;)"/>
+      <elementValue elementRef="VALUE" value="globalMap.get(&quot;CURRENT_FILE&quot;).toString()"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tIterateToFlow_1">
@@ -249,7 +249,7 @@
       <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="filename" expression="(String)StringHandling.CHANGE(&quot;change_audiencemembership.tsv.gz&quot;, &quot;change&quot;, row4.filename) " type="id_String" nullable="true"/>
