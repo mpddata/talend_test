@@ -141,7 +141,7 @@
     <elementParameter field="PASSWORD" name="CLIENT_SECRET" value="nD9ipHrNcOCxNS7mrKfdW4vHVirt7fD9EDyAz9HHIs8="/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;mpdbq1&quot;"/>
     <elementParameter field="TEXT" name="AUTHORIZATION_CODE" value="&quot;4/AAAE2Q1pKW2LbWnca8e-Z8YCzTnJ0EGb_zJkNgCAKRV1lbNEE2z0hds&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM TABLE_DATE_RANGE([mpdbq1:445885.ga_sessions_], TIMESTAMP('&quot; + ((String)globalMap.get(&quot;processStartDate&quot;)) + &quot;'), TIMESTAMP('&quot; + ((String)globalMap.get(&quot;processEndDate&quot;)) + &quot;'))&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM TABLE_DATE_RANGE([mpdbq1:77935470.ga_sessions_],  TIMESTAMP('&quot; + ((String)globalMap.get(&quot;processStartDate&quot;)) + &quot;'), TIMESTAMP('&quot; + ((String)globalMap.get(&quot;processEndDate&quot;)) + &quot;'))&quot;"/>
     <elementParameter field="CLOSED_LIST" name="RESULT_SIZE" value="LARGE"/>
     <elementParameter field="FILE" name="TOKEN_NAME" value="context.resource_file_tokenfile"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
@@ -149,7 +149,7 @@
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="LABEL" value="ga_session_bh"/>
+    <elementParameter field="TEXT" name="LABEL" value="ga_session_says"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tBigQueryInput_1">
       <column comment="" key="false" length="-1" name="visitorId" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
@@ -232,7 +232,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_says&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
