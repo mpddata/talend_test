@@ -2793,7 +2793,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="del from fact_ga_bh"/>
+    <elementParameter field="TEXT" name="LABEL" value="del from fact_ga_nst"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlRow_1"/>
     <metadata connector="REJECT" name="REJECT">
@@ -2902,10 +2902,10 @@
   <note opaque="true" posX="384" posY="128" sizeHeight="97" sizeWidth="129" text="Daclare the &#xD;&#xA;Min and Max date &#xD;&#xA;as 2 global variables&#xD;&#xA;&quot;startdate&quot;&#xD;&#xA;and &quot;enddate&quot;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="576" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;fact_ga_bh&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
+  <note opaque="true" posX="576" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;fact_ga_nst&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="832" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;fact_ga_bh_details&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
+  <note opaque="true" posX="832" posY="128" sizeHeight="97" sizeWidth="161" text="Delete the data from&#xD;&#xA;&quot;fact_ga_nst_details&quot;&#xD;&#xA;table that are&#xD;&#xA;between the Min date&#xD;&#xA;and Max date&#xD;&#xA;">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <note opaque="true" posX="1184" posY="576" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;fact_ga_bh_details&quot; &#xD;&#xA;table">
