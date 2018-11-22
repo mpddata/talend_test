@@ -154,12 +154,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `stg_ga_sessions_bh`.`visitorId`, &#xA;  `stg_ga_sessions_bh`.`visitNumber`, &#xA;  `stg_ga_sessions_bh`.`visitId`, &#xA;  `stg_ga_sessions_bh`.`visitStartTime`, &#xA;  `stg_ga_sessions_bh`.`date`, &#xA;  `stg_ga_sessions_bh`.`totalsVisits`, &#xA;  `stg_ga_sessions_bh`.`totalsHits`, &#xA;  `stg_ga_sessions_bh`.`totalsPageviews`, &#xA;  `stg_ga_sessions_bh`.`totalsTimeOnSite`, &#xA;  `stg_ga_sessions_bh`.`totalsBounces`, &#xA;  `stg_ga_sessions_bh`.`totalsTransactions`, &#xA;  `stg_ga_sessions_bh`.`totalsTransactionRevenue`, &#xA;  `stg_ga_sessions_bh`.`totalsNewVisits`, &#xA;  `stg_ga_sessions_bh`.`totalsScreenviews`, &#xA;  `stg_ga_sessions_bh`.`totalsUniqueScreenviews`, &#xA;  `stg_ga_sessions_bh`.`totalsTimeOnScreen`, &#xA;  `stg_ga_sessions_bh`.`totalsTotalTransactionRevenue`, &#xA;  `stg_ga_sessions_bh`.`totalsSessionQualityDim`, &#xA;  `stg_ga_sessions_bh`.`deviceBrowser`, &#xA;  `stg_ga_sessions_bh`.`deviceBrowserVersion`, &#xA;  `stg_ga_sessions_bh`.`deviceBrowserSize`, &#xA;  `stg_ga_sessions_bh`.`deviceOperatingSystem`, &#xA;  `stg_ga_sessions_bh`.`deviceOperatingSystemVersion`, &#xA;  `stg_ga_sessions_bh`.`deviceIsMobile`, &#xA;  `stg_ga_sessions_bh`.`deviceMobileDeviceBranding`, &#xA;  `stg_ga_sessions_bh`.`deviceMobileDeviceModel`, &#xA;  `stg_ga_sessions_bh`.`deviceMobileInputSelector`, &#xA;  `stg_ga_sessions_bh`.`deviceMobileDeviceInfo`, &#xA;  `stg_ga_sessions_bh`.`deviceMobileDeviceMarketingName`, &#xA;  `stg_ga_sessions_bh`.`deviceLanguage`, &#xA;  `stg_ga_sessions_bh`.`deviceDeviceCategory`, &#xA;  `stg_ga_sessions_bh`.`geoContinent`, &#xA;  `stg_ga_sessions_bh`.`geoSubContinent`, &#xA;  `stg_ga_sessions_bh`.`geoCountry`, &#xA;  `stg_ga_sessions_bh`.`geoRegion`, &#xA;  `stg_ga_sessions_bh`.`geoMetro`, &#xA;  `stg_ga_sessions_bh`.`geoCity`, &#xA;  `stg_ga_sessions_bh`.`geoCityId`, &#xA;  `stg_ga_sessions_bh`.`geoNetworkDomain`, &#xA;  `stg_ga_sessions_bh`.`geoLatitude`, &#xA;  `stg_ga_sessions_bh`.`geoLongitude`, &#xA;  `stg_ga_sessions_bh`.`geoNetworkLocation`, &#xA;  `stg_ga_sessions_bh`.`hitsHitNumber`, &#xA;  `stg_ga_sessions_bh`.`hitsTime`, &#xA;  `stg_ga_sessions_bh`.`hitsHour`, &#xA;  `stg_ga_sessions_bh`.`hitsMinute`, &#xA;  `stg_ga_sessions_bh`.`hitsIsSecure`, &#xA;  `stg_ga_sessions_bh`.`hitsIsInteraction`, &#xA;  `stg_ga_sessions_bh`.`hitsIsEntrance`, &#xA;  `stg_ga_sessions_bh`.`hitsIsExit`, &#xA;  `stg_ga_sessions_bh`.`hitsReferer`, &#xA;  `stg_ga_sessions_bh`.`hitsPagePagePath`, &#xA;  `stg_ga_sessions_bh`.`hitsPageHostname`, &#xA;  `stg_ga_sessions_bh`.`hitsPagePageTitle`, &#xA;  `stg_ga_sessions_bh`.`hitsPageSearchKeyword`, &#xA;  `stg_ga_sessions_bh`.`hitsPageSearchCategory`, &#xA;  `stg_ga_sessions_bh`.`hitsPagePagePathL1`, &#xA;  `stg_ga_sessions_bh`.`hitsPagePagePathL2`, &#xA;  `stg_ga_sessions_bh`.`hitsPagePagePathL3`, &#xA;  `stg_ga_sessions_bh`.`hitsPagePagePathL4`, &#xA;  `stg_ga_sessions_bh`.`fullVisitorId`, &#xA;  `stg_ga_sessions_bh`.`userId`, &#xA;  `stg_ga_sessions_bh`.`clientId`, &#xA;  `stg_ga_sessions_bh`.`channelGrouping`, &#xA;  `stg_ga_sessions_bh`.`socialEngagementType`&#xA;FROM `stg_ga_sessions_bh`&quot;&#xA;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `stg_ga_sessions_nst`.`visitorId`, &#xA;  `stg_ga_sessions_nst`.`visitNumber`, &#xA;  `stg_ga_sessions_nst`.`visitId`, &#xA;  `stg_ga_sessions_nst`.`visitStartTime`, &#xA;  `stg_ga_sessions_nst`.`date`, &#xA;  `stg_ga_sessions_nst`.`totalsVisits`, &#xA;  `stg_ga_sessions_nst`.`totalsHits`, &#xA;  `stg_ga_sessions_nst`.`totalsPageviews`, &#xA;  `stg_ga_sessions_nst`.`totalsTimeOnSite`, &#xA;  `stg_ga_sessions_nst`.`totalsBounces`, &#xA;  `stg_ga_sessions_nst`.`totalsTransactions`, &#xA;  `stg_ga_sessions_nst`.`totalsTransactionRevenue`, &#xA;  `stg_ga_sessions_nst`.`totalsNewVisits`, &#xA;  `stg_ga_sessions_nst`.`totalsScreenviews`, &#xA;  `stg_ga_sessions_nst`.`totalsUniqueScreenviews`, &#xA;  `stg_ga_sessions_nst`.`totalsTimeOnScreen`, &#xA;  `stg_ga_sessions_nst`.`totalsTotalTransactionRevenue`, &#xA;  `stg_ga_sessions_nst`.`totalsSessionQualityDim`, &#xA;  `stg_ga_sessions_nst`.`deviceBrowser`, &#xA;  `stg_ga_sessions_nst`.`deviceBrowserVersion`, &#xA;  `stg_ga_sessions_nst`.`deviceBrowserSize`, &#xA;  `stg_ga_sessions_nst`.`deviceOperatingSystem`, &#xA;  `stg_ga_sessions_nst`.`deviceOperatingSystemVersion`, &#xA;  `stg_ga_sessions_nst`.`deviceIsMobile`, &#xA;  `stg_ga_sessions_nst`.`deviceMobileDeviceBranding`, &#xA;  `stg_ga_sessions_nst`.`deviceMobileDeviceModel`, &#xA;  `stg_ga_sessions_nst`.`deviceMobileInputSelector`, &#xA;  `stg_ga_sessions_nst`.`deviceMobileDeviceInfo`, &#xA;  `stg_ga_sessions_nst`.`deviceMobileDeviceMarketingName`, &#xA;  `stg_ga_sessions_nst`.`deviceLanguage`, &#xA;  `stg_ga_sessions_nst`.`deviceDeviceCategory`, &#xA;  `stg_ga_sessions_nst`.`geoContinent`, &#xA;  `stg_ga_sessions_nst`.`geoSubContinent`, &#xA;  `stg_ga_sessions_nst`.`geoCountry`, &#xA;  `stg_ga_sessions_nst`.`geoRegion`, &#xA;  `stg_ga_sessions_nst`.`geoMetro`, &#xA;  `stg_ga_sessions_nst`.`geoCity`, &#xA;  `stg_ga_sessions_nst`.`geoCityId`, &#xA;  `stg_ga_sessions_nst`.`geoNetworkDomain`, &#xA;  `stg_ga_sessions_nst`.`geoLatitude`, &#xA;  `stg_ga_sessions_nst`.`geoLongitude`, &#xA;  `stg_ga_sessions_nst`.`geoNetworkLocation`, &#xA;  `stg_ga_sessions_nst`.`hitsHitNumber`, &#xA;  `stg_ga_sessions_nst`.`hitsTime`, &#xA;  `stg_ga_sessions_nst`.`hitsHour`, &#xA;  `stg_ga_sessions_nst`.`hitsMinute`, &#xA;  `stg_ga_sessions_nst`.`hitsIsSecure`, &#xA;  `stg_ga_sessions_nst`.`hitsIsInteraction`, &#xA;  `stg_ga_sessions_nst`.`hitsIsEntrance`, &#xA;  `stg_ga_sessions_nst`.`hitsIsExit`, &#xA;  `stg_ga_sessions_nst`.`hitsReferer`, &#xA;  `stg_ga_sessions_nst`.`hitsPagePagePath`, &#xA;  `stg_ga_sessions_nst`.`hitsPageHostname`, &#xA;  `stg_ga_sessions_nst`.`hitsPagePageTitle`, &#xA;  `stg_ga_sessions_nst`.`hitsPageSearchKeyword`, &#xA;  `stg_ga_sessions_nst`.`hitsPageSearchCategory`, &#xA;  `stg_ga_sessions_nst`.`hitsPagePagePathL1`, &#xA;  `stg_ga_sessions_nst`.`hitsPagePagePathL2`, &#xA;  `stg_ga_sessions_nst`.`hitsPagePagePathL3`, &#xA;  `stg_ga_sessions_nst`.`hitsPagePagePathL4`, &#xA;  `stg_ga_sessions_nst`.`fullVisitorId`, &#xA;  `stg_ga_sessions_nst`.`userId`, &#xA;  `stg_ga_sessions_nst`.`clientId`, &#xA;  `stg_ga_sessions_nst`.`channelGrouping`, &#xA;  `stg_ga_sessions_nst`.`socialEngagementType`&#xA;FROM `stg_ga_sessions_nst`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -740,7 +740,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="visitorId" expression="row1.visitorId " type="id_Integer" nullable="true"/>
@@ -1097,12 +1097,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_browser" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_browser&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_browser_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_browser`.`browserUID`, &#xA;  `dim_browser`.`browserName`, &#xA;  `dim_browser`.`browserVer`, &#xA;  `dim_browser`.`browserSid`&#xA;FROM `dim_browser`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_browser_nst`.`browserUID`, &#xA;  `dim_browser_nst`.`browserName`, &#xA;  `dim_browser_nst`.`browserVer`, &#xA;  `dim_browser_nst`.`browserSid`&#xA;FROM `dim_browser_nst`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1155,12 +1155,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_os" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_os&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_os_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_os`.`osUID`, &#xA;  `dim_os`.`osName`, &#xA;  `dim_os`.`osVer`, &#xA;  `dim_os`.`osSid`&#xA;FROM `dim_os`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_os_nst`.`osUID`, &#xA;  `dim_os_nst`.`osName`, &#xA;  `dim_os_nst`.`osVer`, &#xA;  `dim_os_nst`.`osSid`&#xA;FROM `dim_os_nst`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1213,12 +1213,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_device" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_device`.`deviceUID`, &#xA;  `dim_device`.`deviceMobileDeviceBranding`, &#xA;  `dim_device`.`deviceMobileDeviceModel`, &#xA;  `dim_device`.`deviceMobileDeviceInfo`, &#xA;  `dim_device`.`deviceMobileDeviceMarketingName`, &#xA;  `dim_device`.`deviceDeviceCategory`, &#xA;  `dim_device`.`deviceSid`&#xA;FROM `dim_device`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_device_nst`.`deviceUID`, &#xA;  `dim_device_nst`.`deviceMobileDeviceBranding`, &#xA;  `dim_device_nst`.`deviceMobileDeviceModel`, &#xA;  `dim_device_nst`.`deviceMobileDeviceInfo`, &#xA;  `dim_device_nst`.`deviceMobileDeviceMarketingName`, &#xA;  `dim_device_nst`.`deviceDeviceCategory`, &#xA;  `dim_device_nst`.`deviceSid`&#xA;FROM `dim_device_nst`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1284,7 +1284,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh_details&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_nst_details&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -2201,7 +2201,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_bh&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_nst&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
