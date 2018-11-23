@@ -223,7 +223,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="// code sample:&#xA;//&#xA;// multiply by 2 the row identifier&#xA;// output_row.id = input_row.id * 2;&#xA;//&#xA;// lowercase the name&#xA;// output_row.name = input_row.name.toLowerCase();&#xA;output_row.output = input_row.output.replaceAll(&quot;,?\&quot;*\&quot;:\\&quot;, &quot;&quot;);&#xA;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xA;output_row.lotameid = input_row.lotameid;&#xA;output_row.createDate = input_row.createDate;&#xA;output_row.Audience1 = input_row.Audience1.replaceAll(&quot;,?\&quot;*\&quot;:\\&quot;, &quot;&quot;);&#xA;output_row.Audience2 = input_row.Audience2.replaceAll(&quot;,?\&quot;*\&quot;:\\&quot;, &quot;&quot;);&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
