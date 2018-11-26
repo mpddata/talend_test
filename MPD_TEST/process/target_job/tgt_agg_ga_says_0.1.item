@@ -140,12 +140,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_says&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  `fact_ga_hm`.`visitorId`, &#xD;&#xA;  `fact_ga_hm`.`visitNumber`, &#xD;&#xA;  `fact_ga_hm`.`visitId`, &#xD;&#xA;  `fact_ga_hm`.`sessionId`, &#xD;&#xA;  `fact_ga_hm`.`visitStartTime`, &#xD;&#xA;  `fact_ga_hm`.`dateSid`, &#xD;&#xA;  `fact_ga_hm`.`fullVisitorId`, &#xD;&#xA;  `fact_ga_hm`.`userId`, &#xD;&#xA;  `fact_ga_hm`.`clientId`, &#xD;&#xA;  `fact_ga_hm`.`custSid`,&#xD;&#xA;  case when `fact_ga_hm`.`custSid` = 0 then case when `fact_ga_hm`.`clientId` is null or `fact_ga_hm`.`clientId` ='' then  `fact_ga_hm`.`fullVisitorId` else `fact_ga_hm`.`clientId` end else `fact_ga_hm`.`custSid` end, &#xD;&#xA;  `fact_ga_hm`.`channelGrouping`, &#xD;&#xA;  `fact_ga_hm`.`socialEngagementType`, &#xD;&#xA;  `fact_ga_hm`.`totalVisits`, &#xD;&#xA;  `fact_ga_hm`.`totalHits`, &#xD;&#xA;  `fact_ga_hm`.`totalPageviews`, &#xD;&#xA;  `fact_ga_hm`.`totalTimeOnSite`, &#xD;&#xA;  `fact_ga_hm`.`totalBounces`, &#xD;&#xA;  `fact_ga_hm`.`totalTrans`, &#xD;&#xA;  `fact_ga_hm`.`totalTransRevenue`, &#xD;&#xA;  `fact_ga_hm`.`totalNewVisits`, &#xD;&#xA;  `fact_ga_hm`.`totalScreenviews`, &#xD;&#xA;  `fact_ga_hm`.`totalUnique`, &#xD;&#xA;  `fact_ga_hm`.`totalTimeOnScreen`, &#xD;&#xA;  `fact_ga_hm`.`totalTotalTransRevenue`, &#xD;&#xA;  `fact_ga_hm`.`totalSessionQualityDim`, &#xD;&#xA;  `fact_ga_hm`.`browserSid`, &#xD;&#xA;  `fact_ga_hm`.`browserSize`, &#xD;&#xA;  `fact_ga_hm`.`osSid`, &#xD;&#xA;  `fact_ga_hm`.`isMobile`, &#xD;&#xA;  `fact_ga_hm`.`deviceSid`, &#xD;&#xA;  `fact_ga_hm`.`deviceInputSelector`, &#xD;&#xA;  `fact_ga_hm`.`deviceLanguage`, &#xD;&#xA;  `fact_ga_hm`.`geoSid`, &#xD;&#xA;  `fact_ga_hm`.`NetworkDomain`, &#xD;&#xA;  `fact_ga_hm`.`NetworkLocation`&#xD;&#xA;FROM `fact_ga_hm`&#xD;&#xA;WHERE dateSid between '&quot; + ((String)globalMap.get(&quot;startdate&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;enddate&quot;)) + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  `fact_ga_says`.`visitorId`, &#xD;&#xA;  `fact_ga_says`.`visitNumber`, &#xD;&#xA;  `fact_ga_says`.`visitId`, &#xD;&#xA;  `fact_ga_says`.`sessionId`, &#xD;&#xA;  `fact_ga_says`.`visitStartTime`, &#xD;&#xA;  `fact_ga_says`.`dateSid`, &#xD;&#xA;  `fact_ga_says`.`fullVisitorId`, &#xD;&#xA;  `fact_ga_says`.`userId`, &#xD;&#xA;  `fact_ga_says`.`clientId`, &#xD;&#xA;  `fact_ga_says`.`custSid`,&#xD;&#xA;  case when `fact_ga_says`.`custSid` = 0 then case when `fact_ga_says`.`clientId` is null or `fact_ga_says`.`clientId` ='' then  `fact_ga_says`.`fullVisitorId` else `fact_ga_says`.`clientId` end else `fact_ga_says`.`custSid` end, &#xD;&#xA;  `fact_ga_says`.`channelGrouping`, &#xD;&#xA;  `fact_ga_says`.`socialEngagementType`, &#xD;&#xA;  `fact_ga_says`.`totalVisits`, &#xD;&#xA;  `fact_ga_says`.`totalHits`, &#xD;&#xA;  `fact_ga_says`.`totalPageviews`, &#xD;&#xA;  `fact_ga_says`.`totalTimeOnSite`, &#xD;&#xA;  `fact_ga_says`.`totalBounces`, &#xD;&#xA;  `fact_ga_says`.`totalTrans`, &#xD;&#xA;  `fact_ga_says`.`totalTransRevenue`, &#xD;&#xA;  `fact_ga_says`.`totalNewVisits`, &#xD;&#xA;  `fact_ga_says`.`totalScreenviews`, &#xD;&#xA;  `fact_ga_says`.`totalUnique`, &#xD;&#xA;  `fact_ga_says`.`totalTimeOnScreen`, &#xD;&#xA;  `fact_ga_says`.`totalTotalTransRevenue`, &#xD;&#xA;  `fact_ga_says`.`totalSessionQualityDim`, &#xD;&#xA;  `fact_ga_says`.`browserSid`, &#xD;&#xA;  `fact_ga_says`.`browserSize`, &#xD;&#xA;  `fact_ga_says`.`osSid`, &#xD;&#xA;  `fact_ga_says`.`isMobile`, &#xD;&#xA;  `fact_ga_says`.`deviceSid`, &#xD;&#xA;  `fact_ga_says`.`deviceInputSelector`, &#xD;&#xA;  `fact_ga_says`.`deviceLanguage`, &#xD;&#xA;  `fact_ga_says`.`geoSid`, &#xD;&#xA;  `fact_ga_says`.`NetworkDomain`, &#xD;&#xA;  `fact_ga_says`.`NetworkLocation`&#xD;&#xA;FROM `fact_ga_says`&#xD;&#xA;WHERE dateSid between '&quot; + ((String)globalMap.get(&quot;startdate&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;enddate&quot;)) + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -530,7 +530,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_J4u8YOXEEeidb5-wV_mzlA-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_TuzjwOvREeifmLJNxUO3ag-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -672,7 +672,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_says&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -804,7 +804,7 @@
     <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
     <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="insert data into agg_ga_bh"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert data into agg_ga_says"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlOutput_2">
       <column comment="" key="false" length="255" name="dateSid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -953,12 +953,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_says&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;MIN(`stg_ga_sessions_hm`.`date`),&#xD;&#xA;MAX(`stg_ga_sessions_hm`.`date`)&#xD;&#xA;FROM `stg_ga_sessions_hm`&quot; &#xD;&#xA;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;MIN(`stg_ga_sessions_says`.`date`),&#xD;&#xA;MAX(`stg_ga_sessions_says`.`date`)&#xD;&#xA;FROM `stg_ga_sessions_says`&quot; &#xD;&#xA;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1011,7 +1011,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_ga_hm where dateSid between '&quot;+((String)globalMap.get(&quot;startdate&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;enddate&quot;))+&quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE from agg_ga_says where dateSid between '&quot;+((String)globalMap.get(&quot;startdate&quot;))+&quot;' and '&quot;+((String)globalMap.get(&quot;enddate&quot;))+&quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
