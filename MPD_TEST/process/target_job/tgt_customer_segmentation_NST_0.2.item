@@ -148,12 +148,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - agg_ga_bh" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_nst&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `agg_ga_hm`.`dateSid`, &#xA;  `agg_ga_hm`.`custSid`, &#xA;  `agg_ga_hm`.`custUID`, &#xA;  `agg_ga_hm`.`dailyTotalSessions`, &#xA;  `agg_ga_hm`.`dailyTotalVisits`, &#xA;  `agg_ga_hm`.`dailyTotalHits`, &#xA;  `agg_ga_hm`.`dailyTotalPageviews`, &#xA;  `agg_ga_hm`.`dailyTotalTimeOnSite`, &#xA;  `agg_ga_hm`.`dailyTotalBounces`, &#xA;  `agg_ga_hm`.`dailyTotalTrans`, &#xA;  `agg_ga_hm`.`dailyTotalTransRevenue`, &#xA;  `agg_ga_hm`.`dailyTotalNewVisits`, &#xA;  `agg_ga_hm`.`dailyTotalScreenviews`, &#xA;  `agg_ga_hm`.`dailyTotalUnique`, &#xA;  `agg_ga_hm`.`dailyTotalTimeOnScreen`, &#xA;  `agg_ga_hm`.`dailyTotalTotalTransRevenue`, &#xA;  `agg_ga_hm`.`dailyTotalSessionQualityDim`, &#xA;  `agg_ga_hm`.`dailyAveHitsPerSession`, &#xA;  `agg_ga_hm`.`dailyAvePageviewsPerSession`, &#xA;  `agg_ga_hm`.`dailyAveTimeOnSitePerSession`, &#xA;  `agg_ga_hm`.`dailyAveTimeOnScreenPerSession`&#xA;FROM `agg_ga_hm`&#xD;&#xA;WHERE  `agg_ga_hm`.`dateSid` between '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `agg_ga_nst`.`dateSid`, &#xA;  `agg_ga_nst`.`custSid`, &#xA;  `agg_ga_nst`.`custUID`, &#xA;  `agg_ga_nst`.`dailyTotalSessions`, &#xA;  `agg_ga_nst`.`dailyTotalVisits`, &#xA;  `agg_ga_nst`.`dailyTotalHits`, &#xA;  `agg_ga_nst`.`dailyTotalPageviews`, &#xA;  `agg_ga_nst`.`dailyTotalTimeOnSite`, &#xA;  `agg_ga_nst`.`dailyTotalBounces`, &#xA;  `agg_ga_nst`.`dailyTotalTrans`, &#xA;  `agg_ga_nst`.`dailyTotalTransRevenue`, &#xA;  `agg_ga_nst`.`dailyTotalNewVisits`, &#xA;  `agg_ga_nst`.`dailyTotalScreenviews`, &#xA;  `agg_ga_nst`.`dailyTotalUnique`, &#xA;  `agg_ga_nst`.`dailyTotalTimeOnScreen`, &#xA;  `agg_ga_nst`.`dailyTotalTotalTransRevenue`, &#xA;  `agg_ga_nst`.`dailyTotalSessionQualityDim`, &#xA;  `agg_ga_nst`.`dailyAveHitsPerSession`, &#xA;  `agg_ga_nst`.`dailyAvePageviewsPerSession`, &#xA;  `agg_ga_nst`.`dailyAveTimeOnSitePerSession`, &#xA;  `agg_ga_nst`.`dailyAveTimeOnScreenPerSession`&#xA;FROM `agg_ga_nst`&#xA;WHERE  `agg_ga_nst`.`dateSid` between '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2563,7 +2563,7 @@
   <note opaque="true" posX="384" posY="224" sizeHeight="97" sizeWidth="225" text="Delete from&#xD;&#xA;agg_customer_segmentation&#xD;&#xA;based on input process date">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="640" posY="352" sizeHeight="97" sizeWidth="641" text="Query visitHour from fact_ga_bh and aggregate visitHour-Count by custUID and visitHour.&#xD;&#xA;Stored into hash for later processing">
+  <note opaque="true" posX="640" posY="352" sizeHeight="97" sizeWidth="641" text="Query visitHour from fact_ga_nst and aggregate visitHour-Count by custUID and visitHour.&#xD;&#xA;Stored into hash for later processing">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
   <note opaque="true" posX="-32" posY="480" sizeHeight="289" sizeWidth="193" text="Query client statistics&#xD;&#xA;from agg_ga_bh&#xD;&#xA;based on different&#xD;&#xA;date range and&#xD;&#xA;aggregate statistics&#xD;&#xA;by custUID">
