@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="parameter_inputDate" prompt="parameter_inputDate?" promptNeeded="false" type="id_String" value="20181110"/>
+    <contextParameter comment="" name="parameter_inputDate" prompt="parameter_inputDate?" promptNeeded="false" type="id_String" value="20181030"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_AdditionalParams" prompt="connection_mysqltarget_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Database" prompt="connection_mysqltarget_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Login" prompt="connection_mysqltarget_tci_db_Login?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="tci_user"/>
@@ -461,7 +461,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="cust_seg_30">
         <mapperTableEntries name="custSid" expression="row4.custSid " type="id_Integer"/>
@@ -1666,7 +1666,7 @@
       <column comment="" key="false" length="-1" name="visitHour" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out3">
         <mapperTableEntries name="custUID" expression="row17.custUID " type="id_String" nullable="true"/>
