@@ -177,22 +177,14 @@
       <elementValue elementRef="QUERY" value="&quot;$.title&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="url"/>
       <elementValue elementRef="QUERY" value="&quot;$.url&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
-      <elementValue elementRef="QUERY" value="&quot;$.field_article_images.[url]&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_caption"/>
-      <elementValue elementRef="QUERY" value="&quot;$.field_article_images.[caption]&quot;"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING_JSONPATH">
       <elementValue elementRef="SCHEMA_COLUMN" value="nid"/>
-      <elementValue elementRef="QUERY" value="$.nid"/>
+      <elementValue elementRef="QUERY" value="&quot;nid&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="title"/>
-      <elementValue elementRef="QUERY" value="$.title"/>
+      <elementValue elementRef="QUERY" value="&quot;title&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="url"/>
-      <elementValue elementRef="QUERY" value="$.url"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
-      <elementValue elementRef="QUERY" value="$.field_article_images.url"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_caption"/>
-      <elementValue elementRef="QUERY" value="$.field_article_images.caption"/>
+      <elementValue elementRef="QUERY" value="&quot;url&quot;"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPINGXPATH" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="nid"/>
@@ -203,12 +195,6 @@
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="url"/>
       <elementValue elementRef="QUERY" value="&quot;url&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
-      <elementValue elementRef="QUERY" value="&quot;field_article_images/url&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_caption"/>
-      <elementValue elementRef="QUERY" value="&quot;field_article_images/caption&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
@@ -223,15 +209,11 @@
       <column comment="" key="false" length="-1" name="nid" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_caption" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="nid" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_caption" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -260,8 +242,6 @@
       <column comment="" key="false" length="-1" name="nid" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_url" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_caption" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="createdDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -271,16 +251,12 @@
         <mapperTableEntries name="nid" expression="row1.nid " type="id_Integer"/>
         <mapperTableEntries name="title" expression="row1.title " type="id_String" nullable="true"/>
         <mapperTableEntries name="url" expression="row1.url " type="id_String" nullable="true"/>
-        <mapperTableEntries name="field_article_images_url" expression="row1.field_article_images_url " type="id_String" nullable="true"/>
-        <mapperTableEntries name="field_article_images_caption" expression="row1.field_article_images_caption " type="id_String" nullable="true"/>
         <mapperTableEntries name="createdDate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(),0,&quot;dd&quot;) )) " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="nid" type="id_Integer"/>
         <mapperTableEntries name="title" type="id_String" nullable="true"/>
         <mapperTableEntries name="url" type="id_String" nullable="true"/>
-        <mapperTableEntries name="field_article_images_url" type="id_String" nullable="true"/>
-        <mapperTableEntries name="field_article_images_caption" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -332,16 +308,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_caption"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="createdDate"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -356,19 +322,15 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlOutput_1">
-      <column comment="" key="false" length="-1" name="nid" nullable="false" originalDbColumnName="articleID" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_url" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_caption" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nid" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="createdDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="nid" nullable="false" originalDbColumnName="articleID" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_url" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="field_article_images_caption" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nid" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="url" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="createdDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
