@@ -168,7 +168,7 @@
     <elementParameter field="CHECK" name="USEURL" value="false"/>
     <elementParameter field="TEXT" name="URLPATH" value="&quot;http://localhost:8080/JSON/JSON_file.txt&quot;" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
-    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/field_article_images&quot;"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/&quot;"/>
     <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.[*]&quot;" show="false"/>
     <elementParameter field="TABLE" name="MAPPING" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="nid"/>
@@ -196,19 +196,19 @@
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPINGXPATH">
       <elementValue elementRef="SCHEMA_COLUMN" value="nid"/>
-      <elementValue elementRef="QUERY" value="&quot;../nid&quot;"/>
+      <elementValue elementRef="QUERY" value="&quot;nid&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="title"/>
-      <elementValue elementRef="QUERY" value="&quot;../title&quot;"/>
+      <elementValue elementRef="QUERY" value="&quot;title&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="url"/>
-      <elementValue elementRef="QUERY" value="&quot;../url&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
       <elementValue elementRef="QUERY" value="&quot;url&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
+      <elementValue elementRef="QUERY" value="&quot;field_article_images/url&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_caption"/>
-      <elementValue elementRef="QUERY" value="&quot;caption&quot;"/>
+      <elementValue elementRef="QUERY" value="&quot;field_article_images/caption&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
