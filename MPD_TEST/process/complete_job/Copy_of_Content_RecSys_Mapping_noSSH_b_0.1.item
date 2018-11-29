@@ -185,7 +185,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="content" expression="row2.content.replaceAll(&quot;\&quot;&quot;, &quot;&quot;).replaceAll(&quot;\\\\&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="content" expression="row2.content.replaceAll(&quot;\&quot;&quot;, &quot;&quot;).replaceAll(&quot;\\\\&quot;, &quot;&quot;).replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\]\&quot;&quot;, &quot;\\]&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="content" type="id_String" nullable="true"/>
