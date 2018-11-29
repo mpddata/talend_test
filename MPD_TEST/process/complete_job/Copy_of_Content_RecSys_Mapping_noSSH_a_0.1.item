@@ -151,8 +151,8 @@
   <node componentName="tExtractDelimitedFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractDelimitedFields_1" show="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="newline"/>
-    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="true"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;nid&quot;"/>
+    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&lt;p&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
