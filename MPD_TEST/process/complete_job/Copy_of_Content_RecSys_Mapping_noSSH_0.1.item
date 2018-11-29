@@ -190,9 +190,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="url"/>
       <elementValue elementRef="QUERY" value="&quot;url&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_url"/>
-      <elementValue elementRef="QUERY" value="&quot;field_article_images[*].url&quot;"/>
+      <elementValue elementRef="QUERY" value="&quot;field_article_images[url]&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="field_article_images_caption"/>
-      <elementValue elementRef="QUERY" value="&quot;field_article_images[*].caption&quot;"/>
+      <elementValue elementRef="QUERY" value="&quot;field_article_images[caption]&quot;"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPINGXPATH" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="nid"/>
