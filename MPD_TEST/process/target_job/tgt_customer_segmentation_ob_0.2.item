@@ -148,12 +148,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - agg_ga_nst" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_nst&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;agg_ga_ob&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `agg_ga_nst`.`dateSid`, &#xA;  `agg_ga_nst`.`custSid`, &#xA;  `agg_ga_nst`.`custUID`, &#xA;  `agg_ga_nst`.`dailyTotalSessions`, &#xA;  `agg_ga_nst`.`dailyTotalVisits`, &#xA;  `agg_ga_nst`.`dailyTotalHits`, &#xA;  `agg_ga_nst`.`dailyTotalPageviews`, &#xA;  `agg_ga_nst`.`dailyTotalTimeOnSite`, &#xA;  `agg_ga_nst`.`dailyTotalBounces`, &#xA;  `agg_ga_nst`.`dailyTotalTrans`, &#xA;  `agg_ga_nst`.`dailyTotalTransRevenue`, &#xA;  `agg_ga_nst`.`dailyTotalNewVisits`, &#xA;  `agg_ga_nst`.`dailyTotalScreenviews`, &#xA;  `agg_ga_nst`.`dailyTotalUnique`, &#xA;  `agg_ga_nst`.`dailyTotalTimeOnScreen`, &#xA;  `agg_ga_nst`.`dailyTotalTotalTransRevenue`, &#xA;  `agg_ga_nst`.`dailyTotalSessionQualityDim`, &#xA;  `agg_ga_nst`.`dailyAveHitsPerSession`, &#xA;  `agg_ga_nst`.`dailyAvePageviewsPerSession`, &#xA;  `agg_ga_nst`.`dailyAveTimeOnSitePerSession`, &#xA;  `agg_ga_nst`.`dailyAveTimeOnScreenPerSession`&#xA;FROM `agg_ga_nst`&#xA;WHERE  `agg_ga_nst`.`dateSid` between '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `agg_ga_ob`.`dateSid`, &#xA;  `agg_ga_ob`.`custSid`, &#xA;  `agg_ga_ob`.`custUID`, &#xA;  `agg_ga_ob`.`dailyTotalSessions`, &#xA;  `agg_ga_ob`.`dailyTotalVisits`, &#xA;  `agg_ga_ob`.`dailyTotalHits`, &#xA;  `agg_ga_ob`.`dailyTotalPageviews`, &#xA;  `agg_ga_ob`.`dailyTotalTimeOnSite`, &#xA;  `agg_ga_ob`.`dailyTotalBounces`, &#xA;  `agg_ga_ob`.`dailyTotalTrans`, &#xA;  `agg_ga_ob`.`dailyTotalTransRevenue`, &#xA;  `agg_ga_ob`.`dailyTotalNewVisits`, &#xA;  `agg_ga_ob`.`dailyTotalScreenviews`, &#xA;  `agg_ga_ob`.`dailyTotalUnique`, &#xA;  `agg_ga_ob`.`dailyTotalTimeOnScreen`, &#xA;  `agg_ga_ob`.`dailyTotalTotalTransRevenue`, &#xA;  `agg_ga_ob`.`dailyTotalSessionQualityDim`, &#xA;  `agg_ga_ob`.`dailyAveHitsPerSession`, &#xA;  `agg_ga_ob`.`dailyAvePageviewsPerSession`, &#xA;  `agg_ga_ob`.`dailyAveTimeOnSitePerSession`, &#xA;  `agg_ga_ob`.`dailyAveTimeOnScreenPerSession`&#xA;FROM `agg_ga_ob`&#xA;WHERE  `agg_ga_ob`.`dateSid` between '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2324,12 +2324,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_nst&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;fact_ga_ob&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;CASE WHEN custSid = 0 THEN &#xD;&#xA;&#x9;CASE WHEN clientId IS NULL OR clientId ='' THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;hour(from_unixtime(visitStartTime)) AS visitHour&#xD;&#xA;FROM fact_ga_nst WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#xD;&#xA;CASE WHEN custSid = 0 THEN &#xD;&#xA;&#x9;CASE WHEN clientId IS NULL OR clientId ='' THEN  fullVisitorId&#xD;&#xA;            ELSE clientId END &#xD;&#xA;&#x9;ELSE custSid END AS custUID,  &#xD;&#xA;hour(from_unixtime(visitStartTime)) AS visitHour&#xD;&#xA;FROM fact_ga_ob WHERE dateSid BETWEEN '&quot; + ((String)globalMap.get(&quot;processStartDate30&quot;)) + &quot;' and '&quot; + ((String)globalMap.get(&quot;processEndDate30&quot;)) + &quot;' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
