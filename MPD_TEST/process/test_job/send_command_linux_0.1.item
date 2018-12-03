@@ -125,7 +125,10 @@
     </elementParameter>
     <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
     <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
-    <elementParameter field="TABLE" name="PARAMS"/>
+    <elementParameter field="TABLE" name="PARAMS">
+      <elementValue elementRef="NAME" value="&quot;PATH&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;/home/centos/google-cloud-sdk/bin&quot;"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSystem_1"/>
   </node>
