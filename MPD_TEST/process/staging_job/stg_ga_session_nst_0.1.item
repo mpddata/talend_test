@@ -23,6 +23,8 @@
     <contextParameter comment="" name="resource_file_tokenfile" prompt="resource_file_tokenfile?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms2014M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
@@ -787,7 +789,7 @@
   <note opaque="true" posX="352" posY="416" sizeHeight="97" sizeWidth="129" text="retrieve ga &#xD;&#xA;sessions &#xD;&#xA;records from &#xD;&#xA;BigQuery">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
-  <note opaque="true" posX="544" posY="416" sizeHeight="97" sizeWidth="161" text="write BigQuery&#xD;&#xA;records to&#xD;&#xA;staging db&#xD;&#xA;stg_ga_sessions_bh">
+  <note opaque="true" posX="544" posY="416" sizeHeight="97" sizeWidth="161" text="write BigQuery&#xD;&#xA;records to&#xD;&#xA;staging db&#xD;&#xA;stg_ga_sessions_nst">
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>

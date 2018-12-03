@@ -598,7 +598,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigyaID" expression="row1.UID " type="id_String"/>
@@ -709,7 +709,7 @@
         <mapperTableEntries name="maritalSid" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" persistent="true">
-        <mapperTableEntries name="raceDesc" expression="(row1.data_ethnicity == null)?null:" type="id_String" nullable="true"/>
+        <mapperTableEntries name="raceDesc" expression="(row1.data_ethnicity == null)?null:(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;my|malaya|melayu|m&quot;))?&quot;Malay&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;cina|cn|cina|c&quot;))?&quot;Chinese&quot;:&#xD;&#xA;(StringHandling.DOWNCASE(row1.data_ethnicity).matches(&quot;in|i&quot;))?&quot;Indian&quot;:(StringHandling.DOWNCASE(row1.data_ethnicity).contains(&quot;other&quot;))?&quot;Others&quot;:row1.data_ethnicity " type="id_String" nullable="true"/>
         <mapperTableEntries name="raceSid" type="id_Integer"/>
       </inputTables>
     </nodeData>
