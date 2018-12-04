@@ -225,7 +225,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  sor_lotame_hm_daily.GAClientId, &#xD;&#xA;  sor_lotame_hm_daily.date as dateId, &#xD;&#xA;  sor_lotame_hm_daily.LotamePId, &#xD;&#xA;  sor_lotame_hm_daily.GigyaId, &#xD;&#xA;  null as KeywordList&#xD;&#xA;FROM sor_lotame_hm_daily&#xD;&#xA;WHERE date >= '&quot; + ((String)globalMap.get(&quot;processStartDate&quot;)) + &quot;' AND dateId &lt; '&quot; + ((String)globalMap.get(&quot;processEndDate&quot;)) + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  sor_lotame_hm_daily.GAClientId, &#xD;&#xA;  sor_lotame_hm_daily.date as dateId, &#xD;&#xA;  sor_lotame_hm_daily.LotamePId, &#xD;&#xA;  sor_lotame_hm_daily.GigyaId, &#xD;&#xA;  null as KeywordList&#xD;&#xA;FROM sor_lotame_hm_daily&#xD;&#xA;WHERE date >= '&quot; + ((String)globalMap.get(&quot;processStartDate&quot;)) + &quot;' AND date &lt;= '&quot; + ((String)globalMap.get(&quot;processEndDate&quot;)) + &quot;'&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
