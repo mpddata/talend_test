@@ -269,11 +269,11 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="GAClientId" expression="row1.GAClientId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="dateId" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;,row1.dateId) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dateId" expression="row1.dateId" type="id_String" nullable="true"/>
         <mapperTableEntries name="LotamePId" expression="row1.LotamePId " type="id_String" nullable="true"/>
         <mapperTableEntries name="GigyaId" expression="row1.GigyaId " type="id_String" nullable="true"/>
         <mapperTableEntries name="KeywordList" expression="row1.KeywordList " type="id_String" nullable="true"/>
