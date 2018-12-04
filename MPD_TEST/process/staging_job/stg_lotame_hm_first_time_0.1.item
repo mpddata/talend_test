@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="YYYYMMDD" name="parameter_inputDateStart" prompt="parameter_inputDateStart?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_inputDateEnd" prompt="parameter_inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="processDate" prompt="processDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
@@ -17,8 +16,7 @@
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="YYYYMMDD" name="parameter_inputDateStart" prompt="parameter_inputDateStart?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="YYYYMMDD" name="parameter_inputDateEnd" prompt="parameter_inputDateEnd?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="YYYYMMDD" name="processDate" prompt="processDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Login" prompt="connection_mysqlsource_db_Login?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="tci_user"/>
@@ -201,7 +199,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  sor_lotame_hm_daily.GAClientId, &#xD;&#xA;  sor_lotame_hm_daily.date as dateId, &#xD;&#xA;  sor_lotame_hm_daily.LotamePId, &#xD;&#xA;  sor_lotame_hm_daily.GigyaId, &#xD;&#xA;  null as KeywordList&#xD;&#xA;FROM sor_lotame_hm_daily&#xD;&#xA;WHERE date ='&quot; + context.parameter_inputDateStart + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  sor_lotame_hm_daily.GAClientId, &#xD;&#xA;  sor_lotame_hm_daily.date as dateId, &#xD;&#xA;  sor_lotame_hm_daily.LotamePId, &#xD;&#xA;  sor_lotame_hm_daily.GigyaId, &#xD;&#xA;  null as KeywordList&#xD;&#xA;FROM sor_lotame_hm_daily&#xD;&#xA;WHERE date ='&quot; + context.processDate + &quot;'&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
