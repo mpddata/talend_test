@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="resource_file_pemkey" prompt="resource_file_pemkey?" promptNeeded="true" type="id_String" value="&quot;C:/Users/mc.lee/Desktop/MPBigData2017.pem&quot;"/>
+    <contextParameter comment="" name="processDate" prompt="processDate?" promptNeeded="false" type="id_String" value=""/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -133,9 +136,8 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSystem_1"/>
   </node>
-  <node componentName="tSSH" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+  <node componentName="tSSH" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSSH_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;10.55.83.147&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="22"/>
     <elementParameter field="TEXT" name="USER" value="&quot;centos&quot;"/>
@@ -149,7 +151,7 @@
     <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;"/>
     <elementParameter field="TABLE" name="COMMANDS">
       <elementValue elementRef="COMMAND" value="&quot;cd /home/centos&quot;"/>
-      <elementValue elementRef="COMMAND" value="&quot;bq --location=US query --destination_table 1396468.ga_sessions_stg --replace --use_legacy_sql=true --allow_large_results 'SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM [mpdbq1:1396468.ga_sessions_20181111]'&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;mkdir createfolder&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="60" show="false"/>
@@ -181,6 +183,7 @@
   </node>
   <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_3" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="ROOTDIR" value="true"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/home/centos&quot;"/>
     <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
