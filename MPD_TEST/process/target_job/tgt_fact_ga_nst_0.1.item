@@ -950,13 +950,11 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="GAClientId"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="dateId"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LotamePId"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="GigyaId"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="KeywordList"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
@@ -965,16 +963,13 @@
       <column comment="" key="false" length="200" name="GAClientId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="8" name="dateId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="8" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="LotamePId" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="200" name="GigyaId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="65535" name="KeywordList" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -1017,7 +1012,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
         <mapperTableEntries name="GAClientId" expression="row2.GAClientId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="dateId" expression="row2.dateId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dateId" expression="row2.date" type="id_String" nullable="true"/>
         <mapperTableEntries name="LotamePId" expression="row2.LotamePId " type="id_String" nullable="true"/>
         <mapperTableEntries name="GigyaId" expression="row2.GigyaId " type="id_String" nullable="true"/>
         <mapperTableEntries name="KeywordList" expression="row2.KeywordList " type="id_String" nullable="true"/>
@@ -1025,10 +1020,9 @@
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="GAClientId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dateId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date" type="id_String" nullable="true"/>
         <mapperTableEntries name="LotamePId" type="id_String" nullable="true"/>
         <mapperTableEntries name="GigyaId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KeywordList" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" persistent="true">
         <mapperTableEntries name="gigyaID" expression="row2.GigyaId " type="id_String" operator="="/>
