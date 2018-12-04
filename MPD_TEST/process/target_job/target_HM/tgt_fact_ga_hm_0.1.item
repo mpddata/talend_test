@@ -1097,12 +1097,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_browser" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_browser_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_browser&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_browser_hm`.`browserUID`, &#xA;  `dim_browser_hm`.`browserName`, &#xA;  `dim_browser_hm`.`browserVer`, &#xA;  `dim_browser_hm`.`browserSid`&#xA;FROM `dim_browser_hm`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_browser`.`browserUID`, &#xA;  `dim_browser`.`browserName`, &#xA;  `dim_browser`.`browserVer`, &#xA;  `dim_browser`.`browserSid`&#xA;FROM `dim_browser`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1155,12 +1155,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_os" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_os_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_os&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_os_hm`.`osUID`, &#xA;  `dim_os_hm`.`osName`, &#xA;  `dim_os_hm`.`osVer`, &#xA;  `dim_os_hm`.`osSid`&#xA;FROM `dim_os_hm`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `dim_os`.`osUID`, &#xA;  `dim_os`.`osName`, &#xA;  `dim_os`.`osVer`, &#xA;  `dim_os`.`osSid`&#xA;FROM `dim_os`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1213,12 +1213,12 @@
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w - dim_device" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_device&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  `dim_device_hm`.`deviceUID`, &#xD;&#xA;  `dim_device_hm`.`deviceMobileDeviceBranding`, &#xD;&#xA;  `dim_device_hm`.`deviceMobileDeviceModel`, &#xD;&#xA;  `dim_device_hm`.`deviceMobileDeviceInfo`, &#xD;&#xA;  `dim_device_hm`.`deviceMobileDeviceMarketingName`, &#xD;&#xA;  `dim_device_hm`.`deviceDeviceCategory`, &#xD;&#xA;  `dim_device_hm`.`deviceSid`&#xD;&#xA;FROM `dim_device_hm`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  `dim_device`.`deviceUID`, &#xD;&#xA;  `dim_device`.`deviceMobileDeviceBranding`, &#xD;&#xA;  `dim_device`.`deviceMobileDeviceModel`, &#xD;&#xA;  `dim_device`.`deviceMobileDeviceInfo`, &#xD;&#xA;  `dim_device`.`deviceMobileDeviceMarketingName`, &#xD;&#xA;  `dim_device`.`deviceDeviceCategory`, &#xD;&#xA;  `dim_device`.`deviceSid`&#xD;&#xA;FROM `dim_device`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
