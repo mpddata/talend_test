@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20180620"/>
+    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20181111"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="true" type="id_Integer" value="1"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
@@ -15,6 +15,7 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="false" type="id_String" value="1396468"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="false" type="id_String" value=""/>
@@ -31,6 +32,7 @@
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
     <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms4096M&quot;,&quot;-Xmx32768M&quot;]}" show="false"/>
@@ -145,7 +147,7 @@
     <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
     <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
   </parameters>
-  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="160">
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
     <elementParameter field="RADIO" name="FORLOOP" value="true"/>
     <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
@@ -158,7 +160,7 @@
     <elementParameter field="TEXT" name="ITERATION" value="i++" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;processDate&quot;"/>
@@ -167,14 +169,14 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_1"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="160">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="Date dtProcessDate = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, context.parameter_startDate),((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)),&quot;dd&quot;);&#xA;&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMdd&quot;);&#xA;&#xA;globalMap.put(&quot;processDate&quot;, df.format(dtProcessDate));&#xA;System.out.println(&quot;Now processing: &quot; + ((String)globalMap.get(&quot;processDate&quot;)));&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -221,11 +223,11 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="agg_ga_hm_first_time_loading"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="tgt_agg_ga_hm_first_time_loading"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_jW5gIPecEei8v9GOs-icwQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
@@ -268,7 +270,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_2"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="288">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;fact_ga_bh_&quot; + ((String)globalMap.get(&quot;processDate&quot;)) + &quot; completed&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -276,13 +278,209 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_1"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="288">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;agg_ga_bh_&quot; + ((String)globalMap.get(&quot;processDate&quot;)) + &quot; completed&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_browser_HM"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_feIrQOClEeiygaK8F9bnxg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_3"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_geo_HM"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_bBaBQOClEeiygaK8F9bnxg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_5"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_os_HM"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_d6nqEOClEeiygaK8F9bnxg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_6"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="tgt_dim_device_HM"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_YEMpQOClEeiygaK8F9bnxg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Login"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqltarget_tci_db_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqltarget_tci_db_Port"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_4"/>
+  </node>
+  <node componentName="jb_dump_csv_stg" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jb_dump_csv_stg_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="START" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tJava_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="jb_dump_csv_stg"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tSetGlobalVar_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
@@ -292,8 +490,8 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tRunJob_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="jb_dump_csv_stg_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRunJob_1" target="tWarn_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
@@ -304,25 +502,34 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tWarn_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
-  <note opaque="true" posX="32" posY="224" sizeHeight="97" sizeWidth="161" text="Loop the job &#xD;&#xA;N times depends &#xD;&#xA;on the &#xD;&#xA;input date">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_3" offsetLabelX="0" offsetLabelY="0" source="tRunJob_3" target="tRunJob_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_5" offsetLabelX="0" offsetLabelY="0" source="tRunJob_5" target="tRunJob_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tRunJob_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
+  <note opaque="true" posX="32" posY="352" sizeHeight="97" sizeWidth="161" text="Loop the job &#xD;&#xA;N times depends &#xD;&#xA;on the &#xD;&#xA;input date">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="224" posY="224" sizeHeight="97" sizeWidth="97" text="set&#xD;&#xA;global&#xD;&#xA;variable">
+  <note opaque="true" posX="224" posY="352" sizeHeight="97" sizeWidth="97" text="set&#xD;&#xA;global&#xD;&#xA;variable">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="352" posY="224" sizeHeight="161" sizeWidth="129" text="custom java&#xD;&#xA;command&#xD;&#xA;to get current&#xD;&#xA;loop value&#xD;&#xA;and the&#xD;&#xA;value for&#xD;&#xA;global variable">
+  <note opaque="true" posX="352" posY="352" sizeHeight="161" sizeWidth="129" text="custom java&#xD;&#xA;command&#xD;&#xA;to get current&#xD;&#xA;loop value&#xD;&#xA;and the&#xD;&#xA;value for&#xD;&#xA;global variable">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="512" posY="0" sizeHeight="129" sizeWidth="129" text="run subjob&#xD;&#xA;tgt_fact_&#xD;&#xA;ga_bh&#xD;&#xA;_first_time&#xD;&#xA;_loading">
+  <note opaque="true" posX="928" posY="128" sizeHeight="129" sizeWidth="129" text="run subjob&#xD;&#xA;tgt_fact_&#xD;&#xA;ga_bh&#xD;&#xA;_first_time&#xD;&#xA;_loading">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="736" posY="0" sizeHeight="129" sizeWidth="129" text="run subjob&#xD;&#xA;tgt_agg_&#xD;&#xA;ga_bh&#xD;&#xA;_first_time&#xD;&#xA;_loading">
+  <note opaque="true" posX="1152" posY="128" sizeHeight="129" sizeWidth="129" text="run subjob&#xD;&#xA;tgt_agg_&#xD;&#xA;ga_bh&#xD;&#xA;_first_time&#xD;&#xA;_loading">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="512" posY="352" sizeHeight="97" sizeWidth="129" text="send message &#xD;&#xA;when job &#xD;&#xA;success">
+  <note opaque="true" posX="928" posY="480" sizeHeight="97" sizeWidth="129" text="send message &#xD;&#xA;when job &#xD;&#xA;success">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="736" posY="352" sizeHeight="97" sizeWidth="129" text="send message &#xD;&#xA;when job &#xD;&#xA;success">
+  <note opaque="true" posX="1152" posY="480" sizeHeight="97" sizeWidth="129" text="send message &#xD;&#xA;when job &#xD;&#xA;success">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
   <subjob>
@@ -352,6 +559,31 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="jb_dump_csv_stg_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
