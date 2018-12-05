@@ -326,7 +326,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_lotame_hm&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_lotame_nst&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
@@ -454,7 +454,7 @@
   <note opaque="true" posX="800" posY="256" sizeHeight="97" sizeWidth="96" text="transform&#xD;&#xA;and&#xD;&#xA;route data">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
-  <note opaque="true" posX="928" posY="256" sizeHeight="161" sizeWidth="161" text="write the&#xD;&#xA;data from&#xD;&#xA;&quot;sor_lotame_hm_daily&quot;&#xD;&#xA;into staging&#xD;&#xA;database&#xD;&#xA;&quot;stg_lotame_hm&quot;&#xD;&#xA;table">
+  <note opaque="true" posX="928" posY="256" sizeHeight="161" sizeWidth="161" text="write the&#xD;&#xA;data from&#xD;&#xA;&quot;sor_lotame_nst_daily&quot;&#xD;&#xA;into staging&#xD;&#xA;database&#xD;&#xA;&quot;stg_lotame_nst&quot;&#xD;&#xA;table">
     <elementParameter field="TEXT" name="FONT_SIZE" value="9"/>
   </note>
   <subjob>
