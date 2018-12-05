@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="false" type="id_String" value="20181101"/>
+    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="false" type="id_Integer" value="1"/>
     <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="false" type="id_String" value="1396468"/>
+    <contextParameter comment="" name="parameter_stg_table" prompt="parameter_stg_table?" promptNeeded="false" type="id_String" value="stg_ga_sessions_hm"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
@@ -15,6 +16,7 @@
     <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="false" type="id_Integer" value=""/>
     <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="parameter_stg_table" prompt="parameter_stg_table?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
     <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
@@ -141,6 +143,8 @@
     <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
     <elementParameter field="CHECK" name="START" value="true" show="false"/>
     <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value=""/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
