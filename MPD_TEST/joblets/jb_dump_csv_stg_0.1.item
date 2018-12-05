@@ -1315,11 +1315,7 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tFileDelete_1"/>
     </node>
-    <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    </node>
-    <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
+    <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="224">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
       <elementParameter field="TEXT" name="MESSAGE" value="&quot;CSV &quot;+ ((String)globalMap.get(&quot;processDate&quot;)) + &quot; loaded to staging&quot;"/>
       <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -1352,7 +1348,7 @@
     <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tAmazonMysqlRow_1" offsetLabelX="0" offsetLabelY="0" source="tAmazonMysqlRow_1" target="tFileList_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
     </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tWarn_1">
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileDelete_1" offsetLabelX="0" offsetLabelY="0" source="tFileDelete_1" target="tWarn_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
     </connection>
     <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_1" offsetLabelX="0" offsetLabelY="0" source="tWarn_1" target="TRIGGER_OUTPUT_1">
@@ -1389,12 +1385,6 @@
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
     <subjob>
-      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
-    </subjob>
-    <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -1408,7 +1398,7 @@
       <elementParameter field="CHECK" name="INFORMATION" value="false"/>
       <elementParameter field="MEMO" name="COMMENT" value=""/>
     </jobletNodes>
-    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224" trigger="true">
+    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="224" trigger="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_OUTPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
       <elementParameter field="CHECK" name="START" value="false" show="false"/>
