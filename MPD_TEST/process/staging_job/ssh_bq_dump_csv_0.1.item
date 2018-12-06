@@ -2,9 +2,9 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="resource_file_pemkey" prompt="resource_file_pemkey?" promptNeeded="true" type="id_String" value="&quot;C:/Users/mc.lee/Desktop/MPBigData2017.pem&quot;"/>
-    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20181111"/>
     <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="true" type="id_String" value="1396468"/>
-    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="true" type="id_Integer" value="1"/>
+    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20181101"/>
+    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="true" type="id_Integer" value="20"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -203,7 +203,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSystem_3"/>
   </node>
-  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128">
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
     <elementParameter field="RADIO" name="FORLOOP" value="true"/>
     <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
