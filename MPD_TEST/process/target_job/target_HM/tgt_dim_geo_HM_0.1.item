@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Password" prompt="connection_mysqlstaging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Port" prompt="connection_mysqlstaging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_AdditionalParams" prompt="connection_mysqltarget_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Database" prompt="connection_mysqltarget_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Login" prompt="connection_mysqltarget_tci_db_Login?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci2.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+  </context>
+  <context confirmationNeeded="false" name="Production">
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_AdditionalParams" prompt="connection_mysqlstaging_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Database" prompt="connection_mysqlstaging_tci_db_Database?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Login" prompt="connection_mysqlstaging_tci_db_Login?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Password" prompt="connection_mysqlstaging_tci_db_Password?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Port" prompt="connection_mysqlstaging_tci_db_Port?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="3306"/>
+    <contextParameter comment="" name="connection_mysqlstaging_tci_db_Server" prompt="connection_mysqlstaging_tci_db_Server?" promptNeeded="false" repositoryContextId="_9R6kYHX6Eei3jIQe3HhKjQ" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_AdditionalParams" prompt="connection_mysqltarget_tci_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Database" prompt="connection_mysqltarget_tci_db_Database?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Login" prompt="connection_mysqltarget_tci_db_Login?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="tci_user"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Password" prompt="connection_mysqltarget_tci_db_Password?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_Password" value="9VH66/52xXNdt5pOihEeVg=="/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Port" prompt="connection_mysqltarget_tci_db_Port?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="3306"/>
+    <contextParameter comment="" name="connection_mysqltarget_tci_db_Server" prompt="connection_mysqltarget_tci_db_Server?" promptNeeded="false" repositoryContextId="_8_ZkgHs-Eei8sLOnUszr4w" type="id_String" value="stg-tci.cvy01nfma6so.ap-southeast-1.rds.amazonaws.com"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio6.5.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_n5kuoHXKEeicVoGHXlv0ow" name="DQTechnical"/>
+    <routinesParameter id="_n5NiQHXKEeicVoGHXlv0ow" name="DataMasking"/>
+    <routinesParameter id="_n0n9MHXKEeicVoGHXlv0ow" name="DataOperation"/>
+    <routinesParameter id="_n5WFIHXKEeicVoGHXlv0ow" name="DataQualityDependencies"/>
+    <routinesParameter id="_n5RzsHXKEeicVoGHXlv0ow" name="DataQuality"/>
+    <routinesParameter id="_n5gdMHXKEeicVoGHXlv0ow" name="DqStringHandling"/>
+    <routinesParameter id="_n4WmoHXKEeicVoGHXlv0ow" name="Mathematical"/>
+    <routinesParameter id="_n4g-sHXKEeicVoGHXlv0ow" name="Numeric"/>
+    <routinesParameter id="_n4meQHXKEeicVoGHXlv0ow" name="Relational"/>
+    <routinesParameter id="_n5JQ0HXKEeicVoGHXlv0ow" name="SQLike"/>
+    <routinesParameter id="_n4sk4HXKEeicVoGHXlv0ow" name="StringHandling"/>
+    <routinesParameter id="_n4yEcHXKEeicVoGHXlv0ow" name="TalendDataGenerator"/>
+    <routinesParameter id="_n44yIHXKEeicVoGHXlv0ow" name="TalendDate"/>
+    <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
+    <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
+  </parameters>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="stg_db_conn"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_1FgQEHs-Eei8sLOnUszr4w" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqltarget_tci_db_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqltarget_tci_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqltarget_tci_db_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqltarget_tci_db_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqltarget_tci_db_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3If8ofAFGeRxv9DfcQT28gDTaD6tX+XRHq"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tgt_db_conn"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dMoC8HX6Eei3jIQe3HhKjQ" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_mysqlstaging_tci_db_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_mysqlstaging_tci_db_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_mysqlstaging_tci_db_Database" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_mysqlstaging_tci_db_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlL3zAncrjJE3InG6ahtuIQMa0IL6N83C8um/WbDVhe5Rl" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_ga_sessions_hm&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;  `stg_ga_sessions_hm`.`geoContinent`, &#xA;  `stg_ga_sessions_hm`.`geoSubContinent`, &#xA;  `stg_ga_sessions_hm`.`geoCountry`, &#xA;  `stg_ga_sessions_hm`.`geoRegion`, &#xA;  `stg_ga_sessions_hm`.`geoMetro`, &#xA;  `stg_ga_sessions_hm`.`geoCity`, &#xA;  `stg_ga_sessions_hm`.`geoCityId`, &#xA;  `stg_ga_sessions_hm`.`geoLatitude`, &#xA;  `stg_ga_sessions_hm`.`geoLongitude`&#xA;FROM `stg_ga_sessions_hm`&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.connection_mysqlstaging_tci_db_AdditionalParams" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoContinent"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoSubContinent"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoCountry"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoRegion"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoMetro"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoCity"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoCityId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoLatitude"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoLongitude"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMysqlInput_1">
+      <column comment="" key="false" length="255" name="geoContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoSubContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCountry" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoRegion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoMetro" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCity" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCityId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLatitude" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLongitude" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_bBaBQOClEeiygaK8F9bnxg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="255" name="geoCityId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoSubContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCountry" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoRegion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoMetro" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCity" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLat" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLong" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="geoCityId" expression="row1.geoCityId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoContinent" expression="(row1.geoContinent.contains(&quot;not set&quot;))?null:row1.geoContinent " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoSubContinent" expression="(row1.geoSubContinent.contains(&quot;not set&quot;))?null:row1.geoSubContinent " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCountry" expression="(row1.geoCountry.contains(&quot;not set&quot;))?null:row1.geoCountry " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoRegion" expression="(row1.geoRegion.contains(&quot;not set&quot;))?null:row1.geoRegion " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoMetro" expression="(row1.geoMetro.contains(&quot;not set&quot;))?null:row1.geoMetro " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCity" expression="(row1.geoCity.contains(&quot;not set&quot;))?null:row1.geoCity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLat" expression="(row1.geoLatitude.contains(&quot;not set&quot;))?null:row1.geoLatitude " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLong" expression="(row1.geoLongitude.contains(&quot;not set&quot;))?null:row1.geoLongitude " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" expressionFilter="!row1.geoCityId.contains(&quot;not set&quot;)" activateExpressionFilter="true" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="geoContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoSubContinent" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoRegion" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoMetro" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoCityId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLatitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoLongitude" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1" show="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoCityId"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoCityId"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoLat"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoLat"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoLong"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoLong"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoContinent"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoContinent"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoSubContinent"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoSubContinent"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoCountry"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoCountry"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoRegion"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoRegion"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoMetro"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoMetro"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geoCity"/>
+      <elementValue elementRef="FUNCTION" value="max"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geoCity"/>
+      <elementValue elementRef="IGNORE_NULL" value="true"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_1">
+      <column comment="" key="true" length="255" name="geoCityId" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoSubContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCountry" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoRegion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoMetro" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCity" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLat" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLong" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_geo&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE_OR_INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="100" show="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="true"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoCityId"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoContinent"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoSubContinent"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoCountry"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoRegion"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoMetro"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoCity"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoLat"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="geoLong"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false" show="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="load to db"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMysqlOutput_1">
+      <column comment="" key="true" length="255" name="geoCityId" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoSubContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCountry" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoRegion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoMetro" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCity" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLat" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLong" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="255" name="geoCityId" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoSubContinent" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCountry" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoRegion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoMetro" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoCity" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLat" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="geoLong" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlClose_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlClose_2" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tMysqlConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_2" target="tMysqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tAggregateRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMysqlOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tMysqlClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlClose_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlClose_1" target="tMysqlClose_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <note opaque="true" posX="32" posY="128" sizeHeight="97" sizeWidth="97" text="Establish &#xD;&#xA;staging &#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="256" posY="32" sizeHeight="97" sizeWidth="97" text="Establish&#xD;&#xA;target&#xD;&#xA;database&#xD;&#xA;connection">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="128" posY="352" sizeHeight="97" sizeWidth="161" text="Retrieve &#xD;&#xA;geo&#xD;&#xA;data from &#xD;&#xA;&quot;stg_ga_sessions_bh&quot;&#xD;&#xA;table&#xD;&#xA;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="384" posY="352" sizeHeight="97" sizeWidth="97" text="Transform&#xD;&#xA;and&#xD;&#xA;route data">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="544" posY="352" sizeHeight="97" sizeWidth="97" text="Aggregate&#xD;&#xA;columns&#xD;&#xA;using function&#xD;&#xA;&quot;max&quot;">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <note opaque="true" posX="800" posY="352" sizeHeight="97" sizeWidth="129" text="Load to &#xD;&#xA;&quot;dim_geo&quot; &#xD;&#xA;table">
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlClose_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlClose_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>
