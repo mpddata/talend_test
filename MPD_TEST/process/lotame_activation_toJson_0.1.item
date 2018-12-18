@@ -204,7 +204,7 @@
         <mapperTableEntries name="gender" expression="row1.gender " type="id_String" nullable="true"/>
         <mapperTableEntries name="raceSid" expression="row1.raceSid " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="country" expression="row1.country " type="id_String" nullable="true"/>
-        <mapperTableEntries name="age" expression="row1.age " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="age" expression="(row1.age == null || row1.age ==0) ? 0 : row1.age " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Audience1" expression="row1.Audience1 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Audience2" expression="row1.Audience2 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Audience3" expression="row1.Audience3 " type="id_Integer" nullable="true"/>
