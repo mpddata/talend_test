@@ -190,13 +190,13 @@
       <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="raceSid" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="country" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="age" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="age" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Audience1" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Audience2" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Audience3" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigya_id" expression="row1.gigya_id " type="id_String" nullable="true"/>
@@ -204,7 +204,7 @@
         <mapperTableEntries name="gender" expression="row1.gender " type="id_String" nullable="true"/>
         <mapperTableEntries name="raceSid" expression="row1.raceSid " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="country" expression="row1.country " type="id_String" nullable="true"/>
-        <mapperTableEntries name="age" expression="row1.age " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="age" expression="(row1.age > 0 &amp;&amp; row1.age &lt; 5) ? &quot;1-4&quot; :&#xA;(row1.age > 4 &amp;&amp; row1.age &lt; 15) ? &quot;5-14&quot; :&#xA;(row1.age > 14 &amp;&amp; row1.age &lt; 25) ? &quot;15-24&quot; :&#xA;(row1.age > 24 &amp;&amp; row1.age &lt; 35) ? &quot;25-34&quot; :&#xA;(row1.age > 34 &amp;&amp; row1.age &lt; 45) ? &quot;35-44&quot; :&#xA;(row1.age > 44 &amp;&amp; row1.age &lt; 55) ? &quot;45-54&quot; :&#xA;(row1.age > 54 &amp;&amp; row1.age &lt; 65) ? &quot;55-64&quot; :&#xA;(row1.age > 64 &amp;&amp; row1.age &lt; 75) ? &quot;65-74&quot; :&#xA;(row1.age > 74 &amp;&amp; row1.age &lt; 85) ? &quot;75-84&quot; :&#xA;(row1.age > 84 &amp;&amp; row1.age &lt; 95) ? &quot;85-94&quot; :&#xA;(row1.age > 94 &amp;&amp; row1.age &lt; 105) ? &quot;95-104&quot; :&#xA;(row1.age > 104 &amp;&amp; row1.age &lt; 115) ? &quot;105-114&quot; :&#xA;(row1.age > 114 &amp;&amp; row1.age &lt; 125) ? &quot;115-124&quot; :&#xA;(row1.age > 124 &amp;&amp; row1.age &lt; 135) ? &quot;125-134&quot; :&#xA;Null " type="id_String" nullable="true"/>
         <mapperTableEntries name="Audience1" expression="row1.Audience1 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Audience2" expression="row1.Audience2 " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Audience3" expression="row1.Audience3 " type="id_Integer" nullable="true"/>
