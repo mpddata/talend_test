@@ -355,6 +355,7 @@
   </node>
   <node componentName="tSshTunnel" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="-32" posY="128" sizeX="32" sizeY="30">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSshTunnel_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="TUNNELS">
       <elementValue elementRef="HOST" value="&quot;10.55.86.2&quot;"/>
       <elementValue elementRef="PORT" value="&quot;22&quot;"/>
@@ -432,9 +433,6 @@
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tFileOutputJSON_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSshTunnel_1" offsetLabelX="0" offsetLabelY="0" source="tSshTunnel_1" target="tMysqlInput_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
