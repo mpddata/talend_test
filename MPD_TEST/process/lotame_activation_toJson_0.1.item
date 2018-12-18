@@ -316,7 +316,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
-        <mapperTableEntries name="gigya_id" expression="row2.gigya_id.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;, &quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="gigya_id" expression="row2.gigya_id.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;, &quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;, &quot;&quot;) .replaceAll(&quot;segments\&quot;:{&quot;, &quot;segments\&quot;:[&quot;).replaceAll(&quot;}}&quot;,&quot;]}&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="gigya_id" type="id_String" nullable="true"/>
