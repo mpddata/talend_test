@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20181101"/>
-    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="true" type="id_Integer" value="1"/>
-    <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="true" type="id_String" value="149081219"/>
+    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20180919"/>
+    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="true" type="id_Integer" value="12"/>
+    <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="true" type="id_String" value="9029435"/>
     <contextParameter comment="" name="parameter_stg_table" prompt="parameter_stg_table?" promptNeeded="true" type="id_String" value="stg_ga_sessions_nst"/>
     <contextParameter comment="" name="connection_mysqlsource_db_AdditionalParams" prompt="connection_mysqlsource_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="connection_mysqlsource_db_Database" prompt="connection_mysqlsource_db_Database?" promptNeeded="false" repositoryContextId="_fC3nUISqEei1CL3KFVK_vQ" type="id_String" value="stg-tci"/>
