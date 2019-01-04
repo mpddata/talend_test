@@ -252,10 +252,7 @@
     <elementParameter field="TEXT" name="SP_NAME" value="&quot;proc_nst_rm_rec_bef&quot;"/>
     <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RETURN" value="status" show="false"/>
-    <elementParameter field="TABLE" name="SP_ARGS">
-      <elementValue elementRef="COLUMN" value="status"/>
-      <elementValue elementRef="TYPE" value="OUT"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="SP_ARGS"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
