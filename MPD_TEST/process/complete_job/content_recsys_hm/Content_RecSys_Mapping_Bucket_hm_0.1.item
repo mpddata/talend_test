@@ -276,7 +276,7 @@
         <mapperTableEntries name="articleId_7" expression="row3.articleId_7 " type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_8" expression="row3.articleId_8 " type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_9" expression="row3.articleId_9 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="articleId_10" expression="(row3.articleId_10 == null || !row3.articleId_10.matches(&quot;[0-9]+&quot;)) ? 0 : row3.articleId_10.replaceAll(&quot;[^0-9]&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="articleId_10" expression="(row3.articleId_10 == null || !row3.articleId_10.matches(&quot;[0-9]+&quot;)) ? null : row3.articleId_10.replaceAll(&quot;[^0-9]&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="clientId" type="id_String" nullable="true"/>
