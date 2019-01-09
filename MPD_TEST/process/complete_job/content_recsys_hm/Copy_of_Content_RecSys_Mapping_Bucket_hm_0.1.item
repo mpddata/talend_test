@@ -262,12 +262,12 @@
       <column comment="" key="false" length="-1" name="articleId_10" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="output">
         <mapperTableEntries name="createdDate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(),0,&quot;dd&quot;) )) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="clientId" expression="row3.clientId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="articleId_1" expression="row3.articleId_1.substring(1) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="articleId_1" expression="row3.articleId_1" type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_2" expression="row3.articleId_2 " type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_3" expression="row3.articleId_3 " type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_4" expression="row3.articleId_4 " type="id_String" nullable="true"/>
@@ -276,7 +276,7 @@
         <mapperTableEntries name="articleId_7" expression="row3.articleId_7 " type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_8" expression="row3.articleId_8 " type="id_String" nullable="true"/>
         <mapperTableEntries name="articleId_9" expression="row3.articleId_9 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="articleId_10" expression="row3.articleId_10.substring(0,6) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="articleId_10" expression="row3.articleId_10" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="clientId" type="id_String" nullable="true"/>
