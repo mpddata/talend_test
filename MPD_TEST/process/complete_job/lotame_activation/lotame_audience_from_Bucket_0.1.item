@@ -292,7 +292,7 @@
         <mapperTableEntries name="Audience10" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="Audience_ID" expression="row1.Audience1  row1.Audience2  row1.Audience3  row1.Audience4  row1.Audience5  row1.Audience6  row1.Audience7  row1.Audience8  row1.Audience9  row1.Audience10 " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="Audience_ID" expression="row1.Audience1,row1.Audience2,row1.Audience3,row1.Audience4,  row1.Audience5,  row1.Audience6,  row1.Audience7,  row1.Audience8,  row1.Audience9,  row1.Audience10 " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="Audience_Name" type="id_String" nullable="true"/>
         <mapperTableEntries name="Audience_New_Name" type="id_String" nullable="true"/>
       </inputTables>
