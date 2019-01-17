@@ -268,15 +268,15 @@
         <mapperTableEntries name="LotameID" expression="row1.LotameID" type="id_String" nullable="true"/>
         <mapperTableEntries name="CreateDate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;) )) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="Audience1" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience2" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience3" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience4" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience5" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience6" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience7" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience8" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience9" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Audience10" expression="row2.Audience_New_Name " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience2" expression="row1.Audience2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience3" expression="row1.Audience3 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience4" expression="row1.Audience4 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience5" expression="row1.Audience5 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience6" expression="row1.Audience6 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience7" expression="row1.Audience7 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience8" expression="row1.Audience8 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience9" expression="row1.Audience9 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Audience10" expression="row1.Audience10 " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="LotameID" type="id_String" nullable="true"/>
@@ -292,7 +292,7 @@
         <mapperTableEntries name="Audience10" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="Audience_ID" expression="row1.Audience1,row1.Audience2,row1.Audience3,row1.Audience4,  row1.Audience5,  row1.Audience6,  row1.Audience7,  row1.Audience8,  row1.Audience9,  row1.Audience10 " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="Audience_ID" expression="row1.Audience1 " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="Audience_Name" type="id_String" nullable="true"/>
         <mapperTableEntries name="Audience_New_Name" type="id_String" nullable="true"/>
       </inputTables>
