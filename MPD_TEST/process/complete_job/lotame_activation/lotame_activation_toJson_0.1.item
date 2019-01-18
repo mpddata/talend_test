@@ -192,7 +192,7 @@
       <column comment="" key="false" length="-1" name="Audience3" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="gigya_id" expression="row1.gigya_id " type="id_String" nullable="true"/>
@@ -266,17 +266,17 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="7"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/audience1"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/tb1"/>
       <elementValue elementRef="COLUMN" value="Audience1"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="8"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/audience2"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/tb2"/>
       <elementValue elementRef="COLUMN" value="Audience2"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="9"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/audience3"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/tb3"/>
       <elementValue elementRef="COLUMN" value="Audience3"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
