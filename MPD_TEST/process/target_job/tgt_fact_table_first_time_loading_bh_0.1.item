@@ -525,7 +525,9 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="processDate"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateStart"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;processDate&quot;))"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="parameter_inputDateEnd"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;processDate&quot;))"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="connection_mysqlstaging_tci_db_Login"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.connection_mysqlstaging_tci_db_Login"/>
