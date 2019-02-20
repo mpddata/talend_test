@@ -184,17 +184,17 @@
     <elementParameter field="TEXT" name="USER" value="&quot;hafeez&quot;"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" value="PUBLICKEY"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="wiXuUBxiyoc5L4zXsOuoEQ==" show="false"/>
-    <elementParameter field="CHECK" name="PTY" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="STANDARDOUTPUT" value="TO_CONSOLE"/>
+    <elementParameter field="CHECK" name="PTY" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="STANDARDOUTPUT" value="TO_CONSOLE_AND_GLOBAL_VARIABLE"/>
     <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="TO_CONSOLE"/>
     <elementParameter field="FILE" name="PRIVATEKEY" value="&quot;/Users/hafeez/Documents/GCP/google_cloud_ssh&quot;"/>
     <elementParameter field="PASSWORD" name="PASSPHRASE" value="0RMsyjmybrE="/>
-    <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;"/>
     <elementParameter field="TABLE" name="COMMANDS">
-      <elementValue elementRef="COMMAND" value="&quot;ssh -i /Users/hafeez/.ssh/google_cloud_ssh hafeez@10.55.86.2&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;echo cubaan&quot;"/>
     </elementParameter>
-    <elementParameter field="CHECK" name="USE_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="60" show="false"/>
+    <elementParameter field="CHECK" name="USE_TIMEOUT" value="true"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSSH_1"/>
   </node>
