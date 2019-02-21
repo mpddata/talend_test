@@ -182,7 +182,7 @@
     <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/Users/hafeez/Downloads/Talend-Studio-20180116_1512-V6.5.1/workspace&quot;" show="false"/>
     <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;-ssh 10.55.86.2:22 -l tci_admin -pw TcIaDmIn2018 -L 3306:35.187.224.17:3306 -N&quot;"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;-ssh -i /Users/hafeez/.ssh/google_cloud_ssh hafeez@10.55.86.2 -L 3306:35.187.224.17:3306 -N&quot;"/>
     <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
     <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false"/>
     <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
