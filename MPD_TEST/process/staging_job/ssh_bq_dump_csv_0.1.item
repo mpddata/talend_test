@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="resource_file_pemkey" prompt="resource_file_pemkey?" promptNeeded="true" type="id_String" value="&quot;/Users/nurulhayati/Desktop/EDW/MPBigData2017.pem&quot;"/>
+    <contextParameter comment="" name="parameter_source" prompt="parameter_source?" promptNeeded="true" type="id_String" value="9029435"/>
+    <contextParameter comment="" name="parameter_startDate" prompt="parameter_startDate?" promptNeeded="true" type="id_String" value="20181203"/>
+    <contextParameter comment="" name="parameter_noOfDay" prompt="parameter_noOfDay?" promptNeeded="true" type="id_Integer" value="6"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio6.5.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_n5kuoHXKEeicVoGHXlv0ow" name="DQTechnical"/>
+    <routinesParameter id="_n5NiQHXKEeicVoGHXlv0ow" name="DataMasking"/>
+    <routinesParameter id="_n0n9MHXKEeicVoGHXlv0ow" name="DataOperation"/>
+    <routinesParameter id="_n5WFIHXKEeicVoGHXlv0ow" name="DataQualityDependencies"/>
+    <routinesParameter id="_n5RzsHXKEeicVoGHXlv0ow" name="DataQuality"/>
+    <routinesParameter id="_n5gdMHXKEeicVoGHXlv0ow" name="DqStringHandling"/>
+    <routinesParameter id="_n4WmoHXKEeicVoGHXlv0ow" name="Mathematical"/>
+    <routinesParameter id="_n4g-sHXKEeicVoGHXlv0ow" name="Numeric"/>
+    <routinesParameter id="_n4meQHXKEeicVoGHXlv0ow" name="Relational"/>
+    <routinesParameter id="_n5JQ0HXKEeicVoGHXlv0ow" name="SQLike"/>
+    <routinesParameter id="_n4sk4HXKEeicVoGHXlv0ow" name="StringHandling"/>
+    <routinesParameter id="_n4yEcHXKEeicVoGHXlv0ow" name="TalendDataGenerator"/>
+    <routinesParameter id="_n44yIHXKEeicVoGHXlv0ow" name="TalendDate"/>
+    <routinesParameter id="_n5E_YHXKEeicVoGHXlv0ow" name="TalendStringUtil"/>
+    <routinesParameter id="_n4_f0HXKEeicVoGHXlv0ow" name="TalendString"/>
+  </parameters>
+  <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="ROOTDIR" value="true"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/home/centos/google-cloud-sdk/bin&quot;"/>
+    <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;bq --location=US query --destination_table 1396468.ga_sessions_stg --replace --use_legacy_sql=true --allow_large_results 'SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM [mpdbq1:1396468.ga_sessions_20181111] LIMIT 100'&quot;"/>
+    <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+    <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+      <elementValue elementRef="VALUE" value="&quot;cd /home/centos&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;bq --location=US query --destination_table 1396468.ga_sessions_stg --replace --use_legacy_sql=true --allow_large_results 'SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM [mpdbq1:1396468.ga_sessions_20181111]'&quot;"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="TABLE" name="PARAMS">
+      <elementValue elementRef="NAME" value="&quot;PATH&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;/home/centos/google-cloud-sdk/bin&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSystem_1"/>
+  </node>
+  <node componentName="tSSH" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSSH_1" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.55.83.147&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="22"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;centos&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" value="PUBLICKEY"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="wiXuUBxiyoc5L4zXsOuoEQ==" show="false"/>
+    <elementParameter field="CHECK" name="PTY" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="STANDARDOUTPUT" value="TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="TO_CONSOLE"/>
+    <elementParameter field="FILE" name="PRIVATEKEY" value="context.resource_file_pemkey"/>
+    <elementParameter field="PASSWORD" name="PASSPHRASE" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="COMMANDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TABLE" name="COMMANDS">
+      <elementValue elementRef="COMMAND" value="&quot;bq --location=US query --destination_table &quot; + context.parameter_source +&quot;.ga_sessions_stg --replace --use_legacy_sql=true --allow_large_results 'SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM [mpdbq1:&quot; + context.parameter_source +&quot;.ga_sessions_&quot; + ((String)globalMap.get(&quot;processDate&quot;)) + &quot;]'&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;bq --location=US extract --destination_format CSV '&quot; + context.parameter_source +&quot;.ga_sessions_stg' gs://talend_migration_temp/ga_&quot; + context.parameter_source +&quot;_&quot; + ((String)globalMap.get(&quot;processDate&quot;)) + &quot;_*.csv&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;gsutil cp gs://talend_migration_temp/ga_&quot; + context.parameter_source +&quot;_&quot; + ((String)globalMap.get(&quot;processDate&quot;)) + &quot;_*.csv  /home/centos/talend_migrate_temp&quot;"/>
+      <elementValue elementRef="COMMAND" value="&quot;gsutil rm gs://talend_migration_temp/ga_&quot; + context.parameter_source +&quot;_&quot; + ((String)globalMap.get(&quot;processDate&quot;)) + &quot;_*.csv&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSSH_1"/>
+  </node>
+  <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="ROOTDIR" value="true"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/home/centos/google-cloud-sdk/bin&quot;"/>
+    <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;&quot;"/>
+    <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+    <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+      <elementValue elementRef="VALUE" value="&quot;cd /home/centos&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;bq --location=US query --destination_table 1396468.ga_sessions_stg --replace --use_legacy_sql=true --allow_large_results 'SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM [mpdbq1:1396468.ga_sessions_20181111]'&quot;"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="TABLE" name="PARAMS">
+      <elementValue elementRef="NAME" value="&quot;PATH&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;/home/centos/google-cloud-sdk/bin&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;CLASSPATH&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;/home/centos/google-cloud-sdk/bin&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSystem_2"/>
+  </node>
+  <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_3" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="ROOTDIR" value="true"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/home/centos&quot;"/>
+    <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;mkdir trycreate&quot;"/>
+    <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+    <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+      <elementValue elementRef="VALUE" value="&quot;cd /home/centos&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;bq --location=US query --destination_table 1396468.ga_sessions_stg --replace --use_legacy_sql=true --allow_large_results 'SELECT visitorId, visitNumber, visitId, visitStartTime, date, totals.visits, totals.hits, totals.pageviews, totals.timeOnSite, totals.bounces, totals.transactions, totals.transactionRevenue, totals.newVisits, totals.screenviews, totals.uniqueScreenviews, totals.timeOnScreen, totals.totalTransactionRevenue, totals.sessionQualityDim, device.browser, device.browserVersion, device.browserSize, device.operatingSystem, device.operatingSystemVersion, device.isMobile, device.mobileDeviceBranding, device.mobileDeviceModel, device.mobileInputSelector, device.mobileDeviceInfo, device.mobileDeviceMarketingName, device.language, device.deviceCategory, geoNetwork.continent, geoNetwork.subContinent, geoNetwork.country, geoNetwork.region, geoNetwork.metro, geoNetwork.city, geoNetwork.cityId, geoNetwork.networkDomain, geoNetwork.latitude, geoNetwork.longitude, geoNetwork.networkLocation, hits.hitNumber, hits.time, hits.hour, hits.minute, hits.isSecure, hits.isInteraction, hits.isEntrance, hits.isExit, hits.referer, hits.page.pagePath, hits.page.hostname, hits.page.pageTitle, hits.page.searchKeyword, hits.page.searchCategory, hits.page.pagePathLevel1, hits.page.pagePathLevel2, hits.page.pagePathLevel3, hits.page.pagePathLevel4, fullVisitorId, userId, clientId, channelGrouping, socialEngagementType FROM [mpdbq1:1396468.ga_sessions_20181111]'&quot;"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="TABLE" name="PARAMS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSystem_3"/>
+  </node>
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="RADIO" name="FORLOOP" value="true"/>
+    <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
+    <elementParameter field="TEXT" name="FROM" value="0"/>
+    <elementParameter field="TEXT" name="TO" value="context.parameter_noOfDay-1"/>
+    <elementParameter field="TEXT" name="STEP" value="1"/>
+    <elementParameter field="CHECK" name="INCREASE" value="true"/>
+    <elementParameter field="TEXT" name="DECLARATION" value="int i=0" show="false"/>
+    <elementParameter field="TEXT" name="CONDITION" value="i&lt;10" show="false"/>
+    <elementParameter field="TEXT" name="ITERATION" value="i++" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;processDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="Date dtProcessDate = TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, context.parameter_startDate),((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)),&quot;dd&quot;);&#xA;&#xA;SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMdd&quot;);&#xA;&#xA;globalMap.put(&quot;processDate&quot;, df.format(dtProcessDate));&#xA;System.out.println(&quot;Now processing: &quot; + ((String)globalMap.get(&quot;processDate&quot;)));&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tSystem_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tSetGlobalVar_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSSH_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSSH_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>
