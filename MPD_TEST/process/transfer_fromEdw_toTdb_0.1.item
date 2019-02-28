@@ -374,7 +374,7 @@
         <mapperTableEntries name="lotame_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="ga_id" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row3" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="gigya_id" expression="row1.gigya_id " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="custSegment" type="id_String" nullable="true"/>
       </inputTables>
