@@ -261,7 +261,6 @@
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" originalDbColumnName="UID" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ga_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="custSegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_regSource" nullable="true" originalDbColumnName="data_regSource" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" originalDbColumnName="created" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" originalDbColumnName="lastLogin" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -302,7 +301,6 @@
         <mapperTableEntries name="gigya_id" expression="row1.gigya_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="lotame_id" expression="row2.lotame_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="ga_id" expression="row2.ga_id " type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSegment" expression="row3.custSegment " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_regSource" expression="row1.date_regSource " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" expression="row1.date_reg " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" expression="row1.date_lastLogin " type="id_String" nullable="true"/>
@@ -474,9 +472,9 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="nst_out">
         <mapperTableEntries name="gigya_id" expression="bh_out.gigya_id " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lotame_id" expression="(bh_out.lotame_id != null ) ? bh_out.lotame_id :&#xA;(row4.lotame_id != null ) ? row4.lotame_id :&#xA;null " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ga_id" expression="(bh_out.ga_id != null ) ? bh_out.ga_id :&#xA;(row4.ga_id != null ) ? row4.ga_id :&#xA;null; " type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSegment" expression="(bh_out.custSegment != null ) ? bh_out.custSegment :&#xA;(row5.custSegment != null ) ? row5.custSegment :&#xA;null; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotame_id" expression="bh_out.lotame_id " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ga_id" expression="bh_out.ga_id " type="id_String" nullable="true"/>
+        <mapperTableEntries name="custSegment" expression="row5.custSegment " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_regSource" expression="bh_out.date_regSource " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" expression="TalendDate.parseDate(&quot;yyyyMMdd HH:mm:ss&quot;,bh_out.date_reg) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" expression="TalendDate.parseDate(&quot;yyyyMMdd HH:mm:ss&quot;,bh_out.date_lastLogin) " type="id_Date" nullable="true"/>
@@ -514,7 +512,6 @@
         <mapperTableEntries name="gigya_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="lotame_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="ga_id" type="id_String" nullable="true"/>
-        <mapperTableEntries name="custSegment" type="id_String" nullable="true"/>
         <mapperTableEntries name="date_regSource" type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" type="id_String" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" type="id_String" nullable="true"/>
