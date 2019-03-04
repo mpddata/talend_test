@@ -304,9 +304,9 @@
         <mapperTableEntries name="regSource" expression="row1.regSource " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" expression="row1.date_reg " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" expression="row1.date_lastLogin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="birthDay" expression="Integer.parseInt(row1.birthDay) " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="birthMonth" expression="Integer.parseInt(row1.birthMonth) " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="birthYear" expression="Integer.parseInt(row1.birthYear) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="birthDay" expression="(row1.birthDay == null || row1.birthDay == 0) ? 0 : Integer.parseInt(row1.birthDay) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="birthMonth" expression="(row1.birthMonth == null || row1.birthMonth == 0) ? 0 : Integer.parseInt(row1.birthMonth) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="birthYear" expression="(row1.birthYear == null || row1.birthYear == 0) ? 0 : Integer.parseInt(row1.birthYear) " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="loc_city" expression="row1.loc_city " type="id_String" nullable="true"/>
         <mapperTableEntries name="loc_country" expression="row1.loc_country " type="id_String" nullable="true"/>
         <mapperTableEntries name="email" expression="row1.email " type="id_String" nullable="true"/>
