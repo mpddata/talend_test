@@ -125,7 +125,7 @@
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;tci_admin&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="xDY/Cy1A8HrVjemW6VrblA=="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_gigya&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edm_prod&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -261,7 +261,7 @@
       <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" originalDbColumnName="UID" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_regSource" nullable="true" originalDbColumnName="data_regSource" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" originalDbColumnName="created" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" originalDbColumnName="lastLogin" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthDay" nullable="true" originalDbColumnName="profile_birthDay" pattern="" precision="-1" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
@@ -301,7 +301,7 @@
         <mapperTableEntries name="mp_id" expression="&quot;mp&quot;+(java.util.UUID.randomUUID()).toString() " type="id_String" nullable="true"/>
         <mapperTableEntries name="gigya_id" expression="row1.gigya_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="custsegment" expression="&quot;new&quot; " type="id_String" nullable="true"/>
-        <mapperTableEntries name="date_regSource" expression="row1.regSource " type="id_String" nullable="true"/>
+        <mapperTableEntries name="regSource" expression="row1.regSource " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" expression="TalendDate.parseDate(&quot;yyyyMMdd HH:mm:ss&quot;,row1.date_reg) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" expression="TalendDate.parseDate(&quot;yyyyMMdd HH:mm:ss&quot;,row1.date_lastLogin) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="birthDay" expression="Integer.parseInt(row1.birthDay) " type="id_Integer" nullable="true"/>
@@ -417,7 +417,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date_regSource"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="regSource"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -589,7 +589,7 @@
       <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" originalDbColumnName="UID" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_regSource" nullable="true" originalDbColumnName="data_regSource" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" originalDbColumnName="created" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" originalDbColumnName="lastLogin" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthDay" nullable="true" originalDbColumnName="profile_birthDay" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
@@ -626,7 +626,7 @@
       <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" originalDbColumnName="UID" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_regSource" nullable="true" originalDbColumnName="data_regSource" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" originalDbColumnName="created" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" originalDbColumnName="lastLogin" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthDay" nullable="true" originalDbColumnName="profile_birthDay" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
