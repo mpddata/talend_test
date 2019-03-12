@@ -130,7 +130,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `edm_prod`.`gigya_id`,&#xA;  `edm_prod`.`regSource`, &#xA;  `edm_prod`.`date_reg`, &#xA;  `edm_prod`.`date_lastLogin`,&#xA;  `edm_prod`.`birthDay`,&#xA;  `edm_prod`.`birthMonth`,&#xA;  `edm_prod`.`birthYear`,&#xA;  `edm_prod`.`loc_city`,&#xA;  `edm_prod`.`loc_country`,&#xA;  `edm_prod`.`email`,&#xA;  `edm_prod`.`firstName`,&#xA;  `edm_prod`.`gender`,&#xA;  `edm_prod`.`lastName`,&#xA;  `edm_prod`.`locality`,&#xA;  `edm_prod`.`state`,&#xA;  `edm_prod`.`ethnicity`,&#xA;  `edm_prod`.`language`,&#xA;  `edm_prod`.`mobilePhone_1`,&#xA;  `edm_prod`.`mobilePhone_2`,&#xA;  `edm_prod`.`isActive`,&#xA;  `edm_prod`.`subscribeNewsLetter`,&#xA;  `edm_prod`.`optin_bh`,&#xA;  `edm_prod`.`optin_nst`,&#xA;  `edm_prod`.`optin_hm`,&#xA;  `edm_prod`.`optin_flyfm`,&#xA;  `edm_prod`.`optin_hotfm`,&#xA;  `edm_prod`.`optin_cjwowshop`,&#xA;  `edm_prod`.`lastLogin_bh`,&#xA;  `edm_prod`.`lastLogin_nst`,&#xA;  `edm_prod`.`lastLogin_hm`,&#xA;  `edm_prod`.`lastLogin_flyfm`,&#xA;  `edm_prod`.`lastLogin_hotfm`,&#xA;  `edm_prod`.`lastLogin_cjwowshop`&#xA;FROM `edm_prod`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `edm_prod`.`gigya_id`,&#xA;  `edm_prod`.`regSource`, &#xA;  `edm_prod`.`date_reg`, &#xA;  `edm_prod`.`date_lastLogin`,&#xA;  `edm_prod`.`birthDay`,&#xA;  `edm_prod`.`birthMonth`,&#xA;  `edm_prod`.`birthYear`,&#xA;  `edm_prod`.`loc_city`,&#xA;  `edm_prod`.`loc_country`,&#xA;  `edm_prod`.`email`,&#xA;  `edm_prod`.`firstName`,&#xA;  `edm_prod`.`gender`,&#xA;  `edm_prod`.`lastName`,&#xA;  `edm_prod`.`locality`,&#xA;  `edm_prod`.`state`,&#xA;  `edm_prod`.`ethnicity`,&#xA;  `edm_prod`.`language`,&#xA;  `edm_prod`.`mobilePhone_1`,&#xA;  `edm_prod`.`mobilePhone_2`,&#xA;  `edm_prod`.`isActive`,&#xA;  `edm_prod`.`subscribeNewsLetter`,&#xA;  `edm_prod`.`optin_bh`,&#xA;  `edm_prod`.`optin_tonton`,&#xA;  `edm_prod`.`optin_nst`,&#xA;  `edm_prod`.`optin_hm`,&#xA;  `edm_prod`.`optin_ob`,&#xA;  `edm_prod`.`optin_says`,&#xA;  `edm_prod`.`optin_flyfm`,&#xA;  `edm_prod`.`optin_hotfm`,&#xA;  `edm_prod`.`optin_superdeals`,&#xA;  `edm_prod`.`optin_cjwowshop`,&#xA;  `edm_prod`.`optin_8coin`,&#xA;  `edm_prod`.`optin_thelaki`,&#xA;  `edm_prod`.`optin_likely`,&#xA;  `edm_prod`.`optin_dhia`,&#xA;  `edm_prod`.`optin_donna`,&#xA;  `edm_prod`.`optin_wakeke`,&#xA;  `edm_prod`.`optin_lunaria`,&#xA;  `edm_prod`.`optin_chapters`,&#xA;  `edm_prod`.`lastLogin_bh`,&#xA;  `edm_prod`.`lastLogin_tonton`,&#xA;  `edm_prod`.`lastLogin_nst`,&#xA;  `edm_prod`.`lastLogin_hm`,&#xA;  `edm_prod`.`lastLogin_ob`,&#xA;  `edm_prod`.`lastLogin_says`,&#xA;  `edm_prod`.`lastLogin_flyfm`,&#xA;  `edm_prod`.`lastLogin_hotfm`,&#xA;  `edm_prod`.`lastLogin_superdeals`,&#xA;  `edm_prod`.`lastLogin_cjwowshop`,&#xA;  `edm_prod`.`lastLogin_8coin`,&#xA;  `edm_prod`.`lastLogin_thelaki`,&#xA;  `edm_prod`.`lastLogin_likely`,&#xA;  `edm_prod`.`lastLogin_dhia`,&#xA;  `edm_prod`.`lastLogin_donna`,&#xA;  `edm_prod`.`lastLogin_wakeke`,&#xA;  `edm_prod`.`lastLogin_lunaria`,&#xA;  `edm_prod`.`lastLogin_chapters`&#xA;FROM `edm_prod`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -185,27 +185,75 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="optin_bh"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_tonton"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="optin_nst"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="optin_hm"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_ob"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_says"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="optin_flyfm"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="optin_hotfm"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_superdeals"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="optin_cjwowshop"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_8coin"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_thelaki"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_likely"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_dhia"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_donna"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_wakeke"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_lunaria"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="optin_chapters"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_bh"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_tonton"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_nst"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_hm"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_ob"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_says"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_flyfm"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_hotfm"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_superdeals"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_cjwowshop"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_8coin"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_thelaki"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_likely"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_dhia"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_donna"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_wakeke"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_lunaria"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin_chapters"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -232,17 +280,41 @@
       <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="subscribeNewsLetter" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_bh" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_tonton" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_nst" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_hm" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_ob" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_says" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_flyfm" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_hotfm" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_superdeals" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_8coin" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_thelaki" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_likely" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_dhia" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_donna" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_wakeke" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_lunaria" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="optin_chapters" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin_bh" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_tonton" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin_nst" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin_hm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_ob" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_says" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin_flyfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin_hotfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_superdeals" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_8coin" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_thelaki" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_likely" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_dhia" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_donna" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_wakeke" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_lunaria" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_chapters" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
@@ -295,7 +367,7 @@
       <column comment="" key="false" length="-1" name="lastLogin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="bh_out">
         <mapperTableEntries name="mp_id" expression="&quot;mp&quot;+(java.util.UUID.randomUUID()).toString() " type="id_String" nullable="true"/>
@@ -357,17 +429,41 @@
         <mapperTableEntries name="isActive" type="id_String" nullable="true"/>
         <mapperTableEntries name="subscribeNewsLetter" type="id_String" nullable="true"/>
         <mapperTableEntries name="optin_bh" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="optin_tonton" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_nst" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_hm" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="optin_ob" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_says" type="id_String" nullable="true"/>
         <mapperTableEntries name="optin_flyfm" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_hotfm" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="optin_superdeals" type="id_String" nullable="true"/>
         <mapperTableEntries name="optin_cjwowshop" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="optin_8coin" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_thelaki" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_likely" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_dhia" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_donna" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_wakeke" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_lunaria" type="id_String" nullable="true"/>
+        <mapperTableEntries name="optin_chapters" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin_bh" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_tonton" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin_nst" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin_hm" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_ob" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_says" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin_flyfm" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin_hotfm" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_superdeals" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin_cjwowshop" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_8coin" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_thelaki" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_likely" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_dhia" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_donna" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_wakeke" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_lunaria" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastLogin_chapters" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -663,6 +759,80 @@
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="optin_lunaria"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_tonton"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_donna"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_lunaria"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_tonton"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_thelaki"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_says"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_dhia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_chapters"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_likely"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_thelaki"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_chapters"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_ob"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_superdeals"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_8coin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_superdeals"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_wakeke"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_likely"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_ob"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_dhia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="optin_wakeke"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_8coin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_says"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lastLogin_donna"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
