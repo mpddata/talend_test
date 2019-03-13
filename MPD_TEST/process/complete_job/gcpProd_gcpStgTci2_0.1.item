@@ -147,8 +147,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="isRegistered"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="isVerified"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLogin"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastLoginTimestamp"/>
@@ -423,7 +421,6 @@
       <column comment="" key="false" length="-1" name="created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isVerified" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLoginTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -576,7 +573,6 @@
       <column comment="" key="false" length="-1" name="created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isVerified" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLoginTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -719,7 +715,6 @@
         <mapperTableEntries name="created" expression="row1.created " type="id_String" nullable="true"/>
         <mapperTableEntries name="isActive" expression="row1.isActive " type="id_String" nullable="true"/>
         <mapperTableEntries name="isRegistered" expression="row1.isRegistered " type="id_String" nullable="true"/>
-        <mapperTableEntries name="isVerified" expression="row1.isVerified " type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin" expression="row1.lastLogin " type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLoginTimestamp" expression="row1.lastLoginTimestamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="lastUpdated" expression="row1.lastUpdated " type="id_String" nullable="true"/>
@@ -859,7 +854,6 @@
         <mapperTableEntries name="created" type="id_String" nullable="true"/>
         <mapperTableEntries name="isActive" type="id_String" nullable="true"/>
         <mapperTableEntries name="isRegistered" type="id_String" nullable="true"/>
-        <mapperTableEntries name="isVerified" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLogin" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastLoginTimestamp" type="id_String" nullable="true"/>
         <mapperTableEntries name="lastUpdated" type="id_String" nullable="true"/>
@@ -1039,11 +1033,6 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="isRegistered"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="isVerified"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1730,7 +1719,6 @@
       <column comment="" key="false" length="-1" name="created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isVerified" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLoginTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1870,7 +1858,6 @@
       <column comment="" key="false" length="-1" name="created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isVerified" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLogin" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastLoginTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
