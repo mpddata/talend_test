@@ -336,6 +336,7 @@
       <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="age" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthMonth" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthYear" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
@@ -394,6 +395,8 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="var1" expression="(&quot;100000000000&quot;+Numeric.sequence(&quot;s1&quot;,1,1)).substring(2) " type="id_String"/>
+        <mapperTableEntries name="DateString" expression="row1.birthYear +&quot;-&quot;+ row1.birthMonth +&quot;-&quot;+ row1.birthDay " type="id_String"/>
+        <mapperTableEntries name="Fulldate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,Var.DateString) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="bh_out">
         <mapperTableEntries name="mp_id" expression=" &quot;mp&quot;+Var.var1 " type="id_String" nullable="true"/>
@@ -402,6 +405,7 @@
         <mapperTableEntries name="regSource" expression="row1.regSource.replace(&quot;www.&quot;, &quot;&quot;).replace(&quot;.com.my&quot;, &quot;&quot;).replace(&quot;android.&quot;, &quot;&quot;).replace(&quot;ios.&quot;, &quot;&quot;).replace(&quot;_web_desktop&quot;, &quot;&quot;).replace(&quot;_web_mobile&quot;, &quot;&quot;).replace(oldChar, newChar) " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" expression="row1.date_reg " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" expression="row1.date_lastLogin " type="id_String" nullable="true"/>
+        <mapperTableEntries name="age" expression="TalendDate.diffDate(Var.Fulldate,TalendDate.getCurrentDate(),&quot;yyyy&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="birthDay" expression="row1.birthDay " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="birthMonth" expression="row1.birthMonth " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="birthYear" expression="row1.birthYear " type="id_Integer" nullable="true"/>
@@ -574,6 +578,11 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date_lastLogin"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="age"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -852,29 +861,30 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlOutput_1">
-      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthMonth" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthYear" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loc_city" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loc_country" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="email" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="state" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ethnicity" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="language" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="mobilePhone_1" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="mobilePhone_2" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="subscribeNewsLetter" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="age" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthMonth" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthYear" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loc_city" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loc_country" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="email" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="state" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ethnicity" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="language" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mobilePhone_1" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mobilePhone_2" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="subscribeNewsLetter" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_bh" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_tonton" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_nst" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
@@ -893,49 +903,50 @@
       <column comment="" key="false" length="-1" name="optin_wakeke" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_lunaria" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_chapters" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_bh" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_tonton" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_nst" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_hm" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_ob" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_says" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_flyfm" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_hotfm" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_superdeals" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_8coin" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_thelaki" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_likely" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_dhia" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_donna" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_wakeke" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_lunaria" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_chapters" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_bh" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_tonton" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_nst" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_hm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_ob" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_says" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_flyfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_hotfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_superdeals" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_8coin" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_thelaki" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_likely" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_dhia" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_donna" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_wakeke" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_lunaria" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_chapters" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthMonth" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthYear" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loc_city" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loc_country" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="email" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="state" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ethnicity" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="language" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="mobilePhone_1" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="mobilePhone_2" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="subscribeNewsLetter" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custsegment" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_lastLogin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="age" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthDay" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthMonth" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthYear" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loc_city" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loc_country" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="email" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="state" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ethnicity" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="language" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mobilePhone_1" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mobilePhone_2" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="subscribeNewsLetter" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_bh" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_tonton" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_nst" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
@@ -954,24 +965,24 @@
       <column comment="" key="false" length="-1" name="optin_wakeke" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_lunaria" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="optin_chapters" nullable="true" pattern="" precision="-1" sourceType="BIT" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_bh" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_tonton" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_nst" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_hm" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_ob" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_says" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_flyfm" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_hotfm" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_superdeals" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_8coin" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_thelaki" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_likely" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_dhia" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_donna" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_wakeke" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_lunaria" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin_chapters" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_bh" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_tonton" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_nst" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_hm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_ob" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_says" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_flyfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_hotfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_superdeals" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_cjwowshop" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_8coin" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_thelaki" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_likely" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_dhia" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_donna" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_wakeke" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_lunaria" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastLogin_chapters" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -1126,6 +1137,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="lastLogin_donna"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="age"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
