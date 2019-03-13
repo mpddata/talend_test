@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms4096M&quot;,&quot;-Xmx8192M&quot;,&quot;-XX:-UseGCOverheadLimit&quot;]}" show="false"/>
@@ -557,440 +557,6 @@
       <column comment="" key="false" length="-1" name="profile_zip" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_jaLeEEVCEem0teiTrKgoJA-tMap_1-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out1">
-      <column comment="" key="false" length="-1" name="created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLogin" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastLoginTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="lastUpdatedTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loginProvider" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="oldestDataUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="oldestDataUpdatedTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="socialProviders" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="UID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_bh_site" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_checkbox" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_concurrentDevicesIds" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_createdTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_dob" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_education" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_education_level" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_elapsed_days_aiskacang" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_elapsed_days_bhplus" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_elapsed_days_cjwow" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_elapsed_days_tt" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_emarsyscreation" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_ethnicity" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_icNumber" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_identity_card_number" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_income" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_income_bracket" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_isSubscriberNewsLetter" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_is_firstime_login" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_language" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_lastLogin" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_aiskacang" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_bhplus" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_cjwow" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_flyfm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_hm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_hotfm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_nst" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_onefm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_tonton" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_koolfm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_last_login_superdeals" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_lastloginTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_lastUpdated" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_lastUpdatedTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_marital_status" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_mobile_number" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_mobile_phone" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_mpb_retargeting_ad" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_newsletter" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_number_of_children" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_occupation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_oldestDataUpdated" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_oldestDataUpdatedTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_aiskacang" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_bhplus" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_cjwow" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_flyfm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_hm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_hotfm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_nst" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_onefm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_tonton" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_optin_koolfm" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_paymentAmount" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_paymentCurrency" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_paymentError" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_paymentSubscriptionID" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_payment_method" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_phone" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_preferred_contact_method" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_preferred_language" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_age" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_birthDay" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_birthMonth" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_birthYear" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_email" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_firstName" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_gender" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_lastName" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_profile_username" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_race" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_receive_notifications" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_regSource" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_registered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_registeredTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_socialProviders" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_subscribe" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_tt_login_timestampMY" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_tt_site" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_twitter_broadcast" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_username" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_uuid" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_verified" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_verifiedTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_vindiciacreation" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_wow_login_timestampMY" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_wow_site" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="emails" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_age" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_bio" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_birthDay" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_birthMonth" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_birthYear" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_certifications" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_city" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_country" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_educationLevel" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_email" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_firstName" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_gender" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_hometown" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_honors" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_industry" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_interestedIn" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_languages" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_lastName" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_locale" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_name" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_nickname" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_religion" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_skills_level" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_skills_skill" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_skills_years" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_specialities" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_state" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_thumbnailURL" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_timezone" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_username" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_verified" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="profile_zip" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="created" expression="row1.created " type="id_String" nullable="true"/>
-        <mapperTableEntries name="isActive" expression="row1.isActive " type="id_String" nullable="true"/>
-        <mapperTableEntries name="isRegistered" expression="row1.isRegistered " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastLogin" expression="row1.lastLogin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastLoginTimestamp" expression="row1.lastLoginTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastUpdated" expression="row1.lastUpdated " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastUpdatedTimestamp" expression="row1.lastUpdatedTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="loginProvider" expression="row1.loginProvider " type="id_String" nullable="true"/>
-        <mapperTableEntries name="oldestDataUpdated" expression="row1.oldestDataUpdated " type="id_String" nullable="true"/>
-        <mapperTableEntries name="oldestDataUpdatedTimestamp" expression="row1.oldestDataUpdatedTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="socialProviders" expression="row1.socialProviders " type="id_String" nullable="true"/>
-        <mapperTableEntries name="UID" expression="row1.UID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="filename" expression="row1.filename " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_bh_site" expression="row1.data_bh_site " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_checkbox" expression="row1.data_checkbox " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_concurrentDevicesIds" expression="row1.data_concurrentDevicesIds " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_created" expression="row1.data_created " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_createdTimestamp" expression="row1.data_createdTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_dob" expression="row1.data_dob " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_education" expression="row1.data_education " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_education_level" expression="row1.data_education_level " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_aiskacang" expression="row1.data_elapsed_days_aiskacang " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_bhplus" expression="row1.data_elapsed_days_bhplus " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_cjwow" expression="row1.data_elapsed_days_cjwow " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_tt" expression="row1.data_elapsed_days_tt " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_emarsyscreation" expression="row1.data_emarsyscreation " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_ethnicity" expression="row1.data_ethnicity " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_icNumber" expression="row1.data_icNumber " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_identity_card_number" expression="row1.data_identity_card_number " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_income" expression="row1.data_income " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_income_bracket" expression="row1.data_income_bracket " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_isActive" expression="row1.data_isActive " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_isRegistered" expression="row1.data_isRegistered " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_isSubscriberNewsLetter" expression="row1.data_isSubscriberNewsLetter " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_is_firstime_login" expression="row1.data_is_firstime_login " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_language" expression="row1.data_language " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastLogin" expression="row1.data_lastLogin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_aiskacang" expression="row1.data_last_login_aiskacang " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_bhplus" expression="row1.data_last_login_bhplus " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_cjwow" expression="row1.data_last_login_cjwow " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_flyfm" expression="row1.data_last_login_flyfm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_hm" expression="row1.data_last_login_hm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_hotfm" expression="row1.data_last_login_hotfm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_nst" expression="row1.data_last_login_nst " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_onefm" expression="row1.data_last_login_onefm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_tonton" expression="row1.data_last_login_tonton " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_koolfm" expression="row1.data_last_login_koolfm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_superdeals" expression="row1.data_last_login_superdeals " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastloginTimestamp" expression="row1.data_lastloginTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastUpdated" expression="row1.data_lastUpdated " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastUpdatedTimestamp" expression="row1.data_lastUpdatedTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_marital_status" expression="row1.data_marital_status " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_mobile_number" expression="row1.data_mobile_number " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_mobile_phone" expression="row1.data_mobile_phone " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_mpb_retargeting_ad" expression="row1.data_mpb_retargeting_ad " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_newsletter" expression="row1.data_newsletter " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_number_of_children" expression="row1.data_number_of_children " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_occupation" expression="row1.data_occupation " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_oldestDataUpdated" expression="row1.data_oldestDataUpdated " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_oldestDataUpdatedTimestamp" expression="row1.data_oldestDataUpdatedTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_aiskacang" expression="row1.data_optin_aiskacang " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_bhplus" expression="row1.data_optin_bhplus " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_cjwow" expression="row1.data_optin_cjwow " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_flyfm" expression="row1.data_optin_flyfm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_hm" expression="row1.data_optin_hm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_hotfm" expression="row1.data_optin_hotfm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_nst" expression="row1.data_optin_nst " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_onefm" expression="row1.data_optin_onefm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_tonton" expression="row1.data_optin_tonton " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_koolfm" expression="row1.data_optin_koolfm " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentAmount" expression="row1.data_paymentAmount " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentCurrency" expression="row1.data_paymentCurrency " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentError" expression="row1.data_paymentError " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentSubscriptionID" expression="row1.data_paymentSubscriptionID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_payment_method" expression="row1.data_payment_method " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_phone" expression="row1.data_phone " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_preferred_contact_method" expression="row1.data_preferred_contact_method " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_preferred_language" expression="row1.data_preferred_language " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_age" expression="row1.data_profile_age " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_birthDay" expression="row1.data_profile_birthDay " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_birthMonth" expression="row1.data_profile_birthMonth " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_birthYear" expression="row1.data_profile_birthYear " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_email" expression="row1.data_profile_email " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_firstName" expression="row1.data_profile_firstName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_gender" expression="row1.data_profile_gender " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_lastName" expression="row1.data_profile_lastName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_username" expression="row1.data_profile_username " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_race" expression="row1.data_race " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_receive_notifications" expression="row1.data_receive_notifications " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_regSource" expression="row1.data_regSource " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_registered" expression="row1.data_registered " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_registeredTimestamp" expression="row1.data_registeredTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_socialProviders" expression="row1.data_socialProviders " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_subscribe" expression="row1.data_subscribe " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_tt_login_timestampMY" expression="row1.data_tt_login_timestampMY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_tt_site" expression="row1.data_tt_site " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_twitter_broadcast" expression="row1.data_twitter_broadcast " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_username" expression="row1.data_username " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_uuid" expression="row1.data_uuid " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_verified" expression="row1.data_verified " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_verifiedTimestamp" expression="row1.data_verifiedTimestamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_vindiciacreation" expression="row1.data_vindiciacreation " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_wow_login_timestampMY" expression="row1.data_wow_login_timestampMY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_wow_site" expression="row1.data_wow_site " type="id_String" nullable="true"/>
-        <mapperTableEntries name="emails" expression="row1.emails " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_age" expression="row1.profile_age " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_bio" expression="row1.profile_bio " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_birthDay" expression="row1.profile_birthDay " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_birthMonth" expression="row1.profile_birthMonth " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_birthYear" expression="row1.profile_birthYear " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_certifications" expression="row1.profile_certifications " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_city" expression="row1.profile_city " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_country" expression="row1.profile_country " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_educationLevel" expression="row1.profile_educationLevel " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_email" expression="row1.profile_email " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_firstName" expression="row1.profile_firstName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_gender" expression="row1.profile_gender " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_hometown" expression="row1.profile_hometown " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_honors" expression="row1.profile_honors " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_industry" expression="row1.profile_industry " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_interestedIn" expression="row1.profile_interestedIn " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_languages" expression="row1.profile_languages " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_lastName" expression="row1.profile_lastName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_locale" expression="row1.profile_locale " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_name" expression="row1.profile_name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_nickname" expression="row1.profile_nickname " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_religion" expression="row1.profile_religion " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_skills_level" expression="row1.profile_skills_level " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_skills_skill" expression="row1.profile_skills_skill " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_skills_years" expression="row1.profile_skills_years " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_specialities" expression="row1.profile_specialities " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_state" expression="row1.profile_state " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_thumbnailURL" expression="row1.profile_thumbnailURL " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_timezone" expression="row1.profile_timezone " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_username" expression="row1.profile_username " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_verified" expression="row1.profile_verified " type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_zip" expression="row1.profile_zip " type="id_String" nullable="true"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="created" type="id_String" nullable="true"/>
-        <mapperTableEntries name="isActive" type="id_String" nullable="true"/>
-        <mapperTableEntries name="isRegistered" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastLogin" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastLoginTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastUpdated" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lastUpdatedTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="loginProvider" type="id_String" nullable="true"/>
-        <mapperTableEntries name="oldestDataUpdated" type="id_String" nullable="true"/>
-        <mapperTableEntries name="oldestDataUpdatedTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="socialProviders" type="id_String" nullable="true"/>
-        <mapperTableEntries name="UID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="filename" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_bh_site" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_checkbox" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_concurrentDevicesIds" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_created" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_createdTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_dob" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_education" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_education_level" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_aiskacang" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_bhplus" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_cjwow" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_elapsed_days_tt" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_emarsyscreation" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_ethnicity" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_icNumber" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_identity_card_number" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_income" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_income_bracket" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_isActive" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_isRegistered" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_isSubscriberNewsLetter" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_is_firstime_login" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_language" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastLogin" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_aiskacang" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_bhplus" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_cjwow" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_flyfm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_hm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_hotfm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_nst" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_onefm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_tonton" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_koolfm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_last_login_superdeals" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastloginTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastUpdated" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_lastUpdatedTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_marital_status" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_mobile_number" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_mobile_phone" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_mpb_retargeting_ad" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_newsletter" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_number_of_children" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_occupation" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_oldestDataUpdated" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_oldestDataUpdatedTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_aiskacang" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_bhplus" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_cjwow" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_flyfm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_hm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_hotfm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_nst" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_onefm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_tonton" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_optin_koolfm" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentAmount" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentCurrency" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentError" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_paymentSubscriptionID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_payment_method" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_phone" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_preferred_contact_method" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_preferred_language" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_age" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_birthDay" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_birthMonth" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_birthYear" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_email" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_firstName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_gender" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_lastName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_profile_username" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_race" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_receive_notifications" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_regSource" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_registered" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_registeredTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_socialProviders" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_subscribe" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_tt_login_timestampMY" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_tt_site" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_twitter_broadcast" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_username" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_uuid" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_verified" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_verifiedTimestamp" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_vindiciacreation" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_wow_login_timestampMY" type="id_String" nullable="true"/>
-        <mapperTableEntries name="data_wow_site" type="id_String" nullable="true"/>
-        <mapperTableEntries name="emails" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_age" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_bio" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_birthDay" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_birthMonth" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_birthYear" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_certifications" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_city" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_country" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_educationLevel" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_email" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_firstName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_gender" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_hometown" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_honors" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_industry" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_interestedIn" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_languages" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_lastName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_locale" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_name" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_nickname" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_religion" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_skills_level" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_skills_skill" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_skills_years" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_specialities" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_state" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_thumbnailURL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_timezone" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_username" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_verified" type="id_String" nullable="true"/>
-        <mapperTableEntries name="profile_zip" type="id_String" nullable="true"/>
-      </inputTables>
-    </nodeData>
-  </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
@@ -1004,16 +570,16 @@
     <elementParameter field="PASSWORD" name="PASS" value="xDY/Cy1A8HrVjemW6VrblA=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_gigya_new&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
-    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
-    <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)"/>
-    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="100"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="100" show="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true" show="false"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
@@ -1711,9 +1277,9 @@
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false" show="false"/>
     <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlOutput_1">
       <column comment="" key="false" length="-1" name="created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1996,13 +1562,9 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMysqlOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMysqlOutput_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
