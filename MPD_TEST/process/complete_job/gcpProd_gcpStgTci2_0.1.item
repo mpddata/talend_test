@@ -2084,11 +2084,11 @@
   <node componentName="tSshTunnel" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128" sizeX="32" sizeY="30">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSshTunnel_1" show="false"/>
     <elementParameter field="TABLE" name="TUNNELS">
-      <elementValue elementRef="HOST" value="&quot;10.55.86.2&quot;"/>
+      <elementValue elementRef="HOST" value="&quot;10.55.85.211&quot;"/>
       <elementValue elementRef="PORT" value="&quot;22&quot;"/>
-      <elementValue elementRef="USERNAME" value="&quot;hafeez&quot;"/>
+      <elementValue elementRef="USERNAME" value="&quot;ec2-user&quot;"/>
       <elementValue elementRef="PASSWORD" value="&quot;&quot;"/>
-      <elementValue elementRef="KEYFILE" value="&quot;/Users/mohdhafeez/Downloads/google_cloud_ssh&quot;"/>
+      <elementValue elementRef="KEYFILE" value="&quot;/Users/mohdhafeez/Downloads/MPBigData2017.pem&quot;"/>
       <elementValue elementRef="L_TUNNEL_STRING" value="&quot;3306:127.0.0.1:3306&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
