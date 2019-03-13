@@ -173,8 +173,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_checkbox"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="data_childrenCount"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_concurrentDevicesIds"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_created"/>
@@ -454,7 +452,6 @@
       <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_bh_site" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_checkbox" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_childrenCount" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_concurrentDevicesIds" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_createdTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -694,11 +691,6 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_checkbox"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="data_childrenCount"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1378,7 +1370,6 @@
       <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_bh_site" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_checkbox" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_childrenCount" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_concurrentDevicesIds" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_createdTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1527,7 +1518,6 @@
       <column comment="" key="false" length="-1" name="filename" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_bh_site" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_checkbox" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_childrenCount" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_concurrentDevicesIds" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_created" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_createdTimestamp" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
