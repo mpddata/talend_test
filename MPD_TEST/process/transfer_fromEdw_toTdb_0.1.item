@@ -396,7 +396,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="var1" expression="(&quot;100000000000&quot;+Numeric.sequence(&quot;s1&quot;,1,1)).substring(2) " type="id_String"/>
-        <mapperTableEntries name="DateString" expression="(row1.birthDay == null || row1.birthDay ==0) ? 0 :&#xA;row1.birthYear +&quot;-&quot;+ row1.birthMonth +&quot;-&quot;+ row1.birthDay " type="id_String"/>
+        <mapperTableEntries name="DateString" expression="(row1.birthDay == null || row1.birthDay ==0) ? &quot;0000-00-00&quot; :&#xA;row1.birthYear +&quot;-&quot;+ row1.birthMonth +&quot;-&quot;+ row1.birthDay " type="id_String"/>
         <mapperTableEntries name="Fulldate" expression="(row1.birthDay == null || row1.birthDay ==0) ? null :&#xA;TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,Var.DateString) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="bh_out">
