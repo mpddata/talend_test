@@ -207,8 +207,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_isActive"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="data_isLockedOut"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_isRegistered"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_isSubscriberNewsLetter"/>
@@ -467,7 +465,6 @@
       <column comment="" key="false" length="-1" name="data_income" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_income_bracket" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_isLockedOut" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isSubscriberNewsLetter" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_is_firstime_login" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -773,11 +770,6 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_isActive"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="data_isLockedOut"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1379,7 +1371,6 @@
       <column comment="" key="false" length="-1" name="data_income" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_income_bracket" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_isLockedOut" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isSubscriberNewsLetter" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_is_firstime_login" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1526,7 +1517,6 @@
       <column comment="" key="false" length="-1" name="data_income" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_income_bracket" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isActive" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_isLockedOut" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isRegistered" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_isSubscriberNewsLetter" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_is_firstime_login" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
