@@ -425,7 +425,7 @@
         <mapperTableEntries name="mobilePhone_2" expression="row1.mobilePhone_2 " type="id_String" nullable="true"/>
         <mapperTableEntries name="isActive" expression="row1.isActive " type="id_String" nullable="true"/>
         <mapperTableEntries name="subscribeNewsLetter" expression="row1.subscribeNewsLetter " type="id_String" nullable="true"/>
-        <mapperTableEntries name="optin_bh" expression="Boolean.valueOf(&quot;true&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="optin_bh" expression="1" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_tonton" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_nst" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_hm" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
