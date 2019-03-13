@@ -397,7 +397,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="var1" expression="(&quot;100000000000&quot;+Numeric.sequence(&quot;s1&quot;,1,1)).substring(2) " type="id_String"/>
         <mapperTableEntries name="DateString" expression="(row1.birthDay == null || row1.birthDay ==0) ? 0 :&#xA;row1.birthYear +&quot;-&quot;+ row1.birthMonth +&quot;-&quot;+ row1.birthDay " type="id_String"/>
-        <mapperTableEntries name="Fulldate" expression="(row1.birthDay == null || row1.birthDay ==0) ? 0 :&#xA;TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,Var.DateString) " type="id_Date"/>
+        <mapperTableEntries name="Fulldate" expression="(row1.birthDay == null || row1.birthDay ==0) ? null :&#xA;TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,Var.DateString) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="bh_out">
         <mapperTableEntries name="mp_id" expression=" &quot;mp&quot;+Var.var1 " type="id_String" nullable="true"/>
