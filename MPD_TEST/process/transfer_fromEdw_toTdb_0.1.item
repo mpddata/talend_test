@@ -394,11 +394,9 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="var1" expression="(&quot;100000000000&quot;+Numeric.sequence(&quot;s1&quot;,1,1)).substring(2) " type="id_String"/>
-      </varTables>
+      <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="bh_out">
-        <mapperTableEntries name="mp_id" expression=" &quot;mp&quot;+Var.var1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mp_id" expression="&quot;mp&quot;+String.format(&quot;%012d&quot;, Numeric.sequence(&quot;s1&quot;,1,1)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="gigya_id" expression="row1.gigya_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="custsegment" expression="&quot;new&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="regSource" expression="row1.regSource.replace(&quot;www.&quot;, &quot;&quot;).replace(&quot;.com.my&quot;, &quot;&quot;).replace(&quot;android.&quot;, &quot;&quot;).replace(&quot;ios.&quot;, &quot;&quot;).replace(&quot;_web_desktop&quot;, &quot;&quot;).replace(&quot;_web_mobile&quot;, &quot;&quot;).replace(&quot;premiere.&quot;, &quot;&quot;).replace(&quot;_android&quot;, &quot;&quot;).replace(&quot;android&quot;, &quot;tonton&quot;).replace(&quot;ios&quot;, &quot;tonton&quot;).replace(&quot;partner_digi_web_mobile&quot;, &quot;tonton&quot;).replace(&quot;web&quot;, &quot;tonton&quot;).replace(&quot;partner_digi_web_desktop&quot;, &quot;tonton&quot;).replace(&quot;mobile web&quot;, &quot;tonton&quot;).replace(&quot;jalanjalancarimakan&quot;, &quot;jjcm&quot;).replace(&quot;partner_digi_android&quot;, &quot;tonton&quot;) " type="id_String" nullable="true"/>
