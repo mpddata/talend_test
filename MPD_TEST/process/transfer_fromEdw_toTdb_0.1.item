@@ -397,7 +397,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="var1" expression="(&quot;100000000000&quot;+Numeric.sequence(&quot;s1&quot;,1,1)).substring(2) " type="id_String"/>
         <mapperTableEntries name="DateString" expression="row1.birthYear +&quot;-&quot;+ row1.birthMonth +&quot;-&quot;+ row1.birthDay " type="id_String"/>
-        <mapperTableEntries name="Fulldate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,Var.DateString) " type="id_Date"/>
+        <mapperTableEntries name="Fulldate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,Var.DateString) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="bh_out">
         <mapperTableEntries name="mp_id" expression=" &quot;mp&quot;+Var.var1 " type="id_String" nullable="true"/>
@@ -425,7 +425,7 @@
         <mapperTableEntries name="mobilePhone_2" expression="row1.mobilePhone_2 " type="id_String" nullable="true"/>
         <mapperTableEntries name="isActive" expression="row1.isActive " type="id_String" nullable="true"/>
         <mapperTableEntries name="subscribeNewsLetter" expression="row1.subscribeNewsLetter " type="id_String" nullable="true"/>
-        <mapperTableEntries name="optin_bh" expression="1" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="optin_bh" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_tonton" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_nst" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="optin_hm" expression="Boolean.valueOf(&quot;true&quot;)" type="id_Boolean" nullable="true"/>
