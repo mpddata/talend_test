@@ -402,8 +402,8 @@
         <mapperTableEntries name="regSource" expression="(row1.regSource == null) ? null : row1.regSource.replace(&quot;www.&quot;, &quot;&quot;).replace(&quot;.com.my&quot;, &quot;&quot;).replace(&quot;android.&quot;, &quot;&quot;).replace(&quot;ios.&quot;, &quot;&quot;).replace(&quot;_web_desktop&quot;, &quot;&quot;).replace(&quot;_web_mobile&quot;, &quot;&quot;).replace(&quot;premiere.&quot;, &quot;&quot;).replace(&quot;_android&quot;, &quot;&quot;).replace(&quot;android&quot;, &quot;tonton&quot;).replace(&quot;ios&quot;, &quot;tonton&quot;).replace(&quot;partner_digi_web_mobile&quot;, &quot;tonton&quot;).replace(&quot;web&quot;, &quot;tonton&quot;).replace(&quot;partner_digi_web_desktop&quot;, &quot;tonton&quot;).replace(&quot;mobile web&quot;, &quot;tonton&quot;).replace(&quot;jalanjalancarimakan&quot;, &quot;jjcm&quot;).replace(&quot;partner_digi_android&quot;, &quot;tonton&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_reg" expression="row1.date_reg " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_lastLogin" expression="row1.date_lastLogin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="age" expression="Integer.parseInt(TalendDate.getDate(&quot;CCYY&quot;).toString())-row1.birthYear " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="ageGroup" expression="Integer.parseInt(TalendDate.getDate(&quot;CCYY&quot;).toString())-row1.birthYear " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="age" expression="2019-row1.birthYear " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ageGroup" expression="2019-row1.birthYear " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="birthDay" expression="row1.birthDay " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="birthMonth" expression="row1.birthMonth " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="birthYear" expression="row1.birthYear " type="id_Integer" nullable="true"/>
