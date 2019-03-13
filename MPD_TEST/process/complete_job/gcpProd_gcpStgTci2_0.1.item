@@ -2081,18 +2081,6 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSshTunnel" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128" sizeX="32" sizeY="30">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSshTunnel_1" show="false"/>
-    <elementParameter field="TABLE" name="TUNNELS">
-      <elementValue elementRef="HOST" value="&quot;10.55.85.211&quot;"/>
-      <elementValue elementRef="PORT" value="&quot;22&quot;"/>
-      <elementValue elementRef="USERNAME" value="&quot;ec2-user&quot;"/>
-      <elementValue elementRef="PASSWORD" value="&quot;&quot;"/>
-      <elementValue elementRef="KEYFILE" value="&quot;/Users/mohdhafeez/Downloads/MPBigData2017.pem&quot;"/>
-      <elementValue elementRef="L_TUNNEL_STRING" value="&quot;3306:127.0.0.1:3306&quot;"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
   <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
@@ -2706,16 +2694,8 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSshTunnel_1" offsetLabelX="0" offsetLabelY="0" source="tSshTunnel_1" target="tMysqlInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
-  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSshTunnel_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
