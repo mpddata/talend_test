@@ -130,7 +130,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `edm_prod`.`gigya_id`, &#xA;  `edm_prod`.`regSource`, &#xA;  `edm_prod`.`date_reg`, &#xA;  `edm_prod`.`date_lastLogin`, &#xA;  `edm_prod`.`age`, &#xA;  `edm_prod`.`ageGroup`, &#xA;  `edm_prod`.`birthDay`, &#xA;  `edm_prod`.`birthMonth`, &#xA;  `edm_prod`.`birthYear`, &#xA;  `edm_prod`.`loc_city`, &#xA;  `edm_prod`.`loc_country`, &#xA;  `edm_prod`.`email`, &#xA;  `edm_prod`.`firstName`, &#xA;  `edm_prod`.`gender`, &#xA;  `edm_prod`.`lastName`, &#xA;  `edm_prod`.`locality`, &#xA;  `edm_prod`.`state`, &#xA;  `edm_prod`.`ethnicity`, &#xA;  `edm_prod`.`language`, &#xA;  `edm_prod`.`mobilePhone_1`, &#xA;  `edm_prod`.`mobilePhone_2`, &#xA;  `edm_prod`.`isActive`, &#xA;  `edm_prod`.`subscribeNewsLetter`, &#xA;  `edm_prod`.`optin_bh`, &#xA;  `edm_prod`.`optin_tonton`, &#xA;  `edm_prod`.`optin_nst`, &#xA;  `edm_prod`.`optin_hm`, &#xA;  `edm_prod`.`optin_ob`, &#xA;  `edm_prod`.`optin_says`, &#xA;  `edm_prod`.`optin_flyfm`, &#xA;  `edm_prod`.`optin_hotfm`, &#xA;  `edm_prod`.`optin_superdeals`, &#xA;  `edm_prod`.`optin_cjwowshop`, &#xA;  `edm_prod`.`optin_8coin`, &#xA;  `edm_prod`.`optin_thelaki`, &#xA;  `edm_prod`.`optin_likely`, &#xA;  `edm_prod`.`optin_dhia`, &#xA;  `edm_prod`.`optin_donna`, &#xA;  `edm_prod`.`optin_wakeke`, &#xA;  `edm_prod`.`optin_lunaria`, &#xA;  `edm_prod`.`optin_chapters`, &#xA;  `edm_prod`.`lastLogin_bh`, &#xA;  `edm_prod`.`lastLogin_tonton`, &#xA;  `edm_prod`.`lastLogin_nst`, &#xA;  `edm_prod`.`lastLogin_hm`, &#xA;  `edm_prod`.`lastLogin_ob`, &#xA;  `edm_prod`.`lastLogin_says`, &#xA;  `edm_prod`.`lastLogin_flyfm`, &#xA;  `edm_prod`.`lastLogin_hotfm`, &#xA;  `edm_prod`.`lastLogin_superdeals`, &#xA;  `edm_prod`.`lastLogin_cjwowshop`, &#xA;  `edm_prod`.`lastLogin_8coin`, &#xA;  `edm_prod`.`lastLogin_thelaki`, &#xA;  `edm_prod`.`lastLogin_likely`, &#xA;  `edm_prod`.`lastLogin_dhia`, &#xA;  `edm_prod`.`lastLogin_donna`, &#xA;  `edm_prod`.`lastLogin_wakeke`, &#xA;  `edm_prod`.`lastLogin_lunaria`, &#xA;  `edm_prod`.`lastLogin_chapters`&#xA;FROM `edm_prod`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `edm_prod`.`mp_id`, &#xA;  `edm_prod`.`gigya_id`, &#xA;  `edm_prod`.`regSource`, &#xA;  `edm_prod`.`date_reg`, &#xA;  `edm_prod`.`date_lastLogin`, &#xA;  `edm_prod`.`age`, &#xA;  `edm_prod`.`ageGroup`, &#xA;  `edm_prod`.`birthDay`, &#xA;  `edm_prod`.`birthMonth`, &#xA;  `edm_prod`.`birthYear`, &#xA;  `edm_prod`.`loc_city`, &#xA;  `edm_prod`.`loc_country`, &#xA;  `edm_prod`.`email`, &#xA;  `edm_prod`.`firstName`, &#xA;  `edm_prod`.`gender`, &#xA;  `edm_prod`.`lastName`, &#xA;  `edm_prod`.`locality`, &#xA;  `edm_prod`.`state`, &#xA;  `edm_prod`.`ethnicity`, &#xA;  `edm_prod`.`language`, &#xA;  `edm_prod`.`mobilePhone_1`, &#xA;  `edm_prod`.`mobilePhone_2`, &#xA;  `edm_prod`.`isActive`, &#xA;  `edm_prod`.`subscribeNewsLetter`, &#xA;  `edm_prod`.`optin_bh`, &#xA;  `edm_prod`.`optin_tonton`, &#xA;  `edm_prod`.`optin_nst`, &#xA;  `edm_prod`.`optin_hm`, &#xA;  `edm_prod`.`optin_ob`, &#xA;  `edm_prod`.`optin_says`, &#xA;  `edm_prod`.`optin_flyfm`, &#xA;  `edm_prod`.`optin_hotfm`, &#xA;  `edm_prod`.`optin_superdeals`, &#xA;  `edm_prod`.`optin_cjwowshop`, &#xA;  `edm_prod`.`optin_8coin`, &#xA;  `edm_prod`.`optin_thelaki`, &#xA;  `edm_prod`.`optin_likely`, &#xA;  `edm_prod`.`optin_dhia`, &#xA;  `edm_prod`.`optin_donna`, &#xA;  `edm_prod`.`optin_wakeke`, &#xA;  `edm_prod`.`optin_lunaria`, &#xA;  `edm_prod`.`optin_chapters`, &#xA;  `edm_prod`.`lastLogin_bh`, &#xA;  `edm_prod`.`lastLogin_tonton`, &#xA;  `edm_prod`.`lastLogin_nst`, &#xA;  `edm_prod`.`lastLogin_hm`, &#xA;  `edm_prod`.`lastLogin_ob`, &#xA;  `edm_prod`.`lastLogin_says`, &#xA;  `edm_prod`.`lastLogin_flyfm`, &#xA;  `edm_prod`.`lastLogin_hotfm`, &#xA;  `edm_prod`.`lastLogin_superdeals`, &#xA;  `edm_prod`.`lastLogin_cjwowshop`, &#xA;  `edm_prod`.`lastLogin_8coin`, &#xA;  `edm_prod`.`lastLogin_thelaki`, &#xA;  `edm_prod`.`lastLogin_likely`, &#xA;  `edm_prod`.`lastLogin_dhia`, &#xA;  `edm_prod`.`lastLogin_donna`, &#xA;  `edm_prod`.`lastLogin_wakeke`, &#xA;  `edm_prod`.`lastLogin_lunaria`, &#xA;  `edm_prod`.`lastLogin_chapters`&#xA;FROM `edm_prod`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -141,6 +141,8 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="mp_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="gigya_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="regSource"/>
@@ -262,6 +264,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
+      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -354,6 +357,11 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="mp_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="gigya_id"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -658,6 +666,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlOutput_1">
+      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -719,6 +728,7 @@
       <column comment="" key="false" length="-1" name="lastLogin_chapters" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="mp_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gigya_id" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="regSource" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_reg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -783,6 +793,11 @@
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMysqlOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="mp_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
