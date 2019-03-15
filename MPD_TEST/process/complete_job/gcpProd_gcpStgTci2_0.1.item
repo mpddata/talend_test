@@ -141,6 +141,8 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="created"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="UID"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_android_purchase_orderId"/>
@@ -521,8 +523,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_last_login_tonton"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="created"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_optin_koolfm"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="data_last_login_koolfm"/>
@@ -530,6 +530,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
+      <column comment="" key="false" length="255" name="created" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="data_android_purchase_orderId" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="data_android_purchase_token" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
@@ -720,7 +721,6 @@
       <column comment="" key="false" length="255" name="data_optin_hm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="data_optin_onefm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="data_last_login_tonton" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="created" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="data_optin_koolfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="data_last_login_koolfm" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -1131,6 +1131,7 @@
         <mapperTableEntries name="data_last_login_koolfm" expression="row1.data_last_login_koolfm" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="created" type="id_String" nullable="true"/>
         <mapperTableEntries name="UID" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_android_purchase_orderId" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_android_purchase_token" type="id_String" nullable="true"/>
@@ -1321,7 +1322,6 @@
         <mapperTableEntries name="data_optin_hm" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_optin_onefm" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_last_login_tonton" type="id_String" nullable="true"/>
-        <mapperTableEntries name="created" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_optin_koolfm" type="id_String" nullable="true"/>
         <mapperTableEntries name="data_last_login_koolfm" type="id_String" nullable="true"/>
       </inputTables>
