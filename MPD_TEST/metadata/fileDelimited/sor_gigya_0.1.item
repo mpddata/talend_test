@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_VZ2zIFIVEemHe4XybTZ1kg" name="sor_gigya" dataPackage="_VZ2zIVIVEemHe4XybTZ1kg" Server="Localhost 127.0.0.1" FilePath="/Users/mohdhafeez/Downloads/gigya_column.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_VZ2zIVIVEemHe4XybTZ1kg" name="default" dataManager="_VZ2zIFIVEemHe4XybTZ1kg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_VZ2zIlIVEemHe4XybTZ1kg" id="_JXqMkFIVEemHe4XybTZ1kg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_VZ2zI1IVEemHe4XybTZ1kg" label="Column0" length="39" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
