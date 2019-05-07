@@ -159,11 +159,11 @@
       <column comment="" key="false" length="-1" name="source" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Output1">
         <mapperTableEntries name="status" expression="row1.status " type="id_String" nullable="true"/>
-        <mapperTableEntries name="statusDate" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(),0,&quot;dd&quot;) )) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="statusDate" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>
         <mapperTableEntries name="source" expression="&quot;Berita Harian&quot; " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
