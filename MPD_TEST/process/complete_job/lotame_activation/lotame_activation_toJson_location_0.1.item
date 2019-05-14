@@ -130,7 +130,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `sor_lotame_detail_2`.`lotame_id`, &#xA;  `sor_lotame_detail_2`.`city`, &#xA;  `sor_lotame_detail_2`.`region`, &#xA;  `sor_lotame_detail_2`.`behaviour1`, &#xA;  `sor_lotame_detail_2`.`behaviour2`, &#xA;  `sor_lotame_detail_2`.`behaviour3`,&#xA;  `sor_lotame_detail_2`.`behaviour4`,&#xA;  `sor_lotame_detail_2`.`behaviour5`,&#xA;  `sor_lotame_detail_2`.`behaviour6`,&#xA;  `sor_lotame_detail_2`.`behaviour7`,&#xA;  `sor_lotame_detail_2`.`behaviour8`,&#xA;  `sor_lotame_detail_2`.`behaviour9`,&#xA;  `sor_lotame_detail_2`.`behaviour10`&#xA;FROM `sor_lotame_detail_2`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `sor_lotame_detail_2`.`lotame_id`, &#xA;  `sor_lotame_detail_2`.`city`, &#xA;  `sor_lotame_detail_2`.`region`&#xA;FROM `sor_lotame_detail_2`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -147,26 +147,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="region"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour1"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour2"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour5"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour6"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour7"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour8"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour9"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour10"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="DB_sor_lotame_detail"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -174,16 +154,6 @@
       <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="city" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="region" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour1" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour2" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour3" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour4" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour5" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour6" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour7" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour8" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour9" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour10" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
@@ -210,56 +180,6 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="5"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb1"/>
-      <elementValue elementRef="COLUMN" value="behaviour1"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="6"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb2"/>
-      <elementValue elementRef="COLUMN" value="behaviour2"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="7"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb3"/>
-      <elementValue elementRef="COLUMN" value="behaviour3"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="8"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb4"/>
-      <elementValue elementRef="COLUMN" value="behaviour4"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="9"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb5"/>
-      <elementValue elementRef="COLUMN" value="behaviour5"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="10"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb6"/>
-      <elementValue elementRef="COLUMN" value="behaviour6"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="11"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb7"/>
-      <elementValue elementRef="COLUMN" value="behaviour7"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="12"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb8"/>
-      <elementValue elementRef="COLUMN" value="behaviour8"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="13"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb9"/>
-      <elementValue elementRef="COLUMN" value="behaviour9"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="14"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb10"/>
-      <elementValue elementRef="COLUMN" value="behaviour10"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="15"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP" show="false"/>
     <elementParameter field="TABLE" name="LOOP" show="false">
@@ -286,7 +206,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_20hjkEOlEem0QJzm60k8Lw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_YyEmAHYNEemN-ZKXJtKmIQ-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -297,10 +217,10 @@
       <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
-        <mapperTableEntries name="lotame_id" expression="row2.lotame_id.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;,&quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;,&quot;&quot;).replaceAll(&quot;:\\{&quot;,&quot;:\\[&quot;).replaceAll(&quot;\\}\\}&quot;,&quot;\\]\\}&quot;).replaceAll(&quot;\&quot;city\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;region\&quot;:\\[\\],&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb1\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb2\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb3\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb4\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb5\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb6\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb7\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb8\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb9\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb10\&quot;:\\[\\]&quot;,&quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotame_id" expression="row2.lotame_id.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;,&quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;,&quot;&quot;).replaceAll(&quot;:\\{&quot;,&quot;:\\[&quot;).replaceAll(&quot;\\}\\}&quot;,&quot;\\]\\}&quot;).replaceAll(&quot;\&quot;city\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;region\&quot;:\\[\\],&quot;,&quot;&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="lotame_id" type="id_String" nullable="true"/>
@@ -312,7 +232,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_20hjkEOlEem0QJzm60k8Lw-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_YyEmAHYNEemN-ZKXJtKmIQ-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -323,10 +243,10 @@
       <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfout2">
-        <mapperTableEntries name="lotame_id" expression="out2.lotame_id.replaceAll(&quot;city\&quot;:\&quot;&quot;,&quot;city:&quot;).replaceAll(&quot;region\&quot;:\&quot;&quot;,&quot;region:&quot;).replaceAll(&quot;tb1\&quot;:\&quot;&quot;,&quot;tb1:&quot;).replaceAll(&quot;tb2\&quot;:\&quot;&quot;,&quot;tb2:&quot;).replaceAll(&quot;tb3\&quot;:\&quot;&quot;,&quot;tb3:&quot;).replaceAll(&quot;tb4\&quot;:\&quot;&quot;,&quot;tb4:&quot;).replaceAll(&quot;tb5\&quot;:\&quot;&quot;,&quot;tb5:&quot;).replaceAll(&quot;tb6\&quot;:\&quot;&quot;,&quot;tb6:&quot;).replaceAll(&quot;tb7\&quot;:\&quot;&quot;,&quot;tb7:&quot;).replaceAll(&quot;tb8\&quot;:\&quot;&quot;,&quot;tb8:&quot;).replaceAll(&quot;tb9\&quot;:\&quot;&quot;,&quot;tb9:&quot;).replaceAll(&quot;tb10\&quot;:\&quot;&quot;,&quot;tb10:&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotame_id" expression="out2.lotame_id.replaceAll(&quot;city\&quot;:\&quot;&quot;,&quot;city:&quot;).replaceAll(&quot;region\&quot;:\&quot;&quot;,&quot;region:&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="out2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="lotame_id" type="id_String" nullable="true"/>
