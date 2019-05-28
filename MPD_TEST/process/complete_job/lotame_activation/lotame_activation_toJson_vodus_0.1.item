@@ -121,16 +121,16 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;35.187.224.17&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;stg_tci&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;stg_tci2&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;tci_admin&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="xDY/Cy1A8HrVjemW6VrblA=="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sor_lotame_detail_2&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;vodus_file_new&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `sor_lotame_detail_2`.`lotame_id`, &#xA;  `sor_lotame_detail_2`.`behaviour1`, &#xA;  `sor_lotame_detail_2`.`behaviour2`, &#xA;  `sor_lotame_detail_2`.`behaviour3`,&#xA;  `sor_lotame_detail_2`.`behaviour4`,&#xA;  `sor_lotame_detail_2`.`behaviour5`,&#xA;  `sor_lotame_detail_2`.`behaviour6`,&#xA;  `sor_lotame_detail_2`.`behaviour7`,&#xA;  `sor_lotame_detail_2`.`behaviour8`,&#xA;  `sor_lotame_detail_2`.`behaviour9`,&#xA;  `sor_lotame_detail_2`.`behaviour10`&#xA;FROM `sor_lotame_detail_2`&#xA;where `sor_lotame_detail_2`.`behaviour1` is not null&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `vodus_file_new`.`lotameId`,&#xA;  `vodus_file_new`.`age`,&#xA;  `vodus_file_new`.`education`,&#xA;  `vodus_file_new`.`gender`,&#xA;  `vodus_file_new`.`occupation`,&#xA;  `vodus_file_new`.`ethnicity`,&#xA;  `vodus_file_new`.`state`,&#xA;  `vodus_file_new`.`monthlyIncome`,&#xA;  `vodus_file_new`.`maritalStatus`,&#xA;  `vodus_file_new`.`ruralUrban`&#xA;FROM `vodus_file_new`&#xA;WHERE `vodus_file_new`.`date` = CURDATE()-1&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -141,48 +141,45 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="lotame_id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lotameId"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="age"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="education"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gender"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="occupation"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ethnicity"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="monthlyIncome"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour8"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="maritalStatus"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour9"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="behaviour10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ruralUrban"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="DB_sor_lotame_detail"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
-      <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour1" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour2" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour3" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour4" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour5" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour6" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour7" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour8" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour9" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="behaviour10" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lotameId" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="age" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="education" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="occupation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ethnicity" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="state" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="monthlyIncome" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maritalStatus" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ruralUrban" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
-    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="lotame_id"/>
+    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="lotameId"/>
     <elementParameter field="TABLE" name="ROOT" show="false">
       <elementValue elementRef="PATH" value="/rootTag"/>
       <elementValue elementRef="COLUMN" value=""/>
@@ -194,75 +191,70 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="3"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb1"/>
-      <elementValue elementRef="COLUMN" value="behaviour1"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/age"/>
+      <elementValue elementRef="COLUMN" value="age"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="4"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb2"/>
-      <elementValue elementRef="COLUMN" value="behaviour2"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/education"/>
+      <elementValue elementRef="COLUMN" value="education"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="5"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb3"/>
-      <elementValue elementRef="COLUMN" value="behaviour3"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/gender"/>
+      <elementValue elementRef="COLUMN" value="gender"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="6"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb4"/>
-      <elementValue elementRef="COLUMN" value="behaviour4"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/occupation"/>
+      <elementValue elementRef="COLUMN" value="occupation"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="7"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb5"/>
-      <elementValue elementRef="COLUMN" value="behaviour5"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/ethnicity"/>
+      <elementValue elementRef="COLUMN" value="ethnicity"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="8"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb6"/>
-      <elementValue elementRef="COLUMN" value="behaviour6"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/state"/>
+      <elementValue elementRef="COLUMN" value="state"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="9"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb7"/>
-      <elementValue elementRef="COLUMN" value="behaviour7"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/monthlyIncome"/>
+      <elementValue elementRef="COLUMN" value="monthlyIncome"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="10"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb8"/>
-      <elementValue elementRef="COLUMN" value="behaviour8"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/maritalStatus"/>
+      <elementValue elementRef="COLUMN" value="maritalStatus"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="11"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb9"/>
-      <elementValue elementRef="COLUMN" value="behaviour9"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/ruralUrban"/>
+      <elementValue elementRef="COLUMN" value="ruralUrban"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="12"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/tb10"/>
-      <elementValue elementRef="COLUMN" value="behaviour10"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="13"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP" show="false"/>
     <elementParameter field="TABLE" name="LOOP" show="false">
       <elementValue elementRef="PATH" value="/rootTag/userid"/>
-      <elementValue elementRef="COLUMN" value="lotame_id"/>
+      <elementValue elementRef="COLUMN" value="lotameId"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="main"/>
       <elementValue elementRef="ORDER" value="2"/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="lotame_id"/>
-      <elementValue elementRef="INPUT_COLUMN" value="lotame_id"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="lotameId"/>
+      <elementValue elementRef="INPUT_COLUMN" value="lotameId"/>
     </elementParameter>
     <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
     <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWriteJSONField_1">
-      <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lotameId" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="128">
@@ -270,7 +262,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_20hjkEOlEem0QJzm60k8Lw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_J__pYIDwEemN-ZKXJtKmIQ-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -278,16 +270,16 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out2">
-      <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lotameId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
-        <mapperTableEntries name="lotame_id" expression="row2.lotame_id.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;,&quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;,&quot;&quot;).replaceAll(&quot;:\\{&quot;,&quot;:\\[&quot;).replaceAll(&quot;\\}\\}&quot;,&quot;\\]\\}&quot;).replaceAll(&quot;\&quot;tb1\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb2\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb3\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb4\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb5\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb6\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb7\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb8\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb9\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;tb10\&quot;:\\[\\]&quot;,&quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotameId" expression="row2.lotameId.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;,&quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;,&quot;&quot;).replaceAll(&quot;:\\{&quot;,&quot;:\\[&quot;).replaceAll(&quot;\\}\\}&quot;,&quot;\\]\\}&quot;).replaceAll(&quot;\&quot;age\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;education\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;gender\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;occupation\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;ethnicity\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;state\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;monthlyIncome\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;maritalStatus\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;ruralUrban\&quot;:\\[\\]&quot;,&quot;&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="lotame_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotameId" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -296,7 +288,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_20hjkEOlEem0QJzm60k8Lw-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_J__pYIDwEemN-ZKXJtKmIQ-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
@@ -304,16 +296,16 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="copyOfout2">
-      <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lotameId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfout2">
-        <mapperTableEntries name="lotame_id" expression="out2.lotame_id.replaceAll(&quot;tb1\&quot;:\&quot;&quot;,&quot;tb1:&quot;).replaceAll(&quot;tb2\&quot;:\&quot;&quot;,&quot;tb2:&quot;).replaceAll(&quot;tb3\&quot;:\&quot;&quot;,&quot;tb3:&quot;).replaceAll(&quot;tb4\&quot;:\&quot;&quot;,&quot;tb4:&quot;).replaceAll(&quot;tb5\&quot;:\&quot;&quot;,&quot;tb5:&quot;).replaceAll(&quot;tb6\&quot;:\&quot;&quot;,&quot;tb6:&quot;).replaceAll(&quot;tb7\&quot;:\&quot;&quot;,&quot;tb7:&quot;).replaceAll(&quot;tb8\&quot;:\&quot;&quot;,&quot;tb8:&quot;).replaceAll(&quot;tb9\&quot;:\&quot;&quot;,&quot;tb9:&quot;).replaceAll(&quot;tb10\&quot;:\&quot;&quot;,&quot;tb10:&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotameId" expression="out2.lotameId.replaceAll(&quot;age\&quot;:\&quot;&quot;,&quot;age:&quot;).replaceAll(&quot;education\&quot;:\&quot;&quot;,&quot;education:&quot;).replaceAll(&quot;gender\&quot;:\&quot;&quot;,&quot;gender:&quot;).replaceAll(&quot;occupation\&quot;:\&quot;&quot;,&quot;occupation:&quot;).replaceAll(&quot;ethnicity\&quot;:\&quot;&quot;,&quot;ethnicity:&quot;).replaceAll(&quot;state\&quot;:\&quot;&quot;,&quot;state:&quot;).replaceAll(&quot;monthlyIncome\&quot;:\&quot;&quot;,&quot;monthlyIncome:&quot;).replaceAll(&quot;maritalStatus\&quot;:\&quot;&quot;,&quot;maritalStatus:&quot;).replaceAll(&quot;ruralUrban\&quot;:\&quot;&quot;,&quot;ruralUrban:&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="out2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="lotame_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotameId" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -348,7 +340,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="-1" name="lotame_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lotameId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tWriteJSONField_1">
@@ -356,40 +348,40 @@
       <elementValue elementRef="TRACE_COLUMN" value="city"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="lotame_id"/>
+      <elementValue elementRef="TRACE_COLUMN" value="lotameId"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="region"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour3"/>
+      <elementValue elementRef="TRACE_COLUMN" value="gender"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="education"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour1"/>
+      <elementValue elementRef="TRACE_COLUMN" value="age"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour8"/>
+      <elementValue elementRef="TRACE_COLUMN" value="maritalStatus"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour7"/>
+      <elementValue elementRef="TRACE_COLUMN" value="monthlyIncome"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour6"/>
+      <elementValue elementRef="TRACE_COLUMN" value="state"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ethnicity"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour9"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ruralUrban"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="behaviour10"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="behaviour4"/>
+      <elementValue elementRef="TRACE_COLUMN" value="occupation"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
