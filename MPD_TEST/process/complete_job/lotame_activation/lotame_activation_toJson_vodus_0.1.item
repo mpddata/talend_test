@@ -191,47 +191,47 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="3"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/age"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_age"/>
       <elementValue elementRef="COLUMN" value="age"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="4"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/education"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_education"/>
       <elementValue elementRef="COLUMN" value="education"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="5"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/gender"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_gender"/>
       <elementValue elementRef="COLUMN" value="gender"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="6"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/occupation"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_occupation"/>
       <elementValue elementRef="COLUMN" value="occupation"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="7"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/ethnicity"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_ethnicity"/>
       <elementValue elementRef="COLUMN" value="ethnicity"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="8"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/state"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_state"/>
       <elementValue elementRef="COLUMN" value="state"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="9"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/monthlyIncome"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_monthlyIncome"/>
       <elementValue elementRef="COLUMN" value="monthlyIncome"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="10"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/maritalStatus"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_maritalStatus"/>
       <elementValue elementRef="COLUMN" value="maritalStatus"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="11"/>
-      <elementValue elementRef="PATH" value="/rootTag/segments/ruralUrban"/>
+      <elementValue elementRef="PATH" value="/rootTag/segments/vodus_ruralUrban"/>
       <elementValue elementRef="COLUMN" value="ruralUrban"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
@@ -276,7 +276,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
-        <mapperTableEntries name="lotameId" expression="row2.lotameId.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;,&quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;,&quot;&quot;).replaceAll(&quot;:\\{&quot;,&quot;:\\[&quot;).replaceAll(&quot;\\}\\}&quot;,&quot;\\]\\}&quot;).replaceAll(&quot;\&quot;age\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;education\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;gender\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;occupation\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;ethnicity\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;state\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;monthlyIncome\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;maritalStatus\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;ruralUrban\&quot;:\\[\\]&quot;,&quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotameId" expression="row2.lotameId.replaceAll(&quot;\&quot;\\[&quot;, &quot;\\[&quot;).replaceAll(&quot;\\\\\&quot;&quot;,&quot;\&quot;&quot;).replaceAll(&quot;\\]\&quot;&quot;,&quot;\\]&quot;).replaceAll(&quot;\\\\\\\\\&quot;&quot;,&quot;&quot;).replaceAll(&quot;:\\{&quot;,&quot;:\\[&quot;).replaceAll(&quot;\\}\\}&quot;,&quot;\\]\\}&quot;).replaceAll(&quot;\&quot;vodus_age\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_education\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_gender\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_occupation\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_ethnicity\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_state\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_monthlyIncome\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_maritalStatus\&quot;:\\[\\]&quot;,&quot;&quot;).replaceAll(&quot;,\&quot;vodus_ruralUrban\&quot;:\\[\\]&quot;,&quot;&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="lotameId" type="id_String" nullable="true"/>
@@ -302,7 +302,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfout2">
-        <mapperTableEntries name="lotameId" expression="out2.lotameId.replaceAll(&quot;age\&quot;:\&quot;&quot;,&quot;age:&quot;).replaceAll(&quot;education\&quot;:\&quot;&quot;,&quot;education:&quot;).replaceAll(&quot;gender\&quot;:\&quot;&quot;,&quot;gender:&quot;).replaceAll(&quot;occupation\&quot;:\&quot;&quot;,&quot;occupation:&quot;).replaceAll(&quot;ethnicity\&quot;:\&quot;&quot;,&quot;ethnicity:&quot;).replaceAll(&quot;state\&quot;:\&quot;&quot;,&quot;state:&quot;).replaceAll(&quot;monthlyIncome\&quot;:\&quot;&quot;,&quot;monthlyIncome:&quot;).replaceAll(&quot;maritalStatus\&quot;:\&quot;&quot;,&quot;maritalStatus:&quot;).replaceAll(&quot;ruralUrban\&quot;:\&quot;&quot;,&quot;ruralUrban:&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lotameId" expression="out2.lotameId.replaceAll(&quot;vodus_age\&quot;:\&quot;&quot;,&quot;vodus_age:&quot;).replaceAll(&quot;vodus_education\&quot;:\&quot;&quot;,&quot;vodus_education:&quot;).replaceAll(&quot;vodus_gender\&quot;:\&quot;&quot;,&quot;vodus_gender:&quot;).replaceAll(&quot;vodus_occupation\&quot;:\&quot;&quot;,&quot;vodus_occupation:&quot;).replaceAll(&quot;vodus_ethnicity\&quot;:\&quot;&quot;,&quot;vodus_ethnicity:&quot;).replaceAll(&quot;vodus_state\&quot;:\&quot;&quot;,&quot;vodus_state:&quot;).replaceAll(&quot;vodus_monthlyIncome\&quot;:\&quot;&quot;,&quot;vodus_monthlyIncome:&quot;).replaceAll(&quot;vodus_maritalStatus\&quot;:\&quot;&quot;,&quot;vodus_maritalStatus:&quot;).replaceAll(&quot;vodus_ruralUrban\&quot;:\&quot;&quot;,&quot;vodus_ruralUrban:&quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="out2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="lotameId" type="id_String" nullable="true"/>
